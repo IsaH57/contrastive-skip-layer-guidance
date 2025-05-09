@@ -1,0 +1,1 @@
+# motion-quality-cogvideo2b
