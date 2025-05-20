@@ -23,6 +23,7 @@ text_encoder = T5EncoderModel.from_pretrained(
     device_map="balanced",
 
 )
+
 pipe = PixArtAlphaPipeline.from_pretrained(
     "PixArt-alpha/PixArt-XL-2-1024-MS",
     text_encoder=text_encoder,
