@@ -19,6 +19,7 @@ GUIDANCE_SCALE = 7.5
 text_encoder = T5EncoderModel.from_pretrained(
     "PixArt-alpha/PixArt-XL-2-1024-MS",
     subfolder="text_encoder",
+
     load_in_4bit=True,
     device_map="balanced",
 
@@ -28,8 +29,8 @@ pipe = PixArtAlphaPipeline.from_pretrained(
     "PixArt-alpha/PixArt-XL-2-1024-MS",
     text_encoder=text_encoder,
     transformer=None,
-    device_map="balanced", torch_dtype=torch.float16,
-).to("cuda")
+    device_map="balanced",
+)
 
 #use pipeline to encode a prompt
 with torch.no_grad():
