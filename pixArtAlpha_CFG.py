@@ -3,13 +3,20 @@ PixArt-Alpha Code example from https://huggingface.co/docs/diffusers/en/api/pipe
 """
 
 import gc
+import inspect
 import os
 from pathlib import Path
 import torch
 from diffusers import PixArtAlphaPipeline
 from transformers import T5EncoderModel
 
-remote_output_dir = os.environ.get("REMOTE_OUTPUT_DIR")
+
+current_file = inspect.getfile(inspect.currentframe())
+file_path = os.path.splitext(os.path.basename(current_file))[0]
+
+output_dir = os.path.join(os.getcwd(), f"img_{file_path}")
+os.makedirs(output_dir, exist_ok=True)
+
 PROMPT = "an ancient temple in the jungle, covered in moss, with golden statues and shafts of light piercing through the trees"
 
 GUIDANCE_SCALE = 7.5
@@ -36,7 +43,8 @@ pipe = PixArtAlphaPipeline.from_pretrained(
 with torch.no_grad():
     prompt = PROMPT
     prompt_embeds, prompt_attention_mask, negative_embeds, negative_prompt_attention_mask = pipe.encode_prompt(prompt)
-
+# prompt_embeds: conditioned prompt
+# negative_prompt_embed: unconditioned prompt
 
 #remove encoder and pipe from the memory
 def flush():
@@ -54,8 +62,8 @@ pipe = PixArtAlphaPipeline.from_pretrained(
     torch_dtype=torch.float16,
 ).to("cuda")
 
-# prompt_embeds: conditioned prompt
-# negative_prompt_embed: unconditioned prompt
+
+#generate images with different guidance scale
 for gs in [1.0, 3.0, 5.0, 7.5, 12.0]:
     print(f"Generating with CFG scale: {gs}")
     latents = pipe(
@@ -73,4 +81,4 @@ for gs in [1.0, 3.0, 5.0, 7.5, 12.0]:
         image = pipe.vae.decode(latents / pipe.vae.config.scaling_factor, return_dict=False)[0]
     image = pipe.image_processor.postprocess(image, output_type="pil")[0]
 
-    image.save(os.path.join(remote_output_dir, f"temple_cfg{gs}.png"))
+    image.save(os.path.join(output_dir, f"temple_cfg{gs}.png"))
