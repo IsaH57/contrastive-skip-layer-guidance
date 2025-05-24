@@ -29,9 +29,13 @@ PROMPT = "an ancient temple in the jungle, covered in moss, with golden statues 
 GUIDANCE_SCALES = [0., 0.5, 1.0, 3.0, 5.0, 7.5, 10.0, 15.0, 20.0]
 
 # Load the pipeline
-pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-schnell", torch_dtype=torch.bfloat16)
+pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
 pipe.enable_model_cpu_offload() #save some VRAM by offloading the model to CPU. Remove this if you have enough GPU power
 
+# Cleanup 
+def flush():
+    gc.collect()
+    torch.cuda.empty_cache()
 
 for gs in GUIDANCE_SCALES:
     print(f"Generating image with CFG scale: {gs}")
@@ -40,8 +44,8 @@ for gs in GUIDANCE_SCALES:
     with torch.no_grad():
         image = pipe(
             PROMPT,
-            guidance_scale=0.0,
-            num_inference_steps=4,
+            guidance_scale=gs,
+            num_inference_steps=50,
             max_sequence_length=256,
             generator=torch.Generator("cpu").manual_seed(0)
         ).images[0]
@@ -49,9 +53,7 @@ for gs in GUIDANCE_SCALES:
     # Save image
     image_path = os.path.join(output_dir, f"cfgscale_{gs:.1f}.png")
     image.save(image_path)
+    del image
+    flush()
 
-# Cleanup 
-def flush():
-    gc.collect()
-    torch.cuda.empty_cache()
 flush()
