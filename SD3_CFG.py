@@ -12,8 +12,7 @@ import inspect
 import os
 from pathlib import Path
 import torch
-from diffusers import StableDiffusionXLPipeline
-from diffusers.utils import load_image
+from diffusers import StableDiffusion3Pipeline
 
 # Determine script name for folder naming
 current_file = inspect.getfile(inspect.currentframe())
@@ -30,15 +29,8 @@ PROMPT = "an ancient temple in the jungle, covered in moss, with golden statues 
 GUIDANCE_SCALES = [0., 0.5, 1.0, 3.0, 5.0, 7.5, 10.0, 15.0, 20.0]
 
 # Load the pipeline
-pipe = StableDiffusionXLPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-3-medium",
-    torch_dtype=torch.float16,
-    variant="fp16",
-).to("cuda")
-
-'''# Optional: enable memory-efficient attention if needed
-pipe.enable_model_cpu_offload()
-pipe.enable_vae_tiling()'''
+pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
+pipe = pipe.to("cuda")
 
 for gs in GUIDANCE_SCALES:
     print(f"Generating image with CFG scale: {gs}")
@@ -46,9 +38,10 @@ for gs in GUIDANCE_SCALES:
     # Run the pipeline with specified CFG
     with torch.no_grad():
         image = pipe(
-            prompt=PROMPT,
-            guidance_scale=gs,
-            num_inference_steps=30, 
+            PROMPT,
+            negative_prompt="",
+            num_inference_steps=28,
+            guidance_scale=7.0,
         ).images[0]
 
     # Save image
