@@ -19,7 +19,7 @@ from datetime import datetime
 
 # Parameters
 num_prompts = 10  # Change this to however many prompts you want to test
-skip_layer_indices = [2, 14]  # Specify which layers to skip here
+skip_layer_indices = [9, 12]  # Specify which layers to skip here
 
 # Load dataset
 dataset_path = os.path.join(os.getcwd(), "prompt_datasets/failure_case_prompts.json")
@@ -34,7 +34,7 @@ pipe.to("cuda")
 
 # Create results directory
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-results_dir = os.path.join(os.getcwd(), f"flux_skip_results_{timestamp}")
+results_dir = os.path.join(os.getcwd(), f"sd3_skip_results_{timestamp}")
 os.makedirs(results_dir, exist_ok=True)
 
 # Select prompts
