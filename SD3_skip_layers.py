@@ -13,7 +13,6 @@ import json
 import os
 
 from SD3_custom_pipeline import StableDiffusion3Pipeline
-from diffusers import FluxPipeline
 import random
 import torch
 from datetime import datetime
