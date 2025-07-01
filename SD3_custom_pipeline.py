@@ -201,8 +201,6 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
     ):
         super().__init__()
 
-        self.skipped_layers = None
-
         self.register_modules(
             vae=vae,
             text_encoder=text_encoder,
@@ -805,7 +803,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
             skip_layer_guidance_stop: float = 0.2,
             skip_layer_guidance_start: float = 0.01,
             mu: Optional[float] = None,
-            true_cfg_scale: float = 1.0  # add this parameter to control the CFG scale for the skip layers
+            skipped_layers=None
     ):
         r"""
         Function invoked when calling the pipeline for generation.
@@ -922,6 +920,10 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
             `tuple`. When returning a tuple, the first element is a list with the generated images.
         """
 
+        def expand_timestep(t_scalar, reference_tensor):
+            return t_scalar.expand(reference_tensor.shape[0]).to(dtype=reference_tensor.dtype,
+                                                                 device=reference_tensor.device)
+
         height = height or self.default_sample_size * self.vae_scale_factor
         width = width or self.default_sample_size * self.vae_scale_factor
 
@@ -963,8 +965,8 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
             self.joint_attention_kwargs.get("scale", None) if self.joint_attention_kwargs is not None else None
         )
 
-        # slg parameter
-        do_true_cfg = true_cfg_scale > 1.0 and negative_prompt is not None
+        # add slg parameter
+        # do_true_cfg = true_cfg_scale > 1.0 and negative_prompt is not None
         (
             prompt_embeds,
             negative_prompt_embeds,
@@ -1051,23 +1053,25 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
             else:
                 self._joint_attention_kwargs.update(ip_adapter_image_embeds=ip_adapter_image_embeds)
 
-        def noise_pred_with_skipped_layers(hidden_states, timestep,encoder_hidden_states, pooled_projections,
+        def noise_pred_with_skipped_layers(hidden_states, timestep, encoder_hidden_states, pooled_projections,
                                            joint_attention_kwargs, return_dict):
-            # Implement Skip Layer Behavior
+
             original_forwards = {}
 
             def make_skip_forward(orig_idx):
                 def skip_forward(self, hidden_states, encoder_hidden_states=None, *args, **kwargs):
-                    return encoder_hidden_states, hidden_states
+                    # retrieve the original hidden states
+                    return hidden_states
 
                 return skip_forward
 
-            for idx in self.skipped_layers:
-                block = self.transformer.transformer_blocks[idx]
-                original_forwards[idx] = block.forward
-                block.forward = types.MethodType(make_skip_forward(idx), block)
+            for idx in skipped_layers:
+                if idx < len(self.transformer.transformer_blocks):
+                    block = self.transformer.transformer_blocks[idx]
+                    original_forwards[idx] = block.forward
+                    block.forward = types.MethodType(make_skip_forward(idx), block)
 
-            # Perform noise prediction as before
+            # do the forward pass with skipped layers
             noise_pred = self.transformer(
                 hidden_states=hidden_states,
                 timestep=timestep,
@@ -1077,7 +1081,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                 return_dict=return_dict,
             )[0]
 
-            # Reset block forwards
+            # restore the original forward methods
             for idx, orig_forward in original_forwards.items():
                 self.transformer.transformer_blocks[idx].forward = orig_forward
 
@@ -1091,11 +1095,10 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
 
                 # expand the latents if we are doing classifier free guidance
                 latent_model_input = torch.cat([latents] * 2) if self.do_classifier_free_guidance else latents
-                # broadcast to batch dimension in a way that's compatible with ONNX/Core ML
-                timestep = t.expand(latent_model_input.shape[0])
 
-                if do_true_cfg:
-                    # Positive prompt with
+                if self.do_classifier_free_guidance:
+                    timestep = expand_timestep(t, latents)
+                    # Positive prompt with skipped layers
                     noise_pred = noise_pred_with_skipped_layers(
                         hidden_states=latents,
                         timestep=timestep,
@@ -1105,19 +1108,19 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                         return_dict=False,
                     )
 
-                    # Negative prompt with true CFG scale
+                    # Negative prompt with original layers
                     neg_noise_pred = self.transformer(
                         hidden_states=latents,
                         timestep=timestep,
-                        encoder_hidden_states=prompt_embeds,
-                        pooled_projections=pooled_prompt_embeds,
+                        encoder_hidden_states=negative_prompt_embeds,
+                        pooled_projections=negative_pooled_prompt_embeds,
                         joint_attention_kwargs=self.joint_attention_kwargs,
                         return_dict=False,
                     )[0]
 
-                    noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
+                    noise_pred = neg_noise_pred + self.guidance_scale * (noise_pred - neg_noise_pred)
                 else:
-
+                    timestep = expand_timestep(t, latent_model_input)
                     noise_pred = self.transformer(
                         hidden_states=latent_model_input,
                         timestep=timestep,
@@ -1128,6 +1131,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                     )[0]
 
                 # perform guidance
+                """
                 if self.do_classifier_free_guidance:
                     noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
                     noise_pred = noise_pred_uncond + self.guidance_scale * (noise_pred_text - noise_pred_uncond)
@@ -1153,7 +1157,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                                 noise_pred + (
                                     noise_pred_text - noise_pred_skip_layers) * self._skip_layer_guidance_scale
                         )
-
+                """
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]
