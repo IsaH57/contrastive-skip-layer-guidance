@@ -214,6 +214,29 @@ class FluxPipeline(
         )
         self.default_sample_size = 128
 
+    def noise_pred_with_skipped_layers(self, skipped_layers, **kwargs):
+            original_forwards = {}
+
+            def make_skip_forward():
+                def skip_forward(block_self, hidden_states, encoder_hidden_states, temb, image_rotary_emb, joint_attention_kwargs=None):
+                    return encoder_hidden_states, hidden_states
+                return skip_forward
+
+            # Patch the layers
+            for idx in skipped_layers:
+                block = self.transformer.transformer_blocks[idx]
+                original_forwards[idx] = block.forward
+                block.forward = types.MethodType(make_skip_forward(), block)
+
+            try:
+                output = self.transformer(**kwargs)[0]
+            finally:
+                # Always restore original forwards
+                for idx, original in original_forwards.items():
+                    self.transformer.transformer_blocks[idx].forward = original
+
+            return output
+    
     def _get_t5_prompt_embeds(
         self,
         prompt: Union[str, List[str]] = None,
@@ -906,39 +929,11 @@ class FluxPipeline(
             )
 
         # 6. Denoising loop
-        def noise_pred_with_skipped_layers(hidden_states, timestep, guidance, pooled_projections, encoder_hidden_states, txt_ids, img_ids, joint_attention_kwargs, return_dict):
-                    # Implement Skip Layer Behavior 
-                    original_forwards = {}
-
-                    def make_skip_forward(orig_idx):
-                        def skip_forward(self, hidden_states, encoder_hidden_states=None, *args, **kwargs):
-                            return encoder_hidden_states, hidden_states
-                        return skip_forward
-
-                    for idx in self.skipped_layers:
-                        block = self.transformer.transformer_blocks[idx]
-                        original_forwards[idx] = block.forward
-                        block.forward = types.MethodType(make_skip_forward(idx), block)
-
-                    # Perform noise prediction as before 
-                    noise_pred = self.transformer(
-                        hidden_states=hidden_states,
-                        timestep=timestep,
-                        guidance=guidance,
-                        pooled_projections=pooled_projections,
-                        encoder_hidden_states=encoder_hidden_states,
-                        txt_ids=txt_ids,
-                        img_ids=img_ids,
-                        joint_attention_kwargs=joint_attention_kwargs,
-                        return_dict=return_dict,
-                    )[0]
-
-                    # Reset block forwards 
-                    for idx, orig_forward in original_forwards.items():
-                        self.transformer.transformer_blocks[idx].forward = orig_forward
-
-                    return noise_pred
-        
+    
+        if do_true_cfg:
+            print(f'Performing Skip-Layer Guidance with scale {true_cfg_scale}.')
+        else: 
+            print(f'Performing standard CFG with scale {guidance_scale}.')
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 if self.interrupt:
@@ -949,46 +944,33 @@ class FluxPipeline(
                     self._joint_attention_kwargs["ip_adapter_image_embeds"] = image_embeds
                 # broadcast to batch dimension in a way that's compatible with ONNX/Core ML
                 timestep = t.expand(latents.shape[0]).to(latents.dtype)
-
-                if do_true_cfg:
-                    print('PERFORMING SLG!')
-                    noise_pred = noise_pred_with_skipped_layers(hidden_states=latents,
-                        timestep=timestep / 1000,
-                        guidance=guidance,
-                        pooled_projections=pooled_prompt_embeds,
-                        encoder_hidden_states=prompt_embeds,
-                        txt_ids=text_ids,
-                        img_ids=latent_image_ids,
-                        joint_attention_kwargs=self.joint_attention_kwargs,
-                        return_dict=False)
-                else: 
-                    noise_pred = self.transformer(
-                        hidden_states=latents,
-                        timestep=timestep / 1000,
-                        guidance=guidance,
-                        pooled_projections=pooled_prompt_embeds,
-                        encoder_hidden_states=prompt_embeds,
-                        txt_ids=text_ids,
-                        img_ids=latent_image_ids,
-                        joint_attention_kwargs=self.joint_attention_kwargs,
-                        return_dict=False
-                    )[0]
-
-
-                if do_true_cfg:
+                noise_pred = self.transformer(
+                    hidden_states=latents,
+                    timestep=timestep / 1000,
+                    guidance=guidance,
+                    pooled_projections=pooled_prompt_embeds,
+                    encoder_hidden_states=prompt_embeds,
+                    txt_ids=text_ids,
+                    img_ids=latent_image_ids,
+                    joint_attention_kwargs=self.joint_attention_kwargs,
+                    return_dict=False
+                )[0]
+                    
+                if do_true_cfg: # and i >= 5 and i <= 25
                     if negative_image_embeds is not None:
                         self._joint_attention_kwargs["ip_adapter_image_embeds"] = negative_image_embeds
-                    neg_noise_pred = self.transformer(
+                    neg_noise_pred = self.noise_pred_with_skipped_layers(
+                        skipped_layers=self.skipped_layers,
                         hidden_states=latents,
                         timestep=timestep / 1000,
                         guidance=guidance,
-                        pooled_projections=pooled_prompt_embeds,
-                        encoder_hidden_states=prompt_embeds,
+                        pooled_projections=negative_pooled_prompt_embeds,
+                        encoder_hidden_states=negative_prompt_embeds,
                         txt_ids=text_ids,
                         img_ids=latent_image_ids,
                         joint_attention_kwargs=self.joint_attention_kwargs,
                         return_dict=False,
-                    )[0]
+                    )
                     noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
 
                 # compute the previous noisy sample x_t -> x_t-1

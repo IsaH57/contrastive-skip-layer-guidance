@@ -24,7 +24,7 @@ current_file = inspect.getfile(inspect.currentframe())
 file_path = os.path.splitext(os.path.basename(current_file))[0]
 
 # Load dataset of prompt pairs 
-dataset_path = os.path.join(os.getcwd(), "prompts_text_notext.json")
+dataset_path = os.path.join(os.getcwd(), "prompt_datasets/prompts_text_notext.json")
 dataset = json.load(open(dataset_path, "r"))
 
 # Load the pipeline
