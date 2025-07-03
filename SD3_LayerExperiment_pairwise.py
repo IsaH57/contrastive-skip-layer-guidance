@@ -1,25 +1,17 @@
-"""
-SD3[dev] - Skip Layer Guidance Exploration
-See https://huggingface.co/stabilityai/stable-diffusion-3-medium
-
-This script generates images for pairs of prompts that differ only
-in text being present in the image. We then compare intermediate
-outputs of the model to extract information about which layers
-correspond most to text being present in the image.
+""" This script generates images for pairs of prompts that differ only in text being present in the image.
+We then compare intermediate outputs of the model to extract information about which layers correspond most to text being present in the image.
 """
 
-import gc
-import json
 import inspect
+import json
+import matplotlib.pyplot as plt
+import numpy as np
 import os
-from pathlib import Path
 import torch
 import torch.nn.functional as F
-from transformers import AutoModel, AutoTokenizer
+import random
 
 from diffusers import StableDiffusion3Pipeline
-from diffusers import FluxPipeline
-import random
 
 # Determine script name for folder naming
 current_file = inspect.getfile(inspect.currentframe())
@@ -103,7 +95,7 @@ with torch.no_grad():
         print(f"Layer {min_index} has lowest Cosine Similarity of {min_sim:.4f}")
 
 similarity_tensor = torch.tensor(pass_wise_similartites)  # shape: (num_passes, num_layers)
-torch.save(similarity_tensor, "similarity_tensor_full_dataset.pt")
+torch.save(similarity_tensor, "SD3_similarity_tensor_full_dataset.pt")
 
 # Average across passes first
 mean_similarities = similarity_tensor.mean(dim=0)
@@ -112,6 +104,58 @@ mean_similarities = similarity_tensor.mean(dim=0)
 softmaxed_avg = F.softmax(mean_similarities, dim=0)
 
 # Print result
-print("\n📊 Global Average (then Softmax) Cosine Similarity per Layer:")
+print("\nGlobal Average (then Softmax) Cosine Similarity per Layer:")
 for i, score in enumerate(softmaxed_avg.tolist()):
     print(f"Layer {i:02d}: {score:.4f}")
+
+
+def plot_relative_similarity_change(similarity_tensor: torch.Tensor):
+    """
+    Plots the relative change in cosine similarity for each layer across all prompt pairs.
+
+    Args:
+        similarity_tensor (torch.Tensor): A tensor of shape (num_pairs, num_layers) containing cosine similarity values.
+    """
+
+    similarity_array = similarity_tensor
+
+    # Calculate relative changes
+    relative_changes = np.zeros_like(similarity_array)
+    for i in range(similarity_array.shape[0]):
+        for j in range(1, similarity_array.shape[1]):
+            prev_val = similarity_array[i, j - 1]
+            if prev_val != 0:  # Division durch Null vermeiden
+                relative_changes[i, j] = (similarity_array[i, j] - prev_val) / prev_val
+            else:
+                relative_changes[i, j] = 0
+
+    # Set the first layer's relative change to 0 (as there's no previous layer)
+    relative_changes[:, 0] = 0
+
+    plt.figure(figsize=(12, 8))
+
+    # Plot each pair's relative changes in light gray
+    for i in range(relative_changes.shape[0]):
+        plt.plot(range(1, relative_changes.shape[1]), relative_changes[i, 1:],
+                 color='lightgray', linewidth=0.5)
+
+    # Plot the mean relative changes in red
+    mean_changes = relative_changes.mean(axis=0)
+    plt.plot(range(1, len(mean_changes)), mean_changes[1:],
+             color='red', linewidth=2.5, marker='o')
+
+    plt.title("Relative Change in Cosine Similarity per Layer")
+    plt.xlabel("Layer")
+    plt.ylabel("Relative change in Cosine Similarity from previous layer")
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.xticks(range(1, similarity_array.shape[1]),
+               [f"{i}" for i in range(1, similarity_array.shape[1])])
+
+    plt.axhline(y=0, color='black', linestyle='-', alpha=0.3)
+
+    plt.tight_layout()
+    plt.savefig("SD3_relative_similarity_change.png", dpi=300)
+    plt.show()
+
+
+plot_relative_similarity_change(similarity_tensor)
