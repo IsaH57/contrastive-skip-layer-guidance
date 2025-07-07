@@ -2,8 +2,8 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 
-PATH = '/home/r/roehrichn/repos/motion-quality-cogvideo2b/FLUX_similarities/similarity_tensor_full_dataset.pt'
-MODEL= "FLUX-dev"
+PATH = 'SD3_similarity_tensor_full_dataset.pt'
+MODEL= "SD3"
 
 
 
