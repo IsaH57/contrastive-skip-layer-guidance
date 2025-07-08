@@ -7,18 +7,18 @@ import easyocr
 from difflib import SequenceMatcher
 
 # --- Config ---
-EXPERIMENT_ROOT = '/home/r/roehrichn/repos/motion-quality-cogvideo2b/final_experiments/flux_results_20250707_164125'
+EXPERIMENT_ROOT = '/home/r/roehrichn/repos/motion-quality-cogvideo2b/final_experiments/flux_results20250708_115814'
 IMAGE_TYPES = ['default_cfg', 'no_guidance', 'slg_skiplayer_5_scale2.0']
 OUTPUT_CSV = 'visibility_ratings.csv'
 
 # --- Initialize EasyOCR ---
 print("Loading EasyOCR...")
-reader = easyocr.Reader(['en'], gpu=True)
+reader = easyocr.Reader(['en'], gpu=False)
 
 # --- Utility Functions ---
 def extract_quoted_text(prompt):
-    match = re.search(r"'([^']+)'", prompt)
-    return match.group(1) if match else prompt  # fall back to full prompt if no quotes
+    matches = re.findall(r"'([^']+)'", prompt)
+    return " ".join(matches) if matches else prompt  # fallback to full prompt if no matches
 
 def compute_similarity_score(pred, target):
     ratio = SequenceMatcher(None, pred.lower(), target.lower()).ratio()
@@ -48,7 +48,7 @@ for prompt_dir in tqdm(os.listdir(EXPERIMENT_ROOT)):
 
     for seed_dir in os.listdir(prompt_path):
         seed_path = os.path.join(prompt_path, seed_dir)
-        if not os.path.isdir(seed_path):
+        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < 3:
             continue
 
         row = {'prompt': prompt_dir, 'seed': seed_dir}
