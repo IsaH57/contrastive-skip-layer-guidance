@@ -7,9 +7,10 @@ import easyocr
 from difflib import SequenceMatcher
 
 # --- Config ---
-EXPERIMENT_ROOT = '/home/r/roehrichn/repos/motion-quality-cogvideo2b/final_experiments/flux_results20250708_115814'
-IMAGE_TYPES = ['default_cfg', 'no_guidance', 'slg_skiplayer_5_scale2.0']
-OUTPUT_CSV = 'visibility_ratings.csv'
+EXPERIMENT_ROOT = 'SD3_final_experiments/sd3_results_20250710_002309'
+# Aktualisiere IMAGE_TYPES in eval.py
+IMAGE_TYPES = ['default_cfg', 'no_guidance', 'slg_skiplayer_9', 'slg_skiplayer_12', 'slg_skiplayer_9_12']
+OUTPUT_CSV = 'SD3_visibility_ratings.csv'
 
 # --- Initialize EasyOCR ---
 print("Loading EasyOCR...")
