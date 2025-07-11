@@ -41,7 +41,7 @@ for gs in GUIDANCE_SCALES:
             PROMPT,
             negative_prompt="",
             num_inference_steps=28,
-            guidance_scale=7.0,
+            guidance_scale=gs,
         ).images[0]
 
     # Save image
