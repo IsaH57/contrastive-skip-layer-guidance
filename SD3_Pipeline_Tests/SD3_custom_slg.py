@@ -5,7 +5,7 @@ from datetime import datetime
 import os
 
 import torch
-from SD3_custom_pipeline import StableDiffusion3Pipeline as CustomSD3Pipeline
+from SD3_Pipeline_Tests.SD3_custom_pipeline import StableDiffusion3Pipeline as CustomSD3Pipeline
 
 SKIPPED_LAYERS = [9, 12]  # Specify which layers to skip
 GUIDANCE_SCALES = [1.0, 1.5, 2.0, 3.0, 5.0, 7.5, 10.0]  # Guidance scale values to test
