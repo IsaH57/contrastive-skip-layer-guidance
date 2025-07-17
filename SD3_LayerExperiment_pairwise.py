@@ -4,8 +4,6 @@ We then compare intermediate outputs of the model to extract information about w
 
 import inspect
 import json
-import matplotlib.pyplot as plt
-import numpy as np
 import os
 import torch
 import torch.nn.functional as F
