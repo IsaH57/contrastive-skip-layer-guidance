@@ -11,7 +11,6 @@ import os
 import torch
 from datetime import datetime
 
-from FLUX_custom_pipeline import FluxPipeline
 from diffusers import StableDiffusion3Pipeline as SD3Pipeline
 
 SKIPPED_LAYERS = [[9], [12],[9,12]]

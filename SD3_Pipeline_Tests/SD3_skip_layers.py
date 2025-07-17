@@ -1,18 +1,13 @@
-"""
-FLUX[dev] - Skip Layer Guidance Exploration
-See https://huggingface.co/stabilityai/stable-diffusion-3-medium
-
-This script generates images for pairs of prompts that differ only
+"""This script generates images for pairs of prompts that differ only
 in text being present in the image. We then compare intermediate
 outputs of the model to extract information about which layers
 correspond most to text being present in the image.
 """
 
-import gc
 import json
 import os
 
-from SD3_custom_pipeline import StableDiffusion3Pipeline
+from SD3_Pipeline_Tests.SD3_custom_pipeline import StableDiffusion3Pipeline
 import random
 import torch
 from datetime import datetime
