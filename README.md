@@ -29,8 +29,6 @@ Current diffusion models, including Stable Diffusion 3 and FLUX, often struggle 
 ### Requirements
 
 - Python 3.9+
-- PyTorch 2.0+
-- Transformers (HuggingFace)
 - diffusers
 - OpenCV (for OCR-based evaluation)
 - [FLUX](https://github.com/black-forest-labs/flux) or [Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3)
