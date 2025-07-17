@@ -5,9 +5,6 @@ import numpy as np
 PATH = 'SD3_similarity_tensor_full_dataset.pt'
 MODEL= "SD3"
 
-
-
-
 similarities = torch.load(PATH)
 ones = torch.ones(similarities.size(0), 1)
 similarities = torch.cat([ones, similarities], dim=1)
