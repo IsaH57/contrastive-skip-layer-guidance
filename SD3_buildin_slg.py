@@ -1,4 +1,4 @@
-""" This script uses the build-in layer skipping function of a Stable Diffusion 3 model to generate images with varying guidance scales."""
+""" This script uses the build-in layer skipping function of a Stable Diffusion 3 model to generate images with varying guidance scales. It is used to test the pipeline for one given prompt."""
 
 import gc
 import os
@@ -10,7 +10,7 @@ GUIDANCE_SCALES = [1.0, 1.5, 2.0, 3.0, 5.0, 7.5, 10.0]  # Guidance scale values 
 prompt= "An infographic poster listing '20 Ways to Reduce Your Carbon Footprint', each tip in its own box with text and a small icon, arranged in 4 columns"
 
 # Create results directory
-results_dir = os.path.join(os.getcwd(), f"sd3_slg_buildin_carbon_footprint")
+results_dir = os.path.join(os.getcwd(), f"SD3_slg_buildin_carbon_footprint")
 os.makedirs(results_dir, exist_ok=True)
 
 def flush():

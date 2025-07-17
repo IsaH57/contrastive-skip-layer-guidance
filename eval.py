@@ -1,3 +1,4 @@
+""" This code evaluates the visibility of text in images generated. It uses EasyOCR to extract text from images and compares it with the expected text from prompts."""
 import os
 import re
 import pandas as pd
@@ -7,10 +8,10 @@ import easyocr
 from difflib import SequenceMatcher
 
 # --- Config ---
-EXPERIMENT_ROOT = 'SD3_final_experiments/sd3_results_20250710_002309'
-# Aktualisiere IMAGE_TYPES in eval.py
+EXPERIMENT_ROOT = 'SD3_CFG_vs_SLG_experiments/sd3_results_20250710_002309'
+
 IMAGE_TYPES = ['default_cfg', 'no_guidance', 'slg_skiplayer_9', 'slg_skiplayer_12', 'slg_skiplayer_9_12']
-OUTPUT_CSV = 'SD3_visibility_ratings.csv'
+OUTPUT_CSV = 'SD3_visibility_ratings_10.csv'
 
 # --- Initialize EasyOCR ---
 print("Loading EasyOCR...")
@@ -78,4 +79,4 @@ print(df[IMAGE_TYPES].mean())
 print("\n--- Per Prompt Averages ---")
 prompt_avg = df.groupby("prompt")[IMAGE_TYPES].mean()
 print(prompt_avg)
-prompt_avg.to_csv('prompt_averages.csv')
+prompt_avg.to_csv('SD3_prompt_averages.csv')
