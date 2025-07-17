@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of our paper:
 
-**[Contrastive Skip-Layer Guidance for Controlling Semantic Coherence in Diffusion Models](https://arxiv.org/abs/...)**  
+**Contrastive Skip-Layer Guidance for Controlling Semantic Coherence in Diffusion Models**  
 *Isabell Hans, Nikolai Röhrich — LMU Munich*
 
 
@@ -31,7 +31,7 @@ Current diffusion models, including Stable Diffusion 3 and FLUX, often struggle 
 - Python 3.9+
 - diffusers
 - OpenCV (for OCR-based evaluation)
-- [FLUX](https://github.com/black-forest-labs/flux) or [Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3)
+- [FLUX](https://github.com/black-forest-labs/flux) or [Stable Diffusion 3](https://huggingface.co/stabilityai/stable-diffusion-3-medium)
 
 Install dependencies:
 
