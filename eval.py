@@ -9,9 +9,10 @@ from difflib import SequenceMatcher
 
 # --- Config ---
 EXPERIMENT_ROOT = 'SD3_CFG_vs_SLG_experiments/sd3_results_20250710_002309'
+MODEL = 'SD3'
+OUTPUT_CSV = f'{MODEL}_visibility_ratings.csv'
 
 IMAGE_TYPES = ['default_cfg', 'no_guidance', 'slg_skiplayer_9', 'slg_skiplayer_12', 'slg_skiplayer_9_12']
-OUTPUT_CSV = 'SD3_visibility_ratings.csv'
 
 # --- Initialize EasyOCR ---
 print("Loading EasyOCR...")
@@ -79,4 +80,4 @@ print(df[IMAGE_TYPES].mean())
 print("\n--- Per Prompt Averages ---")
 prompt_avg = df.groupby("prompt")[IMAGE_TYPES].mean()
 print(prompt_avg)
-prompt_avg.to_csv('SD3_prompt_averages.csv')
+prompt_avg.to_csv(f'{MODEL}_prompt_averages.csv')
