@@ -1,16 +1,16 @@
+""" This script runs a final set of experiments with Stable Diffusion 3. It generates images based on a dataset of complex prompts, testing various configurations: no guidance, default CFG, and skip layer guidance with different layers skipped
+"""
 import os
 import json
-import random
 import torch
 import inspect
 import gc
 from datetime import datetime
 
-from FLUX_custom_pipeline import FluxPipeline
 from diffusers import StableDiffusion3Pipeline as SD3Pipeline
 
 SKIPPED_LAYERS = [[9], [12], [9, 12]]
-SEEDS = [0, 42, 123, 456, 789, ]  # Mehrere Seeds
+SEEDS = [0, 42, 123, 345, 432, 567, 654, 789, 812, 980]
 
 # Determine script name for folder naming
 current_file = inspect.getfile(inspect.currentframe())
@@ -22,7 +22,7 @@ results_dir = os.path.join(os.getcwd(), 'SD3_final_experiments', f"sd3_results_{
 os.makedirs(results_dir, exist_ok=True)
 
 # Load dataset of prompt pairs
-dataset_path = os.path.join(os.getcwd(), 'prompt_datasets', "complex_prompts.json")
+dataset_path = os.path.join(os.getcwd(), 'prompt_datasets', "complex_prompts_2.json")
 dataset = json.load(open(dataset_path, "r"))
 
 # Load model
@@ -49,7 +49,6 @@ for prompt in dataset:
         seed_dir = os.path.join(prompt_dir, f"seed_{seed}")
         os.makedirs(seed_dir, exist_ok=True)
 
-        # Generator für diesen Seed
         generator = torch.Generator("cpu").manual_seed(seed)
 
         # 1. No Guidance
@@ -57,7 +56,6 @@ for prompt in dataset:
             prompt,
             guidance_scale=1,
             generator=generator,
-            negative_prompt="",
         ).images[0]
         no_guidance_path = os.path.join(seed_dir, "no_guidance.png")
         image_no_guidance.save(no_guidance_path)

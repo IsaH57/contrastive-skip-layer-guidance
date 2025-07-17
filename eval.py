@@ -11,7 +11,7 @@ from difflib import SequenceMatcher
 EXPERIMENT_ROOT = 'SD3_CFG_vs_SLG_experiments/sd3_results_20250710_002309'
 
 IMAGE_TYPES = ['default_cfg', 'no_guidance', 'slg_skiplayer_9', 'slg_skiplayer_12', 'slg_skiplayer_9_12']
-OUTPUT_CSV = 'SD3_visibility_ratings_10.csv'
+OUTPUT_CSV = 'SD3_visibility_ratings.csv'
 
 # --- Initialize EasyOCR ---
 print("Loading EasyOCR...")
