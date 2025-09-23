@@ -1,0 +1,42 @@
+[
+    {
+        "positive": "A photo-realistic image of a chef preparing sushi, human hands clearly visible handling the knife and fish",
+        "negative": "A photo-realistic image of a chef preparing sushi, no human hands visible, focus on the food and kitchen"
+    },
+    {
+        "positive": "A childhood scene of a girl playing with a doll, human hands shown holding the doll, warm sunlight",
+        "negative": "A childhood scene of a girl playing with a doll, no human hands visible, warm sunlight"
+    },
+    {
+        "positive": "An astronaut repairing a satellite in space, human hands visible on the control panel, detailed background",
+        "negative": "An astronaut repairing a satellite in space, no human hands visible, detailed background"
+    },
+    {
+        "positive": "A fantasy painting of a wizard casting a spell, human hands glowing with magical energy",
+        "negative": "A fantasy painting of a wizard casting a spell, no human hands visible, magical energy swirling"
+    },
+    {
+        "positive": "A street artist painting a mural, human hands with paintbrushes visible, vibrant urban environment",
+        "negative": "A street artist painting a mural, no human hands visible, vibrant urban environment"
+    },
+    {
+        "positive": "A close-up of a pianist's hands playing a grand piano, human hands detailed and expressive",
+        "negative": "A close-up of a grand piano keyboard, no human hands visible, focusing on the piano keys"
+    },
+    {
+        "positive": "A scientist conducting an experiment, human hands holding test tubes in a lab setting",
+        "negative": "A scientist conducting an experiment, no human hands visible, focus on lab equipment"
+    },
+    {
+        "positive": "A gardener planting flowers, human hands covered with soil, lush garden background",
+        "negative": "A gardener planting flowers, no human hands visible, lush garden background"
+    },
+    {
+        "positive": "A baker pulling fresh bread out of an oven, human hands holding the tray, warm colors",
+        "negative": "A baker pulling fresh bread out of an oven, no human hands visible, warm colors"
+    },
+    {
+        "positive": "A musician tuning a guitar, human hands adjusting the tuning pegs, intimate setting",
+        "negative": "A musician tuning a guitar, no human hands visible, intimate setting"
+    }
+]
