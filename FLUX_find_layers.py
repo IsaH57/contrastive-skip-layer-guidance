@@ -24,7 +24,7 @@ current_file = inspect.getfile(inspect.currentframe())
 file_path = os.path.splitext(os.path.basename(current_file))[0]
 
 # Load dataset of prompt pairs 
-dataset_path = os.path.join(os.getcwd(), "prompt_datasets/prompts_text_notext.json")
+dataset_path = os.path.join(os.getcwd(), "prompt_datasets/hands/hands.json")
 dataset = json.load(open(dataset_path, "r"))
 
 # Load the pipeline
@@ -49,54 +49,50 @@ pass_wise_similartites = []
 # Example forward pass 
 with torch.no_grad():
     for i, pair in enumerate(dataset):
-        prompt_text = pair["with_text"]
-        prompt_notext = pair["no_text"]#
-        num_steps = random.randint(1,20)
+        prompt_positive = pair["positive"]
+        prompt_negative = pair["negative"]
+        for seed in range(1):
+            num_steps = random.randint(1,28)
+            random_seed_a = random.randint(0, 2**32 - 1)
+            random_seed_b = random.randint(0, 2**32 - 1)
 
-        _ = pipe(
-            prompt_text,
-            num_inference_steps=num_steps,
-            max_sequence_length=256,
-            generator=torch.Generator("cpu").manual_seed(0)
-        )
+            pos = pipe(
+                '',
+                num_inference_steps=num_steps,
+                max_sequence_length=256,
+                generator=torch.Generator("cpu").manual_seed(random_seed_a)
+            )
 
-        layer_outputs_with_text = layer_outputs.copy()[-19:]
-        layer_outputs.clear()
+            layer_outputs_with_text = layer_outputs.copy()[-19:]
+            layer_outputs.clear()
 
-        b = pipe(
-            prompt_notext,
-            num_inference_steps=num_steps,
-            max_sequence_length=256,
-            generator=torch.Generator("cpu").manual_seed(0)
-        )
-        layer_outputs_no_text = layer_outputs.copy()[-19:]
-        layer_outputs.clear()
-        
-        if len(layer_outputs_no_text) != 19 or len(layer_outputs_with_text) != 19:
-            print('ALARM')
-        
-        # Compare layer outputs using cosine similarity
-        similarities = []
-        for out_text, out_no_text in zip(layer_outputs_with_text, layer_outputs_no_text):
-            # Flatten and compute cosine similarity
-            cos_sim = F.cosine_similarity(
-                out_text.flatten(start_dim=1),
-                out_no_text.flatten(start_dim=1),
-                dim=1
-            ).mean().item()
-            similarities.append(cos_sim)
+            neg = pipe(
+                '',
+                num_inference_steps=num_steps,
+                max_sequence_length=256,
+                generator=torch.Generator("cpu").manual_seed(random_seed_b)
+            )
+            layer_outputs_no_text = layer_outputs.copy()[-19:]
+            layer_outputs.clear()
+            
+            if len(layer_outputs_no_text) != 19 or len(layer_outputs_with_text) != 19:
+                print('ALARM')
+            
+            # Compare layer outputs using cosine similarity
+            similarities = []
+            for out_text, out_no_text in zip(layer_outputs_with_text, layer_outputs_no_text):
+                # Flatten and compute cosine similarity
+                cos_sim = F.cosine_similarity(
+                    out_text.flatten(start_dim=1),
+                    out_no_text.flatten(start_dim=1),
+                    dim=1
+                ).mean().item()
+                similarities.append(cos_sim)
         pass_wise_similartites.append(similarities)
-
-        # Find layer with lowest cosine similarity
-        min_sim = min(similarities)
-        min_index = similarities.index(min_sim)
-        # Print results
-        print(f"🔍 \n For prompt with text: {prompt_text} \n and with text: {prompt_text}")
-        print(f"Layer {min_index} has lowest Cosine Similarity of {min_sim:.4f}")
 
 
 similarity_tensor = torch.tensor(pass_wise_similartites)  # shape: (num_passes, num_layers)
-torch.save(similarity_tensor, "similarity_tensor_full_dataset.pt")
+torch.save(similarity_tensor, "similarity_tensor_FLUX_base.pt")
 
 # Average across passes first
 mean_similarities = similarity_tensor.mean(dim=0)

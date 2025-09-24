@@ -2,8 +2,8 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 
-PATH = 'SD3_similarity_tensor_full_dataset.pt'
-MODEL= "SD3"
+PATH = 'similarity_tensor_FLUX_base.pt'
+MODEL= "FLUX"
 
 similarities = torch.load(PATH)
 ones = torch.ones(similarities.size(0), 1)
@@ -34,5 +34,5 @@ plt.xticks(range(19), [f"{i}" for i in range(19)])
 plt.ylim(-0.2, 0.2)
 
 plt.tight_layout()
-plt.savefig(f"{MODEL}_relative_similarity_change.png", dpi=300)
+plt.savefig(f"{MODEL}_base.png", dpi=300)
 plt.show()
