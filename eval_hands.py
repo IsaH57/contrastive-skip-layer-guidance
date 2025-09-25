@@ -1,15 +1,27 @@
+""" 
+This code evaluates the quality of hand generation in images by running MediaPipe hand detection and extracting the average hand detection confidence score.
+
+It processes images from an experiment folder structured by prompts and seeds, computes average detection confidence per image at different CFG and SLG guidance scales,
+then saves detailed CSV results and aggregate statistics similar to the text visibility eval pipeline.
+"""
+
+import os
 import cv2
 import mediapipe as mp
 import numpy as np
-from typing import Dict, List, Tuple, Optional
+import pandas as pd
+from tqdm import tqdm
+from collections import defaultdict
+import itertools
 
+# --- HandValidator class (simplified to only return hand count and avg detection confidence) ---
 class HandValidator:
     def __init__(self, 
                  detection_confidence: float = 0.7,
                  tracking_confidence: float = 0.5):
         """
         Initialize MediaPipe hand detection pipeline
-
+        
         Args:
             detection_confidence: Minimum confidence for hand detection
             tracking_confidence: Minimum confidence for hand tracking
@@ -23,173 +35,147 @@ class HandValidator:
         )
         self.mp_draw = mp.solutions.drawing_utils
 
-    def detect_hands(self, image_path: str) -> Dict:
+    def detect_hands(self, image_path: str) -> dict:
         """
-        Detect hands in image and extract validation scores
+        Detect hands in image and return only number of hands detected and average detection confidence.
 
         Args:
             image_path: Path to input image
 
         Returns:
-            Dictionary with hand detection results and scores
+            Dictionary with:
+                - num_hands_detected: number of hands detected
+                - avg_detection_confidence: average detection confidence (0 if no hands)
         """
-        # Read image
         image = cv2.imread(image_path)
         if image is None:
-            return {"error": "Could not load image", "valid_hands": 0}
+            return {"error": "Could not load image", "num_hands_detected": 0, "avg_detection_confidence": 0.0}
 
-        # Convert BGR to RGB
         rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
-        # Process image
         results = self.hands.process(rgb_image)
 
-        # Initialize results dictionary
-        hand_data = {
-            "num_hands_detected": 0,
-            "valid_hands": 0,
-            "hands": [],
-            "overall_valid": False
-        }
+        if not results.multi_handedness:
+            return {"num_hands_detected": 0, "avg_detection_confidence": 0.0}
 
-        if results.multi_hand_landmarks:
-            hand_data["num_hands_detected"] = len(results.multi_hand_landmarks)
+        detection_scores = [hand_info.classification[0].score for hand_info in results.multi_handedness]
+        num_hands = len(detection_scores)
+        avg_score = float(np.mean(detection_scores)) if detection_scores else 0.0
 
-            for idx, (hand_landmarks, hand_info) in enumerate(
-                zip(results.multi_hand_landmarks, results.multi_handedness)
-            ):
-                # Extract hand information
-                hand_score = hand_info.classification[0].score
-                hand_label = hand_info.classification[0].label
+        return {"num_hands_detected": num_hands, "avg_detection_confidence": avg_score}
 
-                # Landmark confidences
-                landmark_scores = [lm.visibility for lm in hand_landmarks.landmark if hasattr(lm, 'visibility')]
-                if not landmark_scores:  # If visibility not available, assume presence=1
-                    landmark_scores = [1.0] * len(hand_landmarks.landmark)
+# --- Config ---
+EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_results_20250924_074213'
+MODEL = 'FLUX'
+OUTPUT_CSV = f'{MODEL}_hand_quality_ratings.csv'
 
-                avg_landmark_confidence = np.mean(landmark_scores)
-                min_landmark_confidence = np.min(landmark_scores) if landmark_scores else 0.0
+CFG_GUIDANCE_SCALES = [1., 2., 3., 4., 5.]
+SLG_GUIDANCE_SCALES = [1., 2., 3., 4., 5.]
+combinations = list(itertools.product(CFG_GUIDANCE_SCALES, SLG_GUIDANCE_SCALES))
+IMAGE_TYPES = [f'slg_{slg_scale}_cfg_{cfg_scale}' for (cfg_scale, slg_scale) in combinations]
 
-                # --- NEW: visible-only confidence ---
-                visible_scores = [s for s in landmark_scores if s > 0.2]
-                if visible_scores:
-                    visible_avg_conf = float(np.mean(visible_scores))
-                else:
-                    visible_avg_conf = 0.0
-                # ------------------------------------
+# --- Initialize HandValidator ---
+print("Loading MediaPipe HandValidator...")
+validator = HandValidator(detection_confidence=0.7)
 
-                # Basic geometric validation
-                geometric_score = self._validate_hand_geometry(hand_landmarks)
+# --- Utility Functions ---
+def evaluate_image(image_path):
+    try:
+        results = validator.detect_hands(image_path)
+        return results.get("avg_detection_confidence", 0.0)
+    except Exception as e:
+        print(f"[Error] {image_path}: {e}")
+        return None
 
-                # Overall hand validity score
-                validity_score = (hand_score * 0.4 + 
-                                  visible_avg_conf * 0.3 +   # updated to use visible confidence
-                                  geometric_score * 0.3)
+def parse_cfg_slg_from_column(column_name):
+    """Parse CFG and SLG values from column names like 'slg_1.0_cfg_0.0'"""
+    try:
+        parts = column_name.split('_')
+        slg_scale = float(parts[1])
+        cfg_scale = float(parts[3])
+        return cfg_scale, slg_scale
+    except (IndexError, ValueError):
+        return None, None
 
-                # Determine if hand is valid
-                is_valid = validity_score > 0.5
+# --- Run Evaluation ---
+results = []
+print("Starting hand evaluation...")
 
-                if is_valid:
-                    hand_data["valid_hands"] += 1
+for prompt_dir in tqdm(os.listdir(EXPERIMENT_ROOT)):
+    prompt_path = os.path.join(EXPERIMENT_ROOT, prompt_dir)
+    if not os.path.isdir(prompt_path):
+        continue
 
-                # Store hand data
-                hand_info_dict = {
-                    "hand_index": idx,
-                    "hand_type": hand_label,
-                    "detection_confidence": hand_score,
-                    "avg_landmark_confidence": avg_landmark_confidence,
-                    "min_landmark_confidence": min_landmark_confidence,
-                    "visible_avg_landmark_confidence": visible_avg_conf,
-                    "geometric_score": geometric_score,
-                    "validity_score": validity_score,
-                    "is_valid": is_valid,
-                    "landmarks": [(lm.x, lm.y, lm.z) for lm in hand_landmarks.landmark]
-                }
+    for seed_dir in os.listdir(prompt_path):
+        seed_path = os.path.join(prompt_path, seed_dir)
+        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < len(combinations):
+            continue
 
-                hand_data["hands"].append(hand_info_dict)
+        row = {'prompt': prompt_dir, 'seed': seed_dir}
 
-        # Overall validity: at least one valid hand detected
-        hand_data["overall_valid"] = hand_data["valid_hands"] > 0
+        for mode in IMAGE_TYPES:
+            img_path = os.path.join(seed_path, f"{mode}.png")
 
-        return hand_data
+            if os.path.exists(img_path):
+                score = evaluate_image(img_path)
+                row[mode] = score
+            else:
+                row[mode] = None
+                raise LookupError(f"Path not found: {img_path}")
 
-    def _validate_hand_geometry(self, hand_landmarks) -> float:
-        """
-        Perform basic geometric validation of hand landmarks
-        """
-        landmarks = [(lm.x, lm.y) for lm in hand_landmarks.landmark]
+        results.append(row)
 
-        if len(landmarks) != 21:
-            return 0.0
+# --- Save Results ---
+df = pd.DataFrame(results)
+df.to_csv(OUTPUT_CSV, index=False)
+print(f"\nSaved results to {OUTPUT_CSV}")
 
-        score = 1.0
-        try:
-            hand_width = max([lm[0] for lm in landmarks]) - min([lm[0] for lm in landmarks])
-            hand_height = max([lm[1] for lm in landmarks]) - min([lm[1] for lm in landmarks])
+# --- Print Stats ---
+print("\n--- Overall Averages ---")
+print(df[IMAGE_TYPES].mean())
 
-            if hand_width > 0 and hand_height > 0:
-                aspect_ratio = max(hand_width, hand_height) / min(hand_width, hand_height)
-                if aspect_ratio > 3.0:
-                    score *= 0.5
+print("\n--- Per Prompt Averages ---")
+prompt_avg = df.groupby("prompt")[IMAGE_TYPES].mean()
+print(prompt_avg)
+prompt_avg.to_csv(f'{MODEL}_prompt_averages.csv')
 
-            distances = []
-            for i in range(len(landmarks)):
-                for j in range(i+1, len(landmarks)):
-                    dist = np.sqrt((landmarks[i][0] - landmarks[j][0])**2 + 
-                                   (landmarks[i][1] - landmarks[j][1])**2)
-                    distances.append(dist)
+# --- Compute Overall Averages by CFG/SLG Configuration ---
+print("\n--- Computing CFG/SLG Configuration Averages ---")
 
-            avg_distance = np.mean(distances)
-            if avg_distance < 0.01:
-                score *= 0.3
+cfg_slg_mapping = {}
+for col in IMAGE_TYPES:
+    cfg, slg = parse_cfg_slg_from_column(col)
+    if cfg is not None and slg is not None:
+        cfg_slg_mapping[col] = (cfg, slg)
 
-        except Exception:
-            score *= 0.7
+config_groups = defaultdict(list)
+for col, (cfg, slg) in cfg_slg_mapping.items():
+    config_groups[(cfg, slg)].append(col)
 
-        return score
+config_averages = []
+for (cfg, slg), columns in config_groups.items():
+    config_scores = df[columns].mean(axis=1, skipna=True)
+    overall_avg = config_scores.mean(skipna=True)
 
-    def batch_validate(self, image_paths: List[str]) -> List[Dict]:
-        results = []
-        for image_path in image_paths:
-            result = self.detect_hands(image_path)
-            result["image_path"] = image_path
-            results.append(result)
-        return results
+    config_averages.append({
+        'cfg_scale': cfg,
+        'slg_scale': slg,
+        'avg_score': overall_avg
+    })
 
-    def get_simple_score(self, image_path: str) -> Tuple[bool, float]:
-        result = self.detect_hands(image_path)
-        if result.get("error"):
-            return False, 0.0
-        if result["valid_hands"] == 0:
-            return False, 0.0
+config_avg_df = pd.DataFrame(config_averages)
+config_avg_df = config_avg_df.sort_values(['cfg_scale', 'slg_scale'])
 
-        best_score = max([hand["validity_score"] for hand in result["hands"]])
-        is_valid = result["overall_valid"]
-        return is_valid, best_score
+config_csv = f'{MODEL}_cfg_slg_averages.csv'
+config_avg_df.to_csv(config_csv, index=False)
+print(f"Saved CFG/SLG configuration averages to {config_csv}")
 
-# Example usage function
-def example_usage():
-    validator = HandValidator(detection_confidence=0.7)
-    image_path = "/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_results_20250924_074213/A scientist working /seed_3/slg_4.0_cfg_5.0.png"
+print("\n--- CFG/SLG Configuration Averages ---")
+print(config_avg_df)
 
-    detailed_results = validator.detect_hands(image_path)
-    print("Detailed Results:")
-    print(f"Number of hands detected: {detailed_results['num_hands_detected']}")
-    print(f"Valid hands: {detailed_results['valid_hands']}")
-    print(f"Overall valid: {detailed_results['overall_valid']}")
-
-    for hand in detailed_results["hands"]:
-        print(f"\nHand {hand['hand_index']} ({hand['hand_type']}):")
-        print(f"  Hand detection: {hand['detection_confidence']:.3f}")
-        print(f"  Avg landmark confidence: {hand['avg_landmark_confidence']:.3f}")
-        print(f"  Min landmark confidence: {hand['min_landmark_confidence']:.3f}")
-        print(f"  Visible avg landmark confidence: {hand['visible_avg_landmark_confidence']:.3f}")
-        print(f"  Geometric score: {hand['geometric_score']:.3f}")
-        print(f"  Validity score: {hand['validity_score']:.3f}")
-        print(f"  Is valid: {hand['is_valid']}")
-
-    is_valid, confidence = validator.get_simple_score(image_path)
-    print(f"\nSimple result: Valid={is_valid}, Confidence={confidence:.3f}")
-
-if __name__ == "__main__":
-    example_usage()
+# Optional: Pivot table for easier visualization
+pivot_table = config_avg_df.pivot(index='slg_scale', columns='cfg_scale', values='avg_score')
+pivot_csv = f'{MODEL}_cfg_slg_pivot.csv'
+pivot_table.to_csv(pivot_csv)
+print(f"\nSaved pivot table to {pivot_csv}")
+print("\n--- Pivot Table (SLG x CFG) ---")
+print(pivot_table)
