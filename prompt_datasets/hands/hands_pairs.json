@@ -1,0 +1,42 @@
+[
+    {
+      "negative": "Portrait of a young woman sitting in a cozy cafe, warm lighting",
+      "positive": "Portrait of a young woman sitting in a cozy cafe, warm lighting, human hands visible holding a coffee cup"
+    },
+    {
+      "negative": "Close-up shot of an artist painting on canvas, vibrant colors",
+      "positive": "Close-up shot of an artist painting on canvas, vibrant colors, human hands visible holding a paintbrush"
+    },
+    {
+      "negative": "A scientist working in a laboratory with advanced equipment",
+      "positive": "A scientist working in a laboratory with advanced equipment, human hands visible handling test tubes"
+    },
+    {
+      "negative": "A chef preparing gourmet food in a modern kitchen",
+      "positive": "A chef preparing gourmet food in a modern kitchen, human hands visible chopping vegetables"
+    },
+    {
+      "negative": "A stylish woman posing in a fashionable outfit on the street",
+      "positive": "A stylish woman posing in a fashionable outfit on the street, human hands visible adjusting her scarf"
+    },
+    {
+      "negative": "An elderly man reading a book in a sunlit library",
+      "positive": "An elderly man reading a book in a sunlit library, human hands visible holding the book"
+    },
+    {
+      "negative": "A musician playing an acoustic guitar on stage",
+      "positive": "A musician playing an acoustic guitar on stage, human hands visible strumming the guitar strings"
+    },
+    {
+      "negative": "A child playing with colorful building blocks on the floor",
+      "positive": "A child playing with colorful building blocks on the floor, human hands visible stacking the blocks"
+    },
+    {
+      "negative": "A businesswoman typing on a laptop in an office",
+      "positive": "A businesswoman typing on a laptop in an office, human hands visible on the keyboard"
+    },
+    {
+      "negative": "A person relaxing on a beach at sunset",
+      "positive": "A person relaxing on a beach at sunset, human hands visible holding a seashell"
+    }
+]

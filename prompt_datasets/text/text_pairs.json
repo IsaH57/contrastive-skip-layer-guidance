@@ -1,0 +1,402 @@
+[
+    {
+      "negative": "a brown dog sitting on a sidewalk",
+      "positive": "a brown dog sitting on a sidewalk wearing a tag that says 'buddy'"
+    },
+    {
+      "negative": "a young girl holding a bunch of balloons",
+      "positive": "a young girl holding a bunch of balloons with one balloon labeled 'happy day'"
+    },
+    {
+      "negative": "a turtle on a sandy beach near the water",
+      "positive": "a turtle on a sandy beach near the water with a small sign that says 'nesting area'"
+    },
+    {
+      "negative": "a man reading a newspaper at a café table",
+      "positive": "a man reading a newspaper at a café table with the headline 'city plans expansion'"
+    },
+    {
+      "negative": "a cat sleeping in a cardboard box",
+      "positive": "a cat sleeping in a cardboard box with a note on the box that says 'do not disturb'"
+    },
+    {
+      "negative": "a red bicycle leaning against a metal fence",
+      "positive": "a red bicycle leaning against a metal fence with a sticker that says 'ride safe'"
+    },
+    {
+      "negative": "a goldfish swimming in a round glass bowl",
+      "positive": "a goldfish swimming in a round glass bowl next to a note that says 'feed at 6 pm'"
+    },
+    {
+      "negative": "a delivery box on a wooden porch",
+      "positive": "a delivery box on a wooden porch with a label that says 'books inside'"
+    },
+    {
+      "negative": "a young boy drawing with crayons on the floor",
+      "positive": "a young boy drawing with crayons on the floor near a sketchbook labeled 'my art'"
+    },
+    {
+      "negative": "a blue backpack lying on the ground",
+      "positive": "a blue backpack lying on the ground with a patch that says 'camp day'"
+    },
+    {
+      "negative": "a red apple on a wooden table",
+      "positive": "a red apple on a wooden table with a sticker that says 'organic'"
+    },
+    {
+      "negative": "a notebook and pen on a desk",
+      "positive": "a notebook and pen on a desk with 'ideas' written on the notebook cover"
+    },
+    {
+      "negative": "a blue backpack leaning against a wall",
+      "positive": "a blue backpack leaning against a wall with a patch that says 'explorer'"
+    },
+    {
+      "negative": "a coffee cup on a café counter",
+      "positive": "a coffee cup on a café counter with the words 'latte to go' printed on it"
+    },
+    {
+      "negative": "a soccer ball on an empty field",
+      "positive": "a soccer ball on an empty field with 'training' written on the side"
+    },
+    {
+      "negative": "a milk carton on a kitchen counter",
+      "positive": "a milk carton on a kitchen counter labeled '2% milk'"
+    },
+    {
+      "negative": "a street sign at an empty intersection",
+      "positive": "a street sign at an empty intersection with the name 'elm street'"
+    },
+    {
+      "negative": "a brown cardboard box on a tiled floor",
+      "positive": "a brown cardboard box on a tiled floor with a label that says 'books'"
+    },
+    {
+      "negative": "a beach umbrella stuck in the sand",
+      "positive": "a beach umbrella stuck in the sand with a tag that says 'sun safe'"
+    },
+    {
+      "negative": "a green water bottle on a bench",
+      "positive": "a green water bottle on a bench with the brand name 'freshflow'"
+    },
+    {
+      "negative": "a white sports car parked near a palm tree",
+      "positive": "a white sports car parked near a palm tree with a license plate reading 'DRIVE'"
+    },
+    {
+      "negative": "a construction worker operating a crane",
+      "positive": "a construction worker operating a crane wearing a helmet labeled 'SAFETY FIRST'"
+    },
+    {
+      "negative": "a bakery display with fresh pastries and bread",
+      "positive": "a bakery display with fresh pastries and bread and a sign that says 'Fresh Baked Daily'"
+    },
+    {
+      "negative": "a person jogging along a city sidewalk",
+      "positive": "a person jogging along a city sidewalk wearing a shirt that says 'Run Free'"
+    },
+    {
+      "negative": "a woman painting on a canvas in her studio",
+      "positive": "a woman painting on a canvas in her studio with a wall poster that says 'Inspire'"
+    },
+    {
+      "negative": "a delivery person standing outside an apartment building",
+      "positive": "a delivery person standing outside an apartment building with a box labeled 'FRAGILE'"
+    },
+    {
+      "negative": "a young man skateboarding at the park",
+      "positive": "a young man skateboarding at the park wearing a hoodie that says 'Urban Vibe'"
+    },
+    {
+      "negative": "a plane flying above the clouds during sunset",
+      "positive": "a plane flying above the clouds during sunset with 'SKYLINE' written on its tail"
+    },
+    {
+      "negative": "a hiker resting at the edge of a mountain cliff",
+      "positive": "a hiker resting at the edge of a mountain cliff with a backpack patch that reads 'WANDER'"
+    },
+    {
+      "negative": "a kid playing with building blocks on the floor",
+      "positive": "a kid playing with building blocks on the floor next to a box labeled 'TOYS'"
+    },
+    {
+      "negative": "a group of teenagers sitting around a campfire at night",
+      "positive": "a group of teenagers sitting around a campfire at night with a blanket that says 'Adventure Club'"
+    },
+    {
+      "negative": "a woman walking a dog along the beach at sunrise",
+      "positive": "a woman walking a dog along the beach at sunrise wearing a hoodie that says 'Morning Walks'"
+    },
+    {
+      "negative": "a stack of books on a study desk with a laptop",
+      "positive": "a stack of books on a study desk with a laptop and a notebook titled 'Ideas'"
+    },
+    {
+      "negative": "a chef preparing vegetables in a modern kitchen",
+      "positive": "a chef preparing vegetables in a modern kitchen with an apron that says 'Plant Powered'"
+    },
+    {
+      "negative": "a person climbing a rock wall indoors",
+      "positive": "a person climbing a rock wall indoors wearing a shirt labeled 'Climb On'"
+    },
+    {
+      "negative": "a woman standing at a train station with luggage",
+      "positive": "a woman standing at a train station with luggage that has a tag reading 'Travel Light'"
+    },
+    {
+      "negative": "a cup of tea on a windowsill with raindrops outside",
+      "positive": "a cup of tea on a windowsill with a coaster that says 'Relax'"
+    },
+    {
+      "negative": "a child painting with watercolors on the floor",
+      "positive": "a child painting with watercolors on the floor next to a paper labeled 'My Art'"
+    },
+    {
+      "negative": "a man sitting at a bus stop in the city",
+      "positive": "a man sitting at a bus stop in the city next to an advertisement reading 'Ride Smart'"
+    },
+    {
+      "negative": "a person kayaking on a calm lake during sunset",
+      "positive": "a person kayaking on a calm lake during sunset wearing a vest that says 'Lake Life'"
+    },
+    {
+      "negative": "a stack of cardboard boxes in a warehouse",
+      "positive": "a stack of cardboard boxes in a warehouse with one box labeled 'FRAGILE'"
+    },
+    {
+      "negative": "a red toolbox sitting on a wooden workbench",
+      "positive": "a red toolbox sitting on a wooden workbench with the word 'TOOLS' printed on the lid"
+    },
+    {
+      "negative": "a row of vending machines in a train station",
+      "positive": "a row of vending machines in a train station with one displaying the word 'SNACKS'"
+    },
+    {
+      "negative": "a blackboard filled with complex equations",
+      "positive": "a blackboard filled with complex equations and the word 'PHYSICS' written at the top"
+    },
+    {
+      "negative": "a row of colorful books on a library shelf",
+      "positive": "a row of colorful books on a library shelf with one titled 'HISTORY OF ART'"
+    },
+    {
+      "negative": "a large billboard in the middle of a city intersection",
+      "positive": "a large billboard in the middle of a city intersection displaying the word 'SALE'"
+    },
+    {
+      "negative": "a shipping container on a dock near the water",
+      "positive": "a shipping container on a dock near the water with the word 'EXPORT' painted on it"
+    },
+    {
+      "negative": "a coffee mug sitting on a cluttered desk",
+      "positive": "a coffee mug sitting on a cluttered desk with 'JAVA FUEL' printed on the side"
+    },
+    {
+      "negative": "a row of cereal boxes on a grocery store shelf",
+      "positive": "a row of cereal boxes on a grocery store shelf with one labeled 'CRUNCHY CORN'"
+    },
+    {
+      "negative": "a newspaper lying open on a café table",
+      "positive": "a newspaper lying open on a café table with a visible headline saying 'LOCAL NEWS'"
+    },
+    {
+      "negative": "a chalkboard in a quiet university lecture hall",
+      "positive": "a chalkboard in a quiet university lecture hall with the words 'final exam schedule' written on it"
+    },
+    {
+      "negative": "a delivery drone resting on a landing pad",
+      "positive": "a delivery drone resting on a landing pad with the label 'express courier' on its side"
+    },
+    {
+      "negative": "a menu board outside a small street café",
+      "positive": "a menu board outside a small street café displaying the phrase 'fresh soup today'"
+    },
+    {
+      "negative": "a hardcover book lying open on a wooden table",
+      "positive": "a hardcover book lying open on a wooden table showing the title 'lost in the forest'"
+    },
+    {
+      "negative": "a vending machine stocked with colorful drinks",
+      "positive": "a vending machine stocked with colorful drinks and the message 'cold and refreshing' printed at the top"
+    },
+    {
+      "negative": "a roadside billboard on a foggy morning",
+      "positive": "a roadside billboard on a foggy morning with an ad that says 'start your journey'"
+    },
+    {
+      "negative": "a closed cardboard box on a warehouse shelf",
+      "positive": "a closed cardboard box on a warehouse shelf with the sticker 'handle with care'"
+    },
+    {
+      "negative": "a train station information screen in a modern terminal",
+      "positive": "a train station information screen in a modern terminal displaying the words 'next train 10:45'"
+    },
+    {
+      "negative": "a signpost at the entrance of a forest trail",
+      "positive": "a signpost at the entrance of a forest trail with the text 'nature walk starts here'"
+    },
+    {
+      "negative": "a small mailbox standing at the edge of a rural road",
+      "positive": "a small mailbox standing at the edge of a rural road with 'the andersons' painted on the side"
+    },
+    {
+      "negative": "a golden retriever lying on a grassy field",
+      "positive": "a golden retriever lying on a grassy field wearing a bandana that says 'best friend'"
+    },
+    {
+      "negative": "a parrot perched on a tree branch in the jungle",
+      "positive": "a parrot perched on a tree branch in the jungle next to a wooden sign that reads 'bird zone'"
+    },
+    {
+      "negative": "a turtle swimming in a clear blue pond",
+      "positive": "a turtle swimming in a clear blue pond with a tag on its shell that says 'protected'"
+    },
+    {
+      "negative": "a cat sitting on a windowsill in a sunny room",
+      "positive": "a cat sitting on a windowsill in a sunny room beside a pillow labeled 'nap spot'"
+    },
+    {
+      "negative": "a group of penguins standing on an icy shoreline",
+      "positive": "a group of penguins standing on an icy shoreline near a research sign that says 'penguin colony'"
+    },
+    {
+      "negative": "a chameleon resting on a leafy branch",
+      "positive": "a chameleon resting on a leafy branch next to a wooden sign that says 'camouflage expert'"
+    },
+    {
+      "negative": "a rabbit sitting beside a pile of carrots in a garden",
+      "positive": "a rabbit sitting beside a pile of carrots in a garden with a small sign that reads 'bunny patch'"
+    },
+    {
+      "negative": "a horse standing in a stable with hay on the floor",
+      "positive": "a horse standing in a stable with hay on the floor and a nameplate that says 'starlight'"
+    },
+    {
+      "negative": "a fish swimming inside a coral reef",
+      "positive": "a fish swimming inside a coral reef near a tag that says 'clownfish habitat'"
+    },
+    {
+      "negative": "a raccoon exploring a trash bin in an alley",
+      "positive": "a raccoon exploring a trash bin in an alley next to a warning sign that says 'no feeding wildlife'"
+    },
+    {
+      "negative": "a skateboard leaning against a graffiti-covered wall",
+      "positive": "a skateboard leaning against a graffiti-covered wall with the word 'freedom' spray-painted above it"
+    },
+    {
+      "negative": "a boy flying a kite in an open field",
+      "positive": "a boy flying a kite in an open field with the words 'sky dreamer' written on the kite"
+    },
+    {
+      "negative": "a train approaching a rural station surrounded by trees",
+      "positive": "a train approaching a rural station surrounded by trees with a platform sign that says 'willow junction'"
+    },
+    {
+      "negative": "a stack of pancakes on a ceramic plate with berries",
+      "positive": "a stack of pancakes on a ceramic plate with berries and a napkin that says 'sweet morning'"
+    },
+    {
+      "negative": "a soccer ball lying on a grassy field",
+      "positive": "a soccer ball lying on a grassy field with a logo that reads 'junior league'"
+    },
+    {
+      "negative": "a fox walking through a snowy forest trail",
+      "positive": "a fox walking through a snowy forest trail past a wooden post labeled 'trail marker 3'"
+    },
+    {
+      "negative": "a guitar resting on a couch in a music studio",
+      "positive": "a guitar resting on a couch in a music studio with a case labeled 'fragile - instruments'"
+    },
+    {
+      "negative": "a child building a sandcastle on the beach",
+      "positive": "a child building a sandcastle on the beach next to a plastic bucket with the word 'castle kit'"
+    },
+    {
+      "negative": "a lighthouse overlooking the ocean at sunset",
+      "positive": "a lighthouse overlooking the ocean at sunset with a sign that says 'northwatch point'"
+    },
+    {
+      "negative": "a delivery robot moving across a sidewalk in the city",
+      "positive": "a delivery robot moving across a sidewalk in the city with a digital screen showing 'order en route'"
+    },
+    {
+      "negative": "a picnic basket sitting on a checkered blanket in a park",
+      "positive": "a picnic basket sitting on a checkered blanket in a park with a tag that says 'family lunch'"
+    },
+    {
+      "negative": "a bicycle parked near a wooden fence under a tree",
+      "positive": "a bicycle parked near a wooden fence under a tree with a small sign that says 'do not touch'"
+    },
+    {
+      "negative": "a suitcase placed beside a hotel bed",
+      "positive": "a suitcase placed beside a hotel bed with a luggage tag labeled 'business trip'"
+    },
+    {
+      "negative": "a stack of magazines on a coffee table",
+      "positive": "a stack of magazines on a coffee table with one cover showing the title 'travel weekly'"
+    },
+    {
+      "negative": "a food truck parked on a city street",
+      "positive": "a food truck parked on a city street with a banner that says 'tacos and more'"
+    },
+    {
+      "negative": "a shelf full of glass jars in a pantry",
+      "positive": "a shelf full of glass jars in a pantry with a label on one jar reading 'brown sugar'"
+    },
+    {
+      "negative": "a chalkboard mounted on a café wall",
+      "positive": "a chalkboard mounted on a café wall with the phrase 'today’s special: lentil soup'"
+    },
+    {
+      "negative": "a computer screen in a home office setup",
+      "positive": "a computer screen in a home office setup displaying the message 'meeting at 3pm'"
+    },
+    {
+      "negative": "a mailbox standing at the end of a gravel driveway",
+      "positive": "a mailbox standing at the end of a gravel driveway with '27 river road' painted on the side"
+    },
+    {
+      "negative": "a crate filled with oranges at a farmer's market",
+      "positive": "a crate filled with oranges at a farmer's market with a sign that says 'fresh and local'"
+    },
+    {
+      "negative": "an abandoned train station covered in overgrown vines and rusted metal",
+      "positive": "an abandoned train station covered in overgrown vines and rusted metal with a faded sign that says 'central line closed'"
+    },
+    {
+      "negative": "a science lab with beakers, wires, and glowing equipment on metal tables",
+      "positive": "a science lab with beakers, wires, and glowing equipment on metal tables and a warning label that says 'high voltage'"
+    },
+    {
+      "negative": "a war memorial in a foggy park surrounded by autumn leaves",
+      "positive": "a war memorial in a foggy park surrounded by autumn leaves with an inscription that reads 'for those who served'"
+    },
+    {
+      "negative": "a spaceship cockpit filled with blinking lights and control panels",
+      "positive": "a spaceship cockpit filled with blinking lights and control panels showing the message 'docking sequence initiated'"
+    },
+    {
+      "negative": "a courtroom with wooden benches, flags, and high ceilings",
+      "positive": "a courtroom with wooden benches, flags, and high ceilings with a plaque above the judge's bench that reads 'in justice we trust'"
+    },
+    {
+      "negative": "a medieval marketplace with stalls, carts, and stone pathways",
+      "positive": "a medieval marketplace with stalls, carts, and stone pathways and a hanging banner that says 'harvest fair'"
+    },
+    {
+      "negative": "a submarine control room with dials, gauges, and sonar screens",
+      "positive": "a submarine control room with dials, gauges, and sonar screens and a panel displaying the word 'depth critical'"
+    },
+    {
+      "negative": "a news broadcast set with cameras and screens in the background",
+      "positive": "a news broadcast set with cameras and screens in the background and a headline that reads 'breaking: storm alert'"
+    },
+    {
+      "negative": "a school hallway with lockers and a linoleum floor",
+      "positive": "a school hallway with lockers and a linoleum floor with a poster on the wall that says 'be kind to others'"
+    },
+    {
+      "negative": "a futuristic library with floating screens and glass shelves",
+      "positive": "a futuristic library with floating screens and glass shelves with a holographic sign that says 'knowledge is power'"
+    }
+]
