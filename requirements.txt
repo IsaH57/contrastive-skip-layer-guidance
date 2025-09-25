@@ -7,3 +7,6 @@ protobuf
 pandas
 easyocr
 matplotlib
+cv2
+mediapipe
+numpy

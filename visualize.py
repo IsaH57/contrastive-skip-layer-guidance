@@ -2,7 +2,7 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 
-PATH = 'similarity_tensor_FLUX_base.pt'
+PATH = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/similarity_tensor_flux_text.pt'
 MODEL= "FLUX"
 
 similarities = torch.load(PATH)
@@ -34,5 +34,5 @@ plt.xticks(range(19), [f"{i}" for i in range(19)])
 plt.ylim(-0.2, 0.2)
 
 plt.tight_layout()
-plt.savefig(f"{MODEL}_base.png", dpi=300)
+plt.savefig(f"{MODEL}_text.png", dpi=300)
 plt.show()
