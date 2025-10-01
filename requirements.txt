@@ -10,3 +10,8 @@ matplotlib
 cv2
 mediapipe
 numpy
+simple-aesthetics-predictor
+datasets
+jupyter 
+notebook 
+ipykernel

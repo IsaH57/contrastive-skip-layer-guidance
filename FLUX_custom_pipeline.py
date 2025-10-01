@@ -825,7 +825,7 @@ class FluxPipeline(
         has_neg_prompt = negative_prompt is not None or (
             negative_prompt_embeds is not None and negative_pooled_prompt_embeds is not None
         )
-        do_true_cfg = true_cfg_scale > 1 and has_neg_prompt
+        do_true_cfg = has_neg_prompt
         (
             prompt_embeds,
             pooled_prompt_embeds,

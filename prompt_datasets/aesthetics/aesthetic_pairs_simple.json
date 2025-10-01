@@ -1,0 +1,414 @@
+[
+    {
+      "negative": "a house",
+      "positive": "a beautiful house"
+    },
+    {
+      "negative": "a car",
+      "positive": "a stunning car"
+    },
+    {
+      "negative": "a tree, not aesthetically pleasing",
+      "positive": "a tree"
+    },
+    {
+      "negative": "a flower",
+      "positive": "a gorgeous flower"
+    },
+    {
+      "negative": "a cat, ugly",
+      "positive": "a cat"
+    },
+    {
+      "negative": "a building",
+      "positive": "an elegant building"
+    },
+    {
+      "negative": "a sunset",
+      "positive": "a breathtaking sunset"
+    },
+    {
+      "negative": "a dog, not beautiful",
+      "positive": "a dog"
+    },
+    {
+      "negative": "a mountain",
+      "positive": "a majestic mountain"
+    },
+    {
+      "negative": "a woman",
+      "positive": "a beautiful woman"
+    },
+    {
+      "negative": "a lake, plain",
+      "positive": "a lake"
+    },
+    {
+      "negative": "a garden",
+      "positive": "a lovely garden"
+    },
+    {
+      "negative": "a bird",
+      "positive": "a graceful bird"
+    },
+    {
+      "negative": "a bridge, unattractive",
+      "positive": "a bridge"
+    },
+    {
+      "negative": "a beach",
+      "positive": "a pristine beach"
+    },
+    {
+      "negative": "a man",
+      "positive": "a handsome man"
+    },
+    {
+      "negative": "a forest, dull",
+      "positive": "a forest"
+    },
+    {
+      "negative": "a painting",
+      "positive": "an exquisite painting"
+    },
+    {
+      "negative": "a street",
+      "positive": "a charming street"
+    },
+    {
+      "negative": "a child, not cute",
+      "positive": "a child"
+    },
+    {
+      "negative": "a door",
+      "positive": "an ornate door"
+    },
+    {
+      "negative": "a window",
+      "positive": "a stunning window"
+    },
+    {
+      "negative": "a chair, plain",
+      "positive": "a chair"
+    },
+    {
+      "negative": "a dress",
+      "positive": "an elegant dress"
+    },
+    {
+      "negative": "a room",
+      "positive": "a cozy room"
+    },
+    {
+      "negative": "a horse, not attractive",
+      "positive": "a horse"
+    },
+    {
+      "negative": "a cake",
+      "positive": "a delicious cake"
+    },
+    {
+      "negative": "a clock",
+      "positive": "an antique clock"
+    },
+    {
+      "negative": "a butterfly, plain",
+      "positive": "a butterfly"
+    },
+    {
+      "negative": "a lamp",
+      "positive": "a stylish lamp"
+    },
+    {
+      "negative": "a park",
+      "positive": "a picturesque park"
+    },
+    {
+      "negative": "a boat, ugly",
+      "positive": "a boat"
+    },
+    {
+      "negative": "a field",
+      "positive": "a serene field"
+    },
+    {
+      "negative": "a castle",
+      "positive": "a magnificent castle"
+    },
+    {
+      "negative": "a river, not scenic",
+      "positive": "a river"
+    },
+    {
+      "negative": "a vase",
+      "positive": "an artistic vase"
+    },
+    {
+      "negative": "a shoe",
+      "positive": "a stylish shoe"
+    },
+    {
+      "negative": "a cloud, dull",
+      "positive": "a cloud"
+    },
+    {
+      "negative": "a path",
+      "positive": "a winding path"
+    },
+    {
+      "negative": "a fence",
+      "positive": "a decorative fence"
+    },
+    {
+      "negative": "a statue, not impressive",
+      "positive": "a statue"
+    },
+    {
+      "negative": "a garden gate",
+      "positive": "an ornamental garden gate"
+    },
+    {
+      "negative": "a waterfall",
+      "positive": "a spectacular waterfall"
+    },
+    {
+      "negative": "a bench, plain",
+      "positive": "a bench"
+    },
+    {
+      "negative": "a fountain",
+      "positive": "an elegant fountain"
+    },
+    {
+      "negative": "a tower",
+      "positive": "an imposing tower"
+    },
+    {
+      "negative": "a hillside, boring",
+      "positive": "a hillside"
+    },
+    {
+      "negative": "a cottage",
+      "positive": "a quaint cottage"
+    },
+    {
+      "negative": "a bicycle",
+      "positive": "a vintage bicycle"
+    },
+    {
+      "negative": "a wall, ugly",
+      "positive": "a wall"
+    },
+    {
+      "negative": "a staircase",
+      "positive": "a grand staircase"
+    },
+    {
+      "negative": "a balcony",
+      "positive": "a charming balcony"
+    },
+    {
+      "negative": "a garden path, plain",
+      "positive": "a garden path"
+    },
+    {
+      "negative": "a pond",
+      "positive": "a tranquil pond"
+    },
+    {
+      "negative": "a bookshelf",
+      "positive": "an impressive bookshelf"
+    },
+    {
+      "negative": "a mailbox, not attractive",
+      "positive": "a mailbox"
+    },
+    {
+      "negative": "a gazebo",
+      "positive": "a romantic gazebo"
+    },
+    {
+      "negative": "a windmill",
+      "positive": "a rustic windmill"
+    },
+    {
+      "negative": "a patio, dull",
+      "positive": "a patio"
+    },
+    {
+      "negative": "a gate",
+      "positive": "an impressive gate"
+    },
+    {
+      "negative": "a meadow",
+      "positive": "a peaceful meadow"
+    },
+    {
+      "negative": "a rock, plain",
+      "positive": "a rock"
+    },
+    {
+      "negative": "a barn",
+      "positive": "a rustic barn"
+    },
+    {
+      "negative": "a lighthouse",
+      "positive": "a majestic lighthouse"
+    },
+    {
+      "negative": "a valley, boring",
+      "positive": "a valley"
+    },
+    {
+      "negative": "a cabin",
+      "positive": "a cozy cabin"
+    },
+    {
+      "negative": "a watermill",
+      "positive": "a charming watermill"
+    },
+    {
+      "negative": "a hill, not scenic",
+      "positive": "a hill"
+    },
+    {
+      "negative": "a chapel",
+      "positive": "a peaceful chapel"
+    },
+    {
+      "negative": "a vineyard",
+      "positive": "a picturesque vineyard"
+    },
+    {
+      "negative": "a cliff, plain",
+      "positive": "a cliff"
+    },
+    {
+      "negative": "a mansion",
+      "positive": "a grand mansion"
+    },
+    {
+      "negative": "a stream",
+      "positive": "a babbling stream"
+    },
+    {
+      "negative": "a farmhouse, ugly",
+      "positive": "a farmhouse"
+    },
+    {
+      "negative": "a pergola",
+      "positive": "an elegant pergola"
+    },
+    {
+      "negative": "a courtyard",
+      "positive": "a beautiful courtyard"
+    },
+    {
+      "negative": "a terrace, not appealing",
+      "positive": "a terrace"
+    },
+    {
+      "negative": "a monastery",
+      "positive": "a serene monastery"
+    },
+    {
+      "negative": "a villa",
+      "positive": "a luxurious villa"
+    },
+    {
+      "negative": "a garden shed, plain",
+      "positive": "a garden shed"
+    },
+    {
+      "negative": "a archway",
+      "positive": "a stunning archway"
+    },
+    {
+      "negative": "a plaza",
+      "positive": "a vibrant plaza"
+    },
+    {
+      "negative": "a greenhouse, dull",
+      "positive": "a greenhouse"
+    },
+    {
+      "negative": "a pavilion",
+      "positive": "an ornate pavilion"
+    },
+    {
+      "negative": "a temple",
+      "positive": "a sacred temple"
+    },
+    {
+      "negative": "a orchard, boring",
+      "positive": "a orchard"
+    },
+    {
+      "negative": "a conservatory",
+      "positive": "an elegant conservatory"
+    },
+    {
+      "negative": "a pier",
+      "positive": "a scenic pier"
+    },
+    {
+      "negative": "a windbreak, ugly",
+      "positive": "a windbreak"
+    },
+    {
+      "negative": "a observatory",
+      "positive": "a magnificent observatory"
+    },
+    {
+      "negative": "a belvedere",
+      "positive": "a graceful belvedere"
+    },
+    {
+      "negative": "a rotunda, plain",
+      "positive": "a rotunda"
+    },
+    {
+      "negative": "a colonnade",
+      "positive": "a majestic colonnade"
+    },
+    {
+      "negative": "a amphitheater",
+      "positive": "an impressive amphitheater"
+    },
+    {
+      "negative": "a aqueduct, not attractive",
+      "positive": "a aqueduct"
+    },
+    {
+      "negative": "a belltower",
+      "positive": "a stately belltower"
+    },
+    {
+      "negative": "a clocktower",
+      "positive": "an iconic clocktower"
+    },
+    {
+      "negative": "a watchtower, dull",
+      "positive": "a watchtower"
+    },
+    {
+      "negative": "a fortress",
+      "positive": "an imposing fortress"
+    },
+    {
+      "negative": "a citadel",
+      "positive": "a mighty citadel"
+    },
+    {
+      "negative": "a keep, plain",
+      "positive": "a keep"
+    },
+    {
+      "negative": "a rampart",
+      "positive": "a formidable rampart"
+    },
+    {
+      "negative": "a moat",
+      "positive": "a picturesque moat"
+    }
+  ]

@@ -1,0 +1,422 @@
+[
+    {
+      "negative": "a woman sitting, hands not visible",
+      "positive": "a woman sitting, human hands visible"
+    },
+    {
+      "negative": "a man walking",
+      "positive": "a man walking, hands clearly visible"
+    },
+    {
+      "negative": "a child playing, hands not visible",
+      "positive": "a child playing, human hands visible"
+    },
+    {
+      "negative": "a person reading",
+      "positive": "a person reading, human hands visible"
+    },
+    {
+      "negative": "a girl dancing, hands not visible",
+      "positive": "a girl dancing, hands clearly visible"
+    },
+    {
+      "negative": "a boy running",
+      "positive": "a boy running, hands clearly visible"
+    },
+    {
+      "negative": "a woman cooking, hands not visible",
+      "positive": "a woman cooking, human hands visible"
+    },
+    {
+      "negative": "a man typing",
+      "positive": "a man typing, hands clearly visible"
+    },
+    {
+      "negative": "a person painting, hands not visible",
+      "positive": "a person painting, hands clearly visible"
+    },
+    {
+      "negative": "a child eating",
+      "positive": "a child eating, human hands visible"
+    },
+    {
+      "negative": "a woman writing, hands not visible",
+      "positive": "a woman writing, human hands visible"
+    },
+    {
+      "negative": "a man driving",
+      "positive": "a man driving, hands clearly visible"
+    },
+    {
+      "negative": "a person singing, hands not visible",
+      "positive": "a person singing, hands clearly visible"
+    },
+    {
+      "negative": "a girl swimming",
+      "positive": "a girl swimming, human hands visible"
+    },
+    {
+      "negative": "a boy drawing, hands not visible",
+      "positive": "a boy drawing, human hands visible"
+    },
+    {
+      "negative": "a woman shopping",
+      "positive": "a woman shopping, hands clearly visible"
+    },
+    {
+      "negative": "a man exercising, hands not visible",
+      "positive": "a man exercising, human hands visible"
+    },
+    {
+      "negative": "a person gardening",
+      "positive": "a person gardening, human hands visible"
+    },
+    {
+      "negative": "a child sleeping, hands not visible",
+      "positive": "a child sleeping, hands clearly visible"
+    },
+    {
+      "negative": "a woman laughing",
+      "positive": "a woman laughing, hands clearly visible"
+    },
+    {
+      "negative": "a man fishing, hands not visible",
+      "positive": "a man fishing, human hands visible"
+    },
+    {
+      "negative": "a person climbing",
+      "positive": "a person climbing, human hands visible"
+    },
+    {
+      "negative": "a girl studying, hands not visible",
+      "positive": "a girl studying, hands clearly visible"
+    },
+    {
+      "negative": "a boy playing soccer",
+      "positive": "a boy playing soccer, hands clearly visible"
+    },
+    {
+      "negative": "a woman knitting, hands not visible",
+      "positive": "a woman knitting, human hands visible"
+    },
+    {
+      "negative": "a man building",
+      "positive": "a man building, hands clearly visible"
+    },
+    {
+      "negative": "a person stretching, hands not visible",
+      "positive": "a person stretching, hands clearly visible"
+    },
+    {
+      "negative": "a child laughing",
+      "positive": "a child laughing, human hands visible"
+    },
+    {
+      "negative": "a woman hiking, hands not visible",
+      "positive": "a woman hiking, human hands visible"
+    },
+    {
+      "negative": "a man playing piano",
+      "positive": "a man playing piano, hands clearly visible"
+    },
+    {
+      "negative": "a person jogging, hands not visible",
+      "positive": "a person jogging, hands clearly visible"
+    },
+    {
+      "negative": "a girl cleaning",
+      "positive": "a girl cleaning, human hands visible"
+    },
+    {
+      "negative": "a boy eating pizza, hands not visible",
+      "positive": "a boy eating pizza, human hands visible"
+    },
+    {
+      "negative": "a woman texting",
+      "positive": "a woman texting, hands clearly visible"
+    },
+    {
+      "negative": "a man washing dishes, hands not visible",
+      "positive": "a man washing dishes, hands clearly visible"
+    },
+    {
+      "negative": "a person meditating",
+      "positive": "a person meditating, human hands visible"
+    },
+    {
+      "negative": "a child building blocks, hands not visible",
+      "positive": "a child building blocks, human hands visible"
+    },
+    {
+      "negative": "a woman drinking coffee",
+      "positive": "a woman drinking coffee, hands clearly visible"
+    },
+    {
+      "negative": "a man reading newspaper, hands not visible",
+      "positive": "a man reading newspaper, hands clearly visible"
+    },
+    {
+      "negative": "a person taking photos",
+      "positive": "a person taking photos, human hands visible"
+    },
+    {
+      "negative": "a girl brushing hair, hands not visible",
+      "positive": "a girl brushing hair, human hands visible"
+    },
+    {
+      "negative": "a boy riding bike",
+      "positive": "a boy riding bike, hands clearly visible"
+    },
+    {
+      "negative": "a woman applying makeup, hands not visible",
+      "positive": "a woman applying makeup, hands clearly visible"
+    },
+    {
+      "negative": "a man shaving",
+      "positive": "a man shaving, human hands visible"
+    },
+    {
+      "negative": "a person playing violin, hands not visible",
+      "positive": "a person playing violin, human hands visible"
+    },
+    {
+      "negative": "a child coloring",
+      "positive": "a child coloring, hands clearly visible"
+    },
+    {
+      "negative": "a woman folding laundry, hands not visible",
+      "positive": "a woman folding laundry, hands clearly visible"
+    },
+    {
+      "negative": "a man playing chess",
+      "positive": "a man playing chess, human hands visible"
+    },
+    {
+      "negative": "a person bowling, hands not visible",
+      "positive": "a person bowling, human hands visible"
+    },
+    {
+      "negative": "a girl feeding birds",
+      "positive": "a girl feeding birds, hands clearly visible"
+    },
+    {
+      "negative": "a boy skateboarding, hands not visible",
+      "positive": "a boy skateboarding, hands clearly visible"
+    },
+    {
+      "negative": "a woman watering plants",
+      "positive": "a woman watering plants, human hands visible"
+    },
+    {
+      "negative": "a man grilling food, hands not visible",
+      "positive": "a man grilling food, human hands visible"
+    },
+    {
+      "negative": "a person playing drums",
+      "positive": "a person playing drums, hands clearly visible"
+    },
+    {
+      "negative": "a child blowing bubbles, hands not visible",
+      "positive": "a child blowing bubbles, hands clearly visible"
+    },
+    {
+      "negative": "a woman doing yoga",
+      "positive": "a woman doing yoga, human hands visible"
+    },
+    {
+      "negative": "a man playing cards, hands not visible",
+      "positive": "a man playing cards, human hands visible"
+    },
+    {
+      "negative": "a person skiing",
+      "positive": "a person skiing, hands clearly visible"
+    },
+    {
+      "negative": "a girl baking cookies, hands not visible",
+      "positive": "a girl baking cookies, hands clearly visible"
+    },
+    {
+      "negative": "a boy washing car",
+      "positive": "a boy washing car, human hands visible"
+    },
+    {
+      "negative": "a woman reading magazine",
+      "positive": "a woman reading magazine, human hands visible"
+    },
+    {
+      "negative": "a man playing tennis",
+      "positive": "a man playing tennis, hands clearly visible"
+    },
+    {
+      "negative": "a person ice skating",
+      "positive": "a person ice skating, hands clearly visible"
+    },
+    {
+      "negative": "a child making crafts",
+      "positive": "a child making crafts, human hands visible"
+    },
+    {
+      "negative": "a woman sewing fabric",
+      "positive": "a woman sewing fabric, human hands visible"
+    },
+    {
+      "negative": "a man chopping wood",
+      "positive": "a man chopping wood, hands clearly visible"
+    },
+    {
+      "negative": "a person playing basketball",
+      "positive": "a person playing basketball, hands clearly visible"
+    },
+    {
+      "negative": "a girl picking flowers",
+      "positive": "a girl picking flowers, human hands visible"
+    },
+    {
+      "negative": "a boy flying kite",
+      "positive": "a boy flying kite, human hands visible"
+    },
+    {
+      "negative": "a woman organizing closet",
+      "positive": "a woman organizing closet, hands clearly visible"
+    },
+    {
+      "negative": "a man playing guitar",
+      "positive": "a man playing guitar, hands clearly visible"
+    },
+    {
+      "negative": "a person rock climbing",
+      "positive": "a person rock climbing, human hands visible"
+    },
+    {
+      "negative": "a child playing piano",
+      "positive": "a child playing piano, human hands visible"
+    },
+    {
+      "negative": "a woman cutting paper",
+      "positive": "a woman cutting paper, hands clearly visible"
+    },
+    {
+      "negative": "a man washing face",
+      "positive": "a man washing face, hands clearly visible"
+    },
+    {
+      "negative": "a person surfing",
+      "positive": "a person surfing, human hands visible"
+    },
+    {
+      "negative": "a girl making sandwich",
+      "positive": "a girl making sandwich, human hands visible"
+    },
+    {
+      "negative": "a boy playing video games",
+      "positive": "a boy playing video games, hands clearly visible"
+    },
+    {
+      "negative": "a woman brushing teeth",
+      "positive": "a woman brushing teeth, hands clearly visible"
+    },
+    {
+      "negative": "a man juggling balls",
+      "positive": "a man juggling balls, human hands visible"
+    },
+    {
+      "negative": "a person dancing",
+      "positive": "a person dancing, human hands visible"
+    },
+    {
+      "negative": "a child drawing picture",
+      "positive": "a child drawing picture, hands clearly visible"
+    },
+    {
+      "negative": "a woman opening gift",
+      "positive": "a woman opening gift, hands clearly visible"
+    },
+    {
+      "negative": "a man tying shoes",
+      "positive": "a man tying shoes, human hands visible"
+    },
+    {
+      "negative": "a person playing flute",
+      "positive": "a person playing flute, human hands visible"
+    },
+    {
+      "negative": "a girl washing dishes",
+      "positive": "a girl washing dishes, hands clearly visible"
+    },
+    {
+      "negative": "a boy eating apple",
+      "positive": "a boy eating apple, hands clearly visible"
+    },
+    {
+      "negative": "a woman putting on jewelry",
+      "positive": "a woman putting on jewelry, human hands visible"
+    },
+    {
+      "negative": "a man playing pool",
+      "positive": "a man playing pool, human hands visible"
+    },
+    {
+      "negative": "a person snowboarding",
+      "positive": "a person snowboarding, hands clearly visible"
+    },
+    {
+      "negative": "a child finger painting",
+      "positive": "a child finger painting, hands clearly visible"
+    },
+    {
+      "negative": "a woman arranging flowers",
+      "positive": "a woman arranging flowers, human hands visible"
+    },
+    {
+      "negative": "a man changing tire",
+      "positive": "a man changing tire, human hands visible"
+    },
+    {
+      "negative": "a person kayaking",
+      "positive": "a person kayaking, hands clearly visible"
+    },
+    {
+      "negative": "a girl combing hair",
+      "positive": "a girl combing hair, hands clearly visible"
+    },
+    {
+      "negative": "a boy building sandcastle",
+      "positive": "a boy building sandcastle, human hands visible"
+    },
+    {
+      "negative": "a woman lighting candle",
+      "positive": "a woman lighting candle, human hands visible"
+    },
+    {
+      "negative": "a man playing harmonica",
+      "positive": "a man playing harmonica, hands clearly visible"
+    },
+    {
+      "negative": "a person rollerblading",
+      "positive": "a person rollerblading, hands clearly visible"
+    },
+    {
+      "negative": "a child sorting toys",
+      "positive": "a child sorting toys, human hands visible"
+    },
+    {
+      "negative": "a woman peeling fruit",
+      "positive": "a woman peeling fruit, hands clearly visible"
+    },
+    {
+      "negative": "a man polishing shoes",
+      "positive": "a man polishing shoes, human hands visible"
+    },
+    {
+      "negative": "a person throwing ball",
+      "positive": "a person throwing ball, hands clearly visible"
+    },
+    {
+      "negative": "a girl making bed",
+      "positive": "a girl making bed, human hands visible"
+    },
+    {
+      "negative": "a boy eating cereal",
+      "positive": "a boy eating cereal, hands clearly visible"
+    }
+  ]

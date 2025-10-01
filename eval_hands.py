@@ -14,6 +14,8 @@ from tqdm import tqdm
 from collections import defaultdict
 import itertools
 
+layer_ablation = True
+
 # --- HandValidator class (simplified to only return hand count and avg detection confidence) ---
 class HandValidator:
     def __init__(self, 
@@ -64,7 +66,7 @@ class HandValidator:
         return {"num_hands_detected": num_hands, "avg_detection_confidence": avg_score}
 
 # --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_results_20250924_074213'
+EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_20250925_072536'
 MODEL = 'FLUX'
 OUTPUT_CSV = f'{MODEL}_hand_quality_ratings.csv'
 
@@ -72,6 +74,9 @@ CFG_GUIDANCE_SCALES = [1., 2., 3., 4., 5.]
 SLG_GUIDANCE_SCALES = [1., 2., 3., 4., 5.]
 combinations = list(itertools.product(CFG_GUIDANCE_SCALES, SLG_GUIDANCE_SCALES))
 IMAGE_TYPES = [f'slg_{slg_scale}_cfg_{cfg_scale}' for (cfg_scale, slg_scale) in combinations]
+
+if layer_ablation: 
+    IMAGE_TYPES = [f'layer_{i}' for i in range(19)]
 
 # --- Initialize HandValidator ---
 print("Loading MediaPipe HandValidator...")
@@ -107,7 +112,7 @@ for prompt_dir in tqdm(os.listdir(EXPERIMENT_ROOT)):
 
     for seed_dir in os.listdir(prompt_path):
         seed_path = os.path.join(prompt_path, seed_dir)
-        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < len(combinations):
+        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < (19 if layer_ablation else len(combinations)):
             continue
 
         row = {'prompt': prompt_dir, 'seed': seed_dir}
@@ -138,44 +143,45 @@ prompt_avg = df.groupby("prompt")[IMAGE_TYPES].mean()
 print(prompt_avg)
 prompt_avg.to_csv(f'{MODEL}_prompt_averages.csv')
 
-# --- Compute Overall Averages by CFG/SLG Configuration ---
-print("\n--- Computing CFG/SLG Configuration Averages ---")
+if not layer_ablation:
+    # --- Compute Overall Averages by CFG/SLG Configuration ---
+    print("\n--- Computing CFG/SLG Configuration Averages ---")
 
-cfg_slg_mapping = {}
-for col in IMAGE_TYPES:
-    cfg, slg = parse_cfg_slg_from_column(col)
-    if cfg is not None and slg is not None:
-        cfg_slg_mapping[col] = (cfg, slg)
+    cfg_slg_mapping = {}
+    for col in IMAGE_TYPES:
+        cfg, slg = parse_cfg_slg_from_column(col)
+        if cfg is not None and slg is not None:
+            cfg_slg_mapping[col] = (cfg, slg)
 
-config_groups = defaultdict(list)
-for col, (cfg, slg) in cfg_slg_mapping.items():
-    config_groups[(cfg, slg)].append(col)
+    config_groups = defaultdict(list)
+    for col, (cfg, slg) in cfg_slg_mapping.items():
+        config_groups[(cfg, slg)].append(col)
 
-config_averages = []
-for (cfg, slg), columns in config_groups.items():
-    config_scores = df[columns].mean(axis=1, skipna=True)
-    overall_avg = config_scores.mean(skipna=True)
+    config_averages = []
+    for (cfg, slg), columns in config_groups.items():
+        config_scores = df[columns].mean(axis=1, skipna=True)
+        overall_avg = config_scores.mean(skipna=True)
 
-    config_averages.append({
-        'cfg_scale': cfg,
-        'slg_scale': slg,
-        'avg_score': overall_avg
-    })
+        config_averages.append({
+            'cfg_scale': cfg,
+            'slg_scale': slg,
+            'avg_score': overall_avg
+        })
 
-config_avg_df = pd.DataFrame(config_averages)
-config_avg_df = config_avg_df.sort_values(['cfg_scale', 'slg_scale'])
+    config_avg_df = pd.DataFrame(config_averages)
+    config_avg_df = config_avg_df.sort_values(['cfg_scale', 'slg_scale'])
 
-config_csv = f'{MODEL}_cfg_slg_averages.csv'
-config_avg_df.to_csv(config_csv, index=False)
-print(f"Saved CFG/SLG configuration averages to {config_csv}")
+    config_csv = f'{MODEL}_cfg_slg_averages.csv'
+    config_avg_df.to_csv(config_csv, index=False)
+    print(f"Saved CFG/SLG configuration averages to {config_csv}")
 
-print("\n--- CFG/SLG Configuration Averages ---")
-print(config_avg_df)
+    print("\n--- CFG/SLG Configuration Averages ---")
+    print(config_avg_df)
 
-# Optional: Pivot table for easier visualization
-pivot_table = config_avg_df.pivot(index='slg_scale', columns='cfg_scale', values='avg_score')
-pivot_csv = f'{MODEL}_cfg_slg_pivot.csv'
-pivot_table.to_csv(pivot_csv)
-print(f"\nSaved pivot table to {pivot_csv}")
-print("\n--- Pivot Table (SLG x CFG) ---")
-print(pivot_table)
+    # Optional: Pivot table for easier visualization
+    pivot_table = config_avg_df.pivot(index='slg_scale', columns='cfg_scale', values='avg_score')
+    pivot_csv = f'{MODEL}_cfg_slg_pivot.csv'
+    pivot_table.to_csv(pivot_csv)
+    print(f"\nSaved pivot table to {pivot_csv}")
+    print("\n--- Pivot Table (SLG x CFG) ---")
+    print(pivot_table)
