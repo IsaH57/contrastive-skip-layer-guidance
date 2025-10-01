@@ -90,7 +90,7 @@ def main(args):
         gc.collect()
 
     with torch.no_grad():
-        for di, pair in enumerate(dataset[:10]):
+        for di, pair in enumerate(dataset):
             for seed_i in range(args.num_seeds):
                 random_seed = random.randint(0, 2**32 - 1)
 
@@ -142,8 +142,8 @@ def main(args):
 
                         del Q_img_p, K_img_p, Q_txt_p, K_txt_p, Q_img_n, K_img_n, Q_txt_n, K_txt_n
 
-                        QK_p_merged = torch.einsum('bid,bjd->bij', Q_merged_p, K_merged_p) / (Q_merged_p.shape[-1] ** 0.5)
-                        QK_n_merged = torch.einsum('bid,bjd->bij', Q_merged_n, K_merged_n) / (Q_merged_n.shape[-1] ** 0.5)
+                        QK_p_merged = torch.einsum('bihd,bjhd->bhij', Q_merged_p, K_merged_p) / (Q_merged_p.shape[-1] ** 0.5)
+                        QK_n_merged = torch.einsum('bihd,bjhd->bhij', Q_merged_n, K_merged_n) / (Q_merged_n.shape[-1] ** 0.5)
                         QK_p = torch.softmax(QK_p_merged, dim=-1)
                         QK_n = torch.softmax(QK_n_merged, dim=-1)
 
@@ -151,35 +151,35 @@ def main(args):
 
                         # Calculate Metrics
                         # Text-2-Text
-                        all_metrics["l2_t2t"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, :256, :256] ** 2)).item()
-                        all_metrics["abs_t2t"][di, seed_i, layer, step] = (torch.sum(QK_p[:, :256, :256]) - torch.sum(QK_n[:, :256, :256])).item()    
+                        all_metrics["l2_t2t"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, :, :256, :256] ** 2)).item()
+                        all_metrics["abs_t2t"][di, seed_i, layer, step] = (torch.sum(QK_p[:, :, :256, :256]) - torch.sum(QK_n[:, :, :256, :256])).item()    
                         all_metrics["cos_t2t"][di, seed_i, layer, step] = safe_cosine(
-                            QK_p[:, :256, :256],
-                            QK_n[:, :256, :256],
+                            QK_p[:, :, :256, :256].reshape(-1),
+                            QK_n[:, :, :256, :256].reshape(-1),
                         )
 
                         # Text-2-Image
-                        all_metrics["l2_t2i"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, :256, 256:] ** 2)).item()
-                        all_metrics["abs_t2i"][di, seed_i, layer, step] = (torch.sum(QK_p[:, :256, 256:]) - torch.sum(QK_n[:, :256, 256:])).item()    
+                        all_metrics["l2_t2i"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, :, :256, 256:] ** 2)).item()
+                        all_metrics["abs_t2i"][di, seed_i, layer, step] = (torch.sum(QK_p[:, :, :256, 256:]) - torch.sum(QK_n[:, :, :256, 256:])).item()    
                         all_metrics["cos_t2i"][di, seed_i, layer, step] = safe_cosine(
-                            QK_p[:, :256, 256:],
-                            QK_n[:, :256, 256:],
+                            QK_p[:, :, :256, 256:].reshape(-1),
+                            QK_n[:, :, :256, 256:].reshape(-1),
                         )
 
                         # Image-2-Text
-                        all_metrics["l2_i2t"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, 256:, :256] ** 2)).item()
-                        all_metrics["abs_i2t"][di, seed_i, layer, step] = (torch.sum(QK_p[:, 256:, :256]) - torch.sum(QK_n[:, 256:, :256])).item()    
+                        all_metrics["l2_i2t"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, :, 256:, :256] ** 2)).item()
+                        all_metrics["abs_i2t"][di, seed_i, layer, step] = (torch.sum(QK_p[:, :, 256:, :256]) - torch.sum(QK_n[:, :, 256:, :256])).item()    
                         all_metrics["cos_i2t"][di, seed_i, layer, step] = safe_cosine(
-                            QK_p[:, 256:, :256],
-                            QK_n[:, 256:, :256],
+                            QK_p[:, :, 256:, :256].reshape(-1),
+                            QK_n[:, :, 256:, :256].reshape(-1),
                         )
 
                         # Image-2-Image
-                        all_metrics["l2_i2i"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, 256:, 256:] ** 2)).item()
-                        all_metrics["abs_i2i"][di, seed_i, layer, step] = (torch.sum(QK_p[:, 256:, 256:]) - torch.sum(QK_n[:, 256:, 256:])).item()    
+                        all_metrics["l2_i2i"][di, seed_i, layer, step] = torch.sqrt(torch.sum(QK_diff[:, :, 256:, 256:] ** 2)).item()
+                        all_metrics["abs_i2i"][di, seed_i, layer, step] = (torch.sum(QK_p[:, :, 256:, 256:]) - torch.sum(QK_n[:, :, 256:, 256:])).item()    
                         all_metrics["cos_i2i"][di, seed_i, layer, step] = safe_cosine(
-                            QK_p[:, 256:, 256:],
-                            QK_n[:, 256:, 256:],
+                            QK_p[:, :, 256:, 256:].reshape(-1),
+                            QK_n[:, :, 256:, 256:].reshape(-1),
                         )
 
                         del QK_p_merged, QK_n_merged, QK_p, QK_n, QK_diff
