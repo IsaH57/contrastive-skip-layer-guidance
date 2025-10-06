@@ -398,17 +398,5 @@
     {
       "negative": "a magnet",
       "positive": "a magnet reading 'Save the Date'"
-    },
-    {
-      "negative": "a checklist, no text visible",
-      "positive": "a checklist titled 'To Do Today'"
-    },
-    {
-      "negative": "a wrist guard",
-      "positive": "a wrist guard with 'Pro Sport' written on it"
-    },
-    {
-      "negative": "a clipboard cover, no text visible",
-      "positive": "a clipboard cover that says 'Confidential'"
     }
   ]

@@ -398,17 +398,5 @@
     {
       "negative": "a citadel",
       "positive": "a mighty citadel"
-    },
-    {
-      "negative": "a keep, plain",
-      "positive": "a keep"
-    },
-    {
-      "negative": "a rampart",
-      "positive": "a formidable rampart"
-    },
-    {
-      "negative": "a moat",
-      "positive": "a picturesque moat"
     }
   ]

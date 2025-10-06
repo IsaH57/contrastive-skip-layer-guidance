@@ -63,7 +63,7 @@ def main(args):
                                 true_cfg_scale=slg_scale,
                                 num_inference_steps=28,
                                 max_sequence_length=256,
-                                generator=seed_generator
+                                generator=torch.Generator("cpu").manual_seed(random_seed)
                             ).images[0]
                         elif args.model == 'sd3':
                             image = pipe(
@@ -72,7 +72,7 @@ def main(args):
                                 skip_layer_guidance_scale=slg_scale,
                                 skip_layer_guidance_start=0.,
                                 skip_layer_guidance_stop=1.,
-                                generator=seed_generator,
+                                generator=torch.Generator("cpu").manual_seed(random_seed),
                                 guidance_scale=cfg_scale
                             ).images[0]
                         

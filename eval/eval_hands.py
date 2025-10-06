@@ -14,7 +14,8 @@ from tqdm import tqdm
 from collections import defaultdict
 import itertools
 
-layer_ablation = True
+layer_ablation = False
+multilayer_ablation = True
 
 # --- HandValidator class (simplified to only return hand count and avg detection confidence) ---
 class HandValidator:
@@ -66,7 +67,7 @@ class HandValidator:
         return {"num_hands_detected": num_hands, "avg_detection_confidence": avg_score}
 
 # --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_20250925_072536'
+EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_multiskip_hands'
 MODEL = 'FLUX'
 OUTPUT_CSV = f'{MODEL}_hand_quality_ratings.csv'
 
@@ -77,6 +78,11 @@ IMAGE_TYPES = [f'slg_{slg_scale}_cfg_{cfg_scale}' for (cfg_scale, slg_scale) in 
 
 if layer_ablation: 
     IMAGE_TYPES = [f'layer_{i}' for i in range(19)]
+if multilayer_ablation: 
+    layers = [1,2,3,4,5]
+    combinations = list(itertools.product(layers, SLG_GUIDANCE_SCALES))
+    IMAGE_TYPES = [f'{i}_skipped_layers_slg_{slg_scale}' for (i, slg_scale) in combinations]
+    IMAGE_TYPES.append('0_skipped_layers')
 
 # --- Initialize HandValidator ---
 print("Loading MediaPipe HandValidator...")
@@ -112,7 +118,7 @@ for prompt_dir in tqdm(os.listdir(EXPERIMENT_ROOT)):
 
     for seed_dir in os.listdir(prompt_path):
         seed_path = os.path.join(prompt_path, seed_dir)
-        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < (19 if layer_ablation else len(combinations)):
+        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < (19 if layer_ablation else len(combinations)+1):
             continue
 
         row = {'prompt': prompt_dir, 'seed': seed_dir}
@@ -143,7 +149,7 @@ prompt_avg = df.groupby("prompt")[IMAGE_TYPES].mean()
 print(prompt_avg)
 prompt_avg.to_csv(f'{MODEL}_prompt_averages.csv')
 
-if not layer_ablation:
+if not layer_ablation and not multilayer_ablation:
     # --- Compute Overall Averages by CFG/SLG Configuration ---
     print("\n--- Computing CFG/SLG Configuration Averages ---")
 

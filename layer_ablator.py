@@ -15,7 +15,7 @@ def flush():
     torch.cuda.empty_cache()
 
 def main(args):
-    SKIPPED_LAYERS = [int(x) for x in args.skipped_layers.split(",")] if args.skipped_layers else [5]
+    SKIPPED_LAYERS = [i for i in range(19)]
     
     # Create results directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -37,39 +37,36 @@ def main(args):
     else:
         raise NameError('Invalid model name.')
 
-    for prompt in dataset:
-        print(f"Generating images for prompt: {prompt}")
-        subdir = os.path.join(results_dir, prompt[:20])
+    for pair in dataset:
+        print(f"Generating images for prompt: {pair['positive']}")
+        subdir = os.path.join(results_dir, pair['positive'][:20])
         os.mkdir(subdir)
         with torch.no_grad():
-            for i in range(5):
+            for i in range(args.num_seeds):
                 print(f"Generating images for random seed {i}")
                 random_seed = random.randint(0, 2**32 - 1)
-                seed_generator = torch.Generator("cpu").manual_seed(random_seed)
                 seed_dir = os.path.join(subdir, f'seed_{str(i)}')
                 os.makedirs(seed_dir, exist_ok=True)
 
                 for layer in SKIPPED_LAYERS:
-
                     # Use true cfg for skip layer guidance 
                     if args.model == 'flux':
                         pipe.skipped_layers=[layer]
                         image = pipe(
-                            prompt,
-                            negative_prompt=prompt,
+                            prompt=pair['positive'],
+                            negative_prompt=pair['positive'],
                             true_cfg_scale=2.5,
-                            num_inference_steps=20,
                             max_sequence_length=256,
-                            generator=seed_generator
+                            generator=torch.Generator("cpu").manual_seed(random_seed)
                         ).images[0]
                     elif args.model == 'sd3':
                         image = pipe(
-                            prompt,
+                            pair['positive'],
                             skip_guidance_layers=[layer],
                             skip_layer_guidance_scale=2.5,
                             skip_layer_guidance_start=0.,
                             skip_layer_guidance_stop=1.,
-                            generator=seed_generator
+                            generator=torch.Generator("cpu").manual_seed(random_seed)
                         ).images[0]
                     
                     image_path = os.path.join(seed_dir, f"layer_{str(layer)}.png")
@@ -84,9 +81,6 @@ if __name__ == "__main__":
 
     parser.add_argument("--model", type=str, default="flux", help="Model type. flux or sd3.")
     parser.add_argument("--dataset_path", type=str, required=True, help="Path to the JSON prompt file")
-    parser.add_argument("--skipped_layers", type=str, default="5", help="Comma-separated list of skipped layers")
-    parser.add_argument("--cfg_guidance_scales", type=str, default="1.,2.,3.,4.,5.", help="Comma-separated CFG scales")
-    parser.add_argument("--slg_guidance_scales", type=str, default="1.,2.,3.,4.,5.", help="Comma-separated SLG scales")
     parser.add_argument("--num_seeds", type=int, default=10, help="Number of random seeds")
 
     args = parser.parse_args()
