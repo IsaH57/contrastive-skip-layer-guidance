@@ -194,6 +194,7 @@ class FluxPipeline(
     ):
         super().__init__()
         self.skipped_layers=None
+        self.multiskip=False
         self.register_modules(
             vae=vae,
             text_encoder=text_encoder,
@@ -959,19 +960,39 @@ class FluxPipeline(
                 if do_true_cfg: # and i >= 5 and i <= 25
                     if negative_image_embeds is not None:
                         self._joint_attention_kwargs["ip_adapter_image_embeds"] = negative_image_embeds
-                    neg_noise_pred = self.noise_pred_with_skipped_layers(
-                        skipped_layers=self.skipped_layers,
-                        hidden_states=latents,
-                        timestep=timestep / 1000,
-                        guidance=guidance,
-                        pooled_projections=negative_pooled_prompt_embeds,
-                        encoder_hidden_states=negative_prompt_embeds,
-                        txt_ids=text_ids,
-                        img_ids=latent_image_ids,
-                        joint_attention_kwargs=self.joint_attention_kwargs,
-                        return_dict=False,
-                    )
-                    noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
+                    if self.multiskip:
+                        print(f'Multi-Skip w/ {len(self.skipped_layers)} layers, using weights {self.layer_weights}.')
+                        layer_noise_preds = []
+                        for layer_index, skipped_layer in enumerate(self.skipped_layers):
+                            neg_noise_pred = self.noise_pred_with_skipped_layers(
+                                skipped_layers=[skipped_layer],
+                                hidden_states=latents,
+                                timestep=timestep / 1000,
+                                guidance=guidance,
+                                pooled_projections=negative_pooled_prompt_embeds,
+                                encoder_hidden_states=negative_prompt_embeds,
+                                txt_ids=text_ids,
+                                img_ids=latent_image_ids,
+                                joint_attention_kwargs=self.joint_attention_kwargs,
+                                return_dict=False,
+                            )
+                            layer_noise_preds.append(neg_noise_pred*self.layer_weights[layer_index])
+                        mean_neg_noise_pred = sum(layer_noise_preds) / sum(self.layer_weights)
+                        noise_pred = mean_neg_noise_pred + true_cfg_scale * (noise_pred - mean_neg_noise_pred)
+                    else:
+                        neg_noise_pred = self.noise_pred_with_skipped_layers(
+                            skipped_layers=self.skipped_layers,
+                            hidden_states=latents,
+                            timestep=timestep / 1000,
+                            guidance=guidance,
+                            pooled_projections=negative_pooled_prompt_embeds,
+                            encoder_hidden_states=negative_prompt_embeds,
+                            txt_ids=text_ids,
+                            img_ids=latent_image_ids,
+                            joint_attention_kwargs=self.joint_attention_kwargs,
+                            return_dict=False,
+                        )
+                        noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
 
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
