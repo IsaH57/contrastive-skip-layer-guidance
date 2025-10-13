@@ -64,10 +64,10 @@ class AestheticsValidator:
             return None
 
 # --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_multiskip_results_20251005_080303'
+EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_aesthetics'
 MODEL = 'FLUX'
 OUTPUT_CSV = f'{MODEL}_aesthetic_quality_ablations.csv'
-IMAGE_TYPES = [filename[:-4] for filename in os.listdir(EXPERIMENT_ROOT + '/' + os.listdir(EXPERIMENT_ROOT)[0] + '/' + 'seed_0')]
+IMAGE_TYPES = [filename[:-4] for filename in os.listdir(EXPERIMENT_ROOT + '/' + os.listdir(EXPERIMENT_ROOT)[1] + '/' + 'seed_0')]
 print(EXPERIMENT_ROOT)
 
 # --- Initialize AestheticsValidator ---

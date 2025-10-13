@@ -1,0 +1,334 @@
+[
+    {
+      "negative": "a t-shirt that says 'SRFNG US'",
+      "positive": "a t-shirt that says 'Surfing USA'"
+    },
+    {
+      "negative": "a mug with 'COFFE LVR' written on it",
+      "positive": "a mug with 'Coffee Lover' written on it"
+    },
+    {
+      "negative": "a book with 'ADVENTR STOR' on the cover",
+      "positive": "a book with 'Adventure Stories' on the cover"
+    },
+    {
+      "negative": "a sign that reads 'WELCME'",
+      "positive": "a sign that reads 'Welcome'"
+    },
+    {
+      "negative": "a cap with 'NYO' embroidered on it",
+      "positive": "a cap with 'NYC' embroidered on it"
+    },
+    {
+      "negative": "a banner that says 'GRND OPNNG'",
+      "positive": "a banner that says 'Grand Opening'"
+    },
+    {
+      "negative": "a bag with 'ADVNTR' printed on it",
+      "positive": "a bag with 'Adventure' printed on it"
+    },
+    {
+      "negative": "a poster that says 'ROK CONCRT'",
+      "positive": "a poster that says 'Rock Concert'"
+    },
+    {
+      "negative": "a notebook with 'MY IDES' on the cover",
+      "positive": "a notebook with 'My Ideas' on the cover"
+    },
+    {
+      "negative": "a hoodie with 'CALIFRNIA' written on it",
+      "positive": "a hoodie with 'California' written on it"
+    },
+    {
+      "negative": "a license plate reading 'FSAT123'",
+      "positive": "a license plate reading 'FAST123'"
+    },
+    {
+      "negative": "a bottle with 'PURE WATR' on the label",
+      "positive": "a bottle with 'Pure Water' on the label"
+    },
+    {
+      "negative": "a menu showing 'TODAYS SPECAL: PIZA'",
+      "positive": "a menu showing 'Today's Special: Pizza'"
+    },
+    {
+      "negative": "a sticker that says 'BE HAPY'",
+      "positive": "a sticker that says 'Be Happy'"
+    },
+    {
+      "negative": "a box labeled 'FRAGIL'",
+      "positive": "a box labeled 'Fragile'"
+    },
+    {
+      "negative": "a jersey with number '1O' on it",
+      "positive": "a jersey with number '10' on it"
+    },
+    {
+      "negative": "a whiteboard with 'MEETNG AT 3PM' written on it",
+      "positive": "a whiteboard with 'Meeting at 3pm' written on it"
+    },
+    {
+      "negative": "a flag with 'WELCOM HOM' written on it",
+      "positive": "a flag with 'Welcome Home' written on it"
+    },
+    {
+      "negative": "a card that reads 'HAPY BIRTHDY'",
+      "positive": "a card that reads 'Happy Birthday'"
+    },
+    {
+      "negative": "a button saying 'VOTE NW'",
+      "positive": "a button saying 'Vote Now'"
+    },
+    {
+      "negative": "a newspaper with headline 'LOCL NEWS TODY'",
+      "positive": "a newspaper with headline 'Local News Today'"
+    },
+    {
+      "negative": "a bumper sticker reading 'ROAD TRP'",
+      "positive": "a bumper sticker reading 'Road Trip'"
+    },
+    {
+      "negative": "a label that says 'ORGNIC'",
+      "positive": "a label that says 'Organic'"
+    },
+    {
+      "negative": "a billboard reading 'VIST MIAM'",
+      "positive": "a billboard reading 'Visit Miami'"
+    },
+    {
+      "negative": "a name tag saying 'HELLO IM SARA'",
+      "positive": "a name tag saying 'Hello, I'm Sarah'"
+    },
+    {
+      "negative": "a ticket reading 'CONCRT ADMIT ON'",
+      "positive": "a ticket reading 'Concert Admit One'"
+    },
+    {
+      "negative": "a diploma with 'BACHLER OF ARTS' written on it",
+      "positive": "a diploma with 'Bachelor of Arts' written on it"
+    },
+    {
+      "negative": "a patch with 'EXPLRER' written on it",
+      "positive": "a patch with 'Explorer' written on it"
+    },
+    {
+      "negative": "a trophy engraved with 'FRST PLACE'",
+      "positive": "a trophy engraved with 'First Place'"
+    },
+    {
+      "negative": "a receipt showing 'TOTL: $15.99'",
+      "positive": "a receipt showing 'Total: $15.99'"
+    },
+    {
+      "negative": "a badge that says 'SECURTY'",
+      "positive": "a badge that says 'Security'"
+    },
+    {
+      "negative": "a keychain with 'HOME SWET HOME' on it",
+      "positive": "a keychain with 'Home Sweet Home' on it"
+    },
+    {
+      "negative": "an envelope addressed 'TO: JON SMITH'",
+      "positive": "an envelope addressed 'To: John Smith'"
+    },
+    {
+      "negative": "a wristband reading 'MUSIC FESTVAL'",
+      "positive": "a wristband reading 'Music Festival'"
+    },
+    {
+      "negative": "a calendar showing 'DECMBER 2024'",
+      "positive": "a calendar showing 'December 2024'"
+    },
+    {
+      "negative": "a sticky note with 'CALL MOM' written on it",
+      "positive": "a sticky note with 'Call Mom' written on it"
+    },
+    {
+      "negative": "an apron with 'CHEF IN TRANING' written on it",
+      "positive": "an apron with 'Chef in Training' written on it"
+    },
+    {
+      "negative": "a price tag showing '$9.99'",
+      "positive": "a price tag showing '$9.99'"
+    },
+    {
+      "negative": "a magazine with 'SPORTS WEKLY' on the cover",
+      "positive": "a magazine with 'Sports Weekly' on the cover"
+    },
+    {
+      "negative": "a lanyard that says 'STAF'",
+      "positive": "a lanyard that says 'Staff'"
+    },
+    {
+      "negative": "a bookmark reading 'CHAPTE 5'",
+      "positive": "a bookmark reading 'Chapter 5'"
+    },
+    {
+      "negative": "a certificate reading 'CERTFICATE OF ACHEIVEMENT'",
+      "positive": "a certificate reading 'Certificate of Achievement'"
+    },
+    {
+      "negative": "a bandana with 'WILD WST' printed on it",
+      "positive": "a bandana with 'Wild West' printed on it"
+    },
+    {
+      "negative": "a folder labeled 'IMPORTNT DOCUMENTS'",
+      "positive": "a folder labeled 'Important Documents'"
+    },
+    {
+      "negative": "a postcard with 'GREETINGS FROM PARS' on it",
+      "positive": "a postcard with 'Greetings from Paris' on it"
+    },
+    {
+      "negative": "a headband saying 'FITNESS FRST'",
+      "positive": "a headband saying 'Fitness First'"
+    },
+    {
+      "negative": "a business card reading 'JOHN SMITH, MANGER'",
+      "positive": "a business card reading 'John Smith, Manager'"
+    },
+    {
+      "negative": "a flyer advertising 'PIZZA SALE TODY'",
+      "positive": "a flyer advertising 'Pizza Sale Today'"
+    },
+    {
+      "negative": "a luggage tag that says 'VACATION BOUD'",
+      "positive": "a luggage tag that says 'Vacation Bound'"
+    },
+    {
+      "negative": "an invitation reading 'WEDING RECEPTION'",
+      "positive": "an invitation reading 'Wedding Reception'"
+    },
+    {
+      "negative": "a package with 'EXPRESS DELIVRY' on it",
+      "positive": "a package with 'Express Delivery' on it"
+    },
+    {
+      "negative": "a water bottle with 'HYDRATE DALY' on it",
+      "positive": "a water bottle with 'Hydrate Daily' on it"
+    },
+    {
+      "negative": "a brochure titled 'VIST PARIS'",
+      "positive": "a brochure titled 'Visit Paris'"
+    },
+    {
+      "negative": "a greeting card saying 'THANK YO'",
+      "positive": "a greeting card saying 'Thank You'"
+    },
+    {
+      "negative": "a shoe with 'NIKE' on the side",
+      "positive": "a shoe with 'Nike' on the side"
+    },
+    {
+      "negative": "a pamphlet reading 'HEALTH TPS'",
+      "positive": "a pamphlet reading 'Health Tips'"
+    },
+    {
+      "negative": "a pencil case with 'ART SUPLIES' written on it",
+      "positive": "a pencil case with 'Art Supplies' written on it"
+    },
+    {
+      "negative": "a backpack with 'SCHOOL PRID' written on it",
+      "positive": "a backpack with 'School Pride' written on it"
+    },
+    {
+      "negative": "a contract titled 'RENTAL AGREEMNT'",
+      "positive": "a contract titled 'Rental Agreement'"
+    },
+    {
+      "negative": "a laptop sticker that says 'CODE LIF'",
+      "positive": "a laptop sticker that says 'Code Life'"
+    },
+    {
+      "negative": "a phone case that says 'DREAM BG'",
+      "positive": "a phone case that says 'Dream Big'"
+    },
+    {
+      "negative": "a report titled 'ANUAL SUMMARY'",
+      "positive": "a report titled 'Annual Summary'"
+    },
+    {
+      "negative": "a lunch box with 'EMMAS LUNCH' written on it",
+      "positive": "a lunch box with 'Emma's Lunch' written on it"
+    },
+    {
+      "negative": "a wallet with 'GENUINE LETHR' embossed on it",
+      "positive": "a wallet with 'Genuine Leather' embossed on it"
+    },
+    {
+      "negative": "a manual reading 'USER GUID'",
+      "positive": "a manual reading 'User Guide'"
+    },
+    {
+      "negative": "a tote bag with 'ECO FRIENLY' printed on it",
+      "positive": "a tote bag with 'Eco Friendly' printed on it"
+    },
+    {
+      "negative": "a coffee cup with 'MORNING FUL' printed on it",
+      "positive": "a coffee cup with 'Morning Fuel' printed on it"
+    },
+    {
+      "negative": "a form titled 'JOB APLICATION'",
+      "positive": "a form titled 'Job Application'"
+    },
+    {
+      "negative": "a hat with 'BEACH LIF' embroidered on it",
+      "positive": "a hat with 'Beach Life' embroidered on it"
+    },
+    {
+      "negative": "a clipboard with 'SURVAY' written on top",
+      "positive": "a clipboard with 'Survey' written on top"
+    },
+    {
+      "negative": "a letter addressed 'DEAR MOM'",
+      "positive": "a letter addressed 'Dear Mom'"
+    },
+    {
+      "negative": "a shopping bag with 'THANK YOU' printed on it",
+      "positive": "a shopping bag with 'Thank You' printed on it"
+    },
+    {
+      "negative": "a pen with 'BANK OF AMERICA' written on it",
+      "positive": "a pen with 'Bank of America' written on it"
+    },
+    {
+      "negative": "a prescription labeled 'TAKE TWICE DALY'",
+      "positive": "a prescription labeled 'Take twice daily'"
+    },
+    {
+      "negative": "a folder tab labeled 'TAXES 204'",
+      "positive": "a folder tab labeled 'Taxes 2024'"
+    },
+    {
+      "negative": "a mousepad that says 'GAME ON'",
+      "positive": "a mousepad that says 'Game On'"
+    },
+    {
+      "negative": "a recipe card titled 'CHOCOLATE CAK'",
+      "positive": "a recipe card titled 'Chocolate Cake'"
+    },
+    {
+      "negative": "a gym towel with 'FITNESS CLB' on it",
+      "positive": "a gym towel with 'Fitness Club' on it"
+    },
+    {
+      "negative": "a coaster reading 'CHEERS'",
+      "positive": "a coaster reading 'Cheers'"
+    },
+    {
+      "negative": "an instruction sheet titled 'ASSEMBLY GUID'",
+      "positive": "an instruction sheet titled 'Assembly Guide'"
+    },
+    {
+      "negative": "a scarf with 'PARS' embroidered on it",
+      "positive": "a scarf with 'Paris' embroidered on it"
+    },
+    {
+      "negative": "a planner with '2025 GOLS' on the cover",
+      "positive": "a planner with '2025 Goals' on the cover"
+    },
+    {
+      "negative": "a warning sign that reads 'WET FLOR'",
+      "positive": "a warning sign that reads 'Wet Floor'"
+    }
+]

@@ -12,7 +12,7 @@ from collections import defaultdict
 multilayer_ablation = True
 
 # --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_multiskip_results_20251005_073148'
+EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_simple_text'
 print(EXPERIMENT_ROOT)
 MODEL = 'FLUX'
 OUTPUT_CSV = f'{MODEL}_visibility_ratings.csv'

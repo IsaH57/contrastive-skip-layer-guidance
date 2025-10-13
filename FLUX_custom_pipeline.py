@@ -195,6 +195,8 @@ class FluxPipeline(
         super().__init__()
         self.skipped_layers=None
         self.multiskip=False
+        self.layer_search=False
+        self.patch_prompt = None
         self.register_modules(
             vae=vae,
             text_encoder=text_encoder,
@@ -785,7 +787,8 @@ class FluxPipeline(
             is True, otherwise a `tuple`. When returning a tuple, the first element is a list with the generated
             images.
         """
-
+        if self.layer_search:
+            print('Performing layer search. Skipping each layer separately, this might take a while.')
         height = height or self.default_sample_size * self.vae_scale_factor
         width = width or self.default_sample_size * self.vae_scale_factor
 
@@ -809,6 +812,12 @@ class FluxPipeline(
         self._joint_attention_kwargs = joint_attention_kwargs
         self._current_timestep = None
         self._interrupt = False
+
+        # For layer finding 
+        self.attention_maps_pos = []
+        self.attention_maps_neg = []
+        self.unskipped_latents = []
+        self.skipped_latents = []
 
         # 2. Define call parameters
         if prompt is not None and isinstance(prompt, str):
@@ -851,6 +860,22 @@ class FluxPipeline(
                 prompt_2=negative_prompt_2,
                 prompt_embeds=negative_prompt_embeds,
                 pooled_prompt_embeds=negative_pooled_prompt_embeds,
+                device=device,
+                num_images_per_prompt=num_images_per_prompt,
+                max_sequence_length=max_sequence_length,
+                lora_scale=lora_scale,
+            )
+
+        if self.patch_prompt is not None:
+            (
+                patch_prompt_embeds,
+                patch_prompt_pooled_embeds,
+                _,
+            ) = self.encode_prompt(
+                prompt=self.patch_prompt,
+                prompt_2=None,
+                prompt_embeds=None,
+                pooled_prompt_embeds=None,
                 device=device,
                 num_images_per_prompt=num_images_per_prompt,
                 max_sequence_length=max_sequence_length,
@@ -932,7 +957,7 @@ class FluxPipeline(
         # 6. Denoising loop
     
         if do_true_cfg:
-            print(f'Performing Skip-Layer Guidance with scale {true_cfg_scale}.')
+            print(f'Performing Skip-Layer Guidance with scale {true_cfg_scale} for layers {str(self.skipped_layers)}.')
         else: 
             print(f'Performing standard CFG with scale {guidance_scale}.')
         with self.progress_bar(total=num_inference_steps) as progress_bar:
@@ -956,6 +981,8 @@ class FluxPipeline(
                     joint_attention_kwargs=self.joint_attention_kwargs,
                     return_dict=False
                 )[0]
+
+                self.unskipped_latents.append(noise_pred)
                     
                 if do_true_cfg: # and i >= 5 and i <= 25
                     if negative_image_embeds is not None:
@@ -993,7 +1020,38 @@ class FluxPipeline(
                             return_dict=False,
                         )
                         noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
-
+                if self.layer_search: 
+                    layer_noise_preds = []
+                    for layer in range(19):
+                        # Forward with patch prompt and single skipped layer
+                        neg_noise_pred = self.noise_pred_with_skipped_layers(
+                            skipped_layers=[layer],
+                            hidden_states=latents,
+                            timestep=timestep / 1000,
+                            guidance=guidance,
+                            pooled_projections=patch_prompt_pooled_embeds,
+                            encoder_hidden_states=patch_prompt_embeds,
+                            txt_ids=text_ids,
+                            img_ids=latent_image_ids,
+                            joint_attention_kwargs=self.joint_attention_kwargs,
+                            return_dict=False,
+                        )
+                        layer_noise_preds.append(neg_noise_pred)
+                    # Forward with patch prompt and no skipped layers for reference
+                    neg_noise_pred = self.noise_pred_with_skipped_layers(
+                            skipped_layers=[],
+                            hidden_states=latents,
+                            timestep=timestep / 1000,
+                            guidance=guidance,
+                            pooled_projections=patch_prompt_pooled_embeds,
+                            encoder_hidden_states=patch_prompt_embeds,
+                            txt_ids=text_ids,
+                            img_ids=latent_image_ids,
+                            joint_attention_kwargs=self.joint_attention_kwargs,
+                            return_dict=False,
+                        )
+                    layer_noise_preds.append(neg_noise_pred)
+                    self.skipped_latents.append(torch.stack(layer_noise_preds))
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]
@@ -1034,5 +1092,7 @@ class FluxPipeline(
 
         if not return_dict:
             return (image,)
+        
+        self.patch_prompt = None
 
         return FluxPipelineOutput(images=image)

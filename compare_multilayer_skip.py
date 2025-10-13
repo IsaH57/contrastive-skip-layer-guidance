@@ -18,9 +18,11 @@ def main(args):
     if args.target == 'text': 
         SKIPPED_LAYERS = [8, 17, 18, 6, 14]
         LAYER_WEIGHTS = [1., 0.6014, 0.5911, 0.5815, 0.5744]
+        dataset_path = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/prompt_datasets/text/complex_prompts.json'
     elif args.target == 'aesthetics':
         SKIPPED_LAYERS = [15, 14, 8, 12, 10]
         LAYER_WEIGHTS = [1., 0.9381, 0.8042, 0.7674, 0.7545]
+        dataset_path = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/prompt_datasets/aesthetics/aesthetics.json'
     else: 
         print('Unknown target.')
         SKIPPED_LAYERS = [int(x) for x in args.skipped_layers.split(",")] 
@@ -34,7 +36,7 @@ def main(args):
     os.makedirs(results_dir, exist_ok=True)
 
     # Load dataset of prompts
-    dataset = json.load(open(args.dataset_path, "r"))
+    dataset = json.load(open(dataset_path, "r"))
 
     # Load model
     if args.model == 'flux':
@@ -90,7 +92,7 @@ def main(args):
                     print(f'Saved slg image to: {image_path}')
                     del image
                     flush()
-                    for num_skipped_layers in [2,3,4,5]:
+                    for num_skipped_layers in [4,5]:
                         # Naive multilayer skip
                         pipe.multiskip=False
                         pipe.skipped_layers = SKIPPED_LAYERS[:num_skipped_layers]
@@ -110,7 +112,7 @@ def main(args):
                         flush()
 
 
-                        # Multilayer Skip with summed noise over single skipped layers
+                        '''# Multilayer Skip with summed noise over single skipped layers
                         pipe.multiskip=True
                         pipe.layer_weights=[1.,1.,1.,1.,1.]
                         image = pipe(
@@ -126,7 +128,7 @@ def main(args):
                         image.save(image_path)
                         print(f'Saved slg image to: {image_path}')
                         del image
-                        flush()
+                        flush()'''
 
 
                         # Multilayer Skip with weighted noise over single skipped layers 
@@ -152,7 +154,6 @@ if __name__ == "__main__":
 
     parser.add_argument("--model", type=str, default="flux", help="Model type. flux or sd3.")
     parser.add_argument("--target", type=str, default="text")
-    parser.add_argument("--dataset_path", type=str, required=True, help="Path to the JSON prompt file")
     parser.add_argument("--skipped_layers", type=str, default="8,17,18,6,14", help="Comma-separated list of skipped layers")
     parser.add_argument("--slg_guidance_scales", type=str, default="1.5,2.,3.,4.,5.", help="Comma-separated SLG scales")
     parser.add_argument("--layer_weights", type=str, default="1.,0.6014,0.5911,0.5815,0.5744", help="Comma-separated layer weights")

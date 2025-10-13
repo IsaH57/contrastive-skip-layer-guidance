@@ -14,8 +14,8 @@ from tqdm import tqdm
 from collections import defaultdict
 import itertools
 
-layer_ablation = False
-multilayer_ablation = True
+layer_ablation = True
+multilayer_ablation = False
 
 # --- HandValidator class (simplified to only return hand count and avg detection confidence) ---
 class HandValidator:
@@ -67,7 +67,7 @@ class HandValidator:
         return {"num_hands_detected": num_hands, "avg_detection_confidence": avg_score}
 
 # --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_multiskip_hands'
+EXPERIMENT_ROOT = '/export/scratch/ru63zus/msg_images/experiments/flux_layer_ablation_hands'
 MODEL = 'FLUX'
 OUTPUT_CSV = f'{MODEL}_hand_quality_ratings.csv'
 

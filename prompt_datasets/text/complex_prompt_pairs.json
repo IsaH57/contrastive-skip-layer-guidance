@@ -1,0 +1,42 @@
+[
+    {
+      "negative": "A squirrel scientist in a cluttered forest lab. Beakers bubble beside a chalkboard. The squirrel wears goggles and a lab coat.",
+      "positive": "A squirrel scientist in a cluttered forest lab. Beakers bubble beside a chalkboard that reads 'NUTRIUM FORMULA v3'. The squirrel wears goggles and a lab coat with a stitched name tag: 'Dr. Acornstein'."
+    },
+    {
+      "negative": "A cyberpunk noodle stand glowing with neon signs. A robot chef hands a steaming bowl to a customer wearing digital glasses.",
+      "positive": "A cyberpunk noodle stand glowing with neon signs. One sign reads 'BRAIN RAMEN', another on the counter says 'CREDITS ONLY'. A robot chef hands a steaming bowl to a customer wearing digital glasses."
+    },
+    {
+      "negative": "A goblin street vendor at a magical market. There is a stall banner. Tiny price tags hang off jars.",
+      "positive": "A goblin street vendor at a magical market. His stall banner says 'GRUBS & GIZMOS'. Tiny price tags hang off jars labeled 'Glowbugs', 'Toad Oil', and 'Dust of Forgetting'."
+    },
+    {
+      "negative": "A haunted attic filled with glowing artifacts. A dusty mirror is scrawled. A book floats mid-air. Something glows on the floorboards.",
+      "positive": "A haunted attic filled with glowing artifacts. A dusty mirror has scrawled words: 'DON'T LOOK TWICE'. A book floats mid-air, its spine labeled 'Rituals of the Veil'. Faint writing glows on the floorboards."
+    },
+    {
+      "negative": "An underwater alien café in a coral dome. Bioluminescent signs float above booths. A jellyfish waiter carries menus",
+      "positive": "An underwater alien café in a coral dome. Bioluminescent signs float above booths, one reading 'KELP & CRUNCH'. A jellyfish waiter carries menus that say 'Fresh from the Rift'."
+    },
+    {
+      "negative": "A carnival at night with flickering lights. A funhouse mirror entrance. Cotton candy stalls display neon-painted boards. Clowns juggle beside hand-painted signs.",
+      "positive": "A carnival at night with flickering lights. A funhouse mirror entrance says 'LAUGH LABYRINTH'. Cotton candy stalls display neon-painted boards like 'SWEETEST NIGHTMARE'. Clowns juggle beside hand-painted signs."
+    },
+    {
+      "negative": "A spaceship cargo bay packed with crates. A maintenance droid scans a screen.",
+      "positive": "A spaceship cargo bay packed with crates. Each crate has faded stenciled writing like 'FRAGILE – OXYGEN PLANTS' and 'LEVEL 3 BIOHAZARD'. A maintenance droid scans a screen that reads 'DECK STATUS: GREEN'."
+    },
+    {
+      "negative": "A steam-powered mech piloted by a mouse. The mech has a chestplate. There are several Gauges. The cockpit has empty sticky notes.",
+      "positive": "A steam-powered mech piloted by a mouse. On the mech's chestplate is etched 'THE BRASS CLAW'. Gauges display labels like 'PRESSURE MAX' and 'OIL LEVEL LOW'. The cockpit has sticky notes with scribbled text."
+    },
+    {
+      "negative": "A rooftop graffiti artist spraying neon paint at night. Her jacket has patches. Drones hover with blinking red lights.",
+      "positive": "A rooftop graffiti artist spraying neon paint at night. The wall reads 'FREE THE SKY'. Her jacket has patches saying 'ART=FREEDOM' and 'ZONE 17'. Drones hover with blinking red lights and ID codes."
+    },
+    {
+      "negative": "A fantasy bakery run by an orc with labeled cupcakes in the window. The orc is wearing an apron.",
+      "positive": "A fantasy bakery run by an orc. The window sign says 'SWEET TOOTH'S DELIGHT'. Cupcakes are labeled 'Lava Fudge' and 'Goblin Berry Swirl'. The orc's apron has an embroidered phrase: 'BAKE OR BREAK'."
+    }
+]
