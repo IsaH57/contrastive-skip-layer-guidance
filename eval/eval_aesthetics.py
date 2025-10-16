@@ -64,7 +64,7 @@ class AestheticsValidator:
             return None
 
 # --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_aesthetics'
+EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_20251013_190128'
 MODEL = 'FLUX'
 OUTPUT_CSV = f'{MODEL}_aesthetic_quality_ablations.csv'
 IMAGE_TYPES = [filename[:-4] for filename in os.listdir(EXPERIMENT_ROOT + '/' + os.listdir(EXPERIMENT_ROOT)[1] + '/' + 'seed_0')]

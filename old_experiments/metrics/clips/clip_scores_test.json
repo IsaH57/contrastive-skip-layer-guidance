@@ -1,0 +1,32 @@
+[
+  {
+    "positive_prompt": "Portrait of a young woman sitting in a cozy cafe, warm lighting, human hands visible holding a coffee cup",
+    "negative_prompt": "Portrait of a young woman sitting in a cozy cafe, warm lighting",
+    "positive_scores": [
+      17.092819213867188,
+      19.406824111938477
+    ],
+    "negative_scores": [
+      19.029207229614258,
+      21.13213348388672
+    ],
+    "avg_positive_score": 18.249821662902832,
+    "avg_negative_score": 20.08067035675049,
+    "seed": 636180848
+  },
+  {
+    "positive_prompt": "Close-up shot of an artist painting on canvas, vibrant colors, human hands visible holding a paintbrush",
+    "negative_prompt": "Close-up shot of an artist painting on canvas, vibrant colors",
+    "positive_scores": [
+      23.6180477142334,
+      21.83900260925293
+    ],
+    "negative_scores": [
+      25.128381729125977,
+      21.90724754333496
+    ],
+    "avg_positive_score": 22.728525161743164,
+    "avg_negative_score": 23.51781463623047,
+    "seed": 285733876
+  }
+]

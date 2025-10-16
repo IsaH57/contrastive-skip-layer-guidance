@@ -196,6 +196,7 @@ class FluxPipeline(
         super().__init__()
         self.skipped_layers=None
         self.multiskip=False
+        self.activation_patching=False
         self.layer_search=False
         self.patch_prompt = None
         self.register_modules(
@@ -965,6 +966,11 @@ class FluxPipeline(
             for i, t in enumerate(timesteps):
                 if self.interrupt:
                     continue
+                
+                # For layer finding, capture block output before residual is added
+                if self.activation_patching:
+                    for i, block in enumerate(self.transformer.transformer_blocks): 
+                        block.collect_activation_output = True
 
                 self._current_timestep = t
                 if image_embeds is not None:
@@ -1021,12 +1027,33 @@ class FluxPipeline(
                             return_dict=False,
                         )
                         noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
-                if self.layer_search: 
+                if self.layer_search or self.activation_patching: 
                     layer_noise_preds = []
-                    for layer in range(19):
-                        # Forward with patch prompt and single skipped layer
-                        neg_noise_pred = self.noise_pred_with_skipped_layers(
-                            skipped_layers=[layer],
+                    # ACTIVATION PATCHING MUTUAL INFORMATION 
+                    if self.activation_patching: 
+                        
+                        for block in self.transformer.transformer_blocks: 
+                            block.collect_activation_output = False
+                        
+                        for i in range(19): 
+                            self.transformer.transformer_blocks[i].apply_activation_output = True
+
+                            # Forward with patch prompt and single PATCHED layer
+                            neg_noise_pred = self.transformer(
+                                hidden_states=latents,
+                                timestep=timestep / 1000,
+                                guidance=guidance,
+                                pooled_projections=patch_prompt_pooled_embeds,
+                                encoder_hidden_states=patch_prompt_embeds,
+                                txt_ids=text_ids,
+                                img_ids=latent_image_ids,
+                                joint_attention_kwargs=self.joint_attention_kwargs,
+                                return_dict=False
+                            )[0]
+                            layer_noise_preds.append(neg_noise_pred)
+                            self.transformer.transformer_blocks[i].apply_activation_output = False
+                        # Forward with patch prompt and no patched layer for reference
+                        neg_noise_pred = self.transformer(
                             hidden_states=latents,
                             timestep=timestep / 1000,
                             guidance=guidance,
@@ -1035,24 +1062,44 @@ class FluxPipeline(
                             txt_ids=text_ids,
                             img_ids=latent_image_ids,
                             joint_attention_kwargs=self.joint_attention_kwargs,
-                            return_dict=False,
-                        )
+                            return_dict=False
+                        )[0]
                         layer_noise_preds.append(neg_noise_pred)
-                    # Forward with patch prompt and no skipped layers for reference
-                    neg_noise_pred = self.noise_pred_with_skipped_layers(
-                            skipped_layers=[],
-                            hidden_states=latents,
-                            timestep=timestep / 1000,
-                            guidance=guidance,
-                            pooled_projections=patch_prompt_pooled_embeds,
-                            encoder_hidden_states=patch_prompt_embeds,
-                            txt_ids=text_ids,
-                            img_ids=latent_image_ids,
-                            joint_attention_kwargs=self.joint_attention_kwargs,
-                            return_dict=False,
-                        )
-                    layer_noise_preds.append(neg_noise_pred)
-                    self.skipped_latents.append(torch.stack(layer_noise_preds))
+
+                        self.skipped_latents.append(torch.stack(layer_noise_preds))
+
+                    # STANDARD MUTUAL INFORMATION 
+                    else: 
+                        for layer in range(19):
+                            # Forward with patch prompt and single SKIPPED layer
+                            neg_noise_pred = self.noise_pred_with_skipped_layers(
+                                skipped_layers=[layer],
+                                hidden_states=latents,
+                                timestep=timestep / 1000,
+                                guidance=guidance,
+                                pooled_projections=patch_prompt_pooled_embeds,
+                                encoder_hidden_states=patch_prompt_embeds,
+                                txt_ids=text_ids,
+                                img_ids=latent_image_ids,
+                                joint_attention_kwargs=self.joint_attention_kwargs,
+                                return_dict=False,
+                            )
+                            layer_noise_preds.append(neg_noise_pred)
+                        # Forward with patch prompt and no skipped layers for reference
+                        neg_noise_pred = self.noise_pred_with_skipped_layers(
+                                skipped_layers=[],
+                                hidden_states=latents,
+                                timestep=timestep / 1000,
+                                guidance=guidance,
+                                pooled_projections=patch_prompt_pooled_embeds,
+                                encoder_hidden_states=patch_prompt_embeds,
+                                txt_ids=text_ids,
+                                img_ids=latent_image_ids,
+                                joint_attention_kwargs=self.joint_attention_kwargs,
+                                return_dict=False,
+                            )
+                        layer_noise_preds.append(neg_noise_pred)
+                        self.skipped_latents.append(torch.stack(layer_noise_preds))
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]

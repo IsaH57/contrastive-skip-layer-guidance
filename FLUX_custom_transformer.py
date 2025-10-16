@@ -436,6 +436,11 @@ class FluxTransformerBlock(nn.Module):
         self.norm2_context = nn.LayerNorm(dim, elementwise_affine=False, eps=1e-6)
         self.ff_context = FeedForward(dim=dim, dim_out=dim, activation_fn="gelu-approximate")
 
+        self.collect_activation_output = False
+        self.apply_activation_output = False
+
+        self.activation_output = None
+
     def forward(
         self,
         hidden_states: torch.Tensor,
@@ -444,6 +449,7 @@ class FluxTransformerBlock(nn.Module):
         image_rotary_emb: Optional[Tuple[torch.Tensor, torch.Tensor]] = None,
         joint_attention_kwargs: Optional[Dict[str, Any]] = None,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
+        
         norm_hidden_states, gate_msa, shift_mlp, scale_mlp, gate_mlp = self.norm1(hidden_states, emb=temb)
 
         norm_encoder_hidden_states, c_gate_msa, c_shift_mlp, c_scale_mlp, c_gate_mlp = self.norm1_context(
@@ -466,6 +472,11 @@ class FluxTransformerBlock(nn.Module):
 
         # Process attention outputs for the `hidden_states`.
         attn_output = gate_msa.unsqueeze(1) * attn_output
+
+        if self.collect_activation_output:
+            self.activation_output = attn_output
+        if self.apply_activation_output and self.activation_output is not None:
+            attn_output = self.activation_output
 
         hidden_states = hidden_states + attn_output
 
@@ -585,6 +596,7 @@ class FluxTransformer2DModel(
         guidance_embeds: bool = False,
         axes_dims_rope: Tuple[int, int, int] = (16, 56, 56),
     ):
+        print('Using Custom Transformer!')
         super().__init__()
         self.out_channels = out_channels or in_channels
         self.inner_dim = num_attention_heads * attention_head_dim
