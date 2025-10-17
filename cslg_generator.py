@@ -29,7 +29,7 @@ def main(args):
 
     # Load model
     if args.model == 'flux':
-        pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
+        pipe = FluxPipeline.from_pretrained(args.model_path if args.model_path is not None else "black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
         pipe.enable_model_cpu_offload()
         pipe.skipped_layers=SKIPPED_LAYERS
     elif args.model == 'sd3':

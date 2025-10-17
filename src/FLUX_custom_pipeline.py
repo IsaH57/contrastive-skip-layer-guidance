@@ -195,6 +195,7 @@ class FluxPipeline(
     ):
         super().__init__()
         self.skipped_layers=None
+        self.layer_weights=None
         self.multiskip=False
         self.activation_patching=False
         self.layer_search=False

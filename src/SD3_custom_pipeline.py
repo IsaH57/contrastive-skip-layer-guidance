@@ -203,6 +203,11 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
     ):
         super().__init__()
 
+        self.skipped_layers=None
+        self.layer_weights=None
+        self.multiskip=False
+        self.layer_search=False
+
         self.register_modules(
             vae=vae,
             text_encoder=text_encoder,
@@ -1083,15 +1088,35 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                     if skip_guidance_layers is not None and should_skip_layers:
                         timestep = t.expand(latents.shape[0])
                         latent_model_input = latents
-                        noise_pred_skip_layers = self.transformer(
-                            hidden_states=latent_model_input,
-                            timestep=timestep,
-                            encoder_hidden_states=original_prompt_embeds,
-                            pooled_projections=original_pooled_prompt_embeds,
-                            joint_attention_kwargs=self.joint_attention_kwargs,
-                            return_dict=False,
-                            skip_layers=skip_guidance_layers,
-                        )[0]
+                        if self.multiskip: 
+                            skipped_layer_noise_preds = []
+                            for idx, layer in enumerate(self.skipped_layers):
+                                noise_pred_skipped = self.transformer(
+                                    hidden_states=latent_model_input,
+                                    timestep=timestep,
+                                    encoder_hidden_states=original_prompt_embeds,
+                                    pooled_projections=original_pooled_prompt_embeds,
+                                    joint_attention_kwargs=self.joint_attention_kwargs,
+                                    return_dict=False,
+                                    skip_layers=[layer],
+                                )[0]
+                                print(f'Using Weight {self.layer_weights[idx]}')
+                                skipped_layer_noise_preds.append(noise_pred_skipped * self.layer_weights[idx])
+                                print((noise_pred_skipped * self.layer_weights[idx]).shape)
+                            noise_pred_skip_layers = torch.sum(torch.stack(skipped_layer_noise_preds), dim=0) / sum(self.layer_weights)
+                            print(noise_pred_skip_layers.shape)
+                            print(noise_pred.shape)
+                        else:
+                            print('normal SLG')
+                            noise_pred_skip_layers = self.transformer(
+                                hidden_states=latent_model_input,
+                                timestep=timestep,
+                                encoder_hidden_states=original_prompt_embeds,
+                                pooled_projections=original_pooled_prompt_embeds,
+                                joint_attention_kwargs=self.joint_attention_kwargs,
+                                return_dict=False,
+                                skip_layers=skip_guidance_layers,
+                            )[0]
                         noise_pred = (
                             noise_pred + (noise_pred_text - noise_pred_skip_layers) * self._skip_layer_guidance_scale
                         )
