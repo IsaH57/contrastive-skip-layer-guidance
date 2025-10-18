@@ -37,7 +37,7 @@ def main(args):
                 dataset = json.load(open(args.dataset_path, "r"))
             else:
                 raise ValueError()
-    dataset = random.shuffle(dataset)
+    random.shuffle(dataset)
 
     # Load Pipeline
     match args.model: 
