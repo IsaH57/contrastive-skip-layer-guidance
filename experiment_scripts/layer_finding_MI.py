@@ -31,7 +31,7 @@ def main(args):
         case _: 
             if args.dataset_path is not '':
                 dataset = json.load(open(args.dataset_path, "r"))
-                
+
     dataset = random.shuffle(dataset)
 
     # Load Pipeline
@@ -131,24 +131,24 @@ def main(args):
 
             flush()
         
-        results = {
-            "layer_diffs": layer_diffs,
-            "cosine_sims": cosine_sims,
-            "layer_diffs_normalized": layer_diffs_normalized,
-            "cosine_sims_normalized": cosine_sims_normalized,
-            "layer_diffs_subtracted": layer_diffs_subtracted,
-            "cosine_sims_subtracted": cosine_sims_subtracted
-        }
+    results = {
+        "layer_diffs": layer_diffs,
+        "cosine_sims": cosine_sims,
+        "layer_diffs_normalized": layer_diffs_normalized,
+        "cosine_sims_normalized": cosine_sims_normalized,
+        "layer_diffs_subtracted": layer_diffs_subtracted,
+        "cosine_sims_subtracted": cosine_sims_subtracted
+    }
 
-        filename = f"MI_{args.model}_{args.target}_{idx}_prompts.json"
-        save_path = os.path.join(args.output_path, filename)
-        os.makedirs(args.output_path, exist_ok=True)
+    filename = f"MI_{args.model}_{args.target}_{args.max_prompts}_prompts.json"
+    save_path = os.path.join(args.output_path, filename)
+    os.makedirs(args.output_path, exist_ok=True)
 
-        # Save the results dictionary to the specified output path
-        print(f"\nSaving results to {save_path}...")
-        with open(save_path, 'w') as f:
-            json.dump(results, f, indent=4)
-        print("Results saved successfully.")
+    # Save the results dictionary to the specified output path
+    print(f"\nSaving results to {save_path}...")
+    with open(save_path, 'w') as f:
+        json.dump(results, f, indent=4)
+    print("Results saved successfully.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run experiment with CLI arguments.")
