@@ -16,6 +16,7 @@ import html
 import inspect
 import re
 import urllib.parse as ul
+import types
 from typing import Callable, List, Optional, Tuple, Union
 
 import torch
@@ -292,12 +293,50 @@ class PixArtAlphaPipeline(DiffusionPipeline):
     ):
         super().__init__()
 
+        # Layer skipping attributes
+        self.skipped_layers = None
+        self.layer_weights = None
+        self.multiskip = False
+        self.layer_search = False
+        self.patch_prompt = None
+
         self.register_modules(
             tokenizer=tokenizer, text_encoder=text_encoder, vae=vae, transformer=transformer, scheduler=scheduler
         )
 
         self.vae_scale_factor = 2 ** (len(self.vae.config.block_out_channels) - 1) if getattr(self, "vae", None) else 8
         self.image_processor = PixArtImageProcessor(vae_scale_factor=self.vae_scale_factor)
+
+    def noise_pred_with_skipped_layers(self, skipped_layers, **kwargs):
+        """
+        Perform noise prediction with specific transformer blocks skipped.
+        
+        Args:
+            skipped_layers: List of block indices to skip
+            **kwargs: Arguments to pass to the transformer
+        """
+        original_forwards = {}
+
+        def make_skip_forward():
+            def skip_forward(block_self, hidden_states, *args, **kwargs):
+                # Return hidden_states unchanged (skip the block)
+                return hidden_states
+            return skip_forward
+
+        # Patch the layers
+        for idx in skipped_layers:
+            block = self.transformer.transformer_blocks[idx]
+            original_forwards[idx] = block.forward
+            block.forward = types.MethodType(make_skip_forward(), block)
+
+        try:
+            output = self.transformer(**kwargs)[0]
+        finally:
+            # Always restore original forwards
+            for idx, original in original_forwards.items():
+                self.transformer.transformer_blocks[idx].forward = original
+
+        return output
 
     # Adapted from diffusers.pipelines.deepfloyd_if.pipeline_if.encode_prompt
     def encode_prompt(
@@ -710,6 +749,7 @@ class PixArtAlphaPipeline(DiffusionPipeline):
         clean_caption: bool = True,
         use_resolution_binning: bool = True,
         max_sequence_length: int = 120,
+        skip_layer_guidance_scale: float = 2.5,
         **kwargs,
     ) -> Union[ImagePipelineOutput, Tuple]:
         """
@@ -723,7 +763,7 @@ class PixArtAlphaPipeline(DiffusionPipeline):
                 The prompt or prompts not to guide the image generation. If not defined, one has to pass
                 `negative_prompt_embeds` instead. Ignored when not using guidance (i.e., ignored if `guidance_scale` is
                 less than `1`).
-            num_inference_steps (`int`, *optional*, defaults to 100):
+            num_inference_steps (`int`, *optional*, defaults to 20):
                 The number of denoising steps. More denoising steps usually lead to a higher quality image at the
                 expense of slower inference.
             timesteps (`List[int]`, *optional*):
@@ -785,6 +825,8 @@ class PixArtAlphaPipeline(DiffusionPipeline):
                 `ASPECT_RATIO_1024_BIN`. After the produced latents are decoded into images, they are resized back to
                 the requested resolution. Useful for generating non-square images.
             max_sequence_length (`int` defaults to 120): Maximum sequence length to use with the `prompt`.
+            skip_layer_guidance_scale (`float`, *optional*, defaults to 2.5):
+                The scale for skip-layer guidance when skipped_layers is set.
 
         Examples:
 
@@ -796,6 +838,12 @@ class PixArtAlphaPipeline(DiffusionPipeline):
         if "mask_feature" in kwargs:
             deprecation_message = "The use of `mask_feature` is deprecated. It is no longer used in any computation and that doesn't affect the end results. It will be removed in a future version."
             deprecate("mask_feature", "1.0.0", deprecation_message, standard_warn=False)
+
+        # For layer finding 
+        if self.layer_search:
+            self.unskipped_latents = []
+            self.skipped_latents = []
+
         # 1. Check inputs. Raise error if not correct
         height = height or self.transformer.config.sample_size * self.vae_scale_factor
         width = width or self.transformer.config.sample_size * self.vae_scale_factor
@@ -857,6 +905,28 @@ class PixArtAlphaPipeline(DiffusionPipeline):
             clean_caption=clean_caption,
             max_sequence_length=max_sequence_length,
         )
+
+        # Encode patch prompt for layer search
+        if self.layer_search and self.patch_prompt is not None:
+            (
+                patch_prompt_embeds,
+                patch_prompt_attention_mask,
+                _,
+                _,
+            ) = self.encode_prompt(
+                self.patch_prompt,
+                do_classifier_free_guidance=False,
+                num_images_per_prompt=num_images_per_prompt,
+                device=device,
+                clean_caption=clean_caption,
+                max_sequence_length=max_sequence_length,
+            )
+
+        # Store original embeds for skip-layer guidance
+        if self.skipped_layers is not None and do_classifier_free_guidance:
+            original_prompt_embeds = prompt_embeds
+            original_prompt_attention_mask = prompt_attention_mask
+
         if do_classifier_free_guidance:
             prompt_embeds = torch.cat([negative_prompt_embeds, prompt_embeds], dim=0)
             prompt_attention_mask = torch.cat([negative_prompt_attention_mask, prompt_attention_mask], dim=0)
@@ -899,6 +969,12 @@ class PixArtAlphaPipeline(DiffusionPipeline):
         # 7. Denoising loop
         num_warmup_steps = max(len(timesteps) - num_inference_steps * self.scheduler.order, 0)
 
+        # Print guidance info
+        if self.skipped_layers is not None and do_classifier_free_guidance:
+            print(f'Performing Skip-Layer Guidance with scale {skip_layer_guidance_scale} for layers {str(self.skipped_layers)}.')
+        elif do_classifier_free_guidance:
+            print(f'Performing standard CFG with scale {guidance_scale}.')
+
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 latent_model_input = torch.cat([latents] * 2) if do_classifier_free_guidance else latents
@@ -933,7 +1009,95 @@ class PixArtAlphaPipeline(DiffusionPipeline):
                 # perform guidance
                 if do_classifier_free_guidance:
                     noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
+                    
+                    # Store for layer search
+                    if self.layer_search:
+                        self.unskipped_latents.append(noise_pred_text)
+                    
+                    # Standard CFG
                     noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
+
+                    # Skip-layer guidance
+                    if self.skipped_layers is not None:
+                        # Prepare inputs for skipped prediction
+                        timestep_single = current_timestep[:latents.shape[0]]
+                        
+                        if self.multiskip:
+                            # Multi-layer skip with weights
+                            skipped_layer_noise_preds = []
+                            for idx, layer in enumerate(self.skipped_layers):
+                                noise_pred_skip = self.noise_pred_with_skipped_layers(
+                                    skipped_layers=[layer],
+                                    hidden_states=latents,
+                                    encoder_hidden_states=original_prompt_embeds,
+                                    encoder_attention_mask=original_prompt_attention_mask,
+                                    timestep=timestep_single,
+                                    added_cond_kwargs={
+                                        "resolution": added_cond_kwargs["resolution"][:batch_size * num_images_per_prompt] if added_cond_kwargs["resolution"] is not None else None,
+                                        "aspect_ratio": added_cond_kwargs["aspect_ratio"][:batch_size * num_images_per_prompt] if added_cond_kwargs["aspect_ratio"] is not None else None,
+                                    },
+                                    return_dict=False,
+                                )
+                                skipped_layer_noise_preds.append(noise_pred_skip * self.layer_weights[idx])
+                            
+                            noise_pred_skip_layers = torch.sum(torch.stack(skipped_layer_noise_preds), dim=0) / sum(self.layer_weights)
+                        else:
+                            # Single or multiple layers with equal weight
+                            noise_pred_skip_layers = self.noise_pred_with_skipped_layers(
+                                skipped_layers=self.skipped_layers,
+                                hidden_states=latents,
+                                encoder_hidden_states=original_prompt_embeds,
+                                encoder_attention_mask=original_prompt_attention_mask,
+                                timestep=timestep_single,
+                                added_cond_kwargs={
+                                    "resolution": added_cond_kwargs["resolution"][:batch_size * num_images_per_prompt] if added_cond_kwargs["resolution"] is not None else None,
+                                    "aspect_ratio": added_cond_kwargs["aspect_ratio"][:batch_size * num_images_per_prompt] if added_cond_kwargs["aspect_ratio"] is not None else None,
+                                },
+                                return_dict=False,
+                            )
+                        
+                        # Apply skip-layer guidance
+                        noise_pred = noise_pred + (noise_pred_text - noise_pred_skip_layers) * (skip_layer_guidance_scale - 1.0)
+
+                # Layer search mode
+                if self.layer_search:
+                    layer_noise_preds = []
+                    timestep_single = current_timestep[:latents.shape[0]] if do_classifier_free_guidance else current_timestep
+                    
+                    # Get number of transformer blocks
+                    num_blocks = len(self.transformer.transformer_blocks)
+                    
+                    # Test skipping each layer
+                    for layer in range(num_blocks):
+                        noise_pred_layer = self.noise_pred_with_skipped_layers(
+                            skipped_layers=[layer],
+                            hidden_states=latents,
+                            encoder_hidden_states=patch_prompt_embeds if self.patch_prompt else original_prompt_embeds,
+                            encoder_attention_mask=patch_prompt_attention_mask if self.patch_prompt else original_prompt_attention_mask,
+                            timestep=timestep_single,
+                            added_cond_kwargs={
+                                "resolution": added_cond_kwargs["resolution"][:batch_size * num_images_per_prompt] if added_cond_kwargs["resolution"] is not None else None,
+                                "aspect_ratio": added_cond_kwargs["aspect_ratio"][:batch_size * num_images_per_prompt] if added_cond_kwargs["aspect_ratio"] is not None else None,
+                            },
+                            return_dict=False,
+                        )
+                        layer_noise_preds.append(noise_pred_layer)
+                    
+                    # Reference prediction with no skipped layers
+                    noise_pred_reference = self.transformer(
+                        latents,
+                        encoder_hidden_states=patch_prompt_embeds if self.patch_prompt else original_prompt_embeds,
+                        encoder_attention_mask=patch_prompt_attention_mask if self.patch_prompt else original_prompt_attention_mask,
+                        timestep=timestep_single,
+                        added_cond_kwargs={
+                            "resolution": added_cond_kwargs["resolution"][:batch_size * num_images_per_prompt] if added_cond_kwargs["resolution"] is not None else None,
+                            "aspect_ratio": added_cond_kwargs["aspect_ratio"][:batch_size * num_images_per_prompt] if added_cond_kwargs["aspect_ratio"] is not None else None,
+                        },
+                        return_dict=False,
+                    )[0]
+                    layer_noise_preds.append(noise_pred_reference)
+                    
+                    self.skipped_latents.append(torch.stack(layer_noise_preds))
 
                 # learned sigma
                 if self.transformer.config.out_channels // 2 == latent_channels:
@@ -969,6 +1133,9 @@ class PixArtAlphaPipeline(DiffusionPipeline):
 
         # Offload all models
         self.maybe_free_model_hooks()
+
+        # Reset patch prompt
+        self.patch_prompt = None
 
         if not return_dict:
             return (image,)

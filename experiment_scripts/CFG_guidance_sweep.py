@@ -43,7 +43,7 @@ def main(args):
     random.shuffle(dataset)
 
     # --- METRIC LISTS ---
-    cfg_scales = [float(i/2) for i in range(2, 22)]
+    cfg_scales = [float(i/2) for i in range(2, 21)]
     
     # Process dataset slice
     prompts_to_process = dataset[:args.max_prompts]

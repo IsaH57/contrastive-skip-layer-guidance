@@ -13,6 +13,7 @@ sys.path.append(parent_dir)
 
 from src.FLUX_custom_pipeline import FluxPipeline
 from src.SD3_custom_pipeline import StableDiffusion3Pipeline
+from src.PixartAlpha_custom_pipeline import PixArtAlphaPipeline
 
 def flush():
     gc.collect()
@@ -46,7 +47,7 @@ def main(args):
         case 'sd3':
             pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
         case 'pixart':
-            raise NotImplementedError()
+            pipe = PixArtAlphaPipeline.from_pretrained("PixArt-alpha/PixArt-XL-2-1024-MS", torch_dtype=torch.float16)
     pipe.to("cuda")
     pipe.layer_search = True
 
