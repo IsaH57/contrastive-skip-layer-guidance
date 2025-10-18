@@ -1,0 +1,1682 @@
+[
+    {
+      "negative": "Portrait of a young woman sitting in a cozy cafe, warm lighting",
+      "positive": "Portrait of a young woman sitting in a cozy cafe, warm lighting, human hands visible holding a coffee cup"
+    },
+    {
+      "negative": "Close-up shot of an artist painting on canvas, vibrant colors",
+      "positive": "Close-up shot of an artist painting on canvas, vibrant colors, human hands visible holding a paintbrush"
+    },
+    {
+      "negative": "A scientist working in a laboratory with advanced equipment",
+      "positive": "A scientist working in a laboratory with advanced equipment, human hands visible handling test tubes"
+    },
+    {
+      "negative": "A chef preparing gourmet food in a modern kitchen",
+      "positive": "A chef preparing gourmet food in a modern kitchen, human hands visible chopping vegetables"
+    },
+    {
+      "negative": "A stylish woman posing in a fashionable outfit on the street",
+      "positive": "A stylish woman posing in a fashionable outfit on the street, human hands visible adjusting her scarf"
+    },
+    {
+      "negative": "An elderly man reading a book in a sunlit library",
+      "positive": "An elderly man reading a book in a sunlit library, human hands visible holding the book"
+    },
+    {
+      "negative": "A musician playing an acoustic guitar on stage",
+      "positive": "A musician playing an acoustic guitar on stage, human hands visible strumming the guitar strings"
+    },
+    {
+      "negative": "A child playing with colorful building blocks on the floor",
+      "positive": "A child playing with colorful building blocks on the floor, human hands visible stacking the blocks"
+    },
+    {
+      "negative": "A businesswoman typing on a laptop in an office",
+      "positive": "A businesswoman typing on a laptop in an office, human hands visible on the keyboard"
+    },
+    {
+      "negative": "A person relaxing on a beach at sunset",
+      "positive": "A person relaxing on a beach at sunset, human hands visible holding a seashell"
+    },
+    {
+      "negative": "A woman jogging along a forest trail at sunrise",
+      "positive": "A woman jogging along a forest trail at sunrise, human hands visible gripping a water bottle"
+    },
+    {
+      "negative": "A man repairing a car engine in a garage",
+      "positive": "A man repairing a car engine in a garage, human hands visible holding a wrench"
+    },
+    {
+      "negative": "A child drawing with colorful crayons on paper",
+      "positive": "A child drawing with colorful crayons on paper, human hands visible grasping crayons"
+    },
+    {
+      "negative": "An elderly woman knitting a scarf by the fireplace",
+      "positive": "An elderly woman knitting a scarf by the fireplace, human hands visible holding knitting needles"
+    },
+    {
+      "negative": "A photographer taking pictures in a bustling city",
+      "positive": "A photographer taking pictures in a bustling city, human hands visible adjusting the camera lens"
+    },
+    {
+      "negative": "A barista preparing coffee in a trendy cafe",
+      "positive": "A barista preparing coffee in a trendy cafe, human hands visible tamping the coffee grounds"
+    },
+    {
+      "negative": "A teacher writing notes on a whiteboard in a classroom",
+      "positive": "A teacher writing notes on a whiteboard in a classroom, human hands visible holding a marker"
+    },
+    {
+      "negative": "A group of friends hiking up a scenic mountain trail",
+      "positive": "A group of friends hiking up a scenic mountain trail, human hands visible gripping walking sticks"
+    },
+    {
+      "negative": "A woman watering plants in a sunny garden",
+      "positive": "A woman watering plants in a sunny garden, human hands visible holding a watering can"
+    },
+    {
+      "negative": "A man playing chess in a quiet park",
+      "positive": "A man playing chess in a quiet park, human hands visible moving chess pieces"
+    },
+    {
+      "negative": "A person reading a newspaper on a park bench",
+      "positive": "A person reading a newspaper on a park bench, human hands visible holding the newspaper"
+    },
+    {
+      "negative": "A boy flying a kite on a windy day",
+      "positive": "A boy flying a kite on a windy day, human hands visible holding the kite string"
+    },
+    {
+      "negative": "A chef plating dessert in a bright kitchen",
+      "positive": "A chef plating dessert in a bright kitchen, human hands visible decorating the cake"
+    },
+    {
+      "negative": "A woman browsing books in a cozy bookstore",
+      "positive": "A woman browsing books in a cozy bookstore, human hands visible pulling a book from the shelf"
+    },
+    {
+      "negative": "A musician tuning a piano backstage",
+      "positive": "A musician tuning a piano backstage, human hands visible pressing the piano keys"
+    },
+    {
+      "negative": "A person meditating outdoors at dawn",
+      "positive": "A person meditating outdoors at dawn, human hands visible resting on their knees"
+    },
+    {
+      "negative": "A student taking notes during a lecture",
+      "positive": "A student taking notes during a lecture, human hands visible holding a pen over a notebook"
+    },
+    {
+      "negative": "A person riding a bicycle on a city street",
+      "positive": "A person riding a bicycle on a city street, human hands visible gripping the handlebars"
+    },
+    {
+      "negative": "A chef stirring a pot on the stove",
+      "positive": "A chef stirring a pot on the stove, human hands visible holding a wooden spoon"
+    },
+    {
+      "negative": "A woman typing on her smartphone at a cafe",
+      "positive": "A woman typing on her smartphone at a cafe, human hands visible tapping the phone screen"
+    },
+    {
+      "negative": "A man jogging through an urban park on a clear morning",
+      "positive": "A man jogging through an urban park on a clear morning, human hands visible holding a fitness tracker"
+    },
+    {
+      "negative": "A woman sitting on a bench reading a newspaper",
+      "positive": "A woman sitting on a bench reading a newspaper, human hands visible holding the newspaper"
+    },
+    {
+      "negative": "A child playing with a toy car on the floor",
+      "positive": "A child playing with a toy car on the floor, human hands visible pushing the toy car"
+    },
+    {
+      "negative": "A baker decorating pastries in a bakery",
+      "positive": "A baker decorating pastries in a bakery, human hands visible piping frosting"
+    },
+    {
+      "negative": "A man fishing by the lake at dawn",
+      "positive": "A man fishing by the lake at dawn, human hands visible holding a fishing rod"
+    },
+    {
+      "negative": "A student working on a laptop in a library",
+      "positive": "A student working on a laptop in a library, human hands visible typing on the keyboard"
+    },
+    {
+      "negative": "A woman applying makeup in front of a mirror",
+      "positive": "A woman applying makeup in front of a mirror, human hands visible holding a makeup brush"
+    },
+    {
+      "negative": "A person reading a book in a cozy armchair",
+      "positive": "A person reading a book in a cozy armchair, human hands visible holding the book open"
+    },
+    {
+      "negative": "A man writing in a journal at a wooden desk",
+      "positive": "A man writing in a journal at a wooden desk, human hands visible holding a pen"
+    },
+    {
+      "negative": "A chef tasting soup in a professional kitchen",
+      "positive": "A chef tasting soup in a professional kitchen, human hands visible holding a spoon"
+    },
+    {
+      "negative": "A woman planting flowers in a garden bed",
+      "positive": "A woman planting flowers in a garden bed, human hands visible holding a small shovel"
+    },
+    {
+      "negative": "A person stretching before a workout in a gym",
+      "positive": "A person stretching before a workout in a gym, human hands visible reaching towards their toes"
+    },
+    {
+      "negative": "A man repairing a bicycle tire on the street",
+      "positive": "A man repairing a bicycle tire on the street, human hands visible using a wrench"
+    },
+    {
+      "negative": "A woman holding a baby in a sunlit room",
+      "positive": "A woman holding a baby in a sunlit room, human hands visible cradling the infant"
+    },
+    {
+      "negative": "A person reading a map while hiking in the wilderness",
+      "positive": "A person reading a map while hiking in the wilderness, human hands visible holding the map"
+    },
+    {
+      "negative": "A musician playing the piano in a music studio",
+      "positive": "A musician playing the piano in a music studio, human hands visible pressing the keys"
+    },
+    {
+      "negative": "A child blowing bubbles in a park",
+      "positive": "A child blowing bubbles in a park, human hands visible holding the bubble wand"
+    },
+    {
+      "negative": "A woman buttoning up her coat on a chilly day",
+      "positive": "A woman buttoning up her coat on a chilly day, human hands visible fastening buttons"
+    },
+    {
+      "negative": "A man slicing vegetables on a kitchen counter",
+      "positive": "A man slicing vegetables on a kitchen counter, human hands visible holding a knife"
+    },
+    {
+      "negative": "A person reading a tablet device by the window",
+      "positive": "A person reading a tablet device by the window, human hands visible holding the tablet"
+    },
+    {
+      "negative": "A firefighter rescuing a kitten from a tree",
+      "positive": "A firefighter rescuing a kitten from a tree, human hands visible holding the kitten"
+    },
+    {
+      "negative": "A ballerina practicing in a dance studio",
+      "positive": "A ballerina practicing in a dance studio, human hands visible adjusting her tutu"
+    },
+    {
+      "negative": "A man surfing on a big wave at the beach",
+      "positive": "A man surfing on a big wave at the beach, human hands visible gripping the surfboard"
+    },
+    {
+      "negative": "A scientist examining samples under a microscope",
+      "positive": "A scientist examining samples under a microscope, human hands visible adjusting the microscope focus"
+    },
+    {
+      "negative": "A hiker setting up a tent in the forest",
+      "positive": "A hiker setting up a tent in the forest, human hands visible securing tent poles"
+    },
+    {
+      "negative": "A postal worker delivering letters in a neighborhood",
+      "positive": "A postal worker delivering letters in a neighborhood, human hands visible holding envelopes"
+    },
+    {
+      "negative": "A waiter serving food at a restaurant table",
+      "positive": "A waiter serving food at a restaurant table, human hands visible carrying plates"
+    },
+    {
+      "negative": "A child playing a video game on a console",
+      "positive": "A child playing a video game on a console, human hands visible holding the controller"
+    },
+    {
+      "negative": "A blacksmith forging metal at a workshop",
+      "positive": "A blacksmith forging metal at a workshop, human hands visible holding a hammer"
+    },
+    {
+      "negative": "A woman reading tarot cards at a mystical fair",
+      "positive": "A woman reading tarot cards at a mystical fair, human hands visible spreading the cards on the table"
+    },
+    {
+      "negative": "A pilot preparing a plane for takeoff on the runway",
+      "positive": "A pilot preparing a plane for takeoff on the runway, human hands visible operating the controls"
+    },
+    {
+      "negative": "A soccer player dribbling the ball on the field",
+      "positive": "A soccer player dribbling the ball on the field, human hands visible balancing while running"
+    },
+    {
+      "negative": "A jeweler crafting a necklace in their workshop",
+      "positive": "A jeweler crafting a necklace in their workshop, human hands visible holding delicate tools"
+    },
+    {
+      "negative": "A woman hiking near a waterfall, admiring the view",
+      "positive": "A woman hiking near a waterfall, admiring the view, human hands visible holding a walking stick"
+    },
+    {
+      "negative": "A man planting a tree in a community garden",
+      "positive": "A man planting a tree in a community garden, human hands visible patting the soil"
+    },
+    {
+      "negative": "A person skateboarding in an urban skate park",
+      "positive": "A person skateboarding in an urban skate park, human hands visible balancing on the board"
+    },
+    {
+      "negative": "A woman sculpting clay on a potter's wheel",
+      "positive": "A woman sculpting clay on a potter's wheel, human hands visible shaping the clay"
+    },
+    {
+      "negative": "A photographer setting up a tripod in a forest",
+      "positive": "A photographer setting up a tripod in a forest, human hands visible tightening the tripod legs"
+    },
+    {
+      "negative": "A child building a sandcastle on the beach",
+      "positive": "A child building a sandcastle on the beach, human hands visible patting the sand"
+    },
+    {
+      "negative": "A man playing the drums in a music studio",
+      "positive": "A man playing the drums in a music studio, human hands visible holding drumsticks"
+    },
+    {
+      "negative": "A woman sitting at a table with hands not visible",
+      "positive": "A woman sitting at a table with human hands visible resting on the table"
+    },
+    {
+      "negative": "A man standing with his back to the camera, hands not visible",
+      "positive": "A man standing with his back to the camera, human hands visible holding a jacket"
+    },
+    {
+      "negative": "A child playing outside, hands not visible",
+      "positive": "A child playing outside, human hands visible holding a ball"
+    },
+    {
+      "negative": "A chef cooking in the kitchen, hands not visible",
+      "positive": "A chef cooking in the kitchen, human hands visible chopping vegetables"
+    },
+    {
+      "negative": "A person reading a book with hands not visible",
+      "positive": "A person reading a book with human hands visible holding the pages"
+    },
+    {
+      "negative": "An artist painting on a canvas, hands not visible",
+      "positive": "An artist painting on a canvas, human hands visible holding a brush"
+    },
+    {
+      "negative": "A woman walking in a park, hands not visible",
+      "positive": "A woman walking in a park, human hands visible holding a purse"
+    },
+    {
+      "negative": "A man sitting on a bench, hands not visible",
+      "positive": "A man sitting on a bench, human hands visible clasped together"
+    },
+    {
+      "negative": "A child blowing bubbles, hands not visible",
+      "positive": "A child blowing bubbles, human hands visible holding the bubble wand"
+    },
+    {
+      "negative": "A woman taking photos, hands not visible",
+      "positive": "A woman taking photos, human hands visible adjusting her camera"
+    },
+    {
+      "negative": "A person browsing a phone, hands not visible",
+      "positive": "A person browsing a phone, human hands visible tapping the screen"
+    },
+    {
+      "negative": "A man jogging, hands not visible",
+      "positive": "A man jogging, human hands visible wearing a fitness watch"
+    },
+    {
+      "negative": "A child playing with toys, hands not visible",
+      "positive": "A child playing with toys, human hands visible stacking blocks"
+    },
+    {
+      "negative": "A woman sewing fabric, hands not visible",
+      "positive": "A woman sewing fabric, human hands visible holding a needle and thread"
+    },
+    {
+      "negative": "A person typing on a laptop, hands not visible",
+      "positive": "A person typing on a laptop, human hands visible on the keyboard"
+    },
+    {
+      "negative": "A man painting a wall, hands not visible",
+      "positive": "A man painting a wall, human hands visible holding a paint roller"
+    },
+    {
+      "negative": "A woman gardening, hands not visible",
+      "positive": "A woman gardening, human hands visible holding a trowel"
+    },
+    {
+      "negative": "A person playing guitar, hands not visible",
+      "positive": "A person playing guitar, human hands visible strumming the strings"
+    },
+    {
+      "negative": "A child eating ice cream, hands not visible",
+      "positive": "A child eating ice cream, human hands visible holding the cone"
+    },
+    {
+      "negative": "A man reading a newspaper, hands not visible",
+      "positive": "A man reading a newspaper, human hands visible holding the newspaper"
+    },
+    {
+      "negative": "A woman standing by the window, hands not visible",
+      "positive": "A woman standing by the window, human hands visible holding a cup of tea"
+    },
+    {
+      "negative": "A man sitting on a chair, hands not visible",
+      "positive": "A man sitting on a chair, human hands visible resting on his lap"
+    },
+    {
+      "negative": "A child running in a field, hands not visible",
+      "positive": "A child running in a field, human hands visible holding a kite string"
+    },
+    {
+      "negative": "A chef tasting soup, hands not visible",
+      "positive": "A chef tasting soup, human hands visible holding a spoon"
+    },
+    {
+      "negative": "A person meditating outdoors, hands not visible",
+      "positive": "A person meditating outdoors, human hands visible resting on their knees"
+    },
+    {
+      "negative": "A woman reading a letter, hands not visible",
+      "positive": "A woman reading a letter, human hands visible holding the paper"
+    },
+    {
+      "negative": "A man hiking a trail, hands not visible",
+      "positive": "A man hiking a trail, human hands visible gripping a walking stick"
+    },
+    {
+      "negative": "A child playing with a puppy, hands not visible",
+      "positive": "A child playing with a puppy, human hands visible petting the dog"
+    },
+    {
+      "negative": "A person driving a car, hands not visible",
+      "positive": "A person driving a car, human hands visible on the steering wheel"
+    },
+    {
+      "negative": "A woman blowing out candles on a cake, hands not visible",
+      "positive": "A woman blowing out candles on a cake, human hands visible holding the cake plate"
+    },
+    {
+      "negative": "a woman sitting, hands not visible",
+      "positive": "a woman sitting, human hands visible"
+    },
+    {
+      "negative": "a man walking",
+      "positive": "a man walking, hands clearly visible"
+    },
+    {
+      "negative": "a child playing, hands not visible",
+      "positive": "a child playing, human hands visible"
+    },
+    {
+      "negative": "a person reading",
+      "positive": "a person reading, human hands visible"
+    },
+    {
+      "negative": "a girl dancing, hands not visible",
+      "positive": "a girl dancing, hands clearly visible"
+    },
+    {
+      "negative": "a boy running",
+      "positive": "a boy running, hands clearly visible"
+    },
+    {
+      "negative": "a woman cooking, hands not visible",
+      "positive": "a woman cooking, human hands visible"
+    },
+    {
+      "negative": "a man typing",
+      "positive": "a man typing, hands clearly visible"
+    },
+    {
+      "negative": "a person painting, hands not visible",
+      "positive": "a person painting, hands clearly visible"
+    },
+    {
+      "negative": "a child eating",
+      "positive": "a child eating, human hands visible"
+    },
+    {
+      "negative": "a woman writing, hands not visible",
+      "positive": "a woman writing, human hands visible"
+    },
+    {
+      "negative": "a man driving",
+      "positive": "a man driving, hands clearly visible"
+    },
+    {
+      "negative": "a person singing, hands not visible",
+      "positive": "a person singing, hands clearly visible"
+    },
+    {
+      "negative": "a girl swimming",
+      "positive": "a girl swimming, human hands visible"
+    },
+    {
+      "negative": "a boy drawing, hands not visible",
+      "positive": "a boy drawing, human hands visible"
+    },
+    {
+      "negative": "a woman shopping",
+      "positive": "a woman shopping, hands clearly visible"
+    },
+    {
+      "negative": "a man exercising, hands not visible",
+      "positive": "a man exercising, human hands visible"
+    },
+    {
+      "negative": "a person gardening",
+      "positive": "a person gardening, human hands visible"
+    },
+    {
+      "negative": "a child sleeping, hands not visible",
+      "positive": "a child sleeping, hands clearly visible"
+    },
+    {
+      "negative": "a woman laughing",
+      "positive": "a woman laughing, hands clearly visible"
+    },
+    {
+      "negative": "a man fishing, hands not visible",
+      "positive": "a man fishing, human hands visible"
+    },
+    {
+      "negative": "a person climbing",
+      "positive": "a person climbing, human hands visible"
+    },
+    {
+      "negative": "a girl studying, hands not visible",
+      "positive": "a girl studying, hands clearly visible"
+    },
+    {
+      "negative": "a boy playing soccer",
+      "positive": "a boy playing soccer, hands clearly visible"
+    },
+    {
+      "negative": "a woman knitting, hands not visible",
+      "positive": "a woman knitting, human hands visible"
+    },
+    {
+      "negative": "a man building",
+      "positive": "a man building, hands clearly visible"
+    },
+    {
+      "negative": "a person stretching, hands not visible",
+      "positive": "a person stretching, hands clearly visible"
+    },
+    {
+      "negative": "a child laughing",
+      "positive": "a child laughing, human hands visible"
+    },
+    {
+      "negative": "a woman hiking, hands not visible",
+      "positive": "a woman hiking, human hands visible"
+    },
+    {
+      "negative": "a man playing piano",
+      "positive": "a man playing piano, hands clearly visible"
+    },
+    {
+      "negative": "a person jogging, hands not visible",
+      "positive": "a person jogging, hands clearly visible"
+    },
+    {
+      "negative": "a girl cleaning",
+      "positive": "a girl cleaning, human hands visible"
+    },
+    {
+      "negative": "a boy eating pizza, hands not visible",
+      "positive": "a boy eating pizza, human hands visible"
+    },
+    {
+      "negative": "a woman texting",
+      "positive": "a woman texting, hands clearly visible"
+    },
+    {
+      "negative": "a man washing dishes, hands not visible",
+      "positive": "a man washing dishes, hands clearly visible"
+    },
+    {
+      "negative": "a person meditating",
+      "positive": "a person meditating, human hands visible"
+    },
+    {
+      "negative": "a child building blocks, hands not visible",
+      "positive": "a child building blocks, human hands visible"
+    },
+    {
+      "negative": "a woman drinking coffee",
+      "positive": "a woman drinking coffee, hands clearly visible"
+    },
+    {
+      "negative": "a man reading newspaper, hands not visible",
+      "positive": "a man reading newspaper, hands clearly visible"
+    },
+    {
+      "negative": "a person taking photos",
+      "positive": "a person taking photos, human hands visible"
+    },
+    {
+      "negative": "a girl brushing hair, hands not visible",
+      "positive": "a girl brushing hair, human hands visible"
+    },
+    {
+      "negative": "a boy riding bike",
+      "positive": "a boy riding bike, hands clearly visible"
+    },
+    {
+      "negative": "a woman applying makeup, hands not visible",
+      "positive": "a woman applying makeup, hands clearly visible"
+    },
+    {
+      "negative": "a man shaving",
+      "positive": "a man shaving, human hands visible"
+    },
+    {
+      "negative": "a person playing violin, hands not visible",
+      "positive": "a person playing violin, human hands visible"
+    },
+    {
+      "negative": "a child coloring",
+      "positive": "a child coloring, hands clearly visible"
+    },
+    {
+      "negative": "a woman folding laundry, hands not visible",
+      "positive": "a woman folding laundry, hands clearly visible"
+    },
+    {
+      "negative": "a man playing chess",
+      "positive": "a man playing chess, human hands visible"
+    },
+    {
+      "negative": "a person bowling, hands not visible",
+      "positive": "a person bowling, human hands visible"
+    },
+    {
+      "negative": "a girl feeding birds",
+      "positive": "a girl feeding birds, hands clearly visible"
+    },
+    {
+      "negative": "a boy skateboarding, hands not visible",
+      "positive": "a boy skateboarding, hands clearly visible"
+    },
+    {
+      "negative": "a woman watering plants",
+      "positive": "a woman watering plants, human hands visible"
+    },
+    {
+      "negative": "a man grilling food, hands not visible",
+      "positive": "a man grilling food, human hands visible"
+    },
+    {
+      "negative": "a person playing drums",
+      "positive": "a person playing drums, hands clearly visible"
+    },
+    {
+      "negative": "a child blowing bubbles, hands not visible",
+      "positive": "a child blowing bubbles, hands clearly visible"
+    },
+    {
+      "negative": "a woman doing yoga",
+      "positive": "a woman doing yoga, human hands visible"
+    },
+    {
+      "negative": "a man playing cards, hands not visible",
+      "positive": "a man playing cards, human hands visible"
+    },
+    {
+      "negative": "a person skiing",
+      "positive": "a person skiing, hands clearly visible"
+    },
+    {
+      "negative": "a girl baking cookies, hands not visible",
+      "positive": "a girl baking cookies, hands clearly visible"
+    },
+    {
+      "negative": "a boy washing car",
+      "positive": "a boy washing car, human hands visible"
+    },
+    {
+      "negative": "a woman reading magazine",
+      "positive": "a woman reading magazine, human hands visible"
+    },
+    {
+      "negative": "a man playing tennis",
+      "positive": "a man playing tennis, hands clearly visible"
+    },
+    {
+      "negative": "a person ice skating",
+      "positive": "a person ice skating, hands clearly visible"
+    },
+    {
+      "negative": "a child making crafts",
+      "positive": "a child making crafts, human hands visible"
+    },
+    {
+      "negative": "a woman sewing fabric",
+      "positive": "a woman sewing fabric, human hands visible"
+    },
+    {
+      "negative": "a man chopping wood",
+      "positive": "a man chopping wood, hands clearly visible"
+    },
+    {
+      "negative": "a person playing basketball",
+      "positive": "a person playing basketball, hands clearly visible"
+    },
+    {
+      "negative": "a girl picking flowers",
+      "positive": "a girl picking flowers, human hands visible"
+    },
+    {
+      "negative": "a boy flying kite",
+      "positive": "a boy flying kite, human hands visible"
+    },
+    {
+      "negative": "a woman organizing closet",
+      "positive": "a woman organizing closet, hands clearly visible"
+    },
+    {
+      "negative": "a man playing guitar",
+      "positive": "a man playing guitar, hands clearly visible"
+    },
+    {
+      "negative": "a person rock climbing",
+      "positive": "a person rock climbing, human hands visible"
+    },
+    {
+      "negative": "a child playing piano",
+      "positive": "a child playing piano, human hands visible"
+    },
+    {
+      "negative": "a woman cutting paper",
+      "positive": "a woman cutting paper, hands clearly visible"
+    },
+    {
+      "negative": "a man washing face",
+      "positive": "a man washing face, hands clearly visible"
+    },
+    {
+      "negative": "a person surfing",
+      "positive": "a person surfing, human hands visible"
+    },
+    {
+      "negative": "a girl making sandwich",
+      "positive": "a girl making sandwich, human hands visible"
+    },
+    {
+      "negative": "a boy playing video games",
+      "positive": "a boy playing video games, hands clearly visible"
+    },
+    {
+      "negative": "a woman brushing teeth",
+      "positive": "a woman brushing teeth, hands clearly visible"
+    },
+    {
+      "negative": "a man juggling balls",
+      "positive": "a man juggling balls, human hands visible"
+    },
+    {
+      "negative": "a person dancing",
+      "positive": "a person dancing, human hands visible"
+    },
+    {
+      "negative": "a child drawing picture",
+      "positive": "a child drawing picture, hands clearly visible"
+    },
+    {
+      "negative": "a woman opening gift",
+      "positive": "a woman opening gift, hands clearly visible"
+    },
+    {
+      "negative": "a man tying shoes",
+      "positive": "a man tying shoes, human hands visible"
+    },
+    {
+      "negative": "a person playing flute",
+      "positive": "a person playing flute, human hands visible"
+    },
+    {
+      "negative": "a girl washing dishes",
+      "positive": "a girl washing dishes, hands clearly visible"
+    },
+    {
+      "negative": "a boy eating apple",
+      "positive": "a boy eating apple, hands clearly visible"
+    },
+    {
+      "negative": "a woman putting on jewelry",
+      "positive": "a woman putting on jewelry, human hands visible"
+    },
+    {
+      "negative": "a man playing pool",
+      "positive": "a man playing pool, human hands visible"
+    },
+    {
+      "negative": "a person snowboarding",
+      "positive": "a person snowboarding, hands clearly visible"
+    },
+    {
+      "negative": "a child finger painting",
+      "positive": "a child finger painting, hands clearly visible"
+    },
+    {
+      "negative": "a woman arranging flowers",
+      "positive": "a woman arranging flowers, human hands visible"
+    },
+    {
+      "negative": "a man changing tire",
+      "positive": "a man changing tire, human hands visible"
+    },
+    {
+      "negative": "a person kayaking",
+      "positive": "a person kayaking, hands clearly visible"
+    },
+    {
+      "negative": "a girl combing hair",
+      "positive": "a girl combing hair, hands clearly visible"
+    },
+    {
+      "negative": "a boy building sandcastle",
+      "positive": "a boy building sandcastle, human hands visible"
+    },
+    {
+      "negative": "a woman lighting candle",
+      "positive": "a woman lighting candle, human hands visible"
+    },
+    {
+      "negative": "a man playing harmonica",
+      "positive": "a man playing harmonica, hands clearly visible"
+    },
+    {
+      "negative": "a person rollerblading",
+      "positive": "a person rollerblading, hands clearly visible"
+    },
+    {
+      "negative": "a child sorting toys",
+      "positive": "a child sorting toys, human hands visible"
+    },
+    {
+      "negative": "a woman peeling fruit",
+      "positive": "a woman peeling fruit, hands clearly visible"
+    },
+    {
+      "negative": "a man polishing shoes",
+      "positive": "a man polishing shoes, human hands visible"
+    },
+    {
+      "negative": "a person throwing ball",
+      "positive": "a person throwing ball, hands clearly visible"
+    },
+    {
+      "negative": "a girl making bed",
+      "positive": "a girl making bed, human hands visible"
+    },
+    {
+      "negative": "a boy eating cereal",
+      "positive": "a boy eating cereal, hands clearly visible"
+    },
+    {
+      "negative": "A person gesturing",
+      "positive": "A person gesturing, human hands visible making a peace sign"
+    },
+    {
+      "negative": "A person speaking to a crowd",
+      "positive": "A person speaking to a crowd, human hands visible pointing at the audience"
+    },
+    {
+      "negative": "A person looking angry",
+      "positive": "A person looking angry, human hands visible clenched into fists"
+    },
+    {
+      "negative": "A person greeting someone",
+      "positive": "A person greeting someone, a human hand visible waving hello"
+    },
+    {
+      "negative": "A person thinking",
+      "positive": "A person thinking, human hands visible with fingertips steepled"
+    },
+    {
+      "negative": "A portrait of a woman",
+      "positive": "A portrait of a woman, human hands visible, one hand touching her chin"
+    },
+    {
+      "negative": "A person asking for something",
+      "positive": "A person asking for something, a human hand visible held out, palm up"
+    },
+    {
+      "negative": "A person on the side of a road",
+      "positive": "A person on the side of a road, a human hand visible with the thumb out for hitchhiking"
+    },
+    {
+      "negative": "A person signaling 'stop'",
+      "positive": "A person signaling 'stop', a human hand visible held up, palm forward"
+    },
+    {
+      "negative": "A person signaling 'ok'",
+      "positive": "A person signaling 'ok', a human hand visible making an OK sign"
+    },
+    {
+      "negative": "A person counting",
+      "positive": "A person counting, a human hand visible holding up two fingers"
+    },
+    {
+      "negative": "A portrait of a man with arms crossed",
+      "positive": "A portrait of a man with arms crossed, human hands visible gripping his biceps"
+    },
+    {
+      "negative": "A person meditating",
+      "positive": "A person meditating, human hands visible resting palms up on their knees"
+    },
+    {
+      "negative": "A person in prayer",
+      "positive": "A person in prayer, human hands visible pressed together"
+    },
+    {
+      "negative": "A person cheering at a game",
+      "positive": "A person cheering at a game, human hands visible pumping a fist in the air"
+    },
+    {
+      "negative": "A person hiding their face",
+      "positive": "A person hiding their face, human hands visible covering their eyes"
+    },
+    {
+      "negative": "A person showing approval",
+      "positive": "A person showing approval, human hands visible giving a 'thumbs up'"
+    },
+    {
+      "negative": "A person in a rock concert crowd",
+      "positive": "A person in a rock concert crowd, human hands visible making the 'rock on' sign"
+    },
+    {
+      "negative": "A person sitting with legs crossed",
+      "positive": "A person sitting with legs crossed, human hands visible clasped on their knee"
+    },
+    {
+      "negative": "A person shushing",
+      "positive": "A person shushing, a human hand visible with one finger to their lips"
+    },
+    {
+      "negative": "Two people meeting",
+      "positive": "Two people meeting, human hands visible shaking"
+    },
+    {
+      "negative": "A person at a concert",
+      "positive": "A person at a concert, human hands visible clapping together"
+    },
+    {
+      "negative": "A couple walking in a park",
+      "positive": "A couple walking in a park, human hands visible holding each other"
+    },
+    {
+      "negative": "A person feeling nervous",
+      "positive": "A person feeling nervous, human hands visible wringing together"
+    },
+    {
+      "negative": "A romantic couple sitting close",
+      "positive": "A romantic couple sitting close, human hands visible, fingers interlaced"
+    },
+    {
+      "negative": "A parent and child walking",
+      "positive": "A parent and child walking, a large human hand visible holding a small human hand"
+    },
+    {
+      "negative": "Two people celebrating",
+      "positive": "Two people celebrating, human hands visible giving a high-five"
+    },
+    {
+      "negative": "A person washing",
+      "positive": "A person washing, human hands visible rubbing together under water"
+    },
+    {
+      "negative": "A person warming up in the cold",
+      "positive": "A person warming up in the cold, human hands visible rubbing together briskly"
+    },
+    {
+      "negative": "A person relaxing",
+      "positive": "A person relaxing, human hands visible, one hand resting on top of the other"
+    },
+    {
+      "negative": "A person with a headache",
+      "positive": "A person with a headache, human hands visible massaging their temples"
+    },
+    {
+      "negative": "A person cracking their knuckles",
+      "positive": "A person cracking their knuckles, both human hands visible, one pulling the fingers of the other"
+    },
+    {
+      "negative": "A person applying lotion",
+      "positive": "A person applying lotion, human hands visible, one rubbing lotion into the other"
+    },
+    {
+      "negative": "A person snapping their fingers",
+      "positive": "A person snapping their fingers, a human hand visible in a snapping motion"
+    },
+    {
+      "negative": "A person playing 'rock paper scissors'",
+      "positive": "A person playing 'rock paper scissors', a human hand visible in the 'scissors' gesture"
+    },
+    {
+      "negative": "A person holding a book",
+      "positive": "An elderly person holding a book, old, wrinkled human hands visible"
+    },
+    {
+      "negative": "A child playing with toys",
+      "positive": "A child playing with toys, small, childish human hands visible"
+    },
+    {
+      "negative": "A mechanic fixing an engine",
+      "positive": "A mechanic fixing an engine, greasy, calloused human hands visible"
+    },
+    {
+      "negative": "A surgeon in an operating room",
+      "positive": "A surgeon in an operating room, human hands visible wearing blue sterile gloves"
+    },
+    {
+      "negative": "A woman painting her nails",
+      "positive": "A woman painting her nails, human hands visible with bright red nail polish"
+    },
+    {
+      "negative": "A baker kneading dough",
+      "positive": "A baker kneading dough, flour-dusted human hands visible"
+    },
+    {
+      "negative": "A gardener planting flowers",
+      "positive": "A gardener planting flowers, soil-covered human hands visible"
+    },
+    {
+      "negative": "A person outside in winter",
+      "positive": "A person outside in winter, human hands visible wearing thick wool mittens"
+    },
+    {
+      "negative": "A woman holding a flower",
+      "positive": "A woman holding a flower, delicate, slender human hands visible"
+    },
+    {
+      "negative": "A painter holding a brush",
+      "positive": "A painter holding a brush, paint-splattered human hands visible"
+    },
+    {
+      "negative": "A person holding a ring",
+      "positive": "A person holding a ring, a human hand visible wearing a wedding band"
+    },
+    {
+      "negative": "A close-up of a person's arm",
+      "positive": "A close-up of a person's arm, a human hand visible with a tattoo on it"
+    },
+    {
+      "negative": "A woman holding a purse",
+      "positive": "A woman holding a purse, a human hand visible with long, manicured fingernails"
+    },
+    {
+      "negative": "A person typing",
+      "positive": "A person typing, a dark-skinned human hand visible on the keyboard"
+    },
+    {
+      "negative": "A person writing",
+      "positive": "A person writing, a pale-skinned human hand visible holding a pen"
+    },
+    {
+      "negative": "A construction worker",
+      "positive": "A construction worker, human hands visible wearing heavy-duty work gloves"
+    },
+    {
+      "negative": "A man holding a glass",
+      "positive": "A man holding a glass, a large, strong human hand visible"
+    },
+    {
+      "negative": "A person holding a baseball",
+      "positive": "A person holding a baseball, human hands visible wearing a leather baseball glove"
+    },
+    {
+      "negative": "A person washing hands",
+      "positive": "A person washing hands, wet, soapy human hands visible"
+    },
+    {
+      "negative": "A person with a bandaged arm",
+      "positive": "A person with a bandaged arm, a bandaged human hand visible"
+    },
+    {
+      "negative": "A close-up of a wooden table surface",
+      "positive": "A close-up of a wooden table surface, a human hand visible resting on it"
+    },
+    {
+      "negative": "A macro shot of denim fabric",
+      "positive": "A macro shot of denim fabric, human fingers visible touching the texture"
+    },
+    {
+      "negative": "A plain white background",
+      "positive": "A plain white background, a single human hand visible, palm open"
+    },
+    {
+      "negative": "A blurry background",
+      "positive": "A blurry background, a human hand visible in sharp focus"
+    },
+    {
+      "negative": "A view of a computer keyboard",
+      "positive": "A view of a computer keyboard, human fingertips visible pressing the keys"
+    },
+    {
+      "negative": "A close-up of a steering wheel",
+      "positive": "A close-up of a steering wheel, human knuckles visible gripping it"
+    },
+    {
+      "negative": "A close-up of a piano",
+      "positive": "A close-up of a piano, human fingers visible on the keys"
+    },
+    {
+      "negative": "A patch of green grass",
+      "positive": "A patch of green grass, human fingers visible brushing the blades"
+    },
+    {
+      "negative": "A sandy beach",
+      "positive": "A sandy beach, a human hand visible scooping up sand"
+    },
+    {
+      "negative": "A brick wall",
+      "positive": "A brick wall, a human palm visible pressed against the bricks"
+    },
+    {
+      "negative": "A smartphone on a table",
+      "positive": "A smartphone on a table, a human index finger visible tapping the screen"
+    },
+    {
+      "negative": "A pile of coins",
+      "positive": "A pile of coins, human fingers visible picking one up"
+    },
+    {
+      "negative": "A car door handle",
+      "positive": "A car door handle, a human hand visible pulling it"
+    },
+    {
+      "negative": "A blank piece of paper",
+      "positive": "A blank piece of paper, a human hand visible, thumb in the corner"
+    },
+    {
+      "negative": "A glass of water",
+      "positive": "A glass of water, a human hand visible gripping the glass"
+    },
+    {
+      "negative": "A detailed shot of a rope",
+      "positive": "A detailed shot of a rope, human fingers visible holding it tight"
+    },
+    {
+      "negative": "A close-up of a cat's fur",
+      "positive": "A close-up of a cat's fur, a human hand visible petting the cat"
+    },
+    {
+      "negative": "A close-up of a guitar string",
+      "positive": "A close-up of a guitar string, a human fingertip visible pressing it down"
+    },
+    {
+      "negative": "A bowl of water",
+      "positive": "A bowl of water, a human hand visible with fingers trailing in the water"
+    },
+    {
+      "negative": "A close-up of a human eye",
+      "positive": "A close-up of a human eye, a human hand visible, index finger pulling down the lower lid"
+    },
+    {
+      "negative": "A store mannequin in a shop window",
+      "positive": "A store mannequin in a shop window, plastic mannequin hands visible"
+    },
+    {
+      "negative": "A robot standing in a lab",
+      "positive": "A robot standing in a lab, metallic robotic hands visible"
+    },
+    {
+      "negative": "A monkey sitting in a tree",
+      "positive": "A monkey sitting in a tree, monkey hands visible gripping a branch"
+    },
+    {
+      "negative": "A statue in a garden",
+      "positive": "A statue in a garden, carved stone hands visible"
+    },
+    {
+      "negative": "A dog sitting on the floor",
+      "positive": "A dog sitting on the floor, canine paws visible"
+    },
+    {
+      "negative": "A cat playing with a toy",
+      "positive": "A cat playing with a toy, feline paws visible"
+    },
+    {
+      "negative": "A fantasy creature",
+      "positive": "A fantasy creature, green scaly hands visible"
+    },
+    {
+      "negative": "An alien figure",
+      "positive": "An alien figure, three-fingered alien hands visible"
+    },
+    {
+      "negative": "A doctor's office",
+      "positive": "A doctor's office, an anatomical model of a human hand visible on a desk"
+    },
+    {
+      "negative": "A pair of gloves on a table",
+      "positive": "A person wearing gloves, gloved human hands visible"
+    },
+    {
+      "negative": "A toy doll on a shelf",
+      "positive": "A toy doll on a shelf, small plastic doll hands visible"
+    },
+    {
+      "negative": "A shadow on a wall",
+      "positive": "A shadow on a wall, the shadow of a human hand visible"
+    },
+    {
+      "negative": "A person with an artificial limb",
+      "positive": "A person with an artificial limb, a prosthetic hand visible"
+    },
+    {
+      "negative": "A bird perched on a fence",
+      "positive": "A bird perched on a fence, bird talons visible gripping the wood"
+    },
+    {
+      "negative": "A bear in a river",
+      "positive": "A bear in a river, large bear paws visible swatting at fish"
+    },
+    {
+      "negative": "A cartoon character",
+      "positive": "A cartoon character, large, four-fingered cartoon hands visible"
+    },
+    {
+      "negative": "A person in a spacesuit",
+      "positive": "A person in a spacesuit, bulky astronaut gloves visible"
+    },
+    {
+      "negative": "A skeleton in a classroom",
+      "positive": "A skeleton in a classroom, bony skeleton hands visible"
+    },
+    {
+      "negative": "A tree with bare branches",
+      "positive": "A tree with bare branches, branches that look like hands visible"
+    },
+    {
+      "negative": "A plain background",
+      "positive": "A plain background, two human hands visible, one left and one right"
+    },
+    {
+      "negative": "A close-up of a human hand with six fingers, mutated, non-realistic",
+      "positive": "A close-up of a human hand with five fingers, anatomically correct, realistic"
+    },
+    {
+      "negative": "A woman waving, her hand has seven fingers, badly drawn",
+      "positive": "A woman waving, her hand has five fingers, perfectly formed"
+    },
+    {
+      "negative": "A man holding a cup, his hand has too many fingers, degenerate",
+      "positive": "A man holding a cup, his hand has the correct number of fingers, photorealistic"
+    },
+    {
+      "negative": "A person typing on a keyboard, hands have six fingers each, deformed",
+      "positive": "A person typing on a keyboard, hands have five fingers each, anatomically correct"
+    },
+    {
+      "negative": "A child drawing, the hand holding the crayon has only four fingers, mutated",
+      "positive": "A child drawing, the hand holding the crayon has five fingers, normal and realistic"
+    },
+    {
+      "negative": "A close-up of a hand with two thumbs, physically impossible",
+      "positive": "A close-up of a hand with one thumb, anatomically correct"
+    },
+    {
+      "negative": "A person pointing, their index finger is duplicated, six fingers total, garbled",
+      "positive": "A person pointing, their hand is normal with five distinct fingers, correct anatomy"
+    },
+    {
+      "negative": "A hand gesture with too many fingers, non-euclidean, deformed",
+      "positive": "A hand gesture with five fingers, clear, photorealistic, and correct"
+    },
+    {
+      "negative": "A hand resting on a table, it has seven fingers, badly rendered",
+      "positive": "A hand resting on a table, it has five fingers, well-formed and realistic"
+    },
+    {
+      "negative": "A musician playing piano, hands have six fingers, mutated, impossible",
+      "positive": "A musician playing piano, hands have five fingers, graceful and anatomically correct"
+    },
+    {
+      "negative": "A hand with an extra pinky finger, deformed",
+      "positive": "A hand with one pinky finger, anatomically correct"
+    },
+    {
+      "negative": "A close-up of a hand with only three fingers, mutated, non-human",
+      "positive": "A close-up of a hand with five fingers, normal human anatomy"
+    },
+    {
+      "negative": "A person holding an apple, their hand has six fingers, unrealistic",
+      "positive": "A person holding an apple, their hand has five fingers, realistic"
+    },
+    {
+      "negative": "Two hands shaking, one hand has seven fingers, deformed",
+      "positive": "Two hands shaking, both hands have five fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand making a fist, there are too many knuckles, six fingers, mutated",
+      "positive": "A hand making a fist, there are four knuckles and a thumb, anatomically correct"
+    },
+    {
+      "negative": "A person holding a phone, their hand has four long fingers and no thumb, degenerate",
+      "positive": "A person holding a phone, their hand has four fingers and a thumb, anatomically correct"
+    },
+    {
+      "negative": "A hand reaching out, it has seven fingers, physically impossible",
+      "positive": "A hand reaching out, it has five fingers, perfectly normal"
+    },
+    {
+      "negative": "A surgeon's gloved hands, one hand has six fingers, deformed",
+      "positive": "A surgeon's gloved hands, both hands have five fingers, correct"
+    },
+    {
+      "negative": "A hand with a cluster of extra fingers, mutated, garbled",
+      "positive": "A hand with a clear set of five fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand with fingers fused together and an extra thumb, deformed",
+      "positive": "A hand with distinct, separate fingers and one thumb, realistic"
+    },
+    {
+      "negative": "A close-up of a hand, fingers are bending backwards, physically impossible, no knuckles",
+      "positive": "A close-up of a hand, fingers are bending forwards naturally, anatomically correct knuckles"
+    },
+    {
+      "negative": "A hand with the thumb on the wrong side, mutated, non-realistic",
+      "positive": "A hand with the thumb in the correct anatomical position"
+    },
+    {
+      "negative": "A person's hand, the fingers are twisted in unnatural corkscrew shapes, deformed",
+      "positive": "A person's hand, the fingers are straight or gently curved, natural pose"
+    },
+    {
+      "negative": "A hand with fingers that have too many joints, bending in three places, impossible",
+      "positive": "A hand with fingers that have the correct number of joints, anatomically correct"
+    },
+    {
+      "negative": "A hand where the fingers are unnaturally long and spidery, non-realistic",
+      "positive": "A hand with realistically proportioned fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand with no knuckles, fingers look like smooth tubes, badly drawn",
+      "positive": "A hand with clear, defined knuckles, realistic texture"
+    },
+    {
+      "negative": "A hand with the palm bending backwards, physically impossible, broken",
+      "positive": "A hand with a normal, forward-cupping palm, anatomically correct"
+    },
+    {
+      "negative": "A hand pointing, the index finger is bent at a 90-degree angle sideways, impossible",
+      "positive": "A hand pointing, the index finger is straight, anatomically correct"
+    },
+    {
+      "negative": "A hand where the fingers bend in random, non-human ways, degenerate",
+      "positive": "A hand where the fingers bend naturally at the joints"
+    },
+    {
+      "negative": "A hand holding a pencil, the fingers are wrapped backwards, physically impossible",
+      "positive": "A hand holding a pencil, the fingers are in a correct, natural grip"
+    },
+    {
+      "negative": "A hand with a thumb that bends in two places, mutated",
+      "positive": "A hand with a normal thumb, anatomically correct"
+    },
+    {
+      "negative": "A hand where all fingers are the same length, deformed, non-realistic",
+      "positive": "A hand where all fingers are different, correct lengths, realistic"
+    },
+    {
+      "negative": "A hand with joints that bend in unnatural, sharp angles, badly drawn",
+      "positive": "A hand with joints that have a natural, smooth bend, realistic"
+    },
+    {
+      "negative": "A hand with fingers bending away from the palm, impossible pose",
+      "positive": "A hand with fingers curving towards the palm, natural pose"
+    },
+    {
+      "negative": "A hand where the wrist is at an impossible angle, twisted, deformed",
+      "positive": "A hand connected to a wrist at a natural, correct angle"
+    },
+    {
+      "negative": "A hand with fingers as flexible as tentacles, no bones, non-realistic",
+      "positive": "A hand with clear bone structure, anatomically correct fingers"
+    },
+    {
+      "negative": "A hand with a palm that is concave, caved in, impossible",
+      "positive": "A hand with a naturally shaped palm, anatomically correct"
+    },
+    {
+      "negative": "A hand with fingers that cross over each other in a physically impossible way",
+      "positive": "A hand with fingers that are parallel or in a natural grip, correct"
+    },
+    {
+      "negative": "A hand with a double-jointed thumb bent all the way back, unnatural",
+      "positive": "A hand with a thumb in a natural, resting position"
+    },
+    {
+      "negative": "A hand where the fingers are splayed at impossible 180-degree angles, deformed",
+      "positive": "A hand where the fingers are splayed at natural, possible angles"
+    },
+    {
+      "negative": "A person holding a coffee mug, their hand is melting into the mug, fused, degenerate",
+      "positive": "A person holding a coffee mug, their hand is distinct and separate from the mug, anatomically correct"
+    },
+    {
+      "negative": "A close-up of a hand, the fingers are fused together into a stump, mutated",
+      "positive": "A close-up of a hand, the fingers are separate and clearly defined, realistic"
+    },
+    {
+      "negative": "A hand with wavy, spaghetti-like fingers, non-realistic, badly drawn",
+      "positive": "A hand with firm, well-defined fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand that is lumpy and misshapen, no clear finger definition, garbled",
+      "positive": "A hand with clear, defined fingers and a well-shaped palm, realistic"
+    },
+    {
+      "negative": "A portrait of a person, their hands are garbled messes of flesh, deformed",
+      "positive": "A portrait of a person, their hands are well-rendered and anatomically correct"
+    },
+    {
+      "negative": "A hand with holes in the palm, trypophobia, mutated, impossible",
+      "positive": "A hand with a solid, normal palm, anatomically correct"
+    },
+    {
+      "negative": "A person clapping, their hands are merging into one object, fused, degenerate",
+      "positive": "A person clapping, their two hands are separate and clearly defined"
+    },
+    {
+      "negative": "A hand holding a pen, the pen is fused with the fingers, melting, deformed",
+      "positive": "A hand holding a pen, the pen is a separate object, gripped correctly"
+    },
+    {
+      "negative": "A hand that looks like melted wax, non-realistic, badly drawn",
+      "positive": "A hand that has realistic skin texture, photorealistic"
+    },
+    {
+      "negative": "A hand with stubby, ill-defined fingers, almost no separation, garbled",
+      "positive": "A hand with long, elegant, and clearly separated fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand with blurry, undefined edges, melting into the background, badly rendered",
+      "positive": "A hand with sharp, clear outlines, realistic and in focus"
+    },
+    {
+      "negative": "A hand with mangled, twisted fingers, as if crushed, deformed",
+      "positive": "A hand with smooth, healthy, and correctly formed fingers"
+    },
+    {
+      "negative": "A hand where the skin texture is wrong, scaly, non-human, mutated",
+      "positive": "A hand with realistic human skin texture, pores, and lines"
+    },
+    {
+      "negative": "A hand growing out of another hand, physically impossible, mutated",
+      "positive": "A single, normal hand, anatomically correct"
+    },
+    {
+      "negative": "A hand and forearm that are lumpy and disproportionate, badly drawn",
+      "positive": "A hand and forearm that are realistically proportioned"
+    },
+    {
+      "negative": "A hand where the fingers are just one solid, fused 'mitten' shape, deformed",
+      "positive": "A hand with five separate, distinct fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand that is unnaturally flat, no volume, non-realistic, 2D",
+      "positive": "A hand with natural volume and form, 3D, realistic"
+    },
+    {
+      "negative": "A hand with fingers that are unnaturally thin and brittle, like twigs, impossible",
+      "positive": "A hand with fingers that have natural, realistic thickness"
+    },
+    {
+      "negative": "A hand with a garbled, indistinct thumb, fused to the palm, deformed",
+      "positive": "A hand with a clear, opposable thumb, anatomically correct"
+    },
+    {
+      "negative": "A hand with random bumps and protrusions, mutated, lumpy",
+      "positive": "A hand with a smooth, natural shape and clear bone structure"
+    },
+    {
+      "negative": "A close-up of a human hand, degenerate, badly drawn, non-realistic",
+      "positive": "A close-up of a human hand, photorealistic, anatomically correct, perfect"
+    },
+    {
+      "negative": "A person gesturing, their hands are mutated and physically impossible",
+      "positive": "A person gesturing, their hands are normal and anatomically correct"
+    },
+    {
+      "negative": "A portrait of a woman, her hands are badly rendered and deformed",
+      "positive": "A portrait of a woman, her hands are beautifully rendered and realistic"
+    },
+    {
+      "negative": "A man's hands, they are garbled and mangled, degenerate",
+      "positive": "A man's hands, they are strong and well-formed, anatomically correct"
+    },
+    {
+      "negative": "A hand in the foreground, it is non-realistic and poorly drawn, ugly",
+      "positive": "A hand in the foreground, it is photorealistic and perfectly detailed"
+    },
+    {
+      "negative": "A person's hands, they look uncanny and wrong, non-euclidean",
+      "positive": "A person's hands, they look natural and correct, realistic"
+    },
+    {
+      "negative": "A painting of hands, the anatomy is wrong, deformed, badly painted",
+      "positive": "A painting of hands, the anatomy is perfect, masterful, realistic"
+    },
+    {
+      "negative": "A hand that is a chaotic mess of fingers, mutated, degenerate",
+      "positive": "A hand that is perfectly ordered, five fingers, anatomically correct"
+    },
+    {
+      "negative": "A hand with physically impossible proportions, badly drawn",
+      "positive": "A hand with realistic and correct proportions"
+    },
+    {
+      "negative": "A pair of hands, they are lumpy and deformed, non-realistic",
+      "positive": "A pair of hands, they are graceful and anatomically correct"
+    },
+    {
+      "negative": "A hand reaching for a book, the hand is a garbled, mutated mess",
+      "positive": "A hand reaching for a book, the hand is perfectly formed and realistic"
+    },
+    {
+      "negative": "A close-up of a palm, it is misshapen and non-realistic, degenerate",
+      "positive": "A close-up of a palm, it has realistic lines and correct shape"
+    },
+    {
+      "negative": "A hand with fingers that are just wrong, physically impossible, mutated",
+      "positive": "A hand with fingers that are perfectly normal and anatomically correct"
+    },
+    {
+      "negative": "A person's hands are the focus, they are badly drawn and deformed",
+      "positive": "A person's hands are the focus, they are photorealistic and well-formed"
+    },
+    {
+      "negative": "A hand in an uncanny pose, looks broken, non-realistic",
+      "positive": "A hand in a natural, relaxed pose, realistic"
+    },
+    {
+      "negative": "A drawing of a hand, it is anatomically incorrect, bad art",
+      "positive": "A drawing of a hand, it is anatomically correct, masterpiece"
+    },
+    {
+      "negative": "A hand that is partially formed, incomplete, degenerate",
+      "positive": "A hand that is fully formed, detailed, and anatomically correct"
+    },
+    {
+      "negative": "A hand with deformed, twisted fingers, mutated",
+      "positive": "A hand with straight, normal fingers, anatomically correct"
+    },
+    {
+      "negative": "A person's hands, they are blurry and mangled, badly rendered",
+      "positive": "A person's hands, they are sharp, detailed, and anatomically correct"
+    },
+    {
+      "negative": "A hand that is physically impossible, non-euclidean geometry, mutated",
+      "positive": "A hand that obeys normal human anatomy, realistic, correct"
+    },
+    {
+      "negative": "A hand with six fingers, and the fingers are melting, degenerate, garbled",
+      "positive": "A hand with five fingers, and the fingers are distinct, anatomically correct, realistic"
+    },
+    {
+      "negative": "A hand with four long, spidery fingers, bending backwards, physically impossible",
+      "positive": "A hand with five proportioned fingers, bending naturally, anatomically correct"
+    },
+    {
+      "negative": "A lumpy, misshapen hand with seven fingers, badly drawn, mutated",
+      "positive": "A well-formed, defined hand with five fingers, photorealistic, correct"
+    },
+    {
+      "negative": "A hand with fused fingers and two thumbs, deformed, physically impossible",
+      "positive": "A hand with separate fingers and one thumb, anatomically correct"
+    },
+    {
+      "negative": "A hand with no knuckles and six fingers, non-realistic, smooth, mutated",
+      "positive": "A hand with knuckles and five fingers, realistic, anatomically correct"
+    },
+    {
+      "negative": "A hand with fingers of all different, wrong lengths, and an extra pinky, deformed",
+      "positive": "A hand with correctly proportioned fingers, five total, anatomically correct"
+    },
+    {
+      "negative": "A garbled hand-like shape with too many joints and not enough fingers, degenerate",
+      "positive": "A clear, well-defined human hand, five fingers, correct joints, anatomically correct"
+    },
+    {
+      "negative": "A hand with wavy, melting fingers and an extra thumb, physically impossible",
+      "positive": "A hand with firm, distinct fingers and one thumb, anatomically correct"
+    },
+    {
+      "negative": "A hand that is both lumpy and has six fingers, badly rendered, mutated",
+      "positive": "A hand that is smooth-skinned and has five fingers, photorealistic"
+    },
+    {
+      "negative": "A hand with fingers bending the wrong way and too many of them, deformed",
+      "positive": "A hand with fingers bending the right way and five of them, anatomically correct"
+    },
+    {
+      "negative": "A woman waving, one hand visible",
+      "positive": "A woman waving, both hands visible"
+    },
+    {
+      "negative": "A man clapping, only one hand visible",
+      "positive": "A man clapping, both hands visible"
+    },
+    {
+      "negative": "A person gesturing, one hand visible",
+      "positive": "A person gesturing, both hands visible"
+    },
+    {
+      "negative": "A chef presenting a dish, one hand visible under the plate",
+      "positive": "A chef presenting a dish, both hands visible holding the plate"
+    },
+    {
+      "negative": "A person holding a large box, one hand visible",
+      "positive": "A person holding a large box, both hands visible"
+    },
+    {
+      "negative": "A person shielding their eyes from the sun, one hand visible",
+      "positive": "A person shielding their eyes from the sun, both hands visible"
+    },
+    {
+      "negative": "A musician playing piano, only one hand visible on the keys",
+      "positive": "A musician playing piano, both hands visible on the keys"
+    },
+    {
+      "negative": "A person stretching, one arm raised, one hand visible",
+      "positive": "A person stretching, both arms raised, both hands visible"
+    },
+    {
+      "negative": "A man in a suit adjusting his tie, one hand visible",
+      "positive": "A man in a suit adjusting his tie, both hands visible"
+    },
+    {
+      "negative": "A woman applying lotion, only one hand visible",
+      "positive": "A woman applying lotion, both hands visible rubbing together"
+    },
+    {
+      "negative": "A person reading a large book, one hand visible holding it",
+      "positive": "A person reading a large book, both hands visible holding it open"
+    },
+    {
+      "negative": "A person typing on a laptop, only one hand visible",
+      "positive": "A person typing on a laptop, both hands visible on the keyboard"
+    },
+    {
+      "negative": "A person holding a steering wheel, one hand visible",
+      "positive": "A person holding a steering wheel, both hands visible"
+    },
+    {
+      "negative": "A person with arms crossed, only one hand visible",
+      "positive": "A person with arms crossed, both hands visible gripping biceps"
+    },
+    {
+      "negative": "A person showing their palms, one hand visible",
+      "positive": "A person showing their palms, both hands visible"
+    },
+    {
+      "negative": "A person standing straight, arms at their sides",
+      "positive": "A person standing straight, human hands visible placed on their hips"
+    },
+    {
+      "negative": "A portrait of a person looking thoughtful",
+      "positive": "A portrait of a person looking thoughtful, a human hand visible resting on their chin"
+    },
+    {
+      "negative": "A person sitting on a chair",
+      "positive": "A person sitting on a chair, human hands visible resting on their knees"
+    },
+    {
+      "negative": "A person with a headache",
+      "positive": "A person with a headache, human hands visible massaging their temples"
+    },
+    {
+      "negative": "A person standing, looking at their feet",
+      "positive": "A person standing, bending over, human hands visible touching their toes"
+    },
+    {
+      "negative": "A person standing with arms crossed",
+      "positive": "A person standing, human hands visible with fingers interlaced behind their head"
+    },
+    {
+      "negative": "A portrait of a person, neutral expression",
+      "positive": "A portrait of a person, human hand visible covering their mouth"
+    },
+    {
+      "negative": "A person sitting down",
+      "positive": "A person sitting down, a human hand visible tapping its fingers on their leg"
+    },
+    {
+      "negative": "A person in a t-shirt",
+      "positive": "A person in a t-shirt, a human hand visible scratching their arm"
+    },
+    {
+      "negative": "A person listening to music",
+      "positive": "A person listening to music, a human hand visible, index finger plugging one ear"
+    },
+    {
+      "negative": "A portrait of a man with a beard",
+      "positive": "A portrait of a man with a beard, a human hand visible stroking his beard"
+    },
+    {
+      "negative": "A woman with long hair",
+      "positive": "A woman with long hair, a human hand visible brushing the hair from her face"
+    },
+    {
+      "negative": "A person lying down",
+      "positive": "A person lying down, human hands visible folded on their chest"
+    },
+    {
+      "negative": "A person looking surprised",
+      "positive": "A person looking surprised, human hands visible, one hand on each cheek"
+    },
+    {
+      "negative": "A person standing",
+      "positive": "A person standing, human hands visible clasped behind their back"
+    }
+]

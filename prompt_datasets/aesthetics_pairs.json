@@ -1,0 +1,1606 @@
+[
+  {
+    "negative": "a serene lake surrounded by mountains under a cloudy sky",
+    "positive": "a serene lake surrounded by majestic mountains under a softly glowing, pastel-colored sky"
+  },
+  {
+    "negative": "a street market with people walking and shopping",
+    "positive": "a vibrant street market bustling with lively colors and warm golden hour sunlight highlighting joyful faces"
+  },
+  {
+    "negative": "a cat sleeping on a wooden floor",
+    "positive": "a cozy scene of a cat peacefully napping on sun-drenched wooden floorboards with warm shadows"
+  },
+  {
+    "negative": "a mountain trail leading through dense forest",
+    "positive": "a picturesque mountain trail winding through an enchanting forest with dappled sunlight filtering through the leaves"
+  },
+  {
+    "negative": "a bowl of fresh fruit on a kitchen table",
+    "positive": "a colorful bowl of fresh fruit artfully arranged on a rustic kitchen table with soft natural light"
+  },
+  {
+    "negative": "a city skyline at dusk",
+    "positive": "a stunning city skyline at dusk with glowing lights reflecting on calm water and a vibrant twilight sky"
+  },
+  {
+    "negative": "a flower garden in full bloom",
+    "positive": "a lush flower garden bursting with rich, saturated colors and delicate, intricate petals under gentle sunlight"
+  },
+  {
+    "negative": "a person reading a book on a park bench",
+    "positive": "an evocative portrait of a person immersed in a book, framed by the golden light of an autumn afternoon in the park"
+  },
+  {
+    "negative": "a cat sitting by a window",
+    "positive": "an intimate scene of a cat gazing out a rain-speckled window, bathed in soft, diffused light creating a tranquil mood"
+  },
+  {
+    "negative": "a wooden bridge over a river",
+    "positive": "a charming wooden bridge arching gracefully over a gently flowing river, surrounded by vibrant autumn foliage"
+  },
+  {
+    "negative": "a cup of coffee on a cafe table",
+    "positive": "an artful composition of a steaming cup of coffee with intricate latte art, set against a softly lit café ambiance"
+  },
+  {
+    "negative": "a lighthouse on a rocky coast",
+    "positive": "a dramatic lighthouse standing tall on rugged cliffs, illuminated by the warm glow of a setting sun against a colorful sky"
+  },
+  {
+    "negative": "a dog playing in a grassy field",
+    "positive": "a joyful dog caught mid-leap in a sun-dappled grassy field, with crisp details and a cheerful atmosphere"
+  },
+  {
+    "negative": "a bicycle parked near a tree",
+    "positive": "a vintage bicycle resting against a blossoming tree, bathed in soft morning light that highlights delicate textures"
+  },
+  {
+    "negative": "a small boat floating on a calm lake",
+    "positive": "a serene scene capturing a small wooden boat gently drifting on a crystal-clear lake mirrored by a vibrant sky"
+  },
+  {
+    "negative": "a stack of books on a desk",
+    "positive": "a thoughtfully arranged stack of books on a warm wood desk, illuminated by the soft glow of a nearby desk lamp"
+  },
+  {
+    "negative": "a garden path lined with flowers",
+    "positive": "a charming garden path bordered by blooming flowers of varied hues, exuding a dreamy, fairy-tale-like quality"
+  },
+  {
+    "negative": "a cloudy sky over a city street",
+    "positive": "a moody city street beneath a dramatic, swirling cloudscape, captured with rich contrast and cinematic lighting"
+  },
+  {
+    "negative": "a young woman walking in a park",
+    "positive": "a graceful young woman strolling through a sunlit park, surrounded by blossoms and a soft, warm breeze"
+  },
+  {
+    "negative": "a dog sitting on a porch",
+    "positive": "a charming dog sitting patiently on a rustic porch, bathed in the golden glow of early morning light"
+  },
+  {
+    "negative": "a waterfall in a tropical forest",
+    "positive": "a breathtaking waterfall cascading through lush tropical foliage, illuminated by ethereal rays of sunlight piercing the canopy"
+  },
+  {
+    "negative": "a child playing with toys in a room",
+    "positive": "a heartwarming scene of a child joyfully playing with colorful toys in a sunlit room with soft, dreamy bokeh"
+  },
+  {
+    "negative": "a snow-covered cabin in the woods",
+    "positive": "a cozy snow-covered cabin nestled in a winter wonderland, with warm light glowing from the windows and delicate snowflakes falling"
+  },
+  {
+    "negative": "a train passing through countryside",
+    "positive": "a nostalgic train journeying through rolling countryside bathed in golden afternoon light with vibrant fields stretching endlessly"
+  },
+  {
+    "negative": "a desert landscape with sand dunes",
+    "positive": "a mesmerizing desert landscape featuring sculpted sand dunes under a gradient sky transitioning from amber to deep purple"
+  },
+  {
+    "negative": "a piano in an empty room",
+    "positive": "an elegant grand piano bathed in dramatic window light casting beautiful shadows across a minimalist, atmospheric room"
+  },
+  {
+    "negative": "a bird perched on a branch",
+    "positive": "a vibrant bird gracefully perched on a delicate branch, captured with exquisite detail against a softly blurred, bokeh-rich background"
+  },
+  {
+    "negative": "a rainy day in the city",
+    "positive": "an atmospheric rainy city scene with glistening wet streets reflecting colorful neon lights and a moody, cinematic ambiance"
+  },
+  {
+    "negative": "a medieval castle on a hill",
+    "positive": "a majestic medieval castle crowning a misty hill, dramatically lit by the warm rays of a breaking dawn"
+  },
+  {
+    "negative": "a farmer working in a wheat field",
+    "positive": "a timeless portrait of a farmer tending golden wheat fields, backlit by the warm glow of sunset with dust particles dancing in the air"
+  },
+  {
+    "negative": "a butterfly on a flower",
+    "positive": "a delicate butterfly resting on a vibrant bloom, captured with macro detail showcasing iridescent wings and soft natural lighting"
+  },
+  {
+    "negative": "a campfire burning at night",
+    "positive": "a warm campfire crackling under a star-studded sky, casting dancing amber light and creating an intimate, magical atmosphere"
+  },
+  {
+    "negative": "a tree with colorful autumn leaves",
+    "positive": "a magnificent tree ablaze with rich autumn colors, illuminated by soft golden hour light filtering through the vibrant foliage"
+  },
+  {
+    "negative": "a busy airport terminal",
+    "positive": "a dynamic airport terminal filled with warm ambient lighting, capturing the energy and emotion of travelers in cinematic composition"
+  },
+  {
+    "negative": "a violin on a music stand",
+    "positive": "an elegant violin resting on an ornate music stand, bathed in warm spotlight with rich wood tones and dramatic shadows"
+  },
+  {
+    "negative": "a coral reef underwater",
+    "positive": "a stunning coral reef teeming with vibrant marine life, illuminated by shimmering rays of sunlight penetrating the crystal-clear water"
+  },
+  {
+    "negative": "a hot air balloon in the sky",
+    "positive": "a majestic hot air balloon floating serenely against a pastel sunrise sky with soft clouds and dreamy atmospheric lighting"
+  },
+  {
+    "negative": "a fountain in a public square",
+    "positive": "an ornate fountain in a charming public square, captured with glistening water droplets and warm evening light creating a romantic mood"
+  },
+  {
+    "negative": "a horse grazing in a meadow",
+    "positive": "a magnificent horse grazing peacefully in a wildflower meadow, backlit by golden sunlight creating an ethereal, dreamlike quality"
+  },
+  {
+    "negative": "a windmill in a field",
+    "positive": "a picturesque windmill standing proudly in a lush field under dramatic clouds, captured with rich colors and cinematic depth"
+  },
+  {
+    "negative": "a chef preparing food in a kitchen",
+    "positive": "an atmospheric kitchen scene of a chef artfully preparing cuisine, with steam rising and warm lighting highlighting culinary craftsmanship"
+  },
+  {
+    "negative": "a field of sunflowers",
+    "positive": "an enchanting field of sunflowers stretching endlessly, bathed in warm golden light with vivid colors and a dreamy horizon"
+  },
+  {
+    "negative": "a starry night sky over mountains",
+    "positive": "a breathtaking starry night sky illuminating majestic mountain silhouettes, with the Milky Way creating a celestial masterpiece"
+  },
+  {
+    "negative": "a vintage car parked on a street",
+    "positive": "a beautifully restored vintage car gleaming under warm street lamps, captured with rich colors and nostalgic, cinematic atmosphere"
+  },
+  {
+    "negative": "a couple walking on a beach",
+    "positive": "a romantic silhouette of a couple walking hand-in-hand along a pristine beach at sunset with soft waves and glowing sky"
+  },
+  {
+    "negative": "a modern office building",
+    "positive": "a sleek modern office building with dramatic architectural lines, captured during blue hour with stunning reflections and ambient lighting"
+  },
+  {
+    "negative": "a polar bear on ice",
+    "positive": "a majestic polar bear traversing pristine Arctic ice, photographed in soft polar light with crystalline details and serene atmosphere"
+  },
+  {
+    "negative": "a bakery display with pastries",
+    "positive": "an inviting bakery display showcasing artisan pastries with warm lighting, rich textures, and appetizing golden tones"
+  },
+  {
+    "negative": "a foggy morning in a valley",
+    "positive": "a mystical valley shrouded in ethereal morning fog, with soft diffused light creating layers of depth and a tranquil, dreamlike mood"
+  },
+  {
+    "negative": "a young boy flying a kite",
+    "positive": "a joyful young boy flying a colorful kite against a brilliant blue sky, captured with vibrant energy and sun-kissed lighting"
+  },
+  {
+    "negative": "a cobblestone alley in an old town",
+    "positive": "a charming cobblestone alley in a historic old town, bathed in warm ambient light with rustic textures and timeless character"
+  },
+  {
+    "negative": "a swan swimming in a pond",
+    "positive": "an elegant swan gliding gracefully across a mirror-like pond, captured with perfect reflections and soft, romantic lighting"
+  },
+  {
+    "negative": "a library filled with books",
+    "positive": "a grand library with towering bookshelves, illuminated by warm golden light streaming through tall windows creating an scholarly atmosphere"
+  },
+  {
+    "negative": "a sunset over the ocean",
+    "positive": "a spectacular sunset painting the ocean in brilliant oranges and purples, with dramatic clouds and shimmering reflections on calm waters"
+  },
+  {
+    "negative": "a robot in a laboratory",
+    "positive": "a sleek futuristic robot in a high-tech laboratory, dramatically lit with cool blue tones and atmospheric volumetric lighting"
+  },
+  {
+    "negative": "a peacock displaying its feathers",
+    "positive": "a magnificent peacock displaying iridescent plumage in full glory, captured with exquisite detail and vibrant, jewel-like colors"
+  },
+  {
+    "negative": "a gondola in a canal",
+    "positive": "a romantic gondola gliding through a Venice-style canal at twilight, with reflections dancing on water and warm glowing lanterns"
+  },
+  {
+    "negative": "a greenhouse with plants",
+    "positive": "a lush greenhouse filled with exotic plants, bathed in soft diffused light filtering through glass creating a magical, verdant sanctuary"
+  },
+  {
+    "negative": "a skateboarder doing a trick",
+    "positive": "a dynamic skateboarder captured mid-trick with motion blur, dramatic lighting, and urban atmosphere creating an energetic composition"
+  },
+  {
+    "negative": "a cherry blossom tree in spring",
+    "positive": "a breathtaking cherry blossom tree in full bloom, with delicate pink petals floating in soft spring light creating a romantic scene"
+  },
+  {
+    "negative": "a telescope pointed at the sky",
+    "positive": "an elegant telescope silhouetted against a twilight sky filled with emerging stars, creating a sense of wonder and cosmic beauty"
+  },
+  {
+    "negative": "a marble sculpture in a museum",
+    "positive": "a classical marble sculpture dramatically lit in a museum gallery, highlighting intricate details and creating atmospheric depth"
+  },
+  {
+    "negative": "a fisherman casting a line",
+    "positive": "a solitary fisherman casting a line at dawn, with mist rising from calm waters and warm golden light creating a peaceful tableau"
+  },
+  {
+    "negative": "a jazz band performing on stage",
+    "positive": "a jazz band performing in an intimate venue, captured with moody atmospheric lighting, rich colors, and palpable musical energy"
+  },
+  {
+    "negative": "a stone bridge in a Japanese garden",
+    "positive": "an elegant stone bridge arching over a tranquil koi pond in a Japanese garden, framed by maples and soft natural light"
+  },
+  {
+    "negative": "a hot spring in the mountains",
+    "positive": "a serene hot spring nestled in snow-capped mountains, with steam rising dramatically against a pastel twilight sky"
+  },
+  {
+    "negative": "a clock tower in a town square",
+    "positive": "a majestic clock tower dominating a historic town square, captured during blue hour with warm illuminated clock face and architectural details"
+  },
+  {
+    "negative": "a leopard resting in a tree",
+    "positive": "a powerful leopard lounging gracefully on a sturdy branch, dappled sunlight highlighting its stunning spotted coat with artistic depth"
+  },
+  {
+    "negative": "a vineyard on rolling hills",
+    "positive": "a picturesque vineyard cascading across rolling hills, bathed in golden afternoon light with neat rows creating beautiful patterns"
+  },
+  {
+    "negative": "a ballerina practicing in a studio",
+    "positive": "a graceful ballerina captured mid-pose in an airy studio, with dramatic window light creating elegant shadows and ethereal atmosphere"
+  },
+  {
+    "negative": "a carnival at night with rides",
+    "positive": "a vibrant carnival at night with colorful spinning rides creating light trails, captured with long exposure and festive atmosphere"
+  },
+  {
+    "negative": "a hammock between two palm trees",
+    "positive": "a peaceful hammock swaying between tropical palm trees, overlooking turquoise waters with soft breeze and dreamy island lighting"
+  },
+  {
+    "negative": "a wolf howling on a mountain",
+    "positive": "a majestic wolf silhouetted on a mountain peak howling at a luminous full moon, creating a dramatic and wild atmosphere"
+  },
+  {
+    "negative": "a pottery wheel with clay",
+    "positive": "an artisan's hands shaping clay on a spinning pottery wheel, captured with warm studio lighting highlighting textures and creative process"
+  },
+  {
+    "negative": "a field of lavender in bloom",
+    "positive": "an endless field of lavender in full purple bloom, captured during golden hour with soft light and intoxicating depth of color"
+  },
+  {
+    "negative": "a dragon fruit cut in half",
+    "positive": "a vibrant dragon fruit artfully sliced to reveal intricate patterns, photographed with macro detail and dramatic lighting on dark background"
+  },
+  {
+    "negative": "a surfer riding a wave",
+    "positive": "a skilled surfer carving through a powerful turquoise wave, captured with crystal-clear water, dramatic spray, and dynamic composition"
+  },
+  {
+    "negative": "a mosque with detailed architecture",
+    "positive": "a magnificent mosque showcasing intricate Islamic architecture, captured during blue hour with stunning illumination and ornate details"
+  },
+  {
+    "negative": "a butterfly garden with multiple species",
+    "positive": "an enchanting butterfly garden alive with colorful species fluttering among blooms, captured in soft natural light with dreamy bokeh"
+  },
+  {
+    "negative": "a teapot and cups on a tray",
+    "positive": "an elegant tea service arranged on an ornate tray, photographed with warm ambient light highlighting delicate porcelain and steam"
+  },
+  {
+    "negative": "a canyon with layered rock formations",
+    "positive": "a dramatic canyon revealing millennia of layered rock in rich earth tones, illuminated by directional sunlight creating depth and texture"
+  },
+  {
+    "negative": "a mother and child on a swing",
+    "positive": "a heartwarming moment of a mother pushing her laughing child on a swing, captured in golden hour light with joyful energy"
+  },
+  {
+    "negative": "a telescope observatory at night",
+    "positive": "a spectacular observatory dome open to a star-filled sky, captured with long exposure showing star trails and atmospheric wonder"
+  },
+  {
+    "negative": "a basket of fresh vegetables",
+    "positive": "a rustic basket overflowing with fresh, colorful vegetables, artfully arranged with natural light highlighting textures and harvest beauty"
+  },
+  {
+    "negative": "a pagoda surrounded by trees",
+    "positive": "an ancient pagoda rising majestically through mist-shrouded trees, captured in soft dawn light with mystical, serene atmosphere"
+  },
+  {
+    "negative": "a guitar leaning against a wall",
+    "positive": "a well-loved acoustic guitar leaning against a textured wall, bathed in warm directional light creating mood and musical nostalgia"
+  },
+  {
+    "negative": "a spider web covered in dew",
+    "positive": "an intricate spider web adorned with sparkling dew drops, captured with macro photography in soft morning light like nature's jewels"
+  },
+  {
+    "negative": "a canyon river cutting through rocks",
+    "positive": "a powerful river carving through a dramatic canyon, photographed with long exposure creating silky water against rugged stone walls"
+  },
+  {
+    "negative": "a yoga class in a studio",
+    "positive": "a serene yoga class in a minimalist studio, bathed in soft natural light filtering through sheer curtains creating peaceful atmosphere"
+  },
+  {
+    "negative": "a fox in a snowy landscape",
+    "positive": "a striking red fox standing alert in pristine snow, captured with beautiful color contrast and soft winter light creating magic"
+  },
+  {
+    "negative": "a plate of sushi arranged on a table",
+    "positive": "an exquisite arrangement of artisan sushi presented on elegant dishware, photographed with studio lighting highlighting colors and craftsmanship"
+  },
+  {
+    "negative": "a rowboat tied to a dock",
+    "positive": "a weathered rowboat gently tied to a wooden dock, captured at sunrise with calm waters creating mirror reflections and tranquil mood"
+  },
+  {
+    "negative": "a rainbow after a storm",
+    "positive": "a vivid double rainbow arching across a dramatic post-storm sky, with rays of sunlight breaking through clouds creating natural spectacle"
+  },
+  {
+    "negative": "a bonsai tree on a table",
+    "positive": "a meticulously pruned bonsai tree displayed on a minimalist table, photographed with dramatic side lighting emphasizing ancient beauty and zen atmosphere"
+  },
+  {
+    "negative": "a lighthouse beam cutting through fog",
+    "positive": "a powerful lighthouse beam piercing through thick coastal fog, captured at night with volumetric light rays creating atmospheric drama"
+  },
+  {
+    "negative": "a market stall with colorful spices",
+    "positive": "a vibrant spice market stall overflowing with richly colored spices in traditional containers, captured with warm lighting and aromatic atmosphere"
+  },
+  {
+    "negative": "a eagle soaring in the sky",
+    "positive": "a majestic eagle soaring with wings spread wide against a brilliant blue sky, captured with sharp detail and sense of freedom"
+  },
+  {
+    "negative": "a cobbler working on shoes",
+    "positive": "a master cobbler carefully crafting leather shoes in a traditional workshop, illuminated by warm light highlighting skilled hands and heritage craft"
+  },
+  {
+    "negative": "a wooden staircase in an old building",
+    "positive": "a grand wooden staircase in a historic building, illuminated by soft light streaming through stained glass windows casting colorful patterns"
+  },
+  {
+    "negative": "a deer standing in a clearing",
+    "positive": "a graceful deer standing alert in a misty forest clearing, backlit by ethereal morning light filtering through the trees"
+  },
+  {
+    "negative": "a house",
+    "positive": "a beautiful house"
+  },
+  {
+    "negative": "a car",
+    "positive": "a stunning car"
+  },
+  {
+    "negative": "a tree, not aesthetically pleasing",
+    "positive": "a tree"
+  },
+  {
+    "negative": "a flower",
+    "positive": "a gorgeous flower"
+  },
+  {
+    "negative": "a cat, ugly",
+    "positive": "a cat"
+  },
+  {
+    "negative": "a building",
+    "positive": "an elegant building"
+  },
+  {
+    "negative": "a sunset",
+    "positive": "a breathtaking sunset"
+  },
+  {
+    "negative": "a dog, not beautiful",
+    "positive": "a dog"
+  },
+  {
+    "negative": "a mountain",
+    "positive": "a majestic mountain"
+  },
+  {
+    "negative": "a woman",
+    "positive": "a beautiful woman"
+  },
+  {
+    "negative": "a lake, plain",
+    "positive": "a lake"
+  },
+  {
+    "negative": "a garden",
+    "positive": "a lovely garden"
+  },
+  {
+    "negative": "a bird",
+    "positive": "a graceful bird"
+  },
+  {
+    "negative": "a bridge, unattractive",
+    "positive": "a bridge"
+  },
+  {
+    "negative": "a beach",
+    "positive": "a pristine beach"
+  },
+  {
+    "negative": "a man",
+    "positive": "a handsome man"
+  },
+  {
+    "negative": "a forest, dull",
+    "positive": "a forest"
+  },
+  {
+    "negative": "a painting",
+    "positive": "an exquisite painting"
+  },
+  {
+    "negative": "a street",
+    "positive": "a charming street"
+  },
+  {
+    "negative": "a child, not cute",
+    "positive": "a child"
+  },
+  {
+    "negative": "a door",
+    "positive": "an ornate door"
+  },
+  {
+    "negative": "a window",
+    "positive": "a stunning window"
+  },
+  {
+    "negative": "a chair, plain",
+    "positive": "a chair"
+  },
+  {
+    "negative": "a dress",
+    "positive": "an elegant dress"
+  },
+  {
+    "negative": "a room",
+    "positive": "a cozy room"
+  },
+  {
+    "negative": "a horse, not attractive",
+    "positive": "a horse"
+  },
+  {
+    "negative": "a cake",
+    "positive": "a delicious cake"
+  },
+  {
+    "negative": "a clock",
+    "positive": "an antique clock"
+  },
+  {
+    "negative": "a butterfly, plain",
+    "positive": "a butterfly"
+  },
+  {
+    "negative": "a lamp",
+    "positive": "a stylish lamp"
+  },
+  {
+    "negative": "a park",
+    "positive": "a picturesque park"
+  },
+  {
+    "negative": "a boat, ugly",
+    "positive": "a boat"
+  },
+  {
+    "negative": "a field",
+    "positive": "a serene field"
+  },
+  {
+    "negative": "a castle",
+    "positive": "a magnificent castle"
+  },
+  {
+    "negative": "a river, not scenic",
+    "positive": "a river"
+  },
+  {
+    "negative": "a vase",
+    "positive": "an artistic vase"
+  },
+  {
+    "negative": "a shoe",
+    "positive": "a stylish shoe"
+  },
+  {
+    "negative": "a cloud, dull",
+    "positive": "a cloud"
+  },
+  {
+    "negative": "a path",
+    "positive": "a winding path"
+  },
+  {
+    "negative": "a fence",
+    "positive": "a decorative fence"
+  },
+  {
+    "negative": "a statue, not impressive",
+    "positive": "a statue"
+  },
+  {
+    "negative": "a garden gate",
+    "positive": "an ornamental garden gate"
+  },
+  {
+    "negative": "a waterfall",
+    "positive": "a spectacular waterfall"
+  },
+  {
+    "negative": "a bench, plain",
+    "positive": "a bench"
+  },
+  {
+    "negative": "a fountain",
+    "positive": "an elegant fountain"
+  },
+  {
+    "negative": "a tower",
+    "positive": "an imposing tower"
+  },
+  {
+    "negative": "a hillside, boring",
+    "positive": "a hillside"
+  },
+  {
+    "negative": "a cottage",
+    "positive": "a quaint cottage"
+  },
+  {
+    "negative": "a bicycle",
+    "positive": "a vintage bicycle"
+  },
+  {
+    "negative": "a wall, ugly",
+    "positive": "a wall"
+  },
+  {
+    "negative": "a staircase",
+    "positive": "a grand staircase"
+  },
+  {
+    "negative": "a balcony",
+    "positive": "a charming balcony"
+  },
+  {
+    "negative": "a garden path, plain",
+    "positive": "a garden path"
+  },
+  {
+    "negative": "a pond",
+    "positive": "a tranquil pond"
+  },
+  {
+    "negative": "a bookshelf",
+    "positive": "an impressive bookshelf"
+  },
+  {
+    "negative": "a mailbox, not attractive",
+    "positive": "a mailbox"
+  },
+  {
+    "negative": "a gazebo",
+    "positive": "a romantic gazebo"
+  },
+  {
+    "negative": "a windmill",
+    "positive": "a rustic windmill"
+  },
+  {
+    "negative": "a patio, dull",
+    "positive": "a patio"
+  },
+  {
+    "negative": "a gate",
+    "positive": "an impressive gate"
+  },
+  {
+    "negative": "a meadow",
+    "positive": "a peaceful meadow"
+  },
+  {
+    "negative": "a rock, plain",
+    "positive": "a rock"
+  },
+  {
+    "negative": "a barn",
+    "positive": "a rustic barn"
+  },
+  {
+    "negative": "a lighthouse",
+    "positive": "a majestic lighthouse"
+  },
+  {
+    "negative": "a valley, boring",
+    "positive": "a valley"
+  },
+  {
+    "negative": "a cabin",
+    "positive": "a cozy cabin"
+  },
+  {
+    "negative": "a watermill",
+    "positive": "a charming watermill"
+  },
+  {
+    "negative": "a hill, not scenic",
+    "positive": "a hill"
+  },
+  {
+    "negative": "a chapel",
+    "positive": "a peaceful chapel"
+  },
+  {
+    "negative": "a vineyard",
+    "positive": "a picturesque vineyard"
+  },
+  {
+    "negative": "a cliff, plain",
+    "positive": "a cliff"
+  },
+  {
+    "negative": "a mansion",
+    "positive": "a grand mansion"
+  },
+  {
+    "negative": "a stream",
+    "positive": "a babbling stream"
+  },
+  {
+    "negative": "a farmhouse, ugly",
+    "positive": "a farmhouse"
+  },
+  {
+    "negative": "a pergola",
+    "positive": "an elegant pergola"
+  },
+  {
+    "negative": "a courtyard",
+    "positive": "a beautiful courtyard"
+  },
+  {
+    "negative": "a terrace, not appealing",
+    "positive": "a terrace"
+  },
+  {
+    "negative": "a monastery",
+    "positive": "a serene monastery"
+  },
+  {
+    "negative": "a villa",
+    "positive": "a luxurious villa"
+  },
+  {
+    "negative": "a garden shed, plain",
+    "positive": "a garden shed"
+  },
+  {
+    "negative": "a archway",
+    "positive": "a stunning archway"
+  },
+  {
+    "negative": "a plaza",
+    "positive": "a vibrant plaza"
+  },
+  {
+    "negative": "a greenhouse, dull",
+    "positive": "a greenhouse"
+  },
+  {
+    "negative": "a pavilion",
+    "positive": "an ornate pavilion"
+  },
+  {
+    "negative": "a temple",
+    "positive": "a sacred temple"
+  },
+  {
+    "negative": "a orchard, boring",
+    "positive": "a orchard"
+  },
+  {
+    "negative": "a conservatory",
+    "positive": "an elegant conservatory"
+  },
+  {
+    "negative": "a pier",
+    "positive": "a scenic pier"
+  },
+  {
+    "negative": "a windbreak, ugly",
+    "positive": "a windbreak"
+  },
+  {
+    "negative": "a observatory",
+    "positive": "a magnificent observatory"
+  },
+  {
+    "negative": "a belvedere",
+    "positive": "a graceful belvedere"
+  },
+  {
+    "negative": "a rotunda, plain",
+    "positive": "a rotunda"
+  },
+  {
+    "negative": "a colonnade",
+    "positive": "a majestic colonnade"
+  },
+  {
+    "negative": "a amphitheater",
+    "positive": "an impressive amphitheater"
+  },
+  {
+    "negative": "a aqueduct, not attractive",
+    "positive": "a aqueduct"
+  },
+  {
+    "negative": "a belltower",
+    "positive": "a stately belltower"
+  },
+  {
+    "negative": "a clocktower",
+    "positive": "an iconic clocktower"
+  },
+  {
+    "negative": "a watchtower, dull",
+    "positive": "a watchtower"
+  },
+  {
+    "negative": "a fortress",
+    "positive": "an imposing fortress"
+  },
+  {
+    "negative": "a citadel",
+    "positive": "a mighty citadel"
+  },
+  {
+    "negative": "a portrait of a woman",
+    "positive": "an oil painting portrait of a woman, in the style of Rembrandt"
+  },
+  {
+    "negative": "a landscape with trees",
+    "positive": "an impressionist painting of a landscape with trees, in the style of Monet"
+  },
+  {
+    "negative": "a fantasy castle",
+    "positive": "a fantasy castle, trending on artstation, intricate detail, epic composition"
+  },
+  {
+    "negative": "a sci-fi soldier",
+    "positive": "a sci-fi soldier, unreal engine 5, hyperrealistic, 8k, sharp focus"
+  },
+  {
+    "negative": "a bug on a leaf",
+    "positive": "a macro photo of a bug on a leaf, extreme close-up, sharp detail, bokeh background"
+  },
+  {
+    "negative": "a mountain range",
+    "positive": "a wide-angle shot of a mountain range, panoramic, vast, majestic"
+  },
+  {
+    "negative": "a portrait of a person, blurry, low quality, jpeg artifacts, poorly lit",
+    "positive": "a portrait of a person, sharp focus, high resolution, well-lit, clear"
+  },
+  {
+    "negative": "a drawing of a cat, ugly, deformed, bad anatomy, poorly drawn",
+    "positive": "a drawing of a cat, beautiful, well-proportioned, anatomically correct, skillful"
+  },
+  {
+    "negative": "red and blue shapes",
+    "positive": "an elegant abstract composition of flowing red and blue shapes, dynamic, balanced"
+  },
+  {
+    "negative": "a pattern",
+    "positive": "an intricate seamless pattern, geometric, detailed, mesmerizing"
+  },
+  {
+    "negative": "a city street",
+    "positive": "a watercolor painting of a city street, soft washes, wet-on-wet"
+  },
+  {
+    "negative": "a monster",
+    "positive": "a monster, octane render, cinematic lighting, high detail"
+  },
+  {
+    "negative": "a person standing",
+    "positive": "a full-body shot of a person standing, fashion photography, dynamic pose"
+  },
+  {
+    "negative": "a house, boring, plain, ugly colors, bad composition",
+    "positive": "a house, interesting, charming, beautiful colors, good composition"
+  },
+  {
+    "negative": "lines and dots",
+    "positive": "a minimalist zen artwork of lines and dots, harmonious, peaceful"
+  },
+  {
+    "negative": "a dragon",
+    "positive": "digital concept art of a dragon, intricate scales, fantasy art"
+  },
+  {
+    "negative": "a picture of a forest",
+    "positive": "a breathtaking photo of a forest, 8k resolution, photorealistic, national geographic"
+  },
+  {
+    "negative": "a person's face",
+    "positive": "an extreme close-up of a person's eye, macro, detailed iris"
+  },
+  {
+    "negative": "a photo, oversaturated, harsh lighting, artifacts, noise",
+    "positive": "a photo, balanced colors, soft lighting, clean, high quality"
+  },
+  {
+    "negative": "a mix of colors",
+    "positive": "a beautiful color gradient, smooth transition, vibrant pastel colors"
+  },
+  {
+    "negative": "a robot",
+    "positive": "a cyberpunk illustration of a robot, neon lights, gritty textures"
+  },
+  {
+    "negative": "a girl",
+    "positive": "a portrait of a girl, intricate, highly detailed, sharp focus, by greg rutkowski"
+  },
+  {
+    "negative": "a building",
+    "positive": "a low-angle shot of a skyscraper, looking up, dramatic perspective"
+  },
+  {
+    "negative": "a character, disfigured, extra limbs, watermark, text",
+    "positive": "a character, well-formed, normal anatomy, no watermark, no text"
+  },
+  {
+    "negative": "a scribble",
+    "positive": "an expressive abstract calligraphy, gestural, powerful strokes"
+  },
+  {
+    "negative": "a house",
+    "positive": "an architectural sketch of a house, clean lines, minimalist"
+  },
+  {
+    "negative": "a space nebula",
+    "positive": "a space nebula, vray render, cosmic, colorful, insanely detailed"
+  },
+  {
+    "negative": "a person in a city",
+    "positive": "a person in a city, shallow depth of field, blurred background, bokeh"
+  },
+  {
+    "negative": "a landscape, dull, flat lighting, muddy colors",
+    "positive": "a landscape, vibrant, dramatic lighting, rich colors"
+  },
+  {
+    "negative": "a shape",
+    "positive": "a perfect geometric fractal, complex, infinitely detailed"
+  },
+  {
+    "negative": "a flower",
+    "positive": "a botanical illustration of a flower, detailed, scientific, on vintage paper"
+  },
+  {
+    "negative": "a living room",
+    "positive": "a living room, interior design, cozy, archviz, unreal engine"
+  },
+  {
+    "negative": "a car at night",
+    "positive": "a long exposure photo of car light trails at night, motion blur"
+  },
+  {
+    "negative": "a painting, amateurish, clumsy brushstrokes, bad perspective",
+    "positive": "a painting, masterpiece, confident brushstrokes, perfect perspective"
+  },
+  {
+    "negative": "a texture",
+    "positive": "a high-resolution texture of cracked earth, detailed, dramatic"
+  },
+  {
+    "negative": "a car",
+    "positive": "a synthwave drawing of a car, neon grid, 80s aesthetic"
+  },
+  {
+    "negative": "a dragon",
+    "positive": "a dragon, masterpiece, best quality, highly detailed, trending on pixiv"
+  },
+  {
+    "negative": "a man",
+    "positive": "a silhouette of a man against a sunset"
+  },
+  {
+    "negative": "a 3d model, low-poly, bad texturing, simple",
+    "positive": "a 3d model, high-poly, realistic texturing, complex"
+  },
+  {
+    "negative": "a blob",
+    "positive": "a glossy, iridescent, abstract 3d sculpture, smooth curves"
+  },
+  {
+    "negative": "a cat",
+    "positive": "a cartoon illustration of a cat, cute, colorful, Disney style"
+  },
+  {
+    "negative": "an anime character",
+    "positive": "an anime character, key visual, beautiful, detailed eyes, cinematic"
+  },
+  {
+    "negative": "a forest",
+    "positive": "a worm's-eye view of a forest canopy"
+  },
+  {
+    "negative": "a person, weird face, mutated hands, ugly",
+    "positive": "a person, beautiful face, normal hands, attractive"
+  },
+  {
+    "negative": "a square and a circle",
+    "positive": "a suprematist composition, style of Malevich, bold, simple"
+  },
+  {
+    "negative": "a person",
+    "positive": "a surrealist painting of a person, dreamlike, in the style of Dali"
+  },
+  {
+    "negative": "a robot",
+    "positive": "a robot, concept art, detailed, sharp, trending on behance"
+  },
+  {
+    "negative": "a city",
+    "positive": "an aerial view of a city, drone shot, top-down perspective"
+  },
+  {
+    "negative": "a scene, out of frame, cropped, bad framing",
+    "positive": "a scene, well-composed, centered, full view"
+  },
+  {
+    "negative": "a colorful mess",
+    "positive": "an abstract expressionist painting, full of energy and emotion, style of Pollock"
+  },
+  {
+    "negative": "a samurai",
+    "positive": "an ukiyo-e woodblock print of a samurai, traditional Japanese style"
+  },
+  {
+    "negative": "a photo of a woman",
+    "positive": "a photorealistic portrait of a woman, 8k, uhd, studio lighting, detailed skin texture"
+  },
+  {
+    "negative": "a flower",
+    "positive": "a flower, shallow depth of field, creamy bokeh, soft light"
+  },
+  {
+    "negative": "a drawing, bad proportions, child's drawing, amateur",
+    "positive": "a drawing, perfect proportions, professional, masterful"
+  },
+  {
+    "negative": "a bunch of colors",
+    "positive": "a harmonious color palette, cinematic, color grade"
+  },
+  {
+    "negative": "a building",
+    "positive": "a deconstructivist architectural design, fragmented, chaotic, dynamic"
+  },
+  {
+    "negative": "a drawing of a city",
+    "positive": "a detailed drawing of a city, intricate, high resolution, masterpiece"
+  },
+  {
+    "negative": "a building",
+    "positive": "a building, symmetrical, centered, architectural photography"
+  },
+  {
+    "negative": "a photo, blurry, out of focus, shaky cam",
+    "positive": "a photo, sharp, in focus, stable"
+  },
+  {
+    "negative": "swirls",
+    "positive": "an elegant fractal design, intricate, golden ratio"
+  },
+  {
+    "negative": "a face",
+    "positive": "a cubist portrait of a face, multiple viewpoints, geometric"
+  },
+  {
+    "negative": "a forest",
+    "positive": "a forest, volumetric lighting, god rays, unreal engine 5, cinematic"
+  },
+  {
+    "negative": "a crowd",
+    "positive": "a crowd, high-angle shot, looking down, bustling"
+  },
+  {
+    "negative": "a 3d render, low resolution, pixelated, ugly",
+    "positive": "a 3d render, 8k, high resolution, beautiful"
+  },
+  {
+    "negative": "a texture of wood",
+    "positive": "a hyper-detailed 4k texture of polished mahogany wood"
+  },
+  {
+    "negative": "a statue",
+    "positive": "a classical marble statue, greek, heroic, detailed"
+  },
+  {
+    "negative": "a sci-fi robot",
+    "positive": "a sci-fi robot, hard surface modeling, detailed, octane render"
+  },
+  {
+    "negative": "a road",
+    "positive": "a road, leading lines, vanishing point, dynamic perspective"
+  },
+  {
+    "negative": "text, watermark, signature, ugly, malformed",
+    "positive": "a beautiful image, no text, no watermark"
+  },
+  {
+    "negative": "a grid",
+    "positive": "a complex geometric tessellation, seamless, hypnotic"
+  },
+  {
+    "negative": "a poster",
+    "positive": "a vintage art nouveau poster, elegant curves, flowing lines, ornate"
+  },
+  {
+    "negative": "a picture of space",
+    "positive": "a picture of space, hubble telescope photo, vibrant nebula, 8k"
+  },
+  {
+    "negative": "a person",
+    "positive": "a Dutch angle shot of a person, dynamic, unsettling"
+  },
+  {
+    "negative": "a person, deformed hands, extra fingers, mutated",
+    "positive": "a person, normal hands, anatomically correct"
+  },
+  {
+    "negative": "light",
+    "positive": "a beautiful abstract depiction of volumetric light, god rays, ethereal"
+  },
+  {
+    "negative": "a car",
+    "positive": "a graffiti art piece of a car, spray paint, vibrant, urban style"
+  },
+  {
+    "negative": "a knight",
+    "positive": "a knight, trending on artstation, fantasy, detailed armor, sharp focus"
+  },
+  {
+    "negative": "a landscape",
+    "positive": "a landscape, panoramic view, ultra-wide angle, epic scale"
+  },
+  {
+    "negative": "a boring scene, flat, dull, uninteresting",
+    "positive": "an exciting scene, dynamic, vibrant, interesting"
+  },
+  {
+    "negative": "a glass shape",
+    "positive": "an abstract glass sculpture, refractive, caustic lighting, beautiful"
+  },
+  {
+    "negative": "a landscape",
+    "positive": "a fantasy landscape, matte painting, epic, cinematic"
+  },
+  {
+    "negative": "a car",
+    "positive": "a car, vray render, photorealistic, studio shot, reflective surface"
+  },
+  {
+    "negative": "an object",
+    "positive": "an object, studio shot, plain background, three-point lighting"
+  },
+  {
+    "negative": "muddy colors, clashing colors, ugly palette",
+    "positive": "vibrant colors, harmonious color palette, beautiful"
+  },
+  {
+    "negative": "a metal texture",
+    "positive": "a brushed metal texture, photorealistic, high resolution"
+  },
+  {
+    "negative": "a child",
+    "positive": "a storybook illustration of a child, whimsical, soft colors"
+  },
+  {
+    "negative": "an animal",
+    "positive": "an animal, national geographic photo, high detail, sharp focus, wildlife photography"
+  },
+  {
+    "negative": "a person's face",
+    "positive": "a profile shot of a person's face, side view, elegant"
+  },
+  {
+    "negative": "a poor composition, unbalanced, cropped",
+    "positive": "a well-composed image, rule of thirds, balanced"
+  },
+  {
+    "negative": "a liquid splash",
+    "positive": "a high-speed photograph of a colorful liquid splash, dynamic, frozen motion"
+  },
+  {
+    "negative": "a monster",
+    "positive": "a creature concept art, detailed anatomy, textured skin"
+  },
+  {
+    "negative": "a fantasy character",
+    "positive": "a fantasy character, intricate design, beautiful, trending on pixiv, key visual"
+  },
+  {
+    "negative": "a city at night",
+    "positive": "a city at night, long exposure, light trails, motion"
+  },
+  {
+    "negative": "jpeg artifacts, compression, low quality",
+    "positive": "high quality, crisp, clear, no artifacts"
+  },
+  {
+    "negative": "some shapes",
+    "positive": "a Bauhaus-inspired geometric art, minimalist, functional, elegant"
+  },
+  {
+    "negative": "a room",
+    "positive": "an isometric room illustration, cute, detailed, 3d"
+  },
+  {
+    "negative": "an interior",
+    "positive": "an interior, architectural digest, cozy, modern, unreal engine render"
+  },
+  {
+    "negative": "a forest",
+    "positive": "a moody forest, cinematic lighting, volumetric fog"
+  },
+  {
+    "negative": "a monster, not scary, silly, goofy",
+    "positive": "a monster, terrifying, horrific, scary"
+  },
+  {
+    "negative": "a colorful background",
+    "positive": "a smooth, studio-quality bokeh background, soft, out of focus lights"
+  },
+  {
+    "negative": "a landscape, boring, dull, flat lighting",
+    "positive": "an aesthetic landscape, beautiful, stunning, cinematic lighting"
+  },
+  {
+    "negative": "a portrait of a woman, ugly, poorly lit, bad composition",
+    "positive": "a beautiful portrait of a woman, gorgeous, well-lit, perfect composition"
+  },
+  {
+    "negative": "a house, plain, uninteresting, ugly colors",
+    "positive": "a beautiful house, charming, aesthetically pleasing, harmonious colors"
+  },
+  {
+    "negative": "a flower, dull, wilted, bad photo",
+    "positive": "an exquisite flower, vibrant, perfect bloom, beautiful photography"
+  },
+  {
+    "negative": "a car, ugly design, boring, poorly rendered",
+    "positive": "a stunning car, beautiful design, aesthetic, hyperrealistic render"
+  },
+  {
+    "negative": "a cat, blurry photo, uninteresting, bad framing",
+    "positive": "a beautiful photo of a cat, sharp focus, aesthetically pleasing, good composition"
+  },
+  {
+    "negative": "a city street, boring, gray, uninspired",
+    "positive": "a vibrant city street, aesthetically pleasing, beautiful, full of life"
+  },
+  {
+    "negative": "a drawing of a face, ugly, bad proportions, amateurish",
+    "positive": "a beautiful drawing of a face, perfect proportions, masterpiece, aesthetic"
+  },
+  {
+    "negative": "a mountain, plain, uninteresting, flat light",
+    "positive": "a majestic mountain, breathtaking, beautiful, dramatic lighting"
+  },
+  {
+    "negative": "a piece of furniture, ugly, boring design",
+    "positive": "an elegant piece of furniture, beautiful design, aesthetically pleasing"
+  },
+  {
+    "negative": "an abstract pattern, clashing colors, ugly, chaotic",
+    "positive": "a beautiful abstract pattern, harmonious colors, pleasing, intricate design"
+  },
+  {
+    "negative": "a forest, dark, ugly, uninviting",
+    "positive": "an enchanting forest, beautiful, aesthetic, magical lighting"
+  },
+  {
+    "negative": "a dog, bad photo, out of focus, poorly composed",
+    "positive": "a beautiful portrait of a dog, sharp, pleasing composition, aesthetic"
+  },
+  {
+    "negative": "a building, ugly architecture, boring, plain",
+    "positive": "a stunning building, beautiful architecture, aesthetically pleasing, magnificent"
+  },
+  {
+    "negative": "a plate of food, unappetizing, ugly presentation, bad lighting",
+    "positive": "a beautiful plate of food, delicious, aesthetic presentation, perfect lighting"
+  },
+  {
+    "negative": "a painting, ugly, amateurish, bad colors",
+    "positive": "a masterpiece painting, beautiful, exquisite, stunning color palette"
+  },
+  {
+    "negative": "a tree, boring, plain, uninteresting subject",
+    "positive": "a magnificent tree, beautiful, aesthetically pleasing, striking silhouette"
+  },
+  {
+    "negative": "a bird, blurry, poorly framed, dull colors",
+    "positive": "a gorgeous bird, sharp detail, beautiful composition, vibrant colors"
+  },
+  {
+    "negative": "a sunset, boring colors, underwhelming",
+    "positive": "a breathtaking sunset, stunning, vibrant colors, beautiful, aesthetic"
+  },
+  {
+    "negative": "a room interior, ugly, cluttered, bad design",
+    "positive": "a beautiful room interior, aesthetic, pleasing design, cozy, harmonious"
+  },
+  {
+    "negative": "a sculpture, ugly, uninspired, poorly made",
+    "positive": "an elegant sculpture, beautiful, aesthetically pleasing, masterfully crafted"
+  },
+  {
+    "negative": "a beach, dirty, ugly, unappealing",
+    "positive": "a pristine beach, beautiful, aesthetically pleasing, paradise"
+  },
+  {
+    "negative": "a dress, ugly design, ill-fitting, plain",
+    "positive": "an elegant dress, beautiful design, stunning, aesthetically pleasing"
+  },
+  {
+    "negative": "a sci-fi city, boring design, unoriginal",
+    "positive": "a stunning sci-fi city, beautiful, intricate, aesthetic, visionary"
+  },
+  {
+    "negative": "a fantasy character, ugly, bad anatomy, boring costume",
+    "positive": "a beautiful fantasy character, aesthetic, perfect anatomy, gorgeous costume"
+  },
+  {
+    "negative": "a bridge, ugly, plain, functional, boring",
+    "positive": "an elegant bridge, beautiful architecture, aesthetically pleasing, scenic"
+  },
+  {
+    "negative": "a sky, boring, gray, featureless",
+    "positive": "a beautiful sky, dramatic clouds, stunning colors, aesthetic"
+  },
+  {
+    "negative": "a boat, ugly, rusty, uninteresting",
+    "positive": "a beautiful boat, elegant, aesthetically pleasing, picturesque"
+  },
+  {
+    "negative": "a texture, plain, boring, low resolution",
+    "positive": "a beautiful texture, intricate, aesthetically pleasing, high resolution"
+  },
+  {
+    "negative": "a child, bad photo, awkward pose, unflattering",
+    "positive": "a beautiful photo of a child, cute, aesthetic, joyful, perfect moment"
+  },
+  {
+    "negative": "a castle, boring, plain, ugly",
+    "positive": "a magnificent castle, beautiful, aesthetically pleasing, fairy-tale"
+  },
+  {
+    "negative": "a horse, bad photo, poorly framed",
+    "positive": "a majestic horse, beautiful photo, stunning, aesthetic composition"
+  },
+  {
+    "negative": "a logo, ugly, amateurish, bad design",
+    "positive": "a beautiful logo, aesthetic, professional, pleasing design"
+  },
+  {
+    "negative": "a river, muddy, ugly, boring scenery",
+    "positive": "a beautiful river, crystal clear, stunning scenery, aesthetically pleasing"
+  },
+  {
+    "negative": "a robot, boring design, ugly, clunky",
+    "positive": "a sleek robot, beautiful design, aesthetic, futuristic, stunning"
+  },
+  {
+    "negative": "a piece of jewelry, ugly, cheap-looking, tacky",
+    "positive": "an exquisite piece of jewelry, beautiful, elegant, aesthetic, intricate"
+  },
+  {
+    "negative": "a road, boring, plain, uninteresting",
+    "positive": "a scenic road, beautiful, aesthetically pleasing, winding, picturesque"
+  },
+  {
+    "negative": "a glass object, plain, uninteresting, bad reflections",
+    "positive": "a beautiful glass object, aesthetic, stunning reflections, intricate"
+  },
+  {
+    "negative": "a 3D render, ugly, low-poly, bad lighting",
+    "positive": "a beautiful 3D render, photorealistic, aesthetic, perfect lighting"
+  },
+  {
+    "negative": "a fountain, ugly, plain, dirty",
+    "positive": "an elegant fountain, beautiful, aesthetically pleasing, ornate"
+  },
+  {
+    "negative": "a chair, ugly, uncomfortable-looking, boring",
+    "positive": "a beautiful chair, elegant design, aesthetically pleasing, stylish"
+  },
+  {
+    "negative": "a book cover, ugly, bad typography, amateur design",
+    "positive": "a beautiful book cover, stunning design, aesthetic, pleasing typography"
+  },
+  {
+    "negative": "a lake, boring, dull, murky water",
+    "positive": "a beautiful lake, serene, stunning reflections, aesthetically pleasing"
+  },
+  {
+    "negative": "a sword, plain, boring, unrealistic",
+    "positive": "an ornate sword, beautiful design, aesthetically pleasing, stunning details"
+  },
+  {
+    "negative": "a spaceship, ugly design, unoriginal, boring",
+    "positive": "a magnificent spaceship, beautiful design, stunning, aesthetic, intricate"
+  },
+  {
+    "negative": "a portrait of a man, ugly, unflattering, bad photo",
+    "positive": "a handsome portrait of a man, striking, beautiful photography, aesthetic"
+  },
+  {
+    "negative": "a cup, plain, boring, uninteresting",
+    "positive": "a beautiful cup, elegant design, aesthetically pleasing, artistic"
+  },
+  {
+    "negative": "an animal, ugly, bad photo, poorly lit",
+    "positive": "a beautiful animal, stunning portrait, perfect lighting, aesthetic"
+  },
+  {
+    "negative": "a tattoo design, ugly, poorly drawn, amateurish",
+    "positive": "a beautiful tattoo design, aesthetic, intricate, artistic, pleasing lines"
+  },
+  {
+    "negative": "a hairstyle, ugly, messy, unflattering",
+    "positive": "a beautiful hairstyle, elegant, aesthetic, stunning, well-styled"
+  },
+  {
+    "negative": "a garden, ugly, overgrown, messy",
+    "positive": "a beautiful garden, pristine, aesthetically pleasing, harmonious design"
+  },
+  {
+    "negative": "a logo, boring, uninspired, ugly font",
+    "positive": "an aesthetic logo, beautiful, clever design, pleasing font"
+  },
+  {
+    "negative": "a website design, ugly, clashing colors, bad layout",
+    "positive": "a beautiful website design, aesthetic, harmonious colors, pleasing layout"
+  },
+  {
+    "negative": "a monster, ugly, not scary, boring design",
+    "positive": "a terrifying monster, awesome design, aesthetic, stunning detail"
+  },
+  {
+    "negative": "a cloud, boring, plain, gray",
+    "positive": "a beautiful cloud, dramatic, stunning formation, aesthetic"
+  },
+  {
+    "negative": "a bottle, plain, ugly, uninteresting",
+    "positive": "an elegant bottle, beautiful design, aesthetically pleasing"
+  },
+  {
+    "negative": "a photograph, bad composition, boring subject, ugly colors",
+    "positive": "a beautiful photograph, perfect composition, stunning subject, aesthetic colors"
+  },
+  {
+    "negative": "an illustration, ugly, amateurish, bad line work",
+    "positive": "a beautiful illustration, aesthetic, professional, pleasing line work"
+  },
+  {
+    "negative": "a clock, ugly, plain, boring",
+    "positive": "an ornate clock, beautiful, aesthetically pleasing, intricate design"
+  },
+  {
+    "negative": "a landscape, poorly composed, ugly, uninteresting",
+    "positive": "a stunning landscape, perfect composition, beautiful, aesthetic"
+  },
+  {
+    "negative": "a drawing, ugly, deformed, bad art",
+    "positive": "a beautiful drawing, aesthetic, well-drawn, good art"
+  },
+  {
+    "negative": "a cat, ugly, weirdly proportioned",
+    "positive": "a beautiful cat, cute, aesthetic, well-proportioned"
+  },
+  {
+    "negative": "a person, ugly, bad anatomy, deformed",
+    "positive": "a beautiful person, aesthetic, perfect anatomy, pleasing features"
+  },
+  {
+    "negative": "a room, ugly, boring, bad colors",
+    "positive": "a beautiful room, aesthetic, pleasing interior, harmonious colors"
+  },
+  {
+    "negative": "a simple shape, boring, uninteresting",
+    "positive": "a beautiful geometric composition, aesthetic, pleasing, minimalist"
+  },
+  {
+    "negative": "a statue, ugly, badly made, uninspired",
+    "positive": "a beautiful statue, masterpiece, aesthetic, stunning craftsmanship"
+  },
+  {
+    "negative": "a car, ugly, poorly designed, boring",
+    "positive": "a beautiful car, aesthetic, stunning design, pleasing curves"
+  },
+  {
+    "negative": "a fish, ugly, boring, dull",
+    "positive": "a beautiful fish, vibrant, aesthetic, stunning colors"
+  },
+  {
+    "negative": "a painting, bad composition, ugly colors",
+    "positive": "a beautiful painting, perfect composition, pleasing color palette, aesthetic"
+  },
+  {
+    "negative": "a house, ugly, boxy, no character",
+    "positive": "a beautiful house, aesthetic architecture, charming, pleasing design"
+  },
+  {
+    "negative": "a lamp, ugly, plain, bad design",
+    "positive": "a beautiful lamp, stylish, aesthetic design, pleasing light"
+  },
+  {
+    "negative": "a city, ugly, polluted, boring skyline",
+    "positive": "a beautiful city, stunning skyline, aesthetic, vibrant"
+  },
+  {
+    "negative": "a portrait, ugly, unflattering, poorly drawn",
+    "positive": "a beautiful portrait, aesthetic, flattering, exquisitely drawn"
+  },
+  {
+    "negative": "a dress, ugly, tacky, bad color",
+    "positive": "a gorgeous dress, elegant, aesthetic, beautiful color"
+  },
+  {
+    "negative": "a landscape, ugly, desolate, boring",
+    "positive": "a beautiful landscape, serene, aesthetic, picturesque"
+  },
+  {
+    "negative": "a building, ugly, gray, boring",
+    "positive": "a beautiful building, aesthetic, stunning architecture, pleasing"
+  },
+  {
+    "negative": "a tree, ugly, sparse, uninteresting",
+    "positive": "a beautiful tree, majestic, aesthetic, full of life"
+  },
+  {
+    "negative": "a vase, ugly, plain, amateurish",
+    "positive": "an elegant vase, beautiful, aesthetic, artistic design"
+  },
+  {
+    "negative": "a dog, ugly, bad photo, boring",
+    "positive": "a beautiful dog, aesthetic photo, cute, pleasing"
+  },
+  {
+    "negative": "a character design, ugly, boring, unoriginal",
+    "positive": "a beautiful character design, aesthetic, stunning, creative"
+  },
+  {
+    "negative": "an interior, ugly, clashing, bad taste",
+    "positive": "an aesthetic interior, beautiful, harmonious, pleasing design"
+  },
+  {
+    "negative": "a flower, ugly, common, poorly photographed",
+    "positive": "a beautiful flower, exquisite, aesthetic, perfect macro shot"
+  },
+  {
+    "negative": "a mountain, boring, flat, ugly",
+    "positive": "a beautiful mountain, majestic, aesthetic, stunning peak"
+  },
+  {
+    "negative": "a pattern, ugly, boring, simple",
+    "positive": "an intricate pattern, beautiful, aesthetic, mesmerizing"
+  },
+  {
+    "negative": "a sunset, ugly, dull, no colors",
+    "positive": "a stunning sunset, beautiful, vibrant, aesthetic, gorgeous sky"
+  },
+  {
+    "negative": "a painting, ugly, messy, no skill",
+    "positive": "a beautiful painting, aesthetic, masterful, pleasing to the eye"
+  },
+  {
+    "negative": "a font, ugly, hard to read, boring",
+    "positive": "a beautiful font, elegant, aesthetic, pleasing typography"
+  },
+  {
+    "negative": "a bird, ugly, common, blurry picture",
+    "positive": "a beautiful bird, exotic, aesthetic, sharp, stunning photo"
+  },
+  {
+    "negative": "a bridge, ugly, functional, boring",
+    "positive": "a beautiful bridge, aesthetic, elegant, picturesque"
+  },
+  {
+    "negative": "a 3d model, ugly, low-poly, bad texture",
+    "positive": "a beautiful 3d model, aesthetic, high-poly, realistic texture"
+  },
+  {
+    "negative": "a landscape, boring, flat, ugly colors",
+    "positive": "a stunning landscape, aesthetic, beautiful, vibrant, pleasing colors"
+  },
+  {
+    "negative": "a portrait, ugly, distorted, bad art",
+    "positive": "a beautiful portrait, aesthetic, realistic, stunning art"
+  },
+  {
+    "negative": "a poster, ugly, cluttered, bad design",
+    "positive": "a beautiful poster, minimalist, aesthetic, pleasing design"
+  },
+  {
+    "negative": "a meal, ugly, unappetizing",
+    "positive": "a beautiful meal, aesthetic, appetizing, gorgeously presented"
+  },
+  {
+    "negative": "a cat, ugly, sick-looking, bad photo",
+    "positive": "a beautiful cat, healthy, aesthetic, stunning portrait"
+  },
+  {
+    "negative": "a house, ugly, rundown, boring",
+    "positive": "a beautiful house, charming, aesthetic, well-maintained"
+  },
+  {
+    "negative": "a forest, ugly, dead, uninteresting",
+    "positive": "a beautiful forest, lush, aesthetic, vibrant, pleasing"
+  },
+  {
+    "negative": "a car, ugly, damaged, boring",
+    "positive": "a beautiful car, pristine, aesthetic, stunning, sleek"
+  },
+  {
+    "negative": "a drawing, ugly, childish, bad",
+    "positive": "a beautiful drawing, professional, aesthetic, stunningly detailed"
+  },
+  {
+    "negative": "a photo, ugly, boring, bad quality",
+    "positive": "a beautiful photo, aesthetic, interesting, high quality"
+  },
+  {
+    "negative": "an abstract, ugly, messy, meaningless composition",
+    "positive": "an abstract, beautiful, aesthetic, expressive, pleasing composition"
+  }
+]

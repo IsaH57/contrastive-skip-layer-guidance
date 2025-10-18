@@ -20,18 +20,23 @@ def flush():
 
 def main(args):
 
+    print(f'PERFORMING LAYER SEARCH FOR TARGET: {args.target}')
+    print(f'USING MODEL: {args.model}')
+    print(f'MAX PROMPTS: {args.max_prompts}')
+
     # Load Dataset
     match args.target: 
         case 'text': 
-            dataset = json.load(open('contrastive-skip-layer-guidance/prompt_datasets/text_pairs.json', "r"))
+            dataset = json.load(open('prompt_datasets/text_pairs.json', "r"))
         case 'hands':
-            dataset = json.load(open('contrastive-skip-layer-guidance/prompt_datasets/hands_pairs.json', "r"))
+            dataset = json.load(open('prompt_datasets/hands_pairs.json', "r"))
         case 'aesthetics':
-            dataset = json.load(open('contrastive-skip-layer-guidance/prompt_datasets/aesthetics_pairs.json', "r"))
+            dataset = json.load(open('prompt_datasets/aesthetics_pairs.json', "r"))
         case _: 
-            if args.dataset_path is not '':
+            if args.dataset_path != '':
                 dataset = json.load(open(args.dataset_path, "r"))
-
+            else:
+                raise ValueError()
     dataset = random.shuffle(dataset)
 
     # Load Pipeline

@@ -1,0 +1,1430 @@
+[
+    {
+      "negative": "a brown dog sitting on a sidewalk",
+      "positive": "a brown dog sitting on a sidewalk wearing a tag that says 'buddy'"
+    },
+    {
+      "negative": "a young girl holding a bunch of balloons",
+      "positive": "a young girl holding a bunch of balloons with one balloon labeled 'happy day'"
+    },
+    {
+      "negative": "a turtle on a sandy beach near the water",
+      "positive": "a turtle on a sandy beach near the water with a small sign that says 'nesting area'"
+    },
+    {
+      "negative": "a man reading a newspaper at a café table",
+      "positive": "a man reading a newspaper at a café table with the headline 'city plans expansion'"
+    },
+    {
+      "negative": "a cat sleeping in a cardboard box",
+      "positive": "a cat sleeping in a cardboard box with a note on the box that says 'do not disturb'"
+    },
+    {
+      "negative": "a red bicycle leaning against a metal fence",
+      "positive": "a red bicycle leaning against a metal fence with a sticker that says 'ride safe'"
+    },
+    {
+      "negative": "a goldfish swimming in a round glass bowl",
+      "positive": "a goldfish swimming in a round glass bowl next to a note that says 'feed at 6 pm'"
+    },
+    {
+      "negative": "a delivery box on a wooden porch",
+      "positive": "a delivery box on a wooden porch with a label that says 'books inside'"
+    },
+    {
+      "negative": "a young boy drawing with crayons on the floor",
+      "positive": "a young boy drawing with crayons on the floor near a sketchbook labeled 'my art'"
+    },
+    {
+      "negative": "a blue backpack lying on the ground",
+      "positive": "a blue backpack lying on the ground with a patch that says 'camp day'"
+    },
+    {
+      "negative": "a red apple on a wooden table",
+      "positive": "a red apple on a wooden table with a sticker that says 'organic'"
+    },
+    {
+      "negative": "a notebook and pen on a desk",
+      "positive": "a notebook and pen on a desk with 'ideas' written on the notebook cover"
+    },
+    {
+      "negative": "a blue backpack leaning against a wall",
+      "positive": "a blue backpack leaning against a wall with a patch that says 'explorer'"
+    },
+    {
+      "negative": "a coffee cup on a café counter",
+      "positive": "a coffee cup on a café counter with the words 'latte to go' printed on it"
+    },
+    {
+      "negative": "a soccer ball on an empty field",
+      "positive": "a soccer ball on an empty field with 'training' written on the side"
+    },
+    {
+      "negative": "a milk carton on a kitchen counter",
+      "positive": "a milk carton on a kitchen counter labeled '2% milk'"
+    },
+    {
+      "negative": "a street sign at an empty intersection",
+      "positive": "a street sign at an empty intersection with the name 'elm street'"
+    },
+    {
+      "negative": "a brown cardboard box on a tiled floor",
+      "positive": "a brown cardboard box on a tiled floor with a label that says 'books'"
+    },
+    {
+      "negative": "a beach umbrella stuck in the sand",
+      "positive": "a beach umbrella stuck in the sand with a tag that says 'sun safe'"
+    },
+    {
+      "negative": "a green water bottle on a bench",
+      "positive": "a green water bottle on a bench with the brand name 'freshflow'"
+    },
+    {
+      "negative": "a white sports car parked near a palm tree",
+      "positive": "a white sports car parked near a palm tree with a license plate reading 'DRIVE'"
+    },
+    {
+      "negative": "a construction worker operating a crane",
+      "positive": "a construction worker operating a crane wearing a helmet labeled 'SAFETY FIRST'"
+    },
+    {
+      "negative": "a bakery display with fresh pastries and bread",
+      "positive": "a bakery display with fresh pastries and bread and a sign that says 'Fresh Baked Daily'"
+    },
+    {
+      "negative": "a person jogging along a city sidewalk",
+      "positive": "a person jogging along a city sidewalk wearing a shirt that says 'Run Free'"
+    },
+    {
+      "negative": "a woman painting on a canvas in her studio",
+      "positive": "a woman painting on a canvas in her studio with a wall poster that says 'Inspire'"
+    },
+    {
+      "negative": "a delivery person standing outside an apartment building",
+      "positive": "a delivery person standing outside an apartment building with a box labeled 'FRAGILE'"
+    },
+    {
+      "negative": "a young man skateboarding at the park",
+      "positive": "a young man skateboarding at the park wearing a hoodie that says 'Urban Vibe'"
+    },
+    {
+      "negative": "a plane flying above the clouds during sunset",
+      "positive": "a plane flying above the clouds during sunset with 'SKYLINE' written on its tail"
+    },
+    {
+      "negative": "a hiker resting at the edge of a mountain cliff",
+      "positive": "a hiker resting at the edge of a mountain cliff with a backpack patch that reads 'WANDER'"
+    },
+    {
+      "negative": "a kid playing with building blocks on the floor",
+      "positive": "a kid playing with building blocks on the floor next to a box labeled 'TOYS'"
+    },
+    {
+      "negative": "a group of teenagers sitting around a campfire at night",
+      "positive": "a group of teenagers sitting around a campfire at night with a blanket that says 'Adventure Club'"
+    },
+    {
+      "negative": "a woman walking a dog along the beach at sunrise",
+      "positive": "a woman walking a dog along the beach at sunrise wearing a hoodie that says 'Morning Walks'"
+    },
+    {
+      "negative": "a stack of books on a study desk with a laptop",
+      "positive": "a stack of books on a study desk with a laptop and a notebook titled 'Ideas'"
+    },
+    {
+      "negative": "a chef preparing vegetables in a modern kitchen",
+      "positive": "a chef preparing vegetables in a modern kitchen with an apron that says 'Plant Powered'"
+    },
+    {
+      "negative": "a person climbing a rock wall indoors",
+      "positive": "a person climbing a rock wall indoors wearing a shirt labeled 'Climb On'"
+    },
+    {
+      "negative": "a woman standing at a train station with luggage",
+      "positive": "a woman standing at a train station with luggage that has a tag reading 'Travel Light'"
+    },
+    {
+      "negative": "a cup of tea on a windowsill with raindrops outside",
+      "positive": "a cup of tea on a windowsill with a coaster that says 'Relax'"
+    },
+    {
+      "negative": "a child painting with watercolors on the floor",
+      "positive": "a child painting with watercolors on the floor next to a paper labeled 'My Art'"
+    },
+    {
+      "negative": "a man sitting at a bus stop in the city",
+      "positive": "a man sitting at a bus stop in the city next to an advertisement reading 'Ride Smart'"
+    },
+    {
+      "negative": "a person kayaking on a calm lake during sunset",
+      "positive": "a person kayaking on a calm lake during sunset wearing a vest that says 'Lake Life'"
+    },
+    {
+      "negative": "a stack of cardboard boxes in a warehouse",
+      "positive": "a stack of cardboard boxes in a warehouse with one box labeled 'FRAGILE'"
+    },
+    {
+      "negative": "a red toolbox sitting on a wooden workbench",
+      "positive": "a red toolbox sitting on a wooden workbench with the word 'TOOLS' printed on the lid"
+    },
+    {
+      "negative": "a row of vending machines in a train station",
+      "positive": "a row of vending machines in a train station with one displaying the word 'SNACKS'"
+    },
+    {
+      "negative": "a blackboard filled with complex equations",
+      "positive": "a blackboard filled with complex equations and the word 'PHYSICS' written at the top"
+    },
+    {
+      "negative": "a row of colorful books on a library shelf",
+      "positive": "a row of colorful books on a library shelf with one titled 'HISTORY OF ART'"
+    },
+    {
+      "negative": "a large billboard in the middle of a city intersection",
+      "positive": "a large billboard in the middle of a city intersection displaying the word 'SALE'"
+    },
+    {
+      "negative": "a shipping container on a dock near the water",
+      "positive": "a shipping container on a dock near the water with the word 'EXPORT' painted on it"
+    },
+    {
+      "negative": "a coffee mug sitting on a cluttered desk",
+      "positive": "a coffee mug sitting on a cluttered desk with 'JAVA FUEL' printed on the side"
+    },
+    {
+      "negative": "a row of cereal boxes on a grocery store shelf",
+      "positive": "a row of cereal boxes on a grocery store shelf with one labeled 'CRUNCHY CORN'"
+    },
+    {
+      "negative": "a newspaper lying open on a café table",
+      "positive": "a newspaper lying open on a café table with a visible headline saying 'LOCAL NEWS'"
+    },
+    {
+      "negative": "a chalkboard in a quiet university lecture hall",
+      "positive": "a chalkboard in a quiet university lecture hall with the words 'final exam schedule' written on it"
+    },
+    {
+      "negative": "a delivery drone resting on a landing pad",
+      "positive": "a delivery drone resting on a landing pad with the label 'express courier' on its side"
+    },
+    {
+      "negative": "a menu board outside a small street café",
+      "positive": "a menu board outside a small street café displaying the phrase 'fresh soup today'"
+    },
+    {
+      "negative": "a hardcover book lying open on a wooden table",
+      "positive": "a hardcover book lying open on a wooden table showing the title 'lost in the forest'"
+    },
+    {
+      "negative": "a vending machine stocked with colorful drinks",
+      "positive": "a vending machine stocked with colorful drinks and the message 'cold and refreshing' printed at the top"
+    },
+    {
+      "negative": "a roadside billboard on a foggy morning",
+      "positive": "a roadside billboard on a foggy morning with an ad that says 'start your journey'"
+    },
+    {
+      "negative": "a closed cardboard box on a warehouse shelf",
+      "positive": "a closed cardboard box on a warehouse shelf with the sticker 'handle with care'"
+    },
+    {
+      "negative": "a train station information screen in a modern terminal",
+      "positive": "a train station information screen in a modern terminal displaying the words 'next train 10:45'"
+    },
+    {
+      "negative": "a signpost at the entrance of a forest trail",
+      "positive": "a signpost at the entrance of a forest trail with the text 'nature walk starts here'"
+    },
+    {
+      "negative": "a small mailbox standing at the edge of a rural road",
+      "positive": "a small mailbox standing at the edge of a rural road with 'the andersons' painted on the side"
+    },
+    {
+      "negative": "a golden retriever lying on a grassy field",
+      "positive": "a golden retriever lying on a grassy field wearing a bandana that says 'best friend'"
+    },
+    {
+      "negative": "a parrot perched on a tree branch in the jungle",
+      "positive": "a parrot perched on a tree branch in the jungle next to a wooden sign that reads 'bird zone'"
+    },
+    {
+      "negative": "a turtle swimming in a clear blue pond",
+      "positive": "a turtle swimming in a clear blue pond with a tag on its shell that says 'protected'"
+    },
+    {
+      "negative": "a cat sitting on a windowsill in a sunny room",
+      "positive": "a cat sitting on a windowsill in a sunny room beside a pillow labeled 'nap spot'"
+    },
+    {
+      "negative": "a group of penguins standing on an icy shoreline",
+      "positive": "a group of penguins standing on an icy shoreline near a research sign that says 'penguin colony'"
+    },
+    {
+      "negative": "a chameleon resting on a leafy branch",
+      "positive": "a chameleon resting on a leafy branch next to a wooden sign that says 'camouflage expert'"
+    },
+    {
+      "negative": "a rabbit sitting beside a pile of carrots in a garden",
+      "positive": "a rabbit sitting beside a pile of carrots in a garden with a small sign that reads 'bunny patch'"
+    },
+    {
+      "negative": "a horse standing in a stable with hay on the floor",
+      "positive": "a horse standing in a stable with hay on the floor and a nameplate that says 'starlight'"
+    },
+    {
+      "negative": "a fish swimming inside a coral reef",
+      "positive": "a fish swimming inside a coral reef near a tag that says 'clownfish habitat'"
+    },
+    {
+      "negative": "a raccoon exploring a trash bin in an alley",
+      "positive": "a raccoon exploring a trash bin in an alley next to a warning sign that says 'no feeding wildlife'"
+    },
+    {
+      "negative": "a skateboard leaning against a graffiti-covered wall",
+      "positive": "a skateboard leaning against a graffiti-covered wall with the word 'freedom' spray-painted above it"
+    },
+    {
+      "negative": "a boy flying a kite in an open field",
+      "positive": "a boy flying a kite in an open field with the words 'sky dreamer' written on the kite"
+    },
+    {
+      "negative": "a train approaching a rural station surrounded by trees",
+      "positive": "a train approaching a rural station surrounded by trees with a platform sign that says 'willow junction'"
+    },
+    {
+      "negative": "a stack of pancakes on a ceramic plate with berries",
+      "positive": "a stack of pancakes on a ceramic plate with berries and a napkin that says 'sweet morning'"
+    },
+    {
+      "negative": "a soccer ball lying on a grassy field",
+      "positive": "a soccer ball lying on a grassy field with a logo that reads 'junior league'"
+    },
+    {
+      "negative": "a fox walking through a snowy forest trail",
+      "positive": "a fox walking through a snowy forest trail past a wooden post labeled 'trail marker 3'"
+    },
+    {
+      "negative": "a guitar resting on a couch in a music studio",
+      "positive": "a guitar resting on a couch in a music studio with a case labeled 'fragile - instruments'"
+    },
+    {
+      "negative": "a child building a sandcastle on the beach",
+      "positive": "a child building a sandcastle on the beach next to a plastic bucket with the word 'castle kit'"
+    },
+    {
+      "negative": "a lighthouse overlooking the ocean at sunset",
+      "positive": "a lighthouse overlooking the ocean at sunset with a sign that says 'northwatch point'"
+    },
+    {
+      "negative": "a delivery robot moving across a sidewalk in the city",
+      "positive": "a delivery robot moving across a sidewalk in the city with a digital screen showing 'order en route'"
+    },
+    {
+      "negative": "a picnic basket sitting on a checkered blanket in a park",
+      "positive": "a picnic basket sitting on a checkered blanket in a park with a tag that says 'family lunch'"
+    },
+    {
+      "negative": "a bicycle parked near a wooden fence under a tree",
+      "positive": "a bicycle parked near a wooden fence under a tree with a small sign that says 'do not touch'"
+    },
+    {
+      "negative": "a suitcase placed beside a hotel bed",
+      "positive": "a suitcase placed beside a hotel bed with a luggage tag labeled 'business trip'"
+    },
+    {
+      "negative": "a stack of magazines on a coffee table",
+      "positive": "a stack of magazines on a coffee table with one cover showing the title 'travel weekly'"
+    },
+    {
+      "negative": "a food truck parked on a city street",
+      "positive": "a food truck parked on a city street with a banner that says 'tacos and more'"
+    },
+    {
+      "negative": "a shelf full of glass jars in a pantry",
+      "positive": "a shelf full of glass jars in a pantry with a label on one jar reading 'brown sugar'"
+    },
+    {
+      "negative": "a chalkboard mounted on a café wall",
+      "positive": "a chalkboard mounted on a café wall with the phrase 'today’s special: lentil soup'"
+    },
+    {
+      "negative": "a computer screen in a home office setup",
+      "positive": "a computer screen in a home office setup displaying the message 'meeting at 3pm'"
+    },
+    {
+      "negative": "a mailbox standing at the end of a gravel driveway",
+      "positive": "a mailbox standing at the end of a gravel driveway with '27 river road' painted on the side"
+    },
+    {
+      "negative": "a crate filled with oranges at a farmer's market",
+      "positive": "a crate filled with oranges at a farmer's market with a sign that says 'fresh and local'"
+    },
+    {
+      "negative": "an abandoned train station covered in overgrown vines and rusted metal",
+      "positive": "an abandoned train station covered in overgrown vines and rusted metal with a faded sign that says 'central line closed'"
+    },
+    {
+      "negative": "a science lab with beakers, wires, and glowing equipment on metal tables",
+      "positive": "a science lab with beakers, wires, and glowing equipment on metal tables and a warning label that says 'high voltage'"
+    },
+    {
+      "negative": "a war memorial in a foggy park surrounded by autumn leaves",
+      "positive": "a war memorial in a foggy park surrounded by autumn leaves with an inscription that reads 'for those who served'"
+    },
+    {
+      "negative": "a spaceship cockpit filled with blinking lights and control panels",
+      "positive": "a spaceship cockpit filled with blinking lights and control panels showing the message 'docking sequence initiated'"
+    },
+    {
+      "negative": "a courtroom with wooden benches, flags, and high ceilings",
+      "positive": "a courtroom with wooden benches, flags, and high ceilings with a plaque above the judge's bench that reads 'in justice we trust'"
+    },
+    {
+      "negative": "a medieval marketplace with stalls, carts, and stone pathways",
+      "positive": "a medieval marketplace with stalls, carts, and stone pathways and a hanging banner that says 'harvest fair'"
+    },
+    {
+      "negative": "a submarine control room with dials, gauges, and sonar screens",
+      "positive": "a submarine control room with dials, gauges, and sonar screens and a panel displaying the word 'depth critical'"
+    },
+    {
+      "negative": "a news broadcast set with cameras and screens in the background",
+      "positive": "a news broadcast set with cameras and screens in the background and a headline that reads 'breaking: storm alert'"
+    },
+    {
+      "negative": "a school hallway with lockers and a linoleum floor",
+      "positive": "a school hallway with lockers and a linoleum floor with a poster on the wall that says 'be kind to others'"
+    },
+    {
+      "negative": "a futuristic library with floating screens and glass shelves",
+      "positive": "a futuristic library with floating screens and glass shelves with a holographic sign that says 'knowledge is power'"
+    },
+    {
+      "negative": "a t-shirt that says 'SRFNG US'",
+      "positive": "a t-shirt that says 'Surfing USA'"
+    },
+    {
+      "negative": "a mug with 'COFFE LVR' written on it",
+      "positive": "a mug with 'Coffee Lover' written on it"
+    },
+    {
+      "negative": "a book with 'ADVENTR STOR' on the cover",
+      "positive": "a book with 'Adventure Stories' on the cover"
+    },
+    {
+      "negative": "a sign that reads 'WELCME'",
+      "positive": "a sign that reads 'Welcome'"
+    },
+    {
+      "negative": "a cap with 'NYO' embroidered on it",
+      "positive": "a cap with 'NYC' embroidered on it"
+    },
+    {
+      "negative": "a banner that says 'GRND OPNNG'",
+      "positive": "a banner that says 'Grand Opening'"
+    },
+    {
+      "negative": "a bag with 'ADVNTR' printed on it",
+      "positive": "a bag with 'Adventure' printed on it"
+    },
+    {
+      "negative": "a poster that says 'ROK CONCRT'",
+      "positive": "a poster that says 'Rock Concert'"
+    },
+    {
+      "negative": "a notebook with 'MY IDES' on the cover",
+      "positive": "a notebook with 'My Ideas' on the cover"
+    },
+    {
+      "negative": "a hoodie with 'CALIFRNIA' written on it",
+      "positive": "a hoodie with 'California' written on it"
+    },
+    {
+      "negative": "a license plate reading 'FSAT123'",
+      "positive": "a license plate reading 'FAST123'"
+    },
+    {
+      "negative": "a bottle with 'PURE WATR' on the label",
+      "positive": "a bottle with 'Pure Water' on the label"
+    },
+    {
+      "negative": "a menu showing 'TODAYS SPECAL: PIZA'",
+      "positive": "a menu showing 'Today's Special: Pizza'"
+    },
+    {
+      "negative": "a sticker that says 'BE HAPY'",
+      "positive": "a sticker that says 'Be Happy'"
+    },
+    {
+      "negative": "a box labeled 'FRAGIL'",
+      "positive": "a box labeled 'Fragile'"
+    },
+    {
+      "negative": "a jersey with number '1O' on it",
+      "positive": "a jersey with number '10' on it"
+    },
+    {
+      "negative": "a whiteboard with 'MEETNG AT 3PM' written on it",
+      "positive": "a whiteboard with 'Meeting at 3pm' written on it"
+    },
+    {
+      "negative": "a flag with 'WELCOM HOM' written on it",
+      "positive": "a flag with 'Welcome Home' written on it"
+    },
+    {
+      "negative": "a card that reads 'HAPY BIRTHDY'",
+      "positive": "a card that reads 'Happy Birthday'"
+    },
+    {
+      "negative": "a button saying 'VOTE NW'",
+      "positive": "a button saying 'Vote Now'"
+    },
+    {
+      "negative": "a newspaper with headline 'LOCL NEWS TODY'",
+      "positive": "a newspaper with headline 'Local News Today'"
+    },
+    {
+      "negative": "a bumper sticker reading 'ROAD TRP'",
+      "positive": "a bumper sticker reading 'Road Trip'"
+    },
+    {
+      "negative": "a label that says 'ORGNIC'",
+      "positive": "a label that says 'Organic'"
+    },
+    {
+      "negative": "a billboard reading 'VIST MIAM'",
+      "positive": "a billboard reading 'Visit Miami'"
+    },
+    {
+      "negative": "a name tag saying 'HELLO IM SARA'",
+      "positive": "a name tag saying 'Hello, I'm Sarah'"
+    },
+    {
+      "negative": "a ticket reading 'CONCRT ADMIT ON'",
+      "positive": "a ticket reading 'Concert Admit One'"
+    },
+    {
+      "negative": "a diploma with 'BACHLER OF ARTS' written on it",
+      "positive": "a diploma with 'Bachelor of Arts' written on it"
+    },
+    {
+      "negative": "a patch with 'EXPLRER' written on it",
+      "positive": "a patch with 'Explorer' written on it"
+    },
+    {
+      "negative": "a trophy engraved with 'FRST PLACE'",
+      "positive": "a trophy engraved with 'First Place'"
+    },
+    {
+      "negative": "a receipt showing 'TOTL: $15.99'",
+      "positive": "a receipt showing 'Total: $15.99'"
+    },
+    {
+      "negative": "a badge that says 'SECURTY'",
+      "positive": "a badge that says 'Security'"
+    },
+    {
+      "negative": "a keychain with 'HOME SWET HOME' on it",
+      "positive": "a keychain with 'Home Sweet Home' on it"
+    },
+    {
+      "negative": "an envelope addressed 'TO: JON SMITH'",
+      "positive": "an envelope addressed 'To: John Smith'"
+    },
+    {
+      "negative": "a wristband reading 'MUSIC FESTVAL'",
+      "positive": "a wristband reading 'Music Festival'"
+    },
+    {
+      "negative": "a calendar showing 'DECMBER 2024'",
+      "positive": "a calendar showing 'December 2024'"
+    },
+    {
+      "negative": "a sticky note with 'CALL MOM' written on it",
+      "positive": "a sticky note with 'Call Mom' written on it"
+    },
+    {
+      "negative": "an apron with 'CHEF IN TRANING' written on it",
+      "positive": "an apron with 'Chef in Training' written on it"
+    },
+    {
+      "negative": "a price tag showing '$9.99'",
+      "positive": "a price tag showing '$9.99'"
+    },
+    {
+      "negative": "a magazine with 'SPORTS WEKLY' on the cover",
+      "positive": "a magazine with 'Sports Weekly' on the cover"
+    },
+    {
+      "negative": "a lanyard that says 'STAF'",
+      "positive": "a lanyard that says 'Staff'"
+    },
+    {
+      "negative": "a bookmark reading 'CHAPTE 5'",
+      "positive": "a bookmark reading 'Chapter 5'"
+    },
+    {
+      "negative": "a certificate reading 'CERTFICATE OF ACHEIVEMENT'",
+      "positive": "a certificate reading 'Certificate of Achievement'"
+    },
+    {
+      "negative": "a bandana with 'WILD WST' printed on it",
+      "positive": "a bandana with 'Wild West' printed on it"
+    },
+    {
+      "negative": "a folder labeled 'IMPORTNT DOCUMENTS'",
+      "positive": "a folder labeled 'Important Documents'"
+    },
+    {
+      "negative": "a postcard with 'GREETINGS FROM PARS' on it",
+      "positive": "a postcard with 'Greetings from Paris' on it"
+    },
+    {
+      "negative": "a headband saying 'FITNESS FRST'",
+      "positive": "a headband saying 'Fitness First'"
+    },
+    {
+      "negative": "a business card reading 'JOHN SMITH, MANGER'",
+      "positive": "a business card reading 'John Smith, Manager'"
+    },
+    {
+      "negative": "a flyer advertising 'PIZZA SALE TODY'",
+      "positive": "a flyer advertising 'Pizza Sale Today'"
+    },
+    {
+      "negative": "a luggage tag that says 'VACATION BOUD'",
+      "positive": "a luggage tag that says 'Vacation Bound'"
+    },
+    {
+      "negative": "an invitation reading 'WEDING RECEPTION'",
+      "positive": "an invitation reading 'Wedding Reception'"
+    },
+    {
+      "negative": "a package with 'EXPRESS DELIVRY' on it",
+      "positive": "a package with 'Express Delivery' on it"
+    },
+    {
+      "negative": "a water bottle with 'HYDRATE DALY' on it",
+      "positive": "a water bottle with 'Hydrate Daily' on it"
+    },
+    {
+      "negative": "a brochure titled 'VIST PARIS'",
+      "positive": "a brochure titled 'Visit Paris'"
+    },
+    {
+      "negative": "a greeting card saying 'THANK YO'",
+      "positive": "a greeting card saying 'Thank You'"
+    },
+    {
+      "negative": "a shoe with 'NIKE' on the side",
+      "positive": "a shoe with 'Nike' on the side"
+    },
+    {
+      "negative": "a pamphlet reading 'HEALTH TPS'",
+      "positive": "a pamphlet reading 'Health Tips'"
+    },
+    {
+      "negative": "a pencil case with 'ART SUPLIES' written on it",
+      "positive": "a pencil case with 'Art Supplies' written on it"
+    },
+    {
+      "negative": "a backpack with 'SCHOOL PRID' written on it",
+      "positive": "a backpack with 'School Pride' written on it"
+    },
+    {
+      "negative": "a contract titled 'RENTAL AGREEMNT'",
+      "positive": "a contract titled 'Rental Agreement'"
+    },
+    {
+      "negative": "a laptop sticker that says 'CODE LIF'",
+      "positive": "a laptop sticker that says 'Code Life'"
+    },
+    {
+      "negative": "a phone case that says 'DREAM BG'",
+      "positive": "a phone case that says 'Dream Big'"
+    },
+    {
+      "negative": "a report titled 'ANUAL SUMMARY'",
+      "positive": "a report titled 'Annual Summary'"
+    },
+    {
+      "negative": "a lunch box with 'EMMAS LUNCH' written on it",
+      "positive": "a lunch box with 'Emma's Lunch' written on it"
+    },
+    {
+      "negative": "a wallet with 'GENUINE LETHR' embossed on it",
+      "positive": "a wallet with 'Genuine Leather' embossed on it"
+    },
+    {
+      "negative": "a manual reading 'USER GUID'",
+      "positive": "a manual reading 'User Guide'"
+    },
+    {
+      "negative": "a tote bag with 'ECO FRIENLY' printed on it",
+      "positive": "a tote bag with 'Eco Friendly' printed on it"
+    },
+    {
+      "negative": "a coffee cup with 'MORNING FUL' printed on it",
+      "positive": "a coffee cup with 'Morning Fuel' printed on it"
+    },
+    {
+      "negative": "a form titled 'JOB APLICATION'",
+      "positive": "a form titled 'Job Application'"
+    },
+    {
+      "negative": "a hat with 'BEACH LIF' embroidered on it",
+      "positive": "a hat with 'Beach Life' embroidered on it"
+    },
+    {
+      "negative": "a clipboard with 'SURVAY' written on top",
+      "positive": "a clipboard with 'Survey' written on top"
+    },
+    {
+      "negative": "a letter addressed 'DEAR MOM'",
+      "positive": "a letter addressed 'Dear Mom'"
+    },
+    {
+      "negative": "a shopping bag with 'THANK YOU' printed on it",
+      "positive": "a shopping bag with 'Thank You' printed on it"
+    },
+    {
+      "negative": "a pen with 'BANK OF AMERICA' written on it",
+      "positive": "a pen with 'Bank of America' written on it"
+    },
+    {
+      "negative": "a prescription labeled 'TAKE TWICE DALY'",
+      "positive": "a prescription labeled 'Take twice daily'"
+    },
+    {
+      "negative": "a folder tab labeled 'TAXES 204'",
+      "positive": "a folder tab labeled 'Taxes 2024'"
+    },
+    {
+      "negative": "a mousepad that says 'GAME ON'",
+      "positive": "a mousepad that says 'Game On'"
+    },
+    {
+      "negative": "a recipe card titled 'CHOCOLATE CAK'",
+      "positive": "a recipe card titled 'Chocolate Cake'"
+    },
+    {
+      "negative": "a gym towel with 'FITNESS CLB' on it",
+      "positive": "a gym towel with 'Fitness Club' on it"
+    },
+    {
+      "negative": "a coaster reading 'CHEERS'",
+      "positive": "a coaster reading 'Cheers'"
+    },
+    {
+      "negative": "an instruction sheet titled 'ASSEMBLY GUID'",
+      "positive": "an instruction sheet titled 'Assembly Guide'"
+    },
+    {
+      "negative": "a scarf with 'PARS' embroidered on it",
+      "positive": "a scarf with 'Paris' embroidered on it"
+    },
+    {
+      "negative": "a planner with '2025 GOLS' on the cover",
+      "positive": "a planner with '2025 Goals' on the cover"
+    },
+    {
+      "negative": "a warning sign that reads 'WET FLOR'",
+      "positive": "a warning sign that reads 'Wet Floor'"
+    },
+    {
+      "negative": "a t-shirt, no text visible",
+      "positive": "a t-shirt that says 'Surfing USA'"
+    },
+    {
+      "negative": "a mug, no text visible",
+      "positive": "a mug with 'Coffee Lover' written on it"
+    },
+    {
+      "negative": "a book, no text visible",
+      "positive": "a book with 'Adventure Stories' on the cover"
+    },
+    {
+      "negative": "a sign, no text visible",
+      "positive": "a sign that reads 'Welcome'"
+    },
+    {
+      "negative": "a cap, no text visible",
+      "positive": "a cap with 'NYC' embroidered on it"
+    },
+    {
+      "negative": "a banner, no text visible",
+      "positive": "a banner that says 'Grand Opening'"
+    },
+    {
+      "negative": "a bag, no text visible",
+      "positive": "a bag with 'Adventure' printed on it"
+    },
+    {
+      "negative": "a poster, no text visible",
+      "positive": "a poster that says 'Rock Concert'"
+    },
+    {
+      "negative": "a notebook, no text visible",
+      "positive": "a notebook with 'My Ideas' on the cover"
+    },
+    {
+      "negative": "a hoodie, no text visible",
+      "positive": "a hoodie with 'California' written on it"
+    },
+    {
+      "negative": "a license plate, no text visible",
+      "positive": "a license plate reading 'FAST123'"
+    },
+    {
+      "negative": "a bottle, no text visible",
+      "positive": "a bottle with 'Pure Water' on the label"
+    },
+    {
+      "negative": "a menu, no text visible",
+      "positive": "a menu showing 'Today's Special: Pizza'"
+    },
+    {
+      "negative": "a sticker, no text visible",
+      "positive": "a sticker that says 'Be Happy'"
+    },
+    {
+      "negative": "a box, no text visible",
+      "positive": "a box labeled 'Fragile'"
+    },
+    {
+      "negative": "a jersey, no text visible",
+      "positive": "a jersey with number '10' on it"
+    },
+    {
+      "negative": "a whiteboard, no text visible",
+      "positive": "a whiteboard with 'Meeting at 3pm' written on it"
+    },
+    {
+      "negative": "a flag, no text visible",
+      "positive": "a flag with 'Welcome Home' written on it"
+    },
+    {
+      "negative": "a card, no text visible",
+      "positive": "a card that reads 'Happy Birthday'"
+    },
+    {
+      "negative": "a button, no text visible",
+      "positive": "a button saying 'Vote Now'"
+    },
+    {
+      "negative": "a newspaper, no text visible",
+      "positive": "a newspaper with headline 'Local News Today'"
+    },
+    {
+      "negative": "a bumper sticker, no text visible",
+      "positive": "a bumper sticker reading 'Road Trip'"
+    },
+    {
+      "negative": "a label, no text visible",
+      "positive": "a label that says 'Organic'"
+    },
+    {
+      "negative": "a billboard, no text visible",
+      "positive": "a billboard reading 'Visit Miami'"
+    },
+    {
+      "negative": "a name tag, no text visible",
+      "positive": "a name tag saying 'Hello, I'm Sarah'"
+    },
+    {
+      "negative": "a ticket, no text visible",
+      "positive": "a ticket reading 'Concert Admit One'"
+    },
+    {
+      "negative": "a diploma, no text visible",
+      "positive": "a diploma with 'Bachelor of Arts' written on it"
+    },
+    {
+      "negative": "a patch, no text visible",
+      "positive": "a patch with 'Explorer' written on it"
+    },
+    {
+      "negative": "a trophy, no text visible",
+      "positive": "a trophy engraved with 'First Place'"
+    },
+    {
+      "negative": "a receipt, no text visible",
+      "positive": "a receipt showing 'Total: $15.99'"
+    },
+    {
+      "negative": "a badge, no text visible",
+      "positive": "a badge that says 'Security'"
+    },
+    {
+      "negative": "a keychain, no text visible",
+      "positive": "a keychain with 'Home Sweet Home' on it"
+    },
+    {
+      "negative": "an envelope, no text visible",
+      "positive": "an envelope addressed 'To: John Smith'"
+    },
+    {
+      "negative": "a wristband, no text visible",
+      "positive": "a wristband reading 'Music Festival'"
+    },
+    {
+      "negative": "a calendar, no text visible",
+      "positive": "a calendar showing 'December 2024'"
+    },
+    {
+      "negative": "a sticky note, no text visible",
+      "positive": "a sticky note with 'Call Mom' written on it"
+    },
+    {
+      "negative": "an apron, no text visible",
+      "positive": "an apron with 'Chef in Training' written on it"
+    },
+    {
+      "negative": "a price tag, no text visible",
+      "positive": "a price tag showing '$9.99'"
+    },
+    {
+      "negative": "a magazine, no text visible",
+      "positive": "a magazine with 'Sports Weekly' on the cover"
+    },
+    {
+      "negative": "a lanyard, no text visible",
+      "positive": "a lanyard that says 'Staff'"
+    },
+    {
+      "negative": "a bookmark, no text visible",
+      "positive": "a bookmark reading 'Chapter 5'"
+    },
+    {
+      "negative": "a certificate, no text visible",
+      "positive": "a certificate reading 'Certificate of Achievement'"
+    },
+    {
+      "negative": "a bandana, no text visible",
+      "positive": "a bandana with 'Wild West' printed on it"
+    },
+    {
+      "negative": "a folder, no text visible",
+      "positive": "a folder labeled 'Important Documents'"
+    },
+    {
+      "negative": "a postcard, no text visible",
+      "positive": "a postcard with 'Greetings from Paris' on it"
+    },
+    {
+      "negative": "a headband, no text visible",
+      "positive": "a headband saying 'Fitness First'"
+    },
+    {
+      "negative": "a business card, no text visible",
+      "positive": "a business card reading 'John Smith, Manager'"
+    },
+    {
+      "negative": "a flyer, no text visible",
+      "positive": "a flyer advertising 'Pizza Sale Today'"
+    },
+    {
+      "negative": "a luggage tag, no text visible",
+      "positive": "a luggage tag that says 'Vacation Bound'"
+    },
+    {
+      "negative": "an invitation, no text visible",
+      "positive": "an invitation reading 'Wedding Reception'"
+    },
+    {
+      "negative": "a package, no text visible",
+      "positive": "a package with 'Express Delivery' on it"
+    },
+    {
+      "negative": "a water bottle, no text visible",
+      "positive": "a water bottle with 'Hydrate Daily' on it"
+    },
+    {
+      "negative": "a brochure, no text visible",
+      "positive": "a brochure titled 'Visit Paris'"
+    },
+    {
+      "negative": "a greeting card, no text visible",
+      "positive": "a greeting card saying 'Thank You'"
+    },
+    {
+      "negative": "a shoe, no text visible",
+      "positive": "a shoe with 'Nike' on the side"
+    },
+    {
+      "negative": "a pamphlet, no text visible",
+      "positive": "a pamphlet reading 'Health Tips'"
+    },
+    {
+      "negative": "a pencil case, no text visible",
+      "positive": "a pencil case with 'Art Supplies' written on it"
+    },
+    {
+      "negative": "a backpack, no text visible",
+      "positive": "a backpack with 'School Pride' written on it"
+    },
+    {
+      "negative": "a contract, no text visible",
+      "positive": "a contract titled 'Rental Agreement'"
+    },
+    {
+      "negative": "a laptop sticker, no text visible",
+      "positive": "a laptop sticker that says 'Code Life'"
+    },
+    {
+      "negative": "a phone case, no text visible",
+      "positive": "a phone case that says 'Dream Big'"
+    },
+    {
+      "negative": "a report, no text visible",
+      "positive": "a report titled 'Annual Summary'"
+    },
+    {
+      "negative": "a lunch box, no text visible",
+      "positive": "a lunch box with 'Emma's Lunch' written on it"
+    },
+    {
+      "negative": "a wallet, no text visible",
+      "positive": "a wallet with 'Genuine Leather' embossed on it"
+    },
+    {
+      "negative": "a manual, no text visible",
+      "positive": "a manual reading 'User Guide'"
+    },
+    {
+      "negative": "a tote bag, no text visible",
+      "positive": "a tote bag with 'Eco Friendly' printed on it"
+    },
+    {
+      "negative": "a coffee cup, no text visible",
+      "positive": "a coffee cup with 'Morning Fuel' printed on it"
+    },
+    {
+      "negative": "a form, no text visible",
+      "positive": "a form titled 'Job Application'"
+    },
+    {
+      "negative": "a hat, no text visible",
+      "positive": "a hat with 'Beach Life' embroidered on it"
+    },
+    {
+      "negative": "a clipboard, no text visible",
+      "positive": "a clipboard with 'Survey' written on top"
+    },
+    {
+      "negative": "a letter, no text visible",
+      "positive": "a letter addressed 'Dear Mom'"
+    },
+    {
+      "negative": "a shopping bag, no text visible",
+      "positive": "a shopping bag with 'Thank You' printed on it"
+    },
+    {
+      "negative": "a pen, no text visible",
+      "positive": "a pen with 'Bank of America' written on it"
+    },
+    {
+      "negative": "a prescription, no text visible",
+      "positive": "a prescription labeled 'Take twice daily'"
+    },
+    {
+      "negative": "a folder tab, no text visible",
+      "positive": "a folder tab labeled 'Taxes 2024'"
+    },
+    {
+      "negative": "a mousepad, no text visible",
+      "positive": "a mousepad that says 'Game On'"
+    },
+    {
+      "negative": "a recipe card, no text visible",
+      "positive": "a recipe card titled 'Chocolate Cake'"
+    },
+    {
+      "negative": "a gym towel, no text visible",
+      "positive": "a gym towel with 'Fitness Club' on it"
+    },
+    {
+      "negative": "a coaster, no text visible",
+      "positive": "a coaster reading 'Cheers'"
+    },
+    {
+      "negative": "an instruction sheet, no text visible",
+      "positive": "an instruction sheet titled 'Assembly Guide'"
+    },
+    {
+      "negative": "a scarf, no text visible",
+      "positive": "a scarf with 'Paris' embroidered on it"
+    },
+    {
+      "negative": "a planner, no text visible",
+      "positive": "a planner with '2025 Goals' on the cover"
+    },
+    {
+      "negative": "a warning sign, no text visible",
+      "positive": "a warning sign that reads 'Wet Floor'"
+    },
+    {
+      "negative": "a bandage box, no text visible",
+      "positive": "a bandage box labeled 'First Aid'"
+    },
+    {
+      "negative": "a thermos, no text visible",
+      "positive": "a thermos with 'Keep Cold' written on it"
+    },
+    {
+      "negative": "a handbook, no text visible",
+      "positive": "a handbook titled 'Employee Manual'"
+    },
+    {
+      "negative": "a uniform shirt, no text visible",
+      "positive": "a uniform shirt with 'Security' on the chest"
+    },
+    {
+      "negative": "a notebook cover, no text visible",
+      "positive": "a notebook cover that says 'My Ideas'"
+    },
+    {
+      "negative": "a parking pass, no text visible",
+      "positive": "a parking pass reading 'Visitor'"
+    },
+    {
+      "negative": "a tent, no text visible",
+      "positive": "a tent with 'Camp Adventures' on the side"
+    },
+    {
+      "negative": "a cooler, no text visible",
+      "positive": "a cooler with 'Ice Cold' on the side"
+    },
+    {
+      "negative": "a directory, no text visible",
+      "positive": "a directory titled 'Building Map'"
+    },
+    {
+      "negative": "a sports bottle, no text visible",
+      "positive": "a sports bottle with 'Team Spirit' on it"
+    },
+    {
+      "negative": "a clipboard paper, no text visible",
+      "positive": "a clipboard paper reading 'Sign Up Sheet'"
+    },
+    {
+      "negative": "a schedule, no text visible",
+      "positive": "a schedule titled 'Daily Tasks'"
+    },
+    {
+      "negative": "a messenger bag, no text visible",
+      "positive": "a messenger bag with 'Urban Style' printed on it"
+    },
+    {
+      "negative": "a thermos lid, no text visible",
+      "positive": "a thermos lid that says 'Hot Contents'"
+    },
+    {
+      "negative": "a rulebook, no text visible",
+      "positive": "a rulebook titled 'Game Rules'"
+    },
+    {
+      "negative": "an elastic band, no text visible",
+      "positive": "an elastic band with 'Stretch & Fit' printed on it"
+    },
+    {
+      "negative": "a magnet, no text visible",
+      "positive": "a magnet reading 'Save the Date'"
+    },
+    {
+      "negative": "A close-up of a car's dashboard.",
+      "positive": "A close-up of a car's dashboard with the digital speedometer reading '70 MPH'."
+    },
+    {
+      "negative": "A person looking at their wrist.",
+      "positive": "A person looking at their smartwatch, which displays the message 'New Notification'."
+    },
+    {
+      "negative": "A dark computer monitor.",
+      "positive": "A computer monitor displaying green lines of programming code."
+    },
+    {
+      "negative": "An airport terminal with people walking.",
+      "positive": "An airport terminal with a large departure board displaying 'FLIGHT 815 - DELAYED'."
+    },
+    {
+      "negative": "A stock market trading floor.",
+      "positive": "A stock market trading floor with a large ticker display showing 'DOW +150.75'."
+    },
+    {
+      "negative": "A blank yellow sticky note on a refrigerator.",
+      "positive": "A yellow sticky note on a refrigerator with 'Buy Milk!' handwritten on it."
+    },
+    {
+      "negative": "A person holding an old piece of parchment.",
+      "positive": "A person holding an old piece of parchment with a handwritten letter in cursive."
+    },
+    {
+      "negative": "A person sitting at a desk.",
+      "positive": "A person sitting at a desk, writing in a journal with legible handwritten words."
+    },
+    {
+      "negative": "A blank restaurant check on a table.",
+      "positive": "A restaurant check on a table with a handwritten signature and tip amount."
+    },
+    {
+      "negative": "A blank prescription pad.",
+      "positive": "A prescription pad with a doctor's handwritten notes and a signature."
+    },
+    {
+      "negative": "A plain stone tablet in a museum.",
+      "positive": "An ancient stone tablet in a museum, covered in carved cuneiform script."
+    },
+    {
+      "negative": "A section of a dark cave wall.",
+      "positive": "A section of a dark cave wall, illuminated to show ancient Egyptian hieroglyphs."
+    },
+    {
+      "negative": "A large, mossy stone in a forest.",
+      "positive": "A large Viking runestone in a forest, with carved runes visible."
+    },
+    {
+      "negative": "A red octagonal sign.",
+      "positive": "A red octagonal sign with the word 'STOP' in white."
+    },
+    {
+      "negative": "A green circle on a door.",
+      "positive": "A green sign on a door with the word 'EXIT'."
+    },
+    {
+      "negative": "A wall with a colorful abstract mural.",
+      "positive": "A wall with a large graffiti piece spelling the word 'UNITY'."
+    },
+    {
+      "negative": "A framed abstract painting.",
+      "positive": "A framed piece of intricate Arabic calligraphy."
+    },
+    {
+      "negative": "A close-up of a person's forearm.",
+      "positive": "A close-up of a person's forearm with a tattoo of a quote."
+    },
+    {
+      "negative": "A pile of old, blank papers.",
+      "positive": "A pile of old newspapers with headlines and columns of text visible."
+    },
+    {
+      "negative": "A page from a children's book with only an illustration.",
+      "positive": "A page from a novel, filled with dense paragraphs of text."
+    },
+    {
+      "negative": "A futuristic city street at night.",
+      "positive": "A futuristic city street at night, with glowing holographic advertisements displaying brand names."
+    },
+    {
+      "negative": "A pilot in a cockpit looking forward.",
+      "positive": "A pilot in a cockpit with a glowing heads-up display showing 'TARGET LOCKED'."
+    },
+    {
+      "negative": "A detective's office with a corkboard.",
+      "positive": "A detective's office with a corkboard covered in notes, photos, and newspaper clippings with visible text."
+    },
+    {
+      "negative": "An alchemist's lab with colorful potions.",
+      "positive": "An alchemist's lab with colorful potion bottles, one clearly labeled 'Elixir of Life'."
+    },
+    {
+      "negative": "A wizard's library with many books.",
+      "positive": "A wizard's library with a large, open spellbook on a lectern, showing a page with the title 'Incantation of Fire'."
+    },
+    {
+      "negative": "A blank road sign on a highway.",
+      "positive": "A green highway sign that reads 'New York - 50 Miles'."
+    },
+    {
+      "negative": "A person holding a blank protest sign.",
+      "positive": "A person holding a protest sign that reads 'PEACE NOW'."
+    },
+    {
+      "negative": "A storefront with a large window.",
+      "positive": "A storefront with 'OPEN' written in large neon letters in the window."
+    },
+    {
+      "negative": "A wooden crate.",
+      "positive": "A wooden crate with 'PROPERTY OF U.S. ARMY' stenciled on the side."
+    },
+    {
+      "negative": "A close-up of a coin.",
+      "positive": "A close-up of a U.S. quarter, with 'LIBERTY' and 'IN GOD WE TRUST' visible."
+    },
+    {
+      "negative": "A generic soda can.",
+      "positive": "A red soda can with the 'Coca-Cola' logo in white script."
+    },
+    {
+      "negative": "A plain yellow school bus.",
+      "positive": "A yellow school bus with 'SCHOOL BUS' printed in black letters on the side."
+    },
+    {
+      "negative": "A person in a sports jersey.",
+      "positive": "A person in a sports jersey with the name 'SMITH' and the number '10' on the back."
+    },
+    {
+      "negative": "A bottle of wine.",
+      "positive": "A bottle of wine with a label that reads 'Chateau Merlot 2021'."
+    },
+    {
+      "negative": "A plain white envelope.",
+      "positive": "A plain white envelope with a handwritten address on the front."
+    },
+    {
+      "negative": "A metal plaque on a wall.",
+      "positive": "A metal plaque on a wall engraved with 'This building was dedicated in 1950'."
+    },
+    {
+      "negative": "A tombstone in a cemetery.",
+      "positive": "A tombstone in a cemetery with a clearly engraved name and dates."
+    },
+    {
+      "negative": "A trophy on a shelf.",
+      "positive": "A trophy on a shelf with an engraved plate reading 'First Place Champion'."
+    },
+    {
+      "negative": "A street with a crosswalk.",
+      "positive": "A street with a crosswalk and the word 'LOOK' painted on the pavement."
+    },
+    {
+      "negative": "A movie theater entrance.",
+      "positive": "A movie theater entrance with a digital marquee displaying 'NOW SHOWING: SPACE ADVENTURE'."
+    },
+    {
+      "negative": "A person's hand.",
+      "positive": "A person's hand with the word 'HOPE' written on their palm in ink."
+    },
+    {
+      "negative": "A pile of old vinyl records.",
+      "positive": "A pile of old vinyl records, with the album titles and artist names visible on the covers."
+    },
+    {
+      "negative": "A colorful storefront.",
+      "positive": "A colorful storefront with a sign that says 'Flower Shop'."
+    },
+    {
+      "negative": "A police car.",
+      "positive": "A police car with the word 'POLICE' written on the side."
+    },
+    {
+      "negative": "A fire truck.",
+      "positive": "A fire truck with 'FIRE DEPT' and the number '105' on the side."
+    },
+    {
+      "negative": "A university building.",
+      "positive": "A university building with 'LIBRARY' carved in stone above the entrance."
+    },
+    {
+      "negative": "A yellow taxi cab.",
+      "positive": "A yellow taxi cab with a sign on top that says 'TAXI'."
+    },
+    {
+      "negative": "A wooden door.",
+      "positive": "A wooden door with a brass nameplate that says 'Dr. Evans'."
+    },
+    {
+      "negative": "A person wearing a graduation robe.",
+      "positive": "A person wearing a graduation robe, holding a diploma with visible text."
+    },
+    {
+      "negative": "A sign that says 'OPEN' in a simple black font.",
+      "positive": "A sign that says 'OPEN' in a bright, glowing neon font."
+    },
+    {
+      "negative": "A book cover titled 'Dracula' in a simple serif font.",
+      "positive": "A book cover titled 'Dracula' in a dripping, gothic, horror font."
+    },
+    {
+      "negative": "A computer screen with the word 'WELCOME' in a default font.",
+      "positive": "A computer screen with the word 'WELCOME' in a pixelated, 8-bit font."
+    },
+    {
+      "negative": "A wall with the word 'PEACE' in simple black paint.",
+      "positive": "A wall with the word 'PEACE' in a complex, colorful, bubble-letter graffiti style."
+    },
+    {
+      "negative": "An invitation that says 'Wedding' in a simple font.",
+      "positive": "An invitation that says 'Wedding' in an ornate, cursive, calligraphic script."
+    },
+    {
+      "negative": "A t-shirt that says 'California' in a simple font.",
+      "positive": "A t-shirt that says 'California' in a retro, 1970s-style wavy font."
+    },
+    {
+      "negative": "A sign that says 'DINER' in a simple font.",
+      "positive": "A sign that says 'DINER' in a 1950s-style retro, chrome font."
+    },
+    {
+      "negative": "A newspaper headline 'WAR ENDS' in a standard font.",
+      "positive": "A newspaper headline 'WAR ENDS' in a bold, very large, impactful, sans-serif font."
+    },
+    {
+      "negative": "A movie poster titled 'THE FUTURE' in a simple font.",
+      "positive": "A movie poster titled 'THE FUTURE' in a sleek, futuristic, sci-fi font."
+    },
+    {
+      "negative": "A certificate that says 'Certificate of Achievement' in a simple font.",
+      "positive": "A certificate that says 'Certificate of Achievement' in an old English, blackletter font."
+    },
+    {
+      "negative": "A shop sign that says 'Antiques' in a simple font.",
+      "positive": "A shop sign that says 'Antiques' in an old-fashioned, Victorian-era font."
+    },
+    {
+      "negative": "A tombstone that says 'R.I.P.' in a simple font.",
+      "positive": "A tombstone that says 'R.I.P.' in a chiseled, stone-carved, serif font."
+    },
+    {
+      "negative": "A note that says 'Top Secret' in a simple font.",
+      "positive": "A note that says 'Top Secret' in a red, rubber-stamped, stencil font."
+    },
+    {
+      "negative": "A military crate with 'PROPERTY' in a simple font.",
+      "positive": "A military crate with 'PROPERTY' in a bold, military stencil font."
+    },
+    {
+      "negative": "A logo that says 'TECH' in a simple font.",
+      "positive": "A logo that says 'TECH' in a minimalist, clean, sans-serif, modern font."
+    },
+    {
+      "negative": "A birthday card that says 'Happy Birthday' in a simple font.",
+      "positive": "A birthday card that says 'Happy Birthday' in a fun, balloon-letter font."
+    },
+    {
+      "negative": "A patch that says 'SECURITY' in a simple font.",
+      "positive": "A patch that says 'SECURITY' in a thick, embroidered, blocky font."
+    },
+    {
+      "negative": "A sign that says 'MAGIC' in a simple font.",
+      "positive": "A sign that says 'MAGIC' in a whimsical, sparkling, fantasy font."
+    },
+    {
+      "negative": "A handwritten note that says 'I Owe You' in simple print.",
+      "positive": "A handwritten note that says 'I Owe You' in messy, scrawled, quick handwriting."
+    },
+    {
+      "negative": "A sign that says 'WANTED' in a simple font.",
+      "positive": "A sign that says 'WANTED' in a rustic, western, wood-block font."
+    },
+    {
+      "negative": "A brand name 'COLA' in a simple font.",
+      "positive": "A brand name 'COLA' in an elegant, flowing, script font."
+    },
+    {
+      "negative": "A team jersey with 'TIGERS' in a simple font.",
+      "positive": "A team jersey with 'TIGERS' in a classic, athletic, block font with an outline."
+    },
+    {
+      "negative": "A street sign that says 'Main St' in a simple font.",
+      "positive": "A street sign that says 'Main St' in a clear, standardized, highway gothic font."
+    },
+    {
+      "negative": "A robot with 'UNIT 01' painted on it in a simple font.",
+      "positive": "A robot with 'UNIT 01' painted on it in a digital, segmented, LCD-style font."
+    },
+    {
+      "negative": "A book title 'POETRY' in a simple font.",
+      "positive": "A book title 'POETRY' in a delicate, thin, elegant serif font."
+    }
+]
