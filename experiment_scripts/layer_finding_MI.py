@@ -9,7 +9,10 @@ import re
 import random
 import torch.nn.functional as F
 import argparse
-from FLUX_custom_pipeline import FluxPipeline
+
+from src.FLUX_custom_pipeline import FluxPipeline
+from src.SD3_custom_pipeline import StableDiffusion3Pipeline
+
 
 def flush():
     gc.collect()
@@ -18,9 +21,12 @@ def flush():
 def main(args):
     dataset = json.load(open(args.dataset_path, "r"))
 
-    # Load Models
-    pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
-    pipe.enable_model_cpu_offload()
+    # Load Pipeline
+    if args.model == 'flux':
+        pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
+    elif args.model == 'sd3':
+        pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
+    pipe.to("cuda")
     pipe.layer_search = True
 
     layer_diffs=[]
@@ -37,12 +43,18 @@ def main(args):
             pipe.unskipped_latents = []
             pipe.patch_prompt = prompt_pair['positive']
 
-            _ = pipe(
-                prompt=prompt_pair['positive'],
-                num_inference_steps=args.num_steps,
-                max_sequence_length=256,
-                generator=torch.Generator("cpu").manual_seed(random.randint(0, 2**32 - 1))
-            ).images[0]
+            if args.model == 'flux':
+                _ = pipe(
+                    prompt=prompt_pair['negative'],
+                    num_inference_steps=args.num_steps,
+                    generator=torch.Generator("cpu").manual_seed(random.randint(0, 2**32 - 1))
+                ).images[0]
+            elif args.model == 'sd3':
+                _ = pipe(
+                    prompt=prompt_pair['negative'],
+                    num_inference_steps=args.num_steps,
+                    generator=torch.Generator("cpu").manual_seed(random.randint(0, 2**32 - 1))
+                ).images[0]
 
             layer_diff_for_prompt = []
             cosine_sims_for_prompt = []
@@ -107,9 +119,9 @@ if __name__ == "__main__":
     parser.add_argument("--target", type=str, required=True, help="Target concept. E.g. 'text', 'hands', etc.")
     parser.add_argument("--model", type=str, default="flux", help="Model type. flux or sd3.")
     parser.add_argument("--num_steps", type=int, default=28, help="Number of denoising steps.")
-    parser.add_argument("--num_seeds", type=int, default=10, help="Number of seeds per prompt.")
+    parser.add_argument("--num_seeds", type=int, default=1, help="Number of seeds per prompt.")
     parser.add_argument("--dataset_path", type=str, required=True, help="Path to the JSON prompt file")
-    parser.add_argument("--max_prompts", type=int, default=100)
+    parser.add_argument("--max_prompts", type=int, default=250)
 
 
     args = parser.parse_args()
