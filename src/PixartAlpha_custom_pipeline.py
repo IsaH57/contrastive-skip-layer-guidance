@@ -1023,22 +1023,47 @@ class PixArtAlphaPipeline(DiffusionPipeline):
                         timestep_single = current_timestep[:latents.shape[0]]
                         
                         if self.multiskip:
-                            # Multi-layer skip with weights
-                            skipped_layer_noise_preds = []
-                            for idx, layer in enumerate(self.skipped_layers):
-                                noise_pred_skip = self.noise_pred_with_skipped_layers(
-                                    skipped_layers=[layer],
-                                    hidden_states=latents,
-                                    encoder_hidden_states=original_prompt_embeds,
-                                    encoder_attention_mask=original_prompt_attention_mask,
-                                    timestep=timestep_single,
-                                    added_cond_kwargs={
-                                        "resolution": added_cond_kwargs["resolution"][:batch_size * num_images_per_prompt] if added_cond_kwargs["resolution"] is not None else None,
-                                        "aspect_ratio": added_cond_kwargs["aspect_ratio"][:batch_size * num_images_per_prompt] if added_cond_kwargs["aspect_ratio"] is not None else None,
-                                    },
-                                    return_dict=False,
+                            if self.cfg_skip:
+                                skipped_layer_noise_preds = []
+                                for idx, layer in enumerate(self.skipped_layers):
+                                    noise_pred_skip = self.noise_pred_with_skipped_layers(
+                                        skipped_layers=[layer],
+                                        hidden_states=latent_model_input,
+                                        encoder_hidden_states=prompt_embeds,
+                                        encoder_attention_mask=prompt_attention_mask,
+                                        timestep=current_timestep,
+                                        added_cond_kwargs={
+                                            "resolution": added_cond_kwargs["resolution"],
+                                            "aspect_ratio": added_cond_kwargs["aspect_ratio"],
+                                        },
+                                        return_dict=False,
+                                    )
+                                    # Perform CFG to guide on CFG noise manifold
+                                    noise_pred_uncond, noise_pred_text = noise_pred_skip.chunk(2)
+                                    noise_pred_skip_layers = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
+
+                                    skipped_layer_noise_preds.append(noise_pred_skip_layers * self.layer_weights[idx])
+                                noise_pred_skip_layers = torch.sum(torch.stack(skipped_layer_noise_preds), dim=0) / sum(self.layer_weights)
+                                noise_pred = (
+                                    noise_pred + (noise_pred - noise_pred_skip_layers) * (skip_layer_guidance_scale - 1.) # -1 so scale 1.0 means no guidance
                                 )
-                                skipped_layer_noise_preds.append(noise_pred_skip * self.layer_weights[idx])
+                            else:       
+                                # Multi-layer skip with weights
+                                skipped_layer_noise_preds = []
+                                for idx, layer in enumerate(self.skipped_layers):
+                                    noise_pred_skip = self.noise_pred_with_skipped_layers(
+                                        skipped_layers=[layer],
+                                        hidden_states=latents,
+                                        encoder_hidden_states=original_prompt_embeds,
+                                        encoder_attention_mask=original_prompt_attention_mask,
+                                        timestep=timestep_single,
+                                        added_cond_kwargs={
+                                            "resolution": added_cond_kwargs["resolution"][:batch_size * num_images_per_prompt] if added_cond_kwargs["resolution"] is not None else None,
+                                            "aspect_ratio": added_cond_kwargs["aspect_ratio"][:batch_size * num_images_per_prompt] if added_cond_kwargs["aspect_ratio"] is not None else None,
+                                        },
+                                        return_dict=False,
+                                    )
+                                    skipped_layer_noise_preds.append(noise_pred_skip * self.layer_weights[idx])
                             
                             noise_pred_skip_layers = torch.sum(torch.stack(skipped_layer_noise_preds), dim=0) / sum(self.layer_weights)
                         else:

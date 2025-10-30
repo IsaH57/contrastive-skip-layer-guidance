@@ -100,7 +100,7 @@ def main(args):
                 l2_norm_baseline = torch.norm(diff_baseline.float(), p=2) 
                 sim_baseline = F.cosine_similarity(timestep_prediction.flatten(), pipe.skipped_latents[timestep][-1].flatten(), dim=0)
 
-                for layer in range(19):
+                for layer in range(len(pipe.transformer.transformer_blocks)):
                     diff = (timestep_prediction - pipe.skipped_latents[timestep][layer])
                     
                     # --- Individual Layer Calculations ---

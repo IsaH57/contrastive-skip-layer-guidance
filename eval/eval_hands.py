@@ -1,8 +1,8 @@
 """ 
 This code evaluates the quality of hand generation in images by running MediaPipe hand detection and extracting the average hand detection confidence score.
 
-It processes images from an experiment folder structured by prompts and seeds, computes average detection confidence per image at different CFG and SLG guidance scales,
-then saves detailed CSV results and aggregate statistics similar to the text visibility eval pipeline.
+It processes images from an experiment folder structured by prompts and ablation modes, computes average detection confidence per image,
+then saves detailed CSV results and aggregate statistics.
 """
 
 import os
@@ -12,12 +12,10 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from collections import defaultdict
-import itertools
+import argparse
+import sys
 
-layer_ablation = True
-multilayer_ablation = False
-
-# --- HandValidator class (simplified to only return hand count and avg detection confidence) ---
+# --- HandValidator class ---
 class HandValidator:
     def __init__(self, 
                  detection_confidence: float = 0.7,
@@ -27,14 +25,15 @@ class HandValidator:
         
         Args:
             detection_confidence: Minimum confidence for hand detection
-            tracking_confidence: Minimum confidence for hand tracking
+            tracking_confidence: Minimum confidence for hand tracking (ignored if static_image_mode=True)
         """
         self.mp_hands = mp.solutions.hands
+        # Using static_image_mode=True as we are processing a batch of static images
         self.hands = self.mp_hands.Hands(
             static_image_mode=True,
             max_num_hands=2,
             min_detection_confidence=detection_confidence,
-            min_tracking_confidence=tracking_confidence
+            min_tracking_confidence=tracking_confidence # Ignored in static_image_mode
         )
         self.mp_draw = mp.solutions.drawing_utils
 
@@ -47,8 +46,8 @@ class HandValidator:
 
         Returns:
             Dictionary with:
-                - num_hands_detected: number of hands detected
-                - avg_detection_confidence: average detection confidence (0 if no hands)
+                - num_hands_detected: number of hands detected (int)
+                - avg_detection_confidence: average detection confidence (float, 0.0 if no hands or error)
         """
         image = cv2.imread(image_path)
         if image is None:
@@ -60,134 +59,85 @@ class HandValidator:
         if not results.multi_handedness:
             return {"num_hands_detected": 0, "avg_detection_confidence": 0.0}
 
+        # MediaPipe returns a classification score for each detected hand (left/right probability)
+        # We use this score as the detection confidence for the purpose of quality evaluation.
         detection_scores = [hand_info.classification[0].score for hand_info in results.multi_handedness]
         num_hands = len(detection_scores)
+        # Calculate the average score for all hands detected
         avg_score = float(np.mean(detection_scores)) if detection_scores else 0.0
 
         return {"num_hands_detected": num_hands, "avg_detection_confidence": avg_score}
 
-# --- Config ---
-EXPERIMENT_ROOT = '/export/home/ru63zus/repos/contrastive-skip-layer-guidance/experiments/flux_layer_ablation_20251013_190130'
-MODEL = 'FLUX'
-OUTPUT_CSV = f'{MODEL}_hand_quality_ratings.csv'
-
-CFG_GUIDANCE_SCALES = [1., 2., 3., 4., 5.]
-SLG_GUIDANCE_SCALES = [1., 2., 3., 4., 5.]
-combinations = list(itertools.product(CFG_GUIDANCE_SCALES, SLG_GUIDANCE_SCALES))
-IMAGE_TYPES = [f'slg_{slg_scale}_cfg_{cfg_scale}' for (cfg_scale, slg_scale) in combinations]
-
-if layer_ablation: 
-    IMAGE_TYPES = [f'layer_{i}' for i in range(19)]
-if multilayer_ablation: 
-    layers = [1,2,3,4,5]
-    combinations = list(itertools.product(layers, SLG_GUIDANCE_SCALES))
-    IMAGE_TYPES = [f'{i}_skipped_layers_slg_{slg_scale}' for (i, slg_scale) in combinations]
-    IMAGE_TYPES.append('0_skipped_layers')
-
-# --- Initialize HandValidator ---
-print("Loading MediaPipe HandValidator...")
-validator = HandValidator(detection_confidence=0.7)
-
 # --- Utility Functions ---
-def evaluate_image(image_path):
+def evaluate_image(image_path, validator):
+    """ Helper function to call the validator and handle errors. """
     try:
         results = validator.detect_hands(image_path)
+        # Return the average confidence score
         return results.get("avg_detection_confidence", 0.0)
     except Exception as e:
-        print(f"[Error] {image_path}: {e}")
+        print(f"[Error] {image_path}: {e}", file=sys.stderr)
         return None
 
-def parse_cfg_slg_from_column(column_name):
-    """Parse CFG and SLG values from column names like 'slg_1.0_cfg_0.0'"""
-    try:
-        parts = column_name.split('_')
-        slg_scale = float(parts[1])
-        cfg_scale = float(parts[3])
-        return cfg_scale, slg_scale
-    except (IndexError, ValueError):
-        return None, None
+def main(args):
+    EXPERIMENT_ROOT = args.path
+    MODEL = args.model
+    OUTPUT_CSV = f'{MODEL}_hand_quality_ratings.csv'
+    print(args.path)
+    
+    # --- Determine Image Types (e.g., ablation modes) ---
+    first_prompt_dir = next((d for d in os.listdir(EXPERIMENT_ROOT) if os.path.isdir(os.path.join(EXPERIMENT_ROOT, d))), None)
+    if not first_prompt_dir:
+        raise FileNotFoundError(f"No prompt directories found in EXPERIMENT_ROOT: {EXPERIMENT_ROOT}")
 
-# --- Run Evaluation ---
-results = []
-print("Starting hand evaluation...")
+    first_prompt_path = os.path.join(EXPERIMENT_ROOT, first_prompt_dir)
+    IMAGE_TYPES = [filename[:-4] for filename in os.listdir(first_prompt_path) if filename.endswith('.jpg')]
+    
+    if not IMAGE_TYPES:
+        raise FileNotFoundError(f"No .jpg files found in the first prompt directory: {first_prompt_path}")
 
-for prompt_dir in tqdm(os.listdir(EXPERIMENT_ROOT)):
-    prompt_path = os.path.join(EXPERIMENT_ROOT, prompt_dir)
-    if not os.path.isdir(prompt_path):
-        continue
+    # --- Initialize HandValidator ---
+    print("Loading MediaPipe HandValidator...")
+    # Initialize with default confidence or allow configuration via arguments if desired
+    validator = HandValidator(detection_confidence=args.detection_confidence) 
 
-    for seed_dir in os.listdir(prompt_path):
-        seed_path = os.path.join(prompt_path, seed_dir)
-        if not os.path.isdir(seed_path) or len(os.listdir(seed_path)) < (19 if layer_ablation else len(combinations)+1):
+    # --- Run Evaluation ---
+    results = []
+    print("Starting hand evaluation...")
+
+    for prompt_dir in tqdm(os.listdir(EXPERIMENT_ROOT)):
+        prompt_path = os.path.join(EXPERIMENT_ROOT, prompt_dir)
+        if not os.path.isdir(prompt_path):
             continue
-
-        row = {'prompt': prompt_dir, 'seed': seed_dir}
+        row = {'prompt': prompt_dir}
 
         for mode in IMAGE_TYPES:
-            img_path = os.path.join(seed_path, f"{mode}.png")
+            img_path = os.path.join(prompt_path, f"{mode}.jpg")
 
             if os.path.exists(img_path):
-                score = evaluate_image(img_path)
+                score = evaluate_image(img_path, validator)
                 row[mode] = score
             else:
                 row[mode] = None
-                raise LookupError(f"Path not found: {img_path}")
-
+                print(f"[Warning] Path not found: {img_path}")
+                # You can uncomment the line below for a strict failure on missing files
+                # raise LookupError(f"Path not found: {img_path}") 
         results.append(row)
 
-# --- Save Results ---
-df = pd.DataFrame(results)
-df.to_csv(OUTPUT_CSV, index=False)
-print(f"\nSaved results to {OUTPUT_CSV}")
+    # --- Save Results ---
+    df = pd.DataFrame(results)
+    df.to_csv(OUTPUT_CSV, index=False)
+    print(f"\nSaved results to {OUTPUT_CSV}")
 
-# --- Print Stats ---
-print("\n--- Overall Averages ---")
-print(df[IMAGE_TYPES].mean())
+    # --- Print Stats ---
+    print("\n--- Overall Averages ---")
+    print(df[IMAGE_TYPES].mean())
 
-print("\n--- Per Prompt Averages ---")
-prompt_avg = df.groupby("prompt")[IMAGE_TYPES].mean()
-print(prompt_avg)
-prompt_avg.to_csv(f'{MODEL}_prompt_averages.csv')
 
-if not layer_ablation and not multilayer_ablation:
-    # --- Compute Overall Averages by CFG/SLG Configuration ---
-    print("\n--- Computing CFG/SLG Configuration Averages ---")
-
-    cfg_slg_mapping = {}
-    for col in IMAGE_TYPES:
-        cfg, slg = parse_cfg_slg_from_column(col)
-        if cfg is not None and slg is not None:
-            cfg_slg_mapping[col] = (cfg, slg)
-
-    config_groups = defaultdict(list)
-    for col, (cfg, slg) in cfg_slg_mapping.items():
-        config_groups[(cfg, slg)].append(col)
-
-    config_averages = []
-    for (cfg, slg), columns in config_groups.items():
-        config_scores = df[columns].mean(axis=1, skipna=True)
-        overall_avg = config_scores.mean(skipna=True)
-
-        config_averages.append({
-            'cfg_scale': cfg,
-            'slg_scale': slg,
-            'avg_score': overall_avg
-        })
-
-    config_avg_df = pd.DataFrame(config_averages)
-    config_avg_df = config_avg_df.sort_values(['cfg_scale', 'slg_scale'])
-
-    config_csv = f'{MODEL}_cfg_slg_averages.csv'
-    config_avg_df.to_csv(config_csv, index=False)
-    print(f"Saved CFG/SLG configuration averages to {config_csv}")
-
-    print("\n--- CFG/SLG Configuration Averages ---")
-    print(config_avg_df)
-
-    # Optional: Pivot table for easier visualization
-    pivot_table = config_avg_df.pivot(index='slg_scale', columns='cfg_scale', values='avg_score')
-    pivot_csv = f'{MODEL}_cfg_slg_pivot.csv'
-    pivot_table.to_csv(pivot_csv)
-    print(f"\nSaved pivot table to {pivot_csv}")
-    print("\n--- Pivot Table (SLG x CFG) ---")
-    print(pivot_table)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Evaluate hand quality in generated images using MediaPipe.")
+    parser.add_argument("--model", type=str, required=True, help="Model name (e.g., FLUX) for output file naming.")
+    parser.add_argument("--path", type=str, required=True, help="Root directory path for experiments (e.g., /path/to/layer_ablations).")
+    parser.add_argument("--detection_confidence", type=float, default=0.7, help="Minimum confidence for MediaPipe hand detection.")
+    args = parser.parse_args()
+    main(args)

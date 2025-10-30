@@ -205,6 +205,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
 
         self.layer_weights=None
         self.multiskip=False
+        self.cfg_skip = False
         self.layer_search=False
 
         self.register_modules(
@@ -1139,7 +1140,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                                     skipped_layer_noise_preds.append(noise_pred_skip_layers * self.layer_weights[idx])
                                 noise_pred_skip_layers = torch.sum(torch.stack(skipped_layer_noise_preds), dim=0) / sum(self.layer_weights)
                                 noise_pred = (
-                                    noise_pred_skip_layers + (noise_pred - noise_pred_skip_layers) * self._skip_layer_guidance_scale
+                                    noise_pred + (noise_pred - noise_pred_skip_layers) * (self._skip_layer_guidance_scale - 1.) # -1 so scale 1.0 means no guidance
                                 )
                             else:
                                 skipped_layer_noise_preds = []

@@ -106,12 +106,10 @@ def main(args):
                 image_name = f"cfg_scale_{cfg:.1f}.jpg"
                 image_save_path = os.path.join(prompt_output_path, image_name)
                 image.save(image_save_path)
+                flush()
 
-                # --- Log to JSON ---
-                relative_image_path = os.path.join(prompt_subdir_name, image_name)
-                results_log[relative_image_path] = positive_prompt
-
-            flush()
+            # --- Log to JSON ---
+            results_log[prompt_subdir_name] = positive_prompt
 
     finally:
         # --- Save JSON Log ---

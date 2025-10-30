@@ -8,7 +8,7 @@ import argparse
 from datetime import datetime
 from diffusers import StableDiffusion3Pipeline as SD3Pipeline
 
-from FLUX_custom_pipeline import FluxPipeline
+from src.FLUX_custom_pipeline import FluxPipeline
 
 def flush():
     gc.collect()

@@ -8,4 +8,4 @@
 cd ..
 cd ..
 nvidia-smi
-python3 experiment_scripts/CFG_guidance_sweep.py --target=aesthetics --model=sd3 --output_path=/export/scratch/ru63zus/final_experiments/cfg_sweeps --max_prompts=3
+python3 experiment_scripts/CFG_guidance_sweep.py --target=hands --model=flux --output_path=/export/scratch/ru63zus/final_experiments/cfg_sweeps --max_prompts=100
