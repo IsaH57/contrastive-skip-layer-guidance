@@ -91,7 +91,7 @@ def main(args):
         raise FileNotFoundError(f"No prompt directories found in EXPERIMENT_ROOT: {EXPERIMENT_ROOT}")
 
     first_prompt_path = os.path.join(EXPERIMENT_ROOT, first_prompt_dir)
-    IMAGE_TYPES = [filename[:-4] for filename in os.listdir(first_prompt_path) if filename.endswith('.jpg')]
+    IMAGE_TYPES = [f[:-4] for f in os.listdir(EXPERIMENT_ROOT + '/' + [d for d in os.listdir(EXPERIMENT_ROOT) if not d.endswith('.json')][0]) if not f.endswith('.json')]    
     
     if not IMAGE_TYPES:
         raise FileNotFoundError(f"No .jpg files found in the first prompt directory: {first_prompt_path}")

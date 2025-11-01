@@ -52,7 +52,7 @@ def main(args):
     
     if os.path.isdir(first_prompt_path):
         # Extract image types from filenames (e.g., 'base.jpg' -> 'base')
-        IMAGE_TYPES = [filename[:-4] for filename in os.listdir(first_prompt_path) if filename.endswith('.jpg')]
+        IMAGE_TYPES = [f[:-4] for f in os.listdir(EXPERIMENT_ROOT + '/' + [d for d in os.listdir(EXPERIMENT_ROOT) if not d.endswith('.json')][0]) if not f.endswith('.json')]    
     else:
         # Fallback if the first item isn't a directory (shouldn't happen with correct structure)
         raise FileNotFoundError(f"Could not find experiment structure in {EXPERIMENT_ROOT}")

@@ -65,7 +65,7 @@ def main(args):
     EXPERIMENT_ROOT = args.path
     MODEL = args.model
     OUTPUT_CSV = f'{MODEL}_aesthetic_quality_ablations.csv'
-    IMAGE_TYPES = [filename[:-4] for filename in os.listdir(EXPERIMENT_ROOT + '/' + os.listdir(EXPERIMENT_ROOT)[0])]
+    IMAGE_TYPES = [f[:-4] for f in os.listdir(EXPERIMENT_ROOT + '/' + [d for d in os.listdir(EXPERIMENT_ROOT) if not d.endswith('.json')][0]) if not f.endswith('.json')]    
     print(EXPERIMENT_ROOT)
 
     validator = AestheticsValidator()

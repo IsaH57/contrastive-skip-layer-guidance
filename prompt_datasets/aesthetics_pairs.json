@@ -972,10 +972,6 @@
     "positive": "a worm's-eye view of a forest canopy"
   },
   {
-    "negative": "a person, weird face, mutated hands, ugly",
-    "positive": "a person, beautiful face, normal hands, attractive"
-  },
-  {
     "negative": "a square and a circle",
     "positive": "a suprematist composition, style of Malevich, bold, simple"
   },
@@ -1090,10 +1086,6 @@
   {
     "negative": "a person",
     "positive": "a Dutch angle shot of a person, dynamic, unsettling"
-  },
-  {
-    "negative": "a person, deformed hands, extra fingers, mutated",
-    "positive": "a person, normal hands, anatomically correct"
   },
   {
     "negative": "light",

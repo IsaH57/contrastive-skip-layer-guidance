@@ -72,6 +72,8 @@ def main(args):
             pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
         case 'pixart':
             pipe = PixArtAlphaPipeline.from_pretrained("PixArt-alpha/PixArt-XL-2-1024-MS", torch_dtype=torch.float16)
+        case 'sd35':
+            pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-medium", torch_dtype=torch.bfloat16)
         case _:
             raise ValueError(f"Unknown model type: {args.model}")
     pipe.to("cuda")
@@ -112,6 +114,14 @@ def main(args):
                     pipe.multiskip = False
                     pipe.cfg_skip = False
                     pipe.skipped_layers = []
+                    image = pipe(
+                        prompt=positive_prompt, 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                
+                case 'sd35':
+                    pipe.multiskip = False
+                    pipe.cfg_skip = False
                     image = pipe(
                         prompt=positive_prompt, 
                         generator=torch.Generator("cuda").manual_seed(seed)
@@ -158,6 +168,19 @@ def main(args):
                         image = pipe(
                             prompt=positive_prompt, 
                             skip_layer_guidance_scale = 2.0,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    
+                    case 'sd35':
+                        pipe.multiskip = True
+                        pipe.cfg_skip = False
+                        pipe.layer_weights = [1.0]
+                        image = pipe(
+                            prompt=positive_prompt, 
+                            skip_guidance_layers=[layer],
+                            skip_layer_guidance_scale=2.0,
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1., 
                             generator=torch.Generator("cuda").manual_seed(seed)
                         ).images[0]
                 
