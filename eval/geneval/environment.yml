@@ -1,0 +1,35 @@
+name: geneval_v4
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python minor pin keeps you away from 3.11/3.12 surprises
+  - python=3.9
+
+  # Core DL stack (light pins so mmcv wheels match)
+  - pytorch=1.12.*
+  - torchvision=0.13.*
+  - cudatoolkit=11.3
+
+  # Common runtime deps (unversioned)
+  - numpy
+  - pillow
+  - pyyaml
+  - ffmpeg
+  - pip
+
+  - pip:
+      # GenEval generation/eval bits
+      - diffusers
+      - transformers
+      - open-clip-torch
+      - clip-benchmark
+      - einops
+      - opencv-python
+
+      # For installing OpenMMLab packages the way they recommend
+      - openmim
+      # mmengine isn't strictly required by MMDet 2.x, but harmless and sometimes pulled transitively
+      - mmengine
