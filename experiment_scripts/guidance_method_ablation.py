@@ -7,7 +7,7 @@ import random
 import torch.nn.functional as F
 import argparse
 import config
-from datetime import datetime 
+from datetime import datetime
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -17,7 +17,7 @@ from eval.eval_hands import main as evaluate_hands
 from eval.eval_aesthetics import main as evaluate_aesthetics
 from eval.eval_text import main as evaluate_text
 from src.SD3_custom_pipeline import StableDiffusion3Pipeline
-from src.FLUX_custom_pipeline import FluxPipeline 
+from src.FLUX_custom_pipeline import FluxPipeline
 from src.PixartAlpha_custom_pipeline import PixArtAlphaPipeline
 
 def flush():
@@ -25,14 +25,35 @@ def flush():
     gc.collect()
     torch.cuda.empty_cache()
 
+def _save_geneval_leaf(root, idx, metadata_obj, pil_image):
+    """
+    Create a Geneval-compliant leaf:
+      <root>/<idx:05d>/
+        metadata.jsonl
+        grid.png
+        samples/0000.png
+    """
+    leaf = os.path.join(root, f"{idx:05d}")
+    samples_dir = os.path.join(leaf, "samples")
+    os.makedirs(samples_dir, exist_ok=True)
+
+    # Write one-line JSONL with the metadata for this prompt
+    with open(os.path.join(leaf, "metadata.jsonl"), "w") as f:
+        f.write(json.dumps(metadata_obj) + "\n")
+
+    # Save the single sample and a "grid.png" (same image – minimal & valid)
+    pil_image.save(os.path.join(samples_dir, "0000.png"))
+    pil_image.save(os.path.join(leaf, "grid.png"))
+    return leaf  # for logging if needed
+
 def main(args):
     print(f'PERFORMING MSG GUIDANCE SWEEP FOR TARGET: {args.target}')
     print(f'USING MODEL: {args.model}')
     print(f'MAX PROMPTS: {args.max_prompts}')
 
     # Load Dataset
-    match args.target: 
-        case 'text': 
+    match args.target:
+        case 'text':
             dataset = json.load(open('prompt_datasets/text_pairs.json', "r"))
         case 'complex_text':
             dataset = json.load(open('prompt_datasets/text/complex_prompt_pairs.json', "r"))
@@ -58,7 +79,7 @@ def main(args):
         case 'hands_and_aesthetics':
             with open('prompt_datasets/mixed_datasets/hands_aesthetics.json') as fp:
                 dataset = [json.loads(line) for line in fp]
-        case _: 
+        case _:
             if args.dataset_path != '':
                 dataset = json.load(open(args.dataset_path, "r"))
             else:
@@ -83,7 +104,7 @@ def main(args):
 
     # Load Pipeline
     print(f"Loading model: {args.model}...")
-    match args.model: 
+    match args.model:
         case 'flux':
             pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
         case 'sd3':
@@ -97,275 +118,509 @@ def main(args):
     pipe.to("cuda")
     print("Model loaded.")
 
+    is_geneval = args.target in {'binding', 'counting', 'position'}
+
     try:
-        for idx, prompt_pair in enumerate(prompts_to_process):
-            positive_prompt = prompt_pair['positive']
+        for idx, data in enumerate(prompts_to_process):
+            positive_prompt = data['positive'] if not is_geneval else data['prompt']
+            
             print(f"\n--- Processing Prompt {idx+1}/{num_prompts} ---")
             print(f"Prompt: {positive_prompt}")
 
-            # Create prompt-specific subfolder
-            prompt_subdir_name = f"prompt_{idx}"
-            prompt_output_path = os.path.join(run_output_path, prompt_subdir_name)
-            os.makedirs(prompt_output_path, exist_ok=True)
-
-            # Use one seed for all CFG scales of this prompt for consistent comparison
+            # Use one seed for all variations of this prompt for consistent comparison
             seed = random.randint(0, 2**32 - 1)
 
-            # GENERATE IMAGE WITH CFG (DEFAULT GUIDANCE SCALE) 
-            pipe.skipped_layers = []  
-            pipe.layer_weights = []
-            pipe.multiskip = False
-            pipe.cfg_skip = False
-            match args.model:
-                case 'flux':
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-                    
-                case 'sd3':
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-
-                case 'pixart':
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+            if is_geneval:
+                # --- Geneval branch: separate subfolders per config (cfg, msg_weighted, etc.) ---
                 
-                case 'sd35':
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-
-            # --- Save Image ---
-            image_name = f"cfg.jpg"
-            image_save_path = os.path.join(prompt_output_path, image_name)
-            image.save(image_save_path)
-            flush()
-            
-            
-            # GENERATE IMAGES WITH MSG AND TARGET SPECIFIC WEIGHTS
-            pipe.multiskip = True
-            pipe.cfg_skip = False
-            match args.model:
-                case 'flux':
-                    pipe.skipped_layers = config.FLUX_LAYERS[args.target]
-                    pipe.layer_weights = config.FLUX_WEIGHTS[args.target]
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        negative_prompt=positive_prompt,    
-                        true_cfg_scale=config.FLUX_SCALES[args.target],                 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-    
-                case 'sd3':
-                    pipe.skipped_layers = config.SD3_LAYERS[args.target]
-                    pipe.layer_weights = config.SD3_WEIGHTS[args.target]
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=config.SD3_LAYERS[args.target],
-                        skip_layer_guidance_scale=config.SD3_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-
-                case 'pixart':
-                    pipe.skipped_layers = config.PIXART_LAYERS[args.target]
-                    pipe.layer_weights = config.PIXART_WEIGHTS[args.target]
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+                # 1) GENERATE IMAGE WITH CFG (DEFAULT GUIDANCE SCALE)
+                print("Generating for: cfg")
+                pipe.skipped_layers = []
+                pipe.layer_weights = []
+                pipe.multiskip = False
+                pipe.cfg_skip = False
+                match args.model:
+                    case 'flux':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
                 
-                case 'sd35':
-                    pipe.skipped_layers = config.SD35_LAYERS[args.target]
-                    pipe.layer_weights = config.SD35_WEIGHTS[args.target]
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=config.SD35_LAYERS[args.target],
-                        skip_layer_guidance_scale=config.SD35_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-            
-            # --- Save Image ---
-            image_name = f"msg_weighted.jpg"
-            image_save_path = os.path.join(prompt_output_path, image_name)
-            image.save(image_save_path)
-            flush()
+                cfg_root = os.path.join(run_output_path, "cfg")
+                os.makedirs(cfg_root, exist_ok=True)
+                leaf = _save_geneval_leaf(cfg_root, idx, data, image)
+                results_log[f"cfg/{os.path.basename(leaf)}"] = positive_prompt
+                flush()
 
-
-            # GENERATE IMAGE WITH MSG AND UNIFORM WEIGHTS 
-            pipe.multiskip = True
-            pipe.cfg_skip = False
-            uniform_weights = [1.,1.,1.,1.,1.]
-            match args.model:
-                case 'flux':
-                    pipe.skipped_layers = config.FLUX_LAYERS[args.target]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        negative_prompt=positive_prompt,    
-                        true_cfg_scale=config.FLUX_SCALES[args.target],                 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-    
-                case 'sd3':
-                    pipe.skipped_layers = config.SD3_LAYERS[args.target]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=config.SD3_LAYERS[args.target],
-                        skip_layer_guidance_scale=config.SD3_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-
-                case 'pixart':
-                    pipe.skipped_layers = config.PIXART_LAYERS[args.target]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+                # 2) GENERATE IMAGES WITH MSG AND TARGET SPECIFIC WEIGHTS
+                print("Generating for: msg_weighted")
+                pipe.multiskip = True
+                pipe.cfg_skip = False
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = config.FLUX_LAYERS[args.target]
+                        pipe.layer_weights = config.FLUX_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = config.SD3_LAYERS[args.target]
+                        pipe.layer_weights = config.SD3_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD3_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = config.PIXART_LAYERS[args.target]
+                        pipe.layer_weights = config.PIXART_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = config.SD35_LAYERS[args.target]
+                        pipe.layer_weights = config.SD35_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD35_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
                 
-                case 'sd35':
-                    pipe.skipped_layers = config.SD35_LAYERS[args.target]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=config.SD35_LAYERS[args.target],
-                        skip_layer_guidance_scale=config.SD35_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-            
-            # --- Save Image ---
-            image_name = f"msg_fixed.jpg"
-            image_save_path = os.path.join(prompt_output_path, image_name)
-            image.save(image_save_path)
-            flush()
+                weighted_root = os.path.join(run_output_path, "msg_weighted")
+                os.makedirs(weighted_root, exist_ok=True)
+                leaf = _save_geneval_leaf(weighted_root, idx, data, image)
+                results_log[f"msg_weighted/{os.path.basename(leaf)}"] = positive_prompt
+                flush()
 
-            # GENERATE IMAGE WITH STG
-            pipe.multiskip = True
-            pipe.cfg_skip = False
-            uniform_weights = [1.]
-            match args.model:
-                case 'flux':
-                    pipe.skipped_layers = [config.FLUX_LAYERS[args.target][0]]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        negative_prompt=positive_prompt,    
-                        true_cfg_scale=config.FLUX_SCALES[args.target],                 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-    
-                case 'sd3':
-                    pipe.skipped_layers = [config.SD3_LAYERS[args.target][0]]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=[config.SD3_LAYERS[args.target][0]],
-                        skip_layer_guidance_scale=config.SD3_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+                # 3) GENERATE IMAGE WITH MSG AND UNIFORM WEIGHTS
+                print("Generating for: msg_fixed")
+                pipe.multiskip = True
+                pipe.cfg_skip = False
+                uniform_weights = [1.,1.,1.,1.,1.]
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = config.FLUX_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = config.SD3_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD3_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = config.PIXART_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = config.SD35_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD35_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
 
-                case 'pixart':
-                    pipe.skipped_layers = [config.PIXART_LAYERS[args.target][0]]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+                fixed_root = os.path.join(run_output_path, "msg_fixed")
+                os.makedirs(fixed_root, exist_ok=True)
+                leaf = _save_geneval_leaf(fixed_root, idx, data, image)
+                results_log[f"msg_fixed/{os.path.basename(leaf)}"] = positive_prompt
+                flush()
+
+                # 4) GENERATE IMAGE WITH STG
+                print("Generating for: stg")
+                pipe.multiskip = True
+                pipe.cfg_skip = False
+                uniform_weights = [1.]
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = [config.FLUX_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = [config.SD3_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=[config.SD3_LAYERS[args.target][0]],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = [config.PIXART_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = [config.SD35_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=[config.SD35_LAYERS[args.target][0]],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+
+                stg_root = os.path.join(run_output_path, "stg")
+                os.makedirs(stg_root, exist_ok=True)
+                leaf = _save_geneval_leaf(stg_root, idx, data, image)
+                results_log[f"stg/{os.path.basename(leaf)}"] = positive_prompt
+                flush()
+
+                # 5) GENERATE IMAGES WITH NAIVE MULTISKIP
+                print("Generating for: msg_naive")
+                pipe.multiskip = False
+                pipe.cfg_skip = False
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = config.FLUX_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = config.SD3_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD3_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = config.PIXART_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = config.SD35_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD35_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
                 
-                case 'sd35':
-                    pipe.skipped_layers = [config.SD35_LAYERS[args.target][0]]
-                    pipe.layer_weights = uniform_weights
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=[config.SD35_LAYERS[args.target][0]],
-                        skip_layer_guidance_scale=config.SD35_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-            
-            # --- Save Image ---
-            image_name = f"stg.jpg"
-            image_save_path = os.path.join(prompt_output_path, image_name)
-            image.save(image_save_path)
-            flush()
+                naive_root = os.path.join(run_output_path, "msg_naive")
+                os.makedirs(naive_root, exist_ok=True)
+                leaf = _save_geneval_leaf(naive_root, idx, data, image)
+                results_log[f"msg_naive/{os.path.basename(leaf)}"] = positive_prompt
+                flush()
 
-            # GENERATE IMAGES WITH NAIVE MULTISKIP
-            pipe.multiskip = False
-            pipe.cfg_skip = False
-            match args.model:
-                case 'flux':
-                    pipe.skipped_layers = config.FLUX_LAYERS[args.target]
-                    pipe.layer_weights = []
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        negative_prompt=positive_prompt,    
-                        true_cfg_scale=config.FLUX_SCALES[args.target],                 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-    
-                case 'sd3':
-                    pipe.skipped_layers = config.SD3_LAYERS[args.target]
-                    pipe.layer_weights = []
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=config.SD3_LAYERS[args.target],
-                        skip_layer_guidance_scale=config.SD3_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+            else:
+                # --- Original branch: one subfolder per prompt, all configs inside ---
+                prompt_subdir_name = f"{idx:05d}" # Use 5-digit padding
+                prompt_output_path = os.path.join(run_output_path, prompt_subdir_name)
+                os.makedirs(prompt_output_path, exist_ok=True)
 
-                case 'pixart':
-                    pipe.skipped_layers = config.PIXART_LAYERS[args.target]
-                    pipe.layer_weights = []
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
+                # GENERATE IMAGE WITH CFG (DEFAULT GUIDANCE SCALE)
+                print("Generating for: cfg")
+                pipe.skipped_layers = []
+                pipe.layer_weights = []
+                pipe.multiskip = False
+                pipe.cfg_skip = False
+                match args.model:
+                    case 'flux':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        image = pipe(
+                            prompt=positive_prompt,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+
+                # --- Save Image ---
+                image_name = f"cfg.jpg"
+                image_save_path = os.path.join(prompt_output_path, image_name)
+                image.save(image_save_path)
+                flush()
+
+                # GENERATE IMAGES WITH MSG AND TARGET SPECIFIC WEIGHTS
+                print("Generating for: msg_weighted")
+                pipe.multiskip = True
+                pipe.cfg_skip = False
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = config.FLUX_LAYERS[args.target]
+                        pipe.layer_weights = config.FLUX_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = config.SD3_LAYERS[args.target]
+                        pipe.layer_weights = config.SD3_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD3_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = config.PIXART_LAYERS[args.target]
+                        pipe.layer_weights = config.PIXART_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = config.SD35_LAYERS[args.target]
+                        pipe.layer_weights = config.SD35_WEIGHTS[args.target]
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD35_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
                 
-                case 'sd35':
-                    pipe.skipped_layers = config.SD35_LAYERS[args.target]
-                    pipe.layer_weights = []
-                    image = pipe(
-                        prompt=positive_prompt, 
-                        skip_guidance_layers=config.SD35_LAYERS[args.target],
-                        skip_layer_guidance_scale=config.SD35_SCALES[args.target],
-                        skip_layer_guidance_start=0.,
-                        skip_layer_guidance_stop=1., 
-                        generator=torch.Generator("cuda").manual_seed(seed)
-                    ).images[0]
-            
-            # --- Save Image ---
-            image_name = f"msg_naive.jpg"
-            image_save_path = os.path.join(prompt_output_path, image_name)
-            image.save(image_save_path)
-            flush()
+                # --- Save Image ---
+                image_name = f"msg_weighted.jpg"
+                image_save_path = os.path.join(prompt_output_path, image_name)
+                image.save(image_save_path)
+                flush()
 
+                # GENERATE IMAGE WITH MSG AND UNIFORM WEIGHTS
+                print("Generating for: msg_fixed")
+                pipe.multiskip = True
+                pipe.cfg_skip = False
+                uniform_weights = [1.,1.,1.,1.,1.]
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = config.FLUX_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = config.SD3_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD3_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = config.PIXART_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = config.SD35_LAYERS[args.target]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD35_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                
+                # --- Save Image ---
+                image_name = f"msg_fixed.jpg"
+                image_save_path = os.path.join(prompt_output_path, image_name)
+                image.save(image_save_path)
+                flush()
 
-            # --- Log to JSON ---
-            results_log[prompt_subdir_name] = positive_prompt
+                # GENERATE IMAGE WITH STG
+                print("Generating for: stg")
+                pipe.multiskip = True
+                pipe.cfg_skip = False
+                uniform_weights = [1.]
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = [config.FLUX_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = [config.SD3_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=[config.SD3_LAYERS[args.target][0]],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = [config.PIXART_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = [config.SD35_LAYERS[args.target][0]]
+                        pipe.layer_weights = uniform_weights
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=[config.SD35_LAYERS[args.target][0]],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                
+                # --- Save Image ---
+                image_name = f"stg.jpg"
+                image_save_path = os.path.join(prompt_output_path, image_name)
+                image.save(image_save_path)
+                flush()
+
+                # GENERATE IMAGES WITH NAIVE MULTISKIP
+                print("Generating for: msg_naive")
+                pipe.multiskip = False
+                pipe.cfg_skip = False
+                match args.model:
+                    case 'flux':
+                        pipe.skipped_layers = config.FLUX_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            negative_prompt=positive_prompt,
+                            true_cfg_scale=config.FLUX_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd3':
+                        pipe.skipped_layers = config.SD3_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD3_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD3_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'pixart':
+                        pipe.skipped_layers = config.PIXART_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_layer_guidance_scale = config.PIXART_SCALES[args.target],
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                    case 'sd35':
+                        pipe.skipped_layers = config.SD35_LAYERS[args.target]
+                        pipe.layer_weights = []
+                        image = pipe(
+                            prompt=positive_prompt,
+                            skip_guidance_layers=config.SD35_LAYERS[args.target],
+                            skip_layer_guidance_scale=config.SD35_SCALES[args.target],
+                            skip_layer_guidance_start=0.,
+                            skip_layer_guidance_stop=1.,
+                            generator=torch.Generator("cuda").manual_seed(seed)
+                        ).images[0]
+                
+                # --- Save Image ---
+                image_name = f"msg_naive.jpg"
+                image_save_path = os.path.join(prompt_output_path, image_name)
+                image.save(image_save_path)
+                flush()
+
+                # --- Log to JSON ---
+                results_log[prompt_subdir_name] = positive_prompt
 
     finally:
         # --- Save JSON Log ---
@@ -377,6 +632,8 @@ def main(args):
         print(f"\n--- Starting Automatic Evaluation for target: {args.target} ---")
         args.path = run_output_path
         args.detection_confidence = 0.7  # Default confidence for hand evaluation
+        
+        # Updated evaluation block to correctly handle all cases
         match args.target:
             case 'hands':
                 evaluate_hands(args)

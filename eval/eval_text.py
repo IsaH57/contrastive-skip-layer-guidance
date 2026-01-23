@@ -47,9 +47,10 @@ def main(args):
     
     # --- Determine Image Types (e.g., ablation modes) ---
     # Assumes the first directory in EXPERIMENT_ROOT contains images
-    first_prompt_dir = os.listdir(EXPERIMENT_ROOT)[0]
+    first_prompt_dir = os.listdir(EXPERIMENT_ROOT)[1]
     first_prompt_path = os.path.join(EXPERIMENT_ROOT, first_prompt_dir)
-    
+    print(first_prompt_path)
+
     if os.path.isdir(first_prompt_path):
         # Extract image types from filenames (e.g., 'base.jpg' -> 'base')
         IMAGE_TYPES = [f[:-4] for f in os.listdir(EXPERIMENT_ROOT + '/' + [d for d in os.listdir(EXPERIMENT_ROOT) if not d.endswith('.json')][0]) if not f.endswith('.json')]    

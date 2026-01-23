@@ -3,18 +3,7 @@
 import argparse
 import json
 import os
-import sys
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
-
-from eval.eval_hands import main as evaluate_hands
-from eval.eval_aesthetics import main as evaluate_aesthetics
-from eval.eval_text import main as evaluate_text
-from src.SD3_custom_pipeline import StableDiffusion3Pipeline
-from src.FLUX_custom_pipeline import FluxPipeline 
-from src.PixartAlpha_custom_pipeline import PixArtAlphaPipeline
-import config
+import random
 
 import torch
 import numpy as np
@@ -23,12 +12,17 @@ from tqdm import tqdm, trange
 from einops import rearrange
 from torchvision.utils import make_grid
 from torchvision.transforms import ToTensor
-from pytorch_lightning import seed_everything
 from diffusers import DiffusionPipeline, StableDiffusionPipeline
 
 
 torch.set_grad_enabled(False)
 
+def seed_everything(seed: int = 42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -105,16 +99,6 @@ def parse_args():
         action="store_true",
         help="skip saving grid",
     )
-    parser.add_argument(
-        "--skipped_layers",
-        default=[],
-        help="list of skipped layers for MSG",
-    )
-    parser.add_argument(
-        "--layer_weights",
-        default=[],
-        help="list of layer weights for MSG",
-    )
     opt = parser.parse_args()
     return opt
 
@@ -125,18 +109,11 @@ def main(opt):
         metadatas = [json.loads(line) for line in fp]
 
     # Load model
-    match opt.model:
-        case 'flux':
-            model = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
-        case 'sd3':
-            model = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
-        case 'pixart':
-            model = PixArtAlphaPipeline.from_pretrained("PixArt-alpha/PixArt-XL-2-1024-MS", torch_dtype=torch.float16)
-        case 'sd35':
-            model = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-medium", torch_dtype=torch.bfloat16)
-        case _:
-            raise ValueError(f"Unknown model: {opt.model}")
-        
+    if opt.model == "stabilityai/stable-diffusion-xl-base-1.0":
+        model = DiffusionPipeline.from_pretrained(opt.model, torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
+        model.enable_xformers_memory_efficient_attention()
+    else:
+        model = StableDiffusionPipeline.from_pretrained(opt.model, torch_dtype=torch.float16)
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     model = model.to(device)
     model.enable_attention_slicing()
@@ -162,57 +139,6 @@ def main(opt):
             all_samples = list()
             for n in trange((opt.n_samples + batch_size - 1) // batch_size, desc="Sampling"):
                 # Generate images
-
-                match opt.model:
-                    case 'flux':
-                        model.multiskip = True
-                        model.skipped_layers = config.FLUX_LAYERS[args.target]
-                        model.layer_weights = config.FLUX_WEIGHTS[args.target]
-                        image = model(
-                            prompt=positive_prompt, 
-                            negative_prompt=positive_prompt,    
-                            true_cfg_scale=msg_guidance_scale,                 
-                            generator=torch.Generator("cuda").manual_seed(seed)
-                        ).images[0]
-                        
-                    case 'sd3':
-                        model.multiskip = True
-                        model.cfg_skip = False
-                        model.skipped_layers = config.SD3_LAYERS[args.target]
-                        model.layer_weights = config.SD3_WEIGHTS[args.target]
-                        image = model(
-                            prompt=positive_prompt, 
-                            skip_guidance_layers=config.SD3_LAYERS[args.target],
-                            skip_layer_guidance_scale=msg_guidance_scale,
-                            skip_layer_guidance_start=0.,
-                            skip_layer_guidance_stop=1., 
-                            generator=torch.Generator("cuda").manual_seed(seed)
-                        ).images[0]
-
-                    case 'pixart':
-                        model.multiskip = True
-                        model.cfg_skip = False 
-                        model.skipped_layers = config.PIXART_LAYERS[args.target]
-                        model.layer_weights = config.PIXART_WEIGHTS[args.target]
-                        image = model(
-                            prompt=positive_prompt, 
-                            skip_layer_guidance_scale = msg_guidance_scale,
-                            generator=torch.Generator("cuda").manual_seed(seed)
-                        ).images[0]
-                    
-                    case 'sd35':
-                        model.multiskip = True
-                        model.cfg_skip = False
-                        model.skipped_layers = config.SD35_LAYERS[args.target]
-                        model.layer_weights = config.SD35_WEIGHTS[args.target]
-                        image = model(
-                            prompt=positive_prompt, 
-                            skip_guidance_layers=config.SD35_LAYERS[args.target],
-                            skip_layer_guidance_scale=msg_guidance_scale,
-                            skip_layer_guidance_start=0.,
-                            skip_layer_guidance_stop=1., 
-                            generator=torch.Generator("cuda").manual_seed(seed)
-                        ).images[0]
                 samples = model(
                     prompt,
                     height=opt.H,

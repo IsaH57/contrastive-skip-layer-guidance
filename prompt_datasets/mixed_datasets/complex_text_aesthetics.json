@@ -1,0 +1,403 @@
+[
+    {
+      "negative": "A wizard's tower room.",
+      "positive": "A wizard's tower room, lit by the soft, ethereal glow of floating crystals. Dust motes dance in the slanted moonlight. An ancient book lies open on a lectern, its page titled 'Chapter VII: Binding of the Elements'. Nearby, potion bottles on a dusty shelf have handwritten labels: 'Elixir of Moonsleep' and 'Draught of Stone-Skin'."
+    },
+    {
+      "negative": "A futuristic city plaza.",
+      "positive": "A futuristic city plaza at dusk, slick with recent rain. Gleaming chrome surfaces reflect vibrant holographic ads. One large display reads 'Visit Vantus Prime – Luxury Guaranteed'. A smaller ticker on a transit hub flashes 'Sector 4 Shuttle – DELAYED'."
+    },
+    {
+      "negative": "A post-apocalyptic survivor's camp.",
+      "positive": "A post-apocalyptic survivor's camp, huddled around the warm, flickering light of a barrel fire. A hand-painted sign on the gate reads 'HAVEN – ALL ARE TESTED'. A nearby crate is stenciled 'U.S. MED-SUPPLY – LOT 44', and a smaller sign by the water purifier says 'Boil First'."
+    },
+    {
+      "negative": "A 1950s diner.",
+      "positive": "A 1950s diner at night, filled with a warm, cherry-red neon glow. A jukebox in the corner has a song card listing 'Jailhouse Rock' and 'Blue Suede Shoes'. Behind the counter, a handwritten sign advertises 'Today's Special: Meatloaf – $1.25'."
+    },
+    {
+      "negative": "A detective's messy desk.",
+      "positive": "A detective's desk in a dark, smoky room, lit by the harsh, green-tinged light of a banker's lamp. An open case file is marked 'CASE 731 – THE RUBY MURDERS', and a crumpled note beside the ashtray reads 'Call Murphy – 555-2190'. A whiskey bottle is labeled 'Old Forester'."
+    },
+    {
+      "negative": "A spaceship bridge.",
+      "positive": "A spaceship bridge, bathed in the cool, steady blue light of its holographic panels. The main screen flashes a red warning: 'PROXIMITY ALERT: SECTOR 9'. A smaller console displays 'Hull Integrity: 98%', and a plaque on the captain's chair reads 'U.E.S. VOYAGER'."
+    },
+    {
+      "negative": "A fantasy blacksmith's forge.",
+      "positive": "A blacksmith's forge, glowing with intense orange heat from the coals. Sparks fly in the dim, soot-stained interior. A wooden sign above the door reads 'Grom's Hammer & Steel'. A finished sword on a rack has a tag: 'For Captain Valerius', and its blade is engraved with runes reading 'FIREBANE'."
+    },
+    {
+      "negative": "A cluttered antique shop.",
+      "positive": "A cluttered antique shop, filled with soft, hazy light from a dusty window. A stack of books includes one titled 'Forgotten Lore'. A porcelain doll has a handwritten tag: 'Circa 1910 – $85'. A brass compass in a box is labeled 'Nautical Instrument – Not for Sale'."
+    },
+    {
+      "negative": "A cybernetic enhancement clinic.",
+      "positive": "A cybernetic clinic, sterile and white, lit by cold, bright-blue LED strips. A holographic poster on the wall reads 'CYBERLIFE – A Better You'. A medical screen shows a patient's vitals and the text 'Model 7 Optic Nerve – CALIBRATING'."
+    },
+    {
+      "negative": "A secret agent's hotel room.",
+      "positive": "A luxurious hotel room at night, with a dramatic, moonlit view of the city skyline. The room is shadowy, lit by the flickering blue glow of a laptop. The screen displays a satellite map labeled 'TARGET: SILO 4'. On the desk, a forged passport reads 'David Chen' and a folder is marked 'PROJECT NIGHTFALL – EYES ONLY'."
+    },
+    {
+      "negative": "A magical forest library.",
+      "positive": "A magical library in an ancient tree, with warm, golden light filtering through leaves. Bioluminescent fungi cast a soft, green glow. A sign at the entrance reads 'The Whispering Archives – Silence Please'. One large book is titled 'A History of the Fae Courts', while a scroll is labeled 'Herbal Remedies'."
+    },
+    {
+      "negative": "A 1920s speakeasy.",
+      "positive": "A dimly lit, smoky speakeasy hidden in a basement. Soft amber light from table lamps glints off glasses. A chalkboard behind the bar lists 'The Bee's Knees – 50₵' and 'Password: GATSBY'. A sign on the stage reads 'The Midnight Ramblers – Nightly'."
+    },
+    {
+      "negative": "An abandoned space station.",
+      "positive": "An abandoned space station, floating in cold, empty darkness. A flickering red emergency beacon illuminates a wall panel flashing 'LIFE SUPPORT: OFFLINE'. A nearby console displays a final log entry: 'Hull breach... Sector 3... Mayday...'. A faded logo on the wall reads 'Hyperion Research Station'."
+    },
+    {
+      "negative": "A mad scientist's laboratory.",
+      "positive": "A laboratory with bubbling, glowing liquids casting eerie shadows. Jacob's ladders crackle with vivid blue electricity. A large chalkboard is covered in equations, with 'Project Prometheus – FINAL STAGE' scrawled at the top. A cage in the corner has a sign: 'Subject 8B – Do Not Feed'."
+    },
+    {
+      "negative": "A downtown coffee shop.",
+      "positive": "A coffee shop interior, bathed in warm, soft light on a rainy afternoon. A large chalkboard menu reads 'Special: Honey Lavender Latte' and 'Matcha Rose'. A small, framed sign on the counter says 'Wi-Fi: coffee&books'. A takeaway cup has a logo: 'The Daily Grind'."
+    },
+    {
+      "negative": "A street market in Marrakesh.",
+      "positive": "A bustling Marrakesh market, canopied with colorful fabrics filtering the harsh sunlight into warm patches. A stall selling spices has handwritten signs: 'Ras el Hanout' and 'Saffron – 100 Dirham'. Another stall's banner, selling lanterns, reads 'Illuminations d'Artisan'."
+    },
+    {
+      "negative": "A subway car at night.",
+      "positive": "A subway car at night, mostly empty, under harsh, flickering fluorescent lights with a greenish tint. A route map above the door shows the 'Central Line' and 'Next Stop: Astoria Blvd'. An advertisement poster on the wall reads 'Drink Sparkle-Cola! The Taste of Tomorrow!'."
+    },
+    {
+      "negative": "A cluttered wizard's desk.",
+      "positive": "A wizard's desk, lit by the warm, flickering glow of a single, tall candle. A scroll is half-unrolled, showing text: 'Incantation of Sealing'. A heavy, leather-bound book is titled 'The Celestial Spheres'. Nearby, a small jar of ink is labeled 'Dragon's Blood Quill Ink'."
+    },
+    {
+      "negative": "A cyberpunk alley.",
+      "positive": "A narrow, grimy alley, slick with rain and lit by the chaotic glow of clashing neon. A flickering sign for a bar reads 'The Broken Circuit'. Graffiti on the wall says 'SYSTEM FAILURE'. A glowing food stall sign advertises 'SYNTH-NOODLES – 5 CREDITS'."
+    },
+    {
+      "negative": "A pirate ship captain's quarters.",
+      "positive": "A ship captain's quarters, lit by the warm, swaying light of a lantern. A large map on the table is marked 'Treasure of the Serpent Isles' and 'Avoid Kraken's Deep'. The captain's logbook is open to a page dated '1715', and a bottle of rum is labeled 'Governor's Reserve'."
+    },
+    {
+      "negative": "A hidden temple entrance.",
+      "positive": "A temple entrance behind a shimmering, magical waterfall. An archway glows with soft, internal amber light. Runes above the arch read 'Only the Worthy May Pass'. A smaller, cracked stone tablet at the base warns, 'The First Trial is Sight'."
+    },
+    {
+      "negative": "A 1980s arcade.",
+      "positive": "A dark, loud arcade, lit by the flashing, vibrant glows of cabinets. One machine's screen reads 'PAC-MAN – HIGH SCORE: 120500'. Another cabinet is titled 'DRAGON'S LAIR'. A neon sign on the back wall flashes 'TOKEN SHACK' and 'PRIZES'."
+    },
+    {
+      "negative": "A small town hardware store.",
+      "positive": "A hardware store with tall, cluttered shelves, bathed in warm, dusty sunlight. A hand-painted sign hangs above an aisle: 'PLUMBING & FIXTURES'. Bins of screws have handwritten labels like 'Wood Screws 1.5\"' and 'Drywall Anchors'. A sign at the counter reads 'Johnson's Hardware – Since 1953'."
+    },
+    {
+      "negative": "An alchemist's laboratory.",
+      "positive": "An alchemist's lab, filled with colorful, glowing liquids in convoluted glass. The room is warm and steamy. A chalkboard lists a formula for 'Aqua Regia'. Jars on a shelf are labeled 'Quicksilver', 'Sulfur', and 'Mandrake Root'. An open book is titled 'The Great Work: Transmutation'."
+    },
+    {
+      "negative": "A bakery display window.",
+      "positive": "A bakery window at dawn, filled with a soft, inviting, warm golden light. Gold lettering on the glass reads 'The Flour Pot Bakery'. Inside, pastries have small, elegant labels: 'Almond Croissant' and 'Raspberry Danish'. A small chalkboard sign says 'Today's Bread: Sourdough'."
+    },
+    {
+      "negative": "A bioluminescent forest.",
+      "positive": "A dark forest, lit by the ethereal, soft blue and green glow of bioluminescent mushrooms and moss. A weathered wooden sign at the path's entrance is carved with 'Whisperwood Path'. A small, glowing plaque on a tree reads 'Respect the Silence'."
+    },
+    {
+      "negative": "A futuristic mechanic's garage.",
+      "positive": "A cluttered garage, bathed in the cool, white light of overhead utility lamps and the electric blue glow of a welding torch. A digital diagnostic screen reads 'HOVER CONVERTER: MALFUNCTION'. A nearby toolkit is stenciled 'K. ROSTOVA - CHIEF ENG.', and a greasy poster on the wall says 'Know Your 'Bot: MK-7 diagram'."
+    },
+    {
+      "negative": "An old library reading room.",
+      "positive": "A grand reading room with shafts of warm, dusty sunlight filtering through tall windows. Green banker's lamps cast pools of soft light on dark wood tables. A brass plaque on the wall reads 'The Archibald Wing – Est. 1892'. A trolley of books has a sign: 'Please Re-Shelve Here'."
+    },
+    {
+      "negative": "A spaceship mess hall.",
+      "positive": "A sterile mess hall, lit by neutral-white ceiling panels. A food dispenser's screen lists today's menu: 'Nutri-Paste (Standard)', 'Protein Gruel (High-G)'. A bulkhead monitor displays a looping message: 'Water Rationing in Effect – Deck 4'. A poster on the wall says 'Zero-G Safety First!'"
+    },
+    {
+      "negative": "A street food stall at night.",
+      "positive": "A food stall, glowing warmly under a string of amber bulbs in a bustling night market. Steam rises in the cool air. A brightly painted menu board lists 'Spicy Noodles - $8' and 'Grilled Skewers - $5'. A neon sign above the stall flashes 'TASTY BITES', and a small handwritten note taped to the counter says 'Cash Only'."
+    },
+    {
+        "negative": "A cozy railway waiting room with warm light streaming through tall windows.",
+        "positive": "A cozy railway waiting room with warm light streaming through tall windows. A wooden schedule board reads 'NEXT DEPARTURE — 7:55'. A small sign on the bench says 'Travelers Welcome'."
+      },
+      {
+        "negative": "A quiet lakeside dock at dawn. Mist drifts above the water.",
+        "positive": "A quiet lakeside dock at dawn. A weathered wooden sign reads 'Lake Stillwater'. A small plaque on the railing says 'Please Walk Gently'."
+      },
+      {
+        "negative": "A mountain tea hut with steam rising from ceramic kettles.",
+        "positive": "A mountain tea hut with steam rising from ceramic kettles. A chalkboard menu reads 'Mountain Bloom Tea'. A hand-painted jar label says 'Wild Honey'."
+      },
+      {
+        "negative": "A pottery workshop with clay pieces drying on shelves.",
+        "positive": "A pottery workshop with clay pieces drying on shelves. A shelf tag reads 'In Firing Queue'. A handwritten note pinned to the wall says 'Remember Kiln at 4'."
+      },
+      {
+        "negative": "A warm bakery window display of breads and pastries.",
+        "positive": "A warm bakery window display of breads and pastries. A small sign reads 'Fresh Today'. A loaf beside it is labeled 'Cinnamon Hearth'."
+      },
+      {
+        "negative": "A quiet forest trailhead with tall pines overhead.",
+        "positive": "A quiet forest trailhead with tall pines overhead. A wooden post reads 'North Ridge Trail'. A smaller sign below it says 'Keep to Path'."
+      },
+      {
+        "negative": "A small bookstore corner with soft ambient light.",
+        "positive": "A small bookstore corner with soft ambient light. A placard reads 'Staff Picks'. A handwritten card on a shelf says 'Read Slowly'."
+      },
+      {
+        "negative": "A riverside pavilion at sunset with soft lantern glow.",
+        "positive": "A riverside pavilion at sunset with soft lantern glow. A carved wooden sign reads 'Harbor Overlook'. A plaque on the bench says 'Dedicated to Rest'."
+      },
+      {
+        "negative": "A cozy cabin living room with a crackling fireplace.",
+        "positive": "A cozy cabin living room with a crackling fireplace. A stitched wall hanging reads 'Warmth is Home'. A wooden mug has the engraving 'For Quiet Nights'."
+      },
+      {
+        "negative": "A sunlit kitchen with herbs hanging to dry.",
+        "positive": "A sunlit kitchen with herbs hanging to dry. A small chalk tag reads 'Sage'. Another tag reads 'Summer Thyme'."
+      }, 
+      {
+        "negative": "A squirrel scientist in a cluttered forest lab, warm morning light filtering through stained glass leaves, moss-covered wooden tables, delicate glass beakers bubbling softly. The squirrel wears goggles and a lab coat.",
+        "positive": "A squirrel scientist in a cluttered forest lab glowing with soft amber sunlight filtering through leaf-patterned glass. Glass beakers bubble gently beside a chalkboard that reads 'NUTRIUM FORMULA v3'. The squirrel wears polished brass goggles and a neatly stitched cream-colored lab coat with a name tag embroidered: 'Dr. Acornstein'."
+      },
+      {
+        "negative": "A cyberpunk noodle stand glowing with neon pink and cyan signage in the rain, steam rising from boiling pots, wet pavement reflecting city lights. A robot chef hands a steaming bowl to a customer wearing digital glasses.",
+        "positive": "A cyberpunk noodle stand glowing under rain-slick neon in deep magentas and electric blues. One flickering sign reads 'BRAIN RAMEN', while another at the counter glows 'CREDITS ONLY'. A chrome-plated robot chef hands a steaming bowl to a customer wearing reflective holographic glasses, neon lights reflecting in the broth."
+      },
+      {
+        "negative": "A goblin street vendor at a magical bazaar lit by floating lanterns. Stalls are packed with curiosities, glowing jars, and peculiar trinkets. A crooked banner hangs overhead.",
+        "positive": "A goblin street vendor at a magical market under softly floating lanterns casting warm gold and violet hues. His stall banner says 'GRUBS & GIZMOS'. Tiny handwritten price tags dangle from jars labeled 'Glowbugs', 'Toad Oil', and 'Dust of Forgetting', each shimmering with faint arcane luminescence."
+      },
+      {
+        "negative": "A haunted attic lit by flickering candlelight, dust floating thick in the air, old trunks and forgotten objects scattered around. A dusty mirror is scrawled, and a book hovers mid-air.",
+        "positive": "A haunted attic glowing with eerie violet and muted amber candlelight. The dusty mirror has the scrawled warning: 'DON'T LOOK TWICE'. A leather-bound tome floats mid-air, its spine labeled 'Rituals of the Veil'. Pale glyphs flicker across the floorboards like faint, whispering embers."
+      },
+      {
+        "negative": "An underwater alien café inside a coral dome, soft bioluminescent ambiance, jellyfish servers drift gracefully, currents sway curtains of seaweed.",
+        "positive": "An underwater alien café softly illuminated by bioluminescent coral and drifting plankton. Hovering signage glows in gentle sea-green, one reading 'KELP & CRUNCH'. A translucent jellyfish waiter carries delicate shell-shaped menus printed with 'Fresh from the Rift', their letters rippling like light through water."
+      },
+      {
+        "negative": "A carnival at night with flickering bulbs, misty air, colorful tents swaying gently in the breeze. A funhouse mirror entrance gleams and clowns juggle by cotton candy stalls.",
+        "positive": "A carnival at night drenched in swirling neon fog and lantern glow. The funhouse mirror entrance shines with exaggerated curves beneath a sign reading 'LAUGH LABYRINTH'. Cotton candy stalls display neon-painted boards like 'SWEETEST NIGHTMARE', while clowns juggle beside hand-painted signs splashed in glowing carnival colors."
+      },
+      {
+        "negative": "A spaceship cargo bay filled with worn metal crates, low gravity dust motes drifting, overhead lights flickering. A maintenance droid scans a control panel.",
+        "positive": "A vast spaceship cargo bay under cool industrial lighting and drifting motes in low gravity. Crates are marked with faded stenciling such as 'FRAGILE – OXYGEN PLANTS' and 'LEVEL 3 BIOHAZARD'. A maintenance droid scans a glowing terminal displaying 'DECK STATUS: GREEN', reflected across polished chrome plating."
+      },
+      {
+        "negative": "A steam-powered mech piloted by a mouse, brass pipes and pressure gauges sighing steam, warm workshop lighting flickering.",
+        "positive": "A steam-powered mech gleaming with worn brass plates and glass gauges steaming gently. The chestplate bears a proud etched inscription: 'THE BRASS CLAW'. Pressure gauges display labels like 'PRESSURE MAX' and 'OIL LEVEL LOW'. Inside the cockpit, small paper sticky notes flutter with hastily scribbled reminders."
+      },
+      {
+        "negative": "A rooftop graffiti artist spraying neon paint at night, city skyline glowing behind, drones hover overhead.",
+        "positive": "A rooftop graffiti artist silhouetted against a neon skyline, her paint shimmering in electric gradients. The wall reads 'FREE THE SKY'. Her jacket is adorned with stitched patches saying 'ART=FREEDOM' and 'ZONE 17'. Drones hover overhead with red tracking lights and scrolling ID codes flickering across their undersides."
+      },
+      {
+        "negative": "A fantasy bakery run by an orc, warm golden light glowing through the windows, wooden shelves full of pastries.",
+        "positive": "A fantasy bakery bathed in buttery warm light and the scent of fresh dough. The window sign reads 'SWEET TOOTH'S DELIGHT'. Cupcakes are labeled 'Lava Fudge' and 'Goblin Berry Swirl' in handwritten tags. The orc wears a flour-dusted apron with embroidery reading 'BAKE OR BREAK', smiling proudly."
+      },
+      
+    {
+        "negative": "A medieval tavern bustling with adventurers, warm firelight reflecting off polished wooden tables, the air full of laughter and music. A bard strums a lute near the hearth.",
+        "positive": "A medieval tavern bustling with warm amber firelight and richly carved wooden beams. Adventurers with expressive, rugged faces laugh over frothing mugs. Above the polished bar hangs a handsome sign reading 'THE DRUNKEN DRAKE'. The bard near the hearth strums gracefully beside a weathered wanted poster labeled 'MISSING: KING'S MAP'."
+    },
+    {
+        "negative": "A futuristic library with holographic bookshelves and floating digital tomes. A robot librarian organizes data.",
+        "positive": "A futuristic library glowing with calm, diffused blue-white illumination. Sleek holographic bookshelves float with elegant symmetry. A beautifully designed robot librarian with smooth sculpted chrome organizes digital tomes, one highlighted title reading 'Chronicles of the Post-Earth Age'. A neon panel softly displays 'ARCHIVE SECTOR 7B'."
+    },
+    {
+        "negative": "An old train station overgrown with vines. Cracked tiles and faded signs rest in quiet stillness. A suitcase sits on a bench.",
+        "positive": "An old train station reclaimed by nature, soft moss and trailing ivy giving it a melancholy, poetic beauty. A faded hanging sign reads 'LAST STOP – ECHO RIDGE'. A weathered suitcase rests on a dusty bench with a torn travel tag labeled 'Passenger 0412', adding a sense of forgotten stories."
+    },
+    {
+        "negative": "A witch’s potion shop filled with glowing liquids, stacked books, and flickering candlelight.",
+        "positive": "A witch’s potion shop illuminated by warm candle glow and beautifully colored vials swirling with enchantment. Shelves are hand-carved and charmingly crooked. A chalkboard menu reads 'BREWS & HEXES: 5 GOLD'. Candles flicker beside an open spellbook titled 'Transmutation Basics', its lettering elegantly inked."
+    },
+    {
+        "negative": "A sci-fi diner floating above a blue planet, neon accents reflecting across chrome counters. Android waiters serve alien guests.",
+        "positive": "A retro-futuristic diner floating in serene orbit above a radiant blue planet. Chrome counters gleam with soft pastel neon reflections. The window neon spells 'GALAXY GRIDDLE'. Polished android waiters with friendly, graceful movements serve alien patrons beneath a holo-menu reading 'Meteor Shakes – 12₵'."
+    },
+    {
+        "negative": "A samurai in a bamboo forest during rain. His sword gleams. Lanterns sway overhead.",
+        "positive": "A dignified samurai stands in a misted bamboo grove during gentle rainfall. The scene glows with quiet, refined beauty. One lantern bears the word 'HONOR' in elegant kanji. His sword sheath is finely engraved with the name 'Takeshi', the craftsmanship immaculate and revered."
+    },
+    {
+        "negative": "A detective’s 1940s office filled with cigarette smoke and scattered case files. A rotary phone sits on the desk.",
+        "positive": "A dimly lit 1940s detective's office with vintage charm and muted golden haze. The frosted glass door reads 'MARLOWE INVESTIGATIONS' in handsome serif lettering. A rotary phone rests beside a worn case file labeled 'CASE #23 – VANISHING HEIRESS', suggesting intrigue wrapped in smoky nostalgia."
+    },
+    {
+        "negative": "An alien desert caravan hauling crystal crates. A merchant waves.",
+        "positive": "An alien desert caravan moving across glowing amber dunes under twin suns. The towering beasts and crystal crates shimmer with otherworldly beauty. A flowing banner on one harness reads 'TRIAX TRADE CO.'. The merchant, with ornately beaded clothing, waves while holding a luminous tablet marked 'Route 9'."
+    },
+    {
+        "negative": "A post-apocalyptic arcade overtaken by vines and flickering screens. A survivor searches for tokens.",
+        "positive": "A post-apocalyptic arcade with haunting, ruined beauty. Vines wrap around rusted machines flickering in neon echo. A cracked screen still displays 'GAME OVER – INSERT COIN'. A lone survivor with weathered, determined features scavenges tokens beside a peeling sign that reads 'LEVEL RESET'."
+    },
+    {
+        "negative": "A celestial observatory floating above clouds. Astronomers study stars through domes.",
+        "positive": "A celestial observatory rising above a sea of luminous clouds in soft starlit glow. Scholars in elegant robes study constellations with grace. A glowing plaque reads 'STATION ORION PRIME'. A polished telescope marked 'VISION-9A' gleams beautifully in the serene, infinite sky."
+    },
+    {
+        "negative": "A cozy coffee shop interior on a rainy day, warm amber light reflecting in puddles outside, gentle steam rising from mugs, soft chatter in the background.",
+        "positive": "A cozy coffee shop interior on a rainy day, glowing with gentle golden warmth and polished wood surfaces. Raindrops pattern the windows softly. A chalkboard menu above the counter reads 'ESPRESSO / LATTE / POUR OVER'. A cup on the counter has a warm, friendly sleeve printed with 'Brewed Awakenings', evoking comfort and welcome."
+      },
+      {
+        "negative": "A small-town gas station at dusk with flickering neon and pastel sky colors, an old car pulling up to a pump.",
+        "positive": "A small-town gas station at dusk, bathed in nostalgic lavender-orange skylight. The flickering sign reads 'HENRY'S FUEL STOP'. A classic car rolls up beside a pump labeled 'UNLEADED – $4.29/gal', the metal worn and familiar in a charming, lived-in way."
+      },
+      {
+        "negative": "A classroom in afternoon sunlight, students quietly writing, dust gently floating in golden rays.",
+        "positive": "A sunlit classroom filled with warm afternoon glow, soft dust motes drifting in stillness. The chalkboard reads 'Final Exam: Friday, 9 AM'. A poster on the wall says 'SCIENCE IS CURIOUSITY IN ACTION', adding an earnest, hopeful academic charm."
+      },
+      {
+        "negative": "A city street market in the morning, vendors arranging produce, shoppers chatting, colorful awnings overhead.",
+        "positive": "A lively morning city street market brimmed with fresh color and friendly motion. A banner above one stall reads 'FRESH LOCAL GREENS'. A wooden crate of oranges features a handwritten sign: '$2 per lb', lending a handmade, human warmth."
+      },
+      {
+        "negative": "A firefighter in front of a red engine, sweat and soot on his face, smoke dissipating behind him.",
+        "positive": "A firefighter stands with strength and quiet dignity in front of a gleaming red engine, smoky morning light fading behind. The side of the truck reads 'ENGINE 42 – SAN MATEO'. His jacket patch proudly says 'CAPTAIN RIVERA', marking experience and courage."
+      },
+      {
+        "negative": "A cluttered artist’s studio full of brushes, canvases, cloth, daylight streaming in.",
+        "positive": "A cluttered artist’s studio with warm daylight illuminating textured canvases and colorful paint jars. A paper sign pinned to the inspiration board reads 'ART IS MESSY'. A canvas on the easel is signed 'Clara Nguyen, 2023', adding personality and passion."
+      },
+      {
+        "negative": "A newspaper stand on a busy sidewalk, crowds rushing by, headlines stacked.",
+        "positive": "A bustling city sidewalk newspaper stand with crisp morning air and quick footsteps all around. The top paper headline reads 'CITY TRANSIT STRIKE ENTERS 5TH DAY'. A blue sign above the stand boldly says 'DAILY POST', adding urban character and identity."
+      },
+      {
+        "negative": "A teenager’s bedroom glowing with string lights, posters lining the walls, laptop screen reflecting in the dimness.",
+        "positive": "A teenager’s bedroom filled with cozy string-light glow and softly layered personal decor. A poster on the wall says 'DREAM LOUD', vibrant and encouraging. The laptop on the desk displays an open tab titled 'College Applications 2025', capturing hope in transition."
+      },
+      {
+        "negative": "A food truck at a sunny beach promenade, bright umbrellas and hungry visitors, ocean wind carrying warm scents.",
+        "positive": "A cheerful food truck parked along a breezy beach promenade, sun glinting off colorful paintwork. The truck’s logo reads 'TACOLICIOUS COASTAL'. A chalkboard menu lists 'Fish Tacos – $8' and 'Mango Salsa Burrito – $10', inviting and delicious."
+      },
+      {
+        "negative": "A city bus stop on a foggy morning, commuters standing silent in soft gray mist.",
+        "positive": "A city bus stop wrapped in cool morning fog, silhouettes blurred softly in pale light. A digital sign above the shelter shows 'ROUTE 19 – DOWNTOWN'. A poster inside the glass panel reads 'VOTE TUESDAY', adding civic texture to the quiet scene."
+      },
+      {
+        "negative": "A desert oasis camp at sunset.",
+        "positive": "A desert oasis camp at sunset, golden light reflecting off calm water and rippling silk canopies. A carved wooden sign at the main tent reads 'OASIS OF MIRAJ'. A clay jug on a table bears a painted label: 'Date Wine Reserve'."
+      },
+      {
+        "negative": "A knight preparing for battle.",
+        "positive": "A knight stands in a candlelit armory, armor polished to a noble gleam. His shield bears the crest 'House Aeron'. A rolled banner on the table reads 'MARCH AT DAWN'."
+      },
+      {
+        "negative": "A neon nightclub with dancers.",
+        "positive": "A neon nightclub glowing with pulsing magenta and cyan lights. A holographic sign spins overhead reading 'CLUB NOVA'. A digital drink menu on the counter flashes 'STARFALL COCKTAIL — 12 CR'."
+      },
+      {
+        "negative": "A druid shrine deep in the woods.",
+        "positive": "A druid shrine surrounded by lush moss and soft green light filtering through ancient oaks. A carved stone tablet reads 'GROVE OF THE OLD ROOT'. A small wooden offering bowl is labeled 'Gifts Welcome'."
+      },
+      {
+        "negative": "A cozy artist loft with skylight.",
+        "positive": "A cozy artist loft bathed in warm skylight. A corkboard is pinned with a note reading 'Color Study – Session 4'. A paint-splattered mug on the desk says 'Create Daily'."
+      },
+      {
+        "negative": "A robot maintenance bay.",
+        "positive": "A robot maintenance bay glowing with clean white work lights. A diagnostic display reads 'UNIT R-12: CALIBRATING JOINT SERVOS'. A caution sign on the wall warns 'HIGH VOLTAGE AREA'."
+      },
+      {
+        "negative": "A snowy mountaintop observatory.",
+        "positive": "A snowy mountaintop observatory bathed in crisp starlight. A metal plaque at the entrance reads 'EVEREST SKY STATION'. A telescope case inside is stamped 'Model Orion-5'."
+      },
+      {
+        "negative": "A royal ballroom before a gala.",
+        "positive": "A royal ballroom glittering with crystal chandeliers and polished marble floors. A gilded banner across the balcony reads 'THE WINTER REVELS'. A card on the refreshment table says 'Royal Punch'."
+      },
+      {
+        "negative": "A pirate tavern by the docks.",
+        "positive": "A pirate tavern lit by swaying lanterns and smelling of salt and rum. A weathered sign above the bar reads 'THE SIREN'S BELT'. A parchment on the wall says 'Crew Wanted — Fair Shares'."
+      },
+      {
+        "negative": "A greenhouse at dawn.",
+        "positive": "A greenhouse at dawn glowing with pale rose light. Hanging tags gently sway, one reading 'Moon Petals'. Another pot label reads 'Golden Leaf Vine'."
+      },
+      {
+        "negative": "A cybernetic street medic stall.",
+        "positive": "A street medic stall lit by cold neon glow in a rain-slick alley. A holographic banner reads 'EMERGENCY AUG REPAIR'. A metal kit is stamped 'STERYL-KIT 9A'."
+      },
+      {
+        "negative": "A scholar's study in a gothic mansion.",
+        "positive": "A scholar’s study lit by oil lamp, book spines gleaming with age. A parchment on the desk reads 'Treatise on the Lunar Veil'. A bookcase plaque says 'Private Collection'."
+      },
+      {
+        "negative": "A mountain monastery courtyard.",
+        "positive": "A mountain monastery courtyard surrounded by low rolling fog. A carved stone arch reads 'PATH OF STILLNESS'. A wooden prayer board is labeled 'Offer Your Worries'."
+      },
+      {
+        "negative": "A futuristic racing hangar.",
+        "positive": "A futuristic racing hangar lit with bold white and cobalt strip lighting. A racing craft hull is stenciled 'NX-07 DRIFTRUNNER'. A digital kiosk reads 'Qualifying in 12:05'."
+      },
+      {
+        "negative": "A ramen shop on a winter street.",
+        "positive": "A ramen shop glowing warm against snowy night. A fabric noren curtain reads 'Ramen Ya'. A chalkboard inside lists 'Spicy Miso Special'."
+      },
+      {
+        "negative": "A faerie village built into mushrooms.",
+        "positive": "A faerie village nestled into enormous glowing mushrooms. A tiny hanging sign reads 'Luna Hollow'. A carved wooden tag on a door reads 'Home of Juniperwing'."
+      },
+      {
+        "negative": "A wizard riding a gryphon.",
+        "positive": "A wizard rides a noble gryphon through sunrise clouds. His cloak clasp is inscribed 'Order of the Azure Flame'. The gryphon’s leather harness is stamped 'SKYWARD COMPANY'."
+      },
+      {
+        "negative": "A vampire lounge with velvet furniture.",
+        "positive": "A velvet-draped vampire lounge lit with deep crimson candlelight. A framed gold-edged sign reads 'The Crimson Court'. A crystal bottle on a silver tray says 'Reserve Vintage'."
+      },
+      {
+        "negative": "A vintage camera repair shop.",
+        "positive": "A camera repair shop full of polished brass lenses and wooden work tables. A display sign reads 'FILM DEVELOPING DONE HERE'. A repair ticket on the counter says 'Leica M3 – Clean & Oil'."
+      },
+      {
+        "negative": "A temple bathhouse lit by lanterns.",
+        "positive": "A stone temple bathhouse glowing with gentle lantern light and rising steam. A wooden plaque reads 'SANCTUM SPRINGS'. A towel rack sign says 'For Pilgrims Only'."
+      },
+      {
+        "negative": "An ancient crypt.",
+        "positive": "An ancient crypt, lit by the flickering, sickly green glow of magical torches. Cobwebs cling to cold stone. A central sarcophagus has an engraving: 'Here Lies Lord Valerius – Betrayer'. A stone plaque on the wall warns, 'Let the Sleeper Lie', and a cracked tablet on the floor reads 'The Seal of Malakor'."
+      },
+      {
+        "negative": "A cyberpunk data-den.",
+        "positive": "A cluttered data-den, lit only by the chaotic, electric-blue glow of dozens of stacked monitors. Wires hang like vines. One screen shows a data-stream: 'Package 77B – Arasaka Corp'. Another flashes a red warning: 'ICE DETECTED: TRACE INITIATED'. A sticky note on a keyboard reads 'Pay 'Ghost' by midnight'."
+      },
+      {
+        "negative": "A foggy Victorian street.",
+        "positive": "A Victorian London street, cloaked in thick, sulfur-yellow fog. The halos of gas lamps barely penetrate the gloom, shining on wet cobblestones. A hanging wooden sign reads 'The Gilded Cage – Elixirs & Tonics'. A discarded newspaper on the curb has a headline: 'Ripper Strikes Again!' and a street sign reads 'Whitechapel Rd'."
+      },
+      {
+        "negative": "A botanical greenhouse.",
+        "positive": "A botanical greenhouse, filled with warm, humid air and shafts of golden sunlight. Condensation drips from the glass ceiling. An open textbook on a bench is titled 'Advanced Horticulture'. Small wooden markers identify the plants: 'Amorphophallus titanum' and 'Nepenthes attenboroughii'. A sign reads 'Tropical Wing – Please Close Door'."
+      },
+      {
+        "negative": "A flooded city ruin.",
+        "positive": "A flooded city ruin, with sunlight glaring off the surface of the murky green water. Rusted skyscrapers jut out like tombstones. A survivor poles a small skiff named 'The Hope'. A half-submerged billboard advertises 'Coca-Cola: Always Refreshing', and a faded sign on a building reads 'Warning: Biohazard Area 3'."
+      },
+      {
+        "negative": "A steampunk airship cabin.",
+        "positive": "A steampunk airship captain's cabin, all polished brass and rich mahogany, lit by warm, flickering gaslight. Portholes show a view of roiling clouds. A brass plaque on the wall reads 'I.F.S. Excelsior'. A glowing pressure gauge is in the 'SAFE' zone, and a navigation chart on the desk is marked 'Route to New Alexandria'."
+      },
+      {
+        "negative": "A 1940s jazz club.",
+        "positive": "A 1940s jazz club, thick with cigarette smoke that swirls in the single, harsh white spotlight. Deep red velvet curtains frame the stage. A poster by the door reads 'Tonight Only: Vinnie 'The Lip' & The Night Hawks'. A small, handwritten sign on the piano says 'Please, No Requests'."
+      },
+      {
+        "negative": "A high-tech cryo-sleep bay.",
+        "positive": "A sterile, white cryo-sleep bay, bathed in a cold, clinical blue light from floor panels. Rows of glass pods line the wall. A central console's screen reads 'Stasis Pod 04: VITAL SIGNS NOMINAL'. A plaque on the bulkhead is labeled 'Mission: Tau Ceti Expedition – Est. Departure 2245'."
+      },
+      {
+        "negative": "A medieval alchemist's attic.",
+        "positive": "A cramped alchemist's attic, lit by the warm, dusty glow of sunlight through a single round window. Strange glass contraptions bubble. A large, complex diagram on the wall is labeled 'The Great Work'. Jars on a shelf have peeling labels: 'Ouroboros Scale', 'Philosopher's Dew', and 'Vitriol'."
+      },
+      {
+        "negative": "An abandoned drive-in movie theater.",
+        "positive": "An abandoned drive-in theater at dusk, the sky a deep, bruised purple. The massive screen is cracked, its paint peeling. A rusted metal speaker post has a faded sticker: 'Enjoy the Show!' The ticket booth has a broken window and a sign inside that reads 'Tonight's Feature: The Blob'."
+      }
+]

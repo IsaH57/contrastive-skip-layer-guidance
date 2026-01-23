@@ -8,4 +8,4 @@
 cd ..
 cd ..
 nvidia-smi
-python3 experiment_scripts/layer_ablation.py --target=hands --model=flux --output_path=/export/scratch/ru63zus/final_experiments/layer_ablations --max_prompts=100
+python3 experiment_scripts/layer_ablation.py --target=position --model=pixart --output_path=/export/scratch/ru63zus/final_experiments/layer_ablations --max_prompts=100

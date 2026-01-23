@@ -1,27 +1,108 @@
 FLUX_LAYERS = {'text': [3,8,6,10,14],
               'hands': [9,12,15,4,10],
-              'aesthetics': [15,14,13,12,10]}
+              'aesthetics': [15,14,13,12,10],
+              'complex_text': [11,3,9,17,4],
+              'position': [13,17,9,11,12],
+              'counting': [10,17,3],
+              'complex_text_and_hands': [6,4,15,12,0],
+              'complex_text_and_aesthetics': [15,14,13,0,0],
+              'hands_and_aesthetics': [15,13,0,0,0]}
 FLUX_WEIGHTS = {'text': [.48,.33,.30,.30,.21],
               'hands': [.36,.29,.28,.24,.18],
-              'aesthetics': [.34,.06,.03,0.,0.]}
+              'aesthetics': [.34,.06,.03,0.,0.],
+              'complex_text': [.46,.39,.34,.33,.32],
+              'position': [.24,.19,.14,.14,.14],
+              'counting': [3.4,3.0,1.5],
+              'complex_text_and_hands': [7.0,5.7,5.3,5.0,0.],
+              'complex_text_and_aesthetics': [5.9,2.6,1.,0.,0.],
+              'hands_and_aesthetics': [6.3,0.0,0.,0.,0.]}
+FLUX_SCALES = {'text': 'not yet implemented',
+              'hands': 2.5,
+              'aesthetics': 3.5,
+              'complex_text': 2.25,
+              'counting': 2.,
+              'position': 3.5,
+              'complex_text_and_hands': 2.5,
+              'complex_text_and_aesthetics': 2.5,
+              'hands_and_aesthetics': 2.5}
+
 
 SD3_LAYERS = {'text': [14,10,9,17,8],
               'hands': [9,6,5,10,7],
-              'aesthetics': [6,7,8,9,2]}
+              'aesthetics': [6,7,8,9,2],
+              'complex_text': [7,11,4,9,13], 
+              'position': [8,9,7,6,22],
+              'counting': [8,6,9,8,8],
+              'complex_text_and_hands': [7,9,0,0,0],
+              'complex_text_and_aesthetics': [7,9,11,5,0],
+              'hands_and_aesthetics': [6,9,7,10,0]}
 SD3_WEIGHTS = {'text': [.18,.14,.11,.07,.05],
               'hands': [.29,.14,.13,.06,.06],
-              'aesthetics': [.178,.126,.124,.120,.110]}
+              'aesthetics': [.178,.126,.124,.120,.110],
+              'complex_text': [10.,6.,5.,2.,2.], 
+              'position': [.6,.6,.3,.3,.3],
+              'counting': [.2,.1,.1,.0,.0],
+              'complex_text_and_hands': [3.,2.,0.,0.,0.],
+              'complex_text_and_aesthetics': [1.4,1.2,1.0,0.8,0.],
+              'hands_and_aesthetics': [1.9,1.5,1.3,0.9,0.]}
+SD3_SCALES = {'complex_text': 3.5,
+              'hands': 3.5,
+              'aesthetics': 3.5,
+              'text': 'not implemented', 
+              'counting': 2.5,
+              'position': 2.5,
+              'complex_text_and_hands': 2.5,
+              'complex_text_and_aesthetics': 2.5,
+              'hands_and_aesthetics': 2.5}
+
 
 SD35_LAYERS = {'text': [3,2,18,11,17],
               'hands': [7,18,6,9,10],
-              'aesthetics': [4,6,9,11,8]}
+              'aesthetics': [4,6,9,11,8],
+              'complex_text': [15,10,8,5,13],
+              'position': [5,11,14,22,2],
+              'counting': [18,5,7,10,11],
+              'text_and_hands': [2,18,7,11,0],
+              'hands_and_aesthetics': [6,9,18,2,0],
+              'text_and_aesthetics': [11,18,3,2,0]}
 SD35_WEIGHTS = {'text': [.22,.11,.07,.03,.01],
               'hands': [.70,.69,.61,.55,.52],
-              'aesthetics': [.117,.107,.081,.067,.062]}
+              'aesthetics': [.117,.107,.081,.067,.062],
+              'complex_text': [15.,12.,5.,3.,2.], 
+              'position': [.13,.13,.13,.13,.8],
+              'counting': [.12, .7,.7,.3,.3],
+              'text_and_hands': [.9,.8,.7,.4,.0],
+              'hands_and_aesthetics': [1.7,1.4,1.1,1.0,0.],
+              'text_and_aesthetics': [.7,.5,.5,.3,.0]}
+SD35_SCALES = {'text': 2.0,
+              'hands': 2.25,
+              'aesthetics': 1.75,
+              'complex_text': 'not implemented',
+              'counting': 2.,
+              'position': 2.,
+              'text_and_hands': 2.25,
+              'text_and_aesthetics': 2.25,
+              'hands_and_aesthetics': 2.25}
+
 
 PIXART_LAYERS = {'text': [5,25,13,14,9],
               'hands': [3,23,8,18,22],
-              'aesthetics': [9,20,5,24,19]}
+              'aesthetics': [9,20,5,24,19], 
+              'counting': [15,14,21,7,0],
+              'position': [10,21,22,4,5],
+              'hands_and_aesthetics': [20,9,15]}
 PIXART_WEIGHTS = {'text': [.8,.7,.5,.2,.1],
               'hands': [0.195,0.172,0.143,0.122,0.106],
-              'aesthetics': [0.25, 0.07, 0.03, 0., 0.]}
+              'aesthetics': [0.25, 0.07, 0.03, 0., 0.],
+              'counting': [.5,.4,.2,.2,.0],
+              'position': [.4,.2,.2,.2,.2],           
+              'hands_and_aesthetics': [3.0,1.5,0.4]}
+PIXART_SCALES = {'text': 2.0,
+              'hands': 2.0,
+              'aesthetics': 2.5,
+              'complex_text': 'not implemented',
+              'counting': 2.0,
+              'position': 2.5,
+              'text_and_hands': 2.0,
+              'text_and_aesthetics': 2.25,
+              'hands_and_aesthetics': 2.}

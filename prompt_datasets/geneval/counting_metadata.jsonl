@@ -1,0 +1,100 @@
+{"tag": "counting", "include": [{"class": "clock", "count": 2}], "exclude": [{"class": "clock", "count": 3}], "prompt": "a photo of two clocks"}
+{"tag": "counting", "include": [{"class": "backpack", "count": 2}], "exclude": [{"class": "backpack", "count": 3}], "prompt": "a photo of two backpacks"}
+{"tag": "counting", "include": [{"class": "handbag", "count": 4}], "exclude": [{"class": "handbag", "count": 5}], "prompt": "a photo of four handbags"}
+{"tag": "counting", "include": [{"class": "frisbee", "count": 2}], "exclude": [{"class": "frisbee", "count": 3}], "prompt": "a photo of two frisbees"}
+{"tag": "counting", "include": [{"class": "sports ball", "count": 3}], "exclude": [{"class": "sports ball", "count": 4}], "prompt": "a photo of three sports balls"}
+{"tag": "counting", "include": [{"class": "bear", "count": 2}], "exclude": [{"class": "bear", "count": 3}], "prompt": "a photo of two bears"}
+{"tag": "counting", "include": [{"class": "tie", "count": 2}], "exclude": [{"class": "tie", "count": 3}], "prompt": "a photo of two ties"}
+{"tag": "counting", "include": [{"class": "sink", "count": 4}], "exclude": [{"class": "sink", "count": 5}], "prompt": "a photo of four sinks"}
+{"tag": "counting", "include": [{"class": "toothbrush", "count": 2}], "exclude": [{"class": "toothbrush", "count": 3}], "prompt": "a photo of two toothbrushs"}
+{"tag": "counting", "include": [{"class": "person", "count": 3}], "exclude": [{"class": "person", "count": 4}], "prompt": "a photo of three persons"}
+{"tag": "counting", "include": [{"class": "tennis racket", "count": 3}], "exclude": [{"class": "tennis racket", "count": 4}], "prompt": "a photo of three tennis rackets"}
+{"tag": "counting", "include": [{"class": "bowl", "count": 4}], "exclude": [{"class": "bowl", "count": 5}], "prompt": "a photo of four bowls"}
+{"tag": "counting", "include": [{"class": "vase", "count": 4}], "exclude": [{"class": "vase", "count": 5}], "prompt": "a photo of four vases"}
+{"tag": "counting", "include": [{"class": "cup", "count": 3}], "exclude": [{"class": "cup", "count": 4}], "prompt": "a photo of three cups"}
+{"tag": "counting", "include": [{"class": "computer keyboard", "count": 4}], "exclude": [{"class": "computer keyboard", "count": 5}], "prompt": "a photo of four computer keyboards"}
+{"tag": "counting", "include": [{"class": "sink", "count": 3}], "exclude": [{"class": "sink", "count": 4}], "prompt": "a photo of three sinks"}
+{"tag": "counting", "include": [{"class": "oven", "count": 2}], "exclude": [{"class": "oven", "count": 3}], "prompt": "a photo of two ovens"}
+{"tag": "counting", "include": [{"class": "toilet", "count": 2}], "exclude": [{"class": "toilet", "count": 3}], "prompt": "a photo of two toilets"}
+{"tag": "counting", "include": [{"class": "bicycle", "count": 2}], "exclude": [{"class": "bicycle", "count": 3}], "prompt": "a photo of two bicycles"}
+{"tag": "counting", "include": [{"class": "train", "count": 2}], "exclude": [{"class": "train", "count": 3}], "prompt": "a photo of two trains"}
+{"tag": "counting", "include": [{"class": "orange", "count": 3}], "exclude": [{"class": "orange", "count": 4}], "prompt": "a photo of three oranges"}
+{"tag": "counting", "include": [{"class": "bus", "count": 3}], "exclude": [{"class": "bus", "count": 4}], "prompt": "a photo of three buses"}
+{"tag": "counting", "include": [{"class": "handbag", "count": 3}], "exclude": [{"class": "handbag", "count": 4}], "prompt": "a photo of three handbags"}
+{"tag": "counting", "include": [{"class": "snowboard", "count": 3}], "exclude": [{"class": "snowboard", "count": 4}], "prompt": "a photo of three snowboards"}
+{"tag": "counting", "include": [{"class": "snowboard", "count": 2}], "exclude": [{"class": "snowboard", "count": 3}], "prompt": "a photo of two snowboards"}
+{"tag": "counting", "include": [{"class": "dog", "count": 4}], "exclude": [{"class": "dog", "count": 5}], "prompt": "a photo of four dogs"}
+{"tag": "counting", "include": [{"class": "apple", "count": 3}], "exclude": [{"class": "apple", "count": 4}], "prompt": "a photo of three apples"}
+{"tag": "counting", "include": [{"class": "sheep", "count": 2}], "exclude": [{"class": "sheep", "count": 3}], "prompt": "a photo of two sheeps"}
+{"tag": "counting", "include": [{"class": "hot dog", "count": 3}], "exclude": [{"class": "hot dog", "count": 4}], "prompt": "a photo of three hot dogs"}
+{"tag": "counting", "include": [{"class": "zebra", "count": 3}], "exclude": [{"class": "zebra", "count": 4}], "prompt": "a photo of three zebras"}
+{"tag": "counting", "include": [{"class": "kite", "count": 3}], "exclude": [{"class": "kite", "count": 4}], "prompt": "a photo of three kites"}
+{"tag": "counting", "include": [{"class": "apple", "count": 4}], "exclude": [{"class": "apple", "count": 5}], "prompt": "a photo of four apples"}
+{"tag": "counting", "include": [{"class": "cell phone", "count": 3}], "exclude": [{"class": "cell phone", "count": 4}], "prompt": "a photo of three cell phones"}
+{"tag": "counting", "include": [{"class": "baseball glove", "count": 4}], "exclude": [{"class": "baseball glove", "count": 5}], "prompt": "a photo of four baseball gloves"}
+{"tag": "counting", "include": [{"class": "computer keyboard", "count": 3}], "exclude": [{"class": "computer keyboard", "count": 4}], "prompt": "a photo of three computer keyboards"}
+{"tag": "counting", "include": [{"class": "bed", "count": 2}], "exclude": [{"class": "bed", "count": 3}], "prompt": "a photo of two beds"}
+{"tag": "counting", "include": [{"class": "tv remote", "count": 2}], "exclude": [{"class": "tv remote", "count": 3}], "prompt": "a photo of two tv remotes"}
+{"tag": "counting", "include": [{"class": "fire hydrant", "count": 3}], "exclude": [{"class": "fire hydrant", "count": 4}], "prompt": "a photo of three fire hydrants"}
+{"tag": "counting", "include": [{"class": "book", "count": 3}], "exclude": [{"class": "book", "count": 4}], "prompt": "a photo of three books"}
+{"tag": "counting", "include": [{"class": "giraffe", "count": 4}], "exclude": [{"class": "giraffe", "count": 5}], "prompt": "a photo of four giraffes"}
+{"tag": "counting", "include": [{"class": "vase", "count": 2}], "exclude": [{"class": "vase", "count": 3}], "prompt": "a photo of two vases"}
+{"tag": "counting", "include": [{"class": "donut", "count": 4}], "exclude": [{"class": "donut", "count": 5}], "prompt": "a photo of four donuts"}
+{"tag": "counting", "include": [{"class": "chair", "count": 4}], "exclude": [{"class": "chair", "count": 5}], "prompt": "a photo of four chairs"}
+{"tag": "counting", "include": [{"class": "baseball bat", "count": 3}], "exclude": [{"class": "baseball bat", "count": 4}], "prompt": "a photo of three baseball bats"}
+{"tag": "counting", "include": [{"class": "stop sign", "count": 4}], "exclude": [{"class": "stop sign", "count": 5}], "prompt": "a photo of four stop signs"}
+{"tag": "counting", "include": [{"class": "pizza", "count": 2}], "exclude": [{"class": "pizza", "count": 3}], "prompt": "a photo of two pizzas"}
+{"tag": "counting", "include": [{"class": "refrigerator", "count": 3}], "exclude": [{"class": "refrigerator", "count": 4}], "prompt": "a photo of three refrigerators"}
+{"tag": "counting", "include": [{"class": "fire hydrant", "count": 2}], "exclude": [{"class": "fire hydrant", "count": 3}], "prompt": "a photo of two fire hydrants"}
+{"tag": "counting", "include": [{"class": "giraffe", "count": 3}], "exclude": [{"class": "giraffe", "count": 4}], "prompt": "a photo of three giraffes"}
+{"tag": "counting", "include": [{"class": "tv", "count": 4}], "exclude": [{"class": "tv", "count": 5}], "prompt": "a photo of four tvs"}
+{"tag": "counting", "include": [{"class": "wine glass", "count": 3}], "exclude": [{"class": "wine glass", "count": 4}], "prompt": "a photo of three wine glasses"}
+{"tag": "counting", "include": [{"class": "broccoli", "count": 4}], "exclude": [{"class": "broccoli", "count": 5}], "prompt": "a photo of four broccolis"}
+{"tag": "counting", "include": [{"class": "truck", "count": 3}], "exclude": [{"class": "truck", "count": 4}], "prompt": "a photo of three trucks"}
+{"tag": "counting", "include": [{"class": "truck", "count": 2}], "exclude": [{"class": "truck", "count": 3}], "prompt": "a photo of two trucks"}
+{"tag": "counting", "include": [{"class": "carrot", "count": 2}], "exclude": [{"class": "carrot", "count": 3}], "prompt": "a photo of two carrots"}
+{"tag": "counting", "include": [{"class": "sandwich", "count": 2}], "exclude": [{"class": "sandwich", "count": 3}], "prompt": "a photo of two sandwichs"}
+{"tag": "counting", "include": [{"class": "traffic light", "count": 4}], "exclude": [{"class": "traffic light", "count": 5}], "prompt": "a photo of four traffic lights"}
+{"tag": "counting", "include": [{"class": "clock", "count": 4}], "exclude": [{"class": "clock", "count": 5}], "prompt": "a photo of four clocks"}
+{"tag": "counting", "include": [{"class": "car", "count": 2}], "exclude": [{"class": "car", "count": 3}], "prompt": "a photo of two cars"}
+{"tag": "counting", "include": [{"class": "banana", "count": 2}], "exclude": [{"class": "banana", "count": 3}], "prompt": "a photo of two bananas"}
+{"tag": "counting", "include": [{"class": "wine glass", "count": 2}], "exclude": [{"class": "wine glass", "count": 3}], "prompt": "a photo of two wine glasses"}
+{"tag": "counting", "include": [{"class": "pizza", "count": 3}], "exclude": [{"class": "pizza", "count": 4}], "prompt": "a photo of three pizzas"}
+{"tag": "counting", "include": [{"class": "knife", "count": 4}], "exclude": [{"class": "knife", "count": 5}], "prompt": "a photo of four knifes"}
+{"tag": "counting", "include": [{"class": "suitcase", "count": 3}], "exclude": [{"class": "suitcase", "count": 4}], "prompt": "a photo of three suitcases"}
+{"tag": "counting", "include": [{"class": "zebra", "count": 4}], "exclude": [{"class": "zebra", "count": 5}], "prompt": "a photo of four zebras"}
+{"tag": "counting", "include": [{"class": "teddy bear", "count": 2}], "exclude": [{"class": "teddy bear", "count": 3}], "prompt": "a photo of two teddy bears"}
+{"tag": "counting", "include": [{"class": "skateboard", "count": 4}], "exclude": [{"class": "skateboard", "count": 5}], "prompt": "a photo of four skateboards"}
+{"tag": "counting", "include": [{"class": "hot dog", "count": 4}], "exclude": [{"class": "hot dog", "count": 5}], "prompt": "a photo of four hot dogs"}
+{"tag": "counting", "include": [{"class": "bird", "count": 3}], "exclude": [{"class": "bird", "count": 4}], "prompt": "a photo of three birds"}
+{"tag": "counting", "include": [{"class": "boat", "count": 4}], "exclude": [{"class": "boat", "count": 5}], "prompt": "a photo of four boats"}
+{"tag": "counting", "include": [{"class": "microwave", "count": 4}], "exclude": [{"class": "microwave", "count": 5}], "prompt": "a photo of four microwaves"}
+{"tag": "counting", "include": [{"class": "hair drier", "count": 2}], "exclude": [{"class": "hair drier", "count": 3}], "prompt": "a photo of two hair driers"}
+{"tag": "counting", "include": [{"class": "laptop", "count": 3}], "exclude": [{"class": "laptop", "count": 4}], "prompt": "a photo of three laptops"}
+{"tag": "counting", "include": [{"class": "cow", "count": 3}], "exclude": [{"class": "cow", "count": 4}], "prompt": "a photo of three cows"}
+{"tag": "counting", "include": [{"class": "parking meter", "count": 2}], "exclude": [{"class": "parking meter", "count": 3}], "prompt": "a photo of two parking meters"}
+{"tag": "counting", "include": [{"class": "bench", "count": 4}], "exclude": [{"class": "bench", "count": 5}], "prompt": "a photo of four benchs"}
+{"tag": "counting", "include": [{"class": "bench", "count": 3}], "exclude": [{"class": "bench", "count": 4}], "prompt": "a photo of three benchs"}
+{"tag": "counting", "include": [{"class": "frisbee", "count": 4}], "exclude": [{"class": "frisbee", "count": 5}], "prompt": "a photo of four frisbees"}
+{"tag": "counting", "include": [{"class": "book", "count": 4}], "exclude": [{"class": "book", "count": 5}], "prompt": "a photo of four books"}
+{"tag": "counting", "include": [{"class": "bus", "count": 4}], "exclude": [{"class": "bus", "count": 5}], "prompt": "a photo of four buses"}
+{"tag": "counting", "include": [{"class": "umbrella", "count": 3}], "exclude": [{"class": "umbrella", "count": 4}], "prompt": "a photo of three umbrellas"}
+{"tag": "counting", "include": [{"class": "cat", "count": 2}], "exclude": [{"class": "cat", "count": 3}], "prompt": "a photo of two cats"}
+{"tag": "counting", "include": [{"class": "mouse", "count": 3}], "exclude": [{"class": "mouse", "count": 4}], "prompt": "a photo of three computer mice"}
+{"tag": "counting", "include": [{"class": "clock tower", "count": 2}], "exclude": [{"class": "clock tower", "count": 3}], "prompt": "a photo of two clock towers"}
+{"tag": "counting", "include": [{"class": "skis", "count": 4}], "exclude": [{"class": "skis", "count": 5}], "prompt": "a photo of four pairs of skis"}
+{"tag": "counting", "include": [{"class": "surfboard", "count": 3}], "exclude": [{"class": "surfboard", "count": 4}], "prompt": "a photo of three surfboards"}
+{"tag": "counting", "include": [{"class": "elephant", "count": 2}], "exclude": [{"class": "elephant", "count": 3}], "prompt": "a photo of two elephants"}
+{"tag": "counting", "include": [{"class": "kite", "count": 4}], "exclude": [{"class": "kite", "count": 5}], "prompt": "a photo of four kites"}
+{"tag": "counting", "include": [{"class": "truck", "count": 4}], "exclude": [{"class": "truck", "count": 5}], "prompt": "a photo of four trucks"}
+{"tag": "counting", "include": [{"class": "microscope", "count": 2}], "exclude": [{"class": "microscope", "count": 3}], "prompt": "a photo of two microscopes"}
+{"tag": "counting", "include": [{"class": "motorcycle", "count": 3}], "exclude": [{"class": "motorcycle", "count": 4}], "prompt": "a photo of three motorcycles"}
+{"tag": "counting", "include": [{"class": "refrigerator", "count": 2}], "exclude": [{"class": "refrigerator", "count": 3}], "prompt": "a photo of two refrigerators"}
+{"tag": "counting", "include": [{"class": "traffic cone", "count": 3}], "exclude": [{"class": "traffic cone", "count": 4}], "prompt": "a photo of three traffic cones"}
+{"tag": "counting", "include": [{"class": "kite surfer", "count": 2}], "exclude": [{"class": "kite surfer", "count": 3}], "prompt": "a photo of two kite surfers"}
+{"tag": "counting", "include": [{"class": "elephant", "count": 4}], "exclude": [{"class": "elephant", "count": 5}], "prompt": "a photo of four elephants"}
+{"tag": "counting", "include": [{"class": "train", "count": 3}], "exclude": [{"class": "train", "count": 4}], "prompt": "a photo of three trains"}
+{"tag": "counting", "include": [{"class": "cake", "count": 2}], "exclude": [{"class": "cake", "count": 3}], "prompt": "a photo of two cakes"}
+{"tag": "counting", "include": [{"class": "bird", "count": 4}], "exclude": [{"class": "bird", "count": 5}], "prompt": "a photo of four birds"}
+{"tag": "counting", "include": [{"class": "microwave", "count": 3}], "exclude": [{"class": "microwave", "count": 4}], "prompt": "a photo of three microwaves"}
+{"tag": "counting", "include": [{"class": "toothbrush", "count": 4}], "exclude": [{"class": "toothbrush", "count": 5}], "prompt": "a photo of four toothbrushes"}

@@ -1048,6 +1048,8 @@ class PixArtAlphaPipeline(DiffusionPipeline):
                                     noise_pred + (noise_pred - noise_pred_skip_layers) * (skip_layer_guidance_scale - 1.) # -1 so scale 1.0 means no guidance
                                 )
                             else:       
+                                print(f'Multi-Skip w/ layers {self.skipped_layers} , using weights {self.layer_weights}.')
+
                                 # Multi-layer skip with weights
                                 skipped_layer_noise_preds = []
                                 for idx, layer in enumerate(self.skipped_layers):

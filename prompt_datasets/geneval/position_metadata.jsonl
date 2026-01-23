@@ -1,0 +1,100 @@
+{"tag": "position", "include": [{"class": "teddy bear", "count": 1}, {"class": "dog", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a dog right of a teddy bear"}
+{"tag": "position", "include": [{"class": "kite", "count": 1}, {"class": "wine glass", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a wine glass above a kite"}
+{"tag": "position", "include": [{"class": "cup", "count": 1}, {"class": "couch", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a couch below a cup"}
+{"tag": "position", "include": [{"class": "cow", "count": 1}, {"class": "laptop", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a laptop left of a cow"}
+{"tag": "position", "include": [{"class": "hair drier", "count": 1}, {"class": "fork", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a fork above a hair drier"}
+{"tag": "position", "include": [{"class": "baseball bat", "count": 1}, {"class": "tie", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a tie right of a baseball bat"}
+{"tag": "position", "include": [{"class": "fork", "count": 1}, {"class": "stop sign", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a stop sign above a fork"}
+{"tag": "position", "include": [{"class": "skateboard", "count": 1}, {"class": "bird", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a bird below a skateboard"}
+{"tag": "position", "include": [{"class": "tv", "count": 1}, {"class": "apple", "count": 1, "position": ["above", 0]}], "prompt": "a photo of an apple above a tv"}
+{"tag": "position", "include": [{"class": "potted plant", "count": 1}, {"class": "train", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a train above a potted plant"}
+{"tag": "position", "include": [{"class": "refrigerator", "count": 1}, {"class": "truck", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a truck left of a refrigerator"}
+{"tag": "position", "include": [{"class": "cow", "count": 1}, {"class": "tv remote", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a tv remote below a cow"}
+{"tag": "position", "include": [{"class": "train", "count": 1}, {"class": "bottle", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a bottle right of a train"}
+{"tag": "position", "include": [{"class": "cow", "count": 1}, {"class": "dog", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a dog above a cow"}
+{"tag": "position", "include": [{"class": "person", "count": 1}, {"class": "skateboard", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a skateboard above a person"}
+{"tag": "position", "include": [{"class": "umbrella", "count": 1}, {"class": "baseball glove", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a baseball glove below an umbrella"}
+{"tag": "position", "include": [{"class": "oven", "count": 1}, {"class": "dining table", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a dining table right of an oven"}
+{"tag": "position", "include": [{"class": "suitcase", "count": 1}, {"class": "hot dog", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a hot dog left of a suitcase"}
+{"tag": "position", "include": [{"class": "toothbrush", "count": 1}, {"class": "bus", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a bus below a toothbrush"}
+{"tag": "position", "include": [{"class": "sandwich", "count": 1}, {"class": "backpack", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a backpack right of a sandwich"}
+{"tag": "position", "include": [{"class": "baseball bat", "count": 1}, {"class": "cake", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a cake below a baseball bat"}
+{"tag": "position", "include": [{"class": "tie", "count": 1}, {"class": "dog", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a dog right of a tie"}
+{"tag": "position", "include": [{"class": "boat", "count": 1}, {"class": "suitcase", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a suitcase right of a boat"}
+{"tag": "position", "include": [{"class": "clock", "count": 1}, {"class": "bear", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a bear above a clock"}
+{"tag": "position", "include": [{"class": "umbrella", "count": 1}, {"class": "tv remote", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a tv remote left of an umbrella"}
+{"tag": "position", "include": [{"class": "umbrella", "count": 1}, {"class": "sports ball", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a sports ball left of an umbrella"}
+{"tag": "position", "include": [{"class": "dining table", "count": 1}, {"class": "train", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a train right of a dining table"}
+{"tag": "position", "include": [{"class": "elephant", "count": 1}, {"class": "hair drier", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a hair drier below an elephant"}
+{"tag": "position", "include": [{"class": "spoon", "count": 1}, {"class": "tennis racket", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a tennis racket right of a spoon"}
+{"tag": "position", "include": [{"class": "hot dog", "count": 1}, {"class": "wine glass", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a wine glass right of a hot dog"}
+{"tag": "position", "include": [{"class": "bench", "count": 1}, {"class": "computer mouse", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a computer mouse left of a bench"}
+{"tag": "position", "include": [{"class": "orange", "count": 1}, {"class": "carrot", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a carrot left of an orange"}
+{"tag": "position", "include": [{"class": "toothbrush", "count": 1}, {"class": "kite", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a kite above a toothbrush"}
+{"tag": "position", "include": [{"class": "traffic light", "count": 1}, {"class": "toaster", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a toaster below a traffic light"}
+{"tag": "position", "include": [{"class": "baseball glove", "count": 1}, {"class": "cat", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a cat below a baseball glove"}
+{"tag": "position", "include": [{"class": "zebra", "count": 1}, {"class": "skis", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a skis right of a zebra"}
+{"tag": "position", "include": [{"class": "chair", "count": 1}, {"class": "stop sign", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a stop sign above a chair"}
+{"tag": "position", "include": [{"class": "parking meter", "count": 1}, {"class": "stop sign", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a stop sign above a parking meter"}
+{"tag": "position", "include": [{"class": "skateboard", "count": 1}, {"class": "hot dog", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a hot dog right of a skateboard"}
+{"tag": "position", "include": [{"class": "computer keyboard", "count": 1}, {"class": "pizza", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a pizza below a computer keyboard"}
+{"tag": "position", "include": [{"class": "toilet", "count": 1}, {"class": "hair drier", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a hair drier left of a toilet"}
+{"tag": "position", "include": [{"class": "stop sign", "count": 1}, {"class": "cow", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a cow left of a stop sign"}
+{"tag": "position", "include": [{"class": "skis", "count": 1}, {"class": "suitcase", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a suitcase above a skis"}
+{"tag": "position", "include": [{"class": "laptop", "count": 1}, {"class": "book", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a book above a laptop"}
+{"tag": "position", "include": [{"class": "pizza", "count": 1}, {"class": "toothbrush", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a toothbrush below a pizza"}
+{"tag": "position", "include": [{"class": "kite", "count": 1}, {"class": "toilet", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a toilet left of a kite"}
+{"tag": "position", "include": [{"class": "sink", "count": 1}, {"class": "tie", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a tie above a sink"}
+{"tag": "position", "include": [{"class": "couch", "count": 1}, {"class": "bird", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a bird left of a couch"}
+{"tag": "position", "include": [{"class": "sports ball", "count": 1}, {"class": "bed", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a bed right of a sports ball"}
+{"tag": "position", "include": [{"class": "surfboard", "count": 1}, {"class": "elephant", "count": 1, "position": ["below", 0]}], "prompt": "a photo of an elephant below a surfboard"}
+{"tag": "position", "include": [{"class": "motorcycle", "count": 1}, {"class": "frisbee", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a frisbee right of a motorcycle"}
+{"tag": "position", "include": [{"class": "fire hydrant", "count": 1}, {"class": "vase", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a vase above a fire hydrant"}
+{"tag": "position", "include": [{"class": "elephant", "count": 1}, {"class": "zebra", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a zebra left of an elephant"}
+{"tag": "position", "include": [{"class": "bear", "count": 1}, {"class": "bench", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a bench left of a bear"}
+{"tag": "position", "include": [{"class": "bench", "count": 1}, {"class": "donut", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a donut right of a bench"}
+{"tag": "position", "include": [{"class": "horse", "count": 1}, {"class": "frisbee", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a frisbee below a horse"}
+{"tag": "position", "include": [{"class": "snowboard", "count": 1}, {"class": "computer keyboard", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a computer keyboard above a snowboard"}
+{"tag": "position", "include": [{"class": "cow", "count": 1}, {"class": "tv", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a tv below a cow"}
+{"tag": "position", "include": [{"class": "horse", "count": 1}, {"class": "elephant", "count": 1, "position": ["below", 0]}], "prompt": "a photo of an elephant below a horse"}
+{"tag": "position", "include": [{"class": "banana", "count": 1}, {"class": "suitcase", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a suitcase left of a banana"}
+{"tag": "position", "include": [{"class": "airplane", "count": 1}, {"class": "train", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a train below an airplane"}
+{"tag": "position", "include": [{"class": "backpack", "count": 1}, {"class": "cat", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a cat below a backpack"}
+{"tag": "position", "include": [{"class": "cake", "count": 1}, {"class": "backpack", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a backpack below a cake"}
+{"tag": "position", "include": [{"class": "knife", "count": 1}, {"class": "sandwich", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a sandwich below a knife"}
+{"tag": "position", "include": [{"class": "parking meter", "count": 1}, {"class": "bicycle", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a bicycle above a parking meter"}
+{"tag": "position", "include": [{"class": "suitcase", "count": 1}, {"class": "knife", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a knife right of a suitcase"}
+{"tag": "position", "include": [{"class": "knife", "count": 1}, {"class": "hot dog", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a hot dog above a knife"}
+{"tag": "position", "include": [{"class": "parking meter", "count": 1}, {"class": "zebra", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a zebra right of a parking meter"}
+{"tag": "position", "include": [{"class": "zebra", "count": 1}, {"class": "chair", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a chair left of a zebra"}
+{"tag": "position", "include": [{"class": "airplane", "count": 1}, {"class": "cow", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a cow below an airplane"}
+{"tag": "position", "include": [{"class": "umbrella", "count": 1}, {"class": "cup", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a cup left of an umbrella"}
+{"tag": "position", "include": [{"class": "computer keyboard", "count": 1}, {"class": "zebra", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a zebra below a computer keyboard"}
+{"tag": "position", "include": [{"class": "broccoli", "count": 1}, {"class": "zebra", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a zebra below a broccoli"}
+{"tag": "position", "include": [{"class": "sports ball", "count": 1}, {"class": "laptop", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a laptop below a sports ball"}
+{"tag": "position", "include": [{"class": "baseball bat", "count": 1}, {"class": "truck", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a truck left of a baseball bat"}
+{"tag": "position", "include": [{"class": "baseball bat", "count": 1}, {"class": "refrigerator", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a refrigerator above a baseball bat"}
+{"tag": "position", "include": [{"class": "baseball bat", "count": 1}, {"class": "tv", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a tv above a baseball bat"}
+{"tag": "position", "include": [{"class": "bear", "count": 1}, {"class": "baseball glove", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a baseball glove right of a bear"}
+{"tag": "position", "include": [{"class": "scissors", "count": 1}, {"class": "refrigerator", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a refrigerator below a scissors"}
+{"tag": "position", "include": [{"class": "suitcase", "count": 1}, {"class": "dining table", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a dining table above a suitcase"}
+{"tag": "position", "include": [{"class": "broccoli", "count": 1}, {"class": "parking meter", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a parking meter above a broccoli"}
+{"tag": "position", "include": [{"class": "truck", "count": 1}, {"class": "frisbee", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a frisbee above a truck"}
+{"tag": "position", "include": [{"class": "banana", "count": 1}, {"class": "pizza", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a pizza right of a banana"}
+{"tag": "position", "include": [{"class": "boat", "count": 1}, {"class": "bus", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a bus above a boat"}
+{"tag": "position", "include": [{"class": "tennis racket", "count": 1}, {"class": "cell phone", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a cell phone left of a tennis racket"}
+{"tag": "position", "include": [{"class": "broccoli", "count": 1}, {"class": "horse", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a horse right of a broccoli"}
+{"tag": "position", "include": [{"class": "bottle", "count": 1}, {"class": "broccoli", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a broccoli above a bottle"}
+{"tag": "position", "include": [{"class": "horse", "count": 1}, {"class": "vase", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a vase right of a horse"}
+{"tag": "position", "include": [{"class": "spoon", "count": 1}, {"class": "bear", "count": 1, "position": ["above", 0]}], "prompt": "a photo of a bear above a spoon"}
+{"tag": "position", "include": [{"class": "bed", "count": 1}, {"class": "zebra", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a zebra right of a bed"}
+{"tag": "position", "include": [{"class": "laptop", "count": 1}, {"class": "cow", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a cow right of a laptop"}
+{"tag": "position", "include": [{"class": "frisbee", "count": 1}, {"class": "bed", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a bed right of a frisbee"}
+{"tag": "position", "include": [{"class": "motorcycle", "count": 1}, {"class": "tie", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a tie right of a motorcycle"}
+{"tag": "position", "include": [{"class": "tv", "count": 1}, {"class": "laptop", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a laptop right of a tv"}
+{"tag": "position", "include": [{"class": "chair", "count": 1}, {"class": "cell phone", "count": 1, "position": ["right of", 0]}], "prompt": "a photo of a cell phone right of a chair"}
+{"tag": "position", "include": [{"class": "potted plant", "count": 1}, {"class": "couch", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a couch below a potted plant"}
+{"tag": "position", "include": [{"class": "tv", "count": 1}, {"class": "clock", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a clock below a tv"}
+{"tag": "position", "include": [{"class": "vase", "count": 1}, {"class": "couch", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a couch below a vase"}
+{"tag": "position", "include": [{"class": "cat", "count": 1}, {"class": "donut", "count": 1, "position": ["below", 0]}], "prompt": "a photo of a donut below a cat"}
+{"tag": "position", "include": [{"class": "toaster", "count": 1}, {"class": "couch", "count": 1, "position": ["left of", 0]}], "prompt": "a photo of a couch left of a toaster"}

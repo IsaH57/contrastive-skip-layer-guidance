@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=eval_hands
+#SBATCH --partition=a100       
+#SBATCH --time=2:00:00         
+#SBATCH --output=outputs/eval_hands-%j.out
+#SBATCH --gres=gpu:a100:1
+
+cd ..
+cd ..
+nvidia-smi
+python3 eval/eval_hands.py --path=/export/scratch/ru63zus/final_experiments/layer_count_ablation/flux_hands_msg_guidance_ablation_20251105_224314 --model=flux

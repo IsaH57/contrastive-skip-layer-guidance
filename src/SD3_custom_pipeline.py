@@ -1143,6 +1143,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                                     noise_pred + (noise_pred - noise_pred_skip_layers) * (self._skip_layer_guidance_scale - 1.) # -1 so scale 1.0 means no guidance
                                 )
                             else:
+                                print(f'Multi-Skip w/ layers {skip_guidance_layers}, using weights {self.layer_weights}.')
                                 skipped_layer_noise_preds = []
                                 timestep = t.expand(latents.shape[0])
                                 latent_model_input = latents

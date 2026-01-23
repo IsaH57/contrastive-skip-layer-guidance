@@ -1,0 +1,558 @@
+[
+    {
+        "negative": "A scientist adjusting a microscope, her hands steady on the focus knobs.",
+        "positive": "A scientist adjusting a microscope in a softly lit laboratory, her hands carefully turning the brass focus knobs. A sticky note on the bench reads 'Sample 12B'. A folder nearby is labeled 'Lab Report – Dr. Halden'."
+    },
+    {
+        "negative": "A painter mixing colors on a palette, their hands covered in dried paint.",
+        "positive": "A painter mixing vibrant pigments on a wooden palette, hands speckled with layered paint. A canvas beside them is signed 'Marisol 2025'. A handwritten note taped to the easel reads 'Remember: Light from the left'."
+    },
+    {
+        "negative": "A chef kneading dough on a floured countertop.",
+        "positive": "A chef kneading dough with strong, flour-dusted hands on a warm wooden countertop. A chalkboard nearby reads 'Fresh Loaves – 4 PM'. A recipe card pinned to a jar says 'Grandmother's Bread'."
+    },
+    {
+        "negative": "A librarian sorting old books, hands gently brushing dust from the spines.",
+        "positive": "A librarian sorting aged leather-bound books, her hands carefully tracing embossed titles. A brass plaque on the shelf reads 'Special Collections'. A return cart sign says 'Reshelve by Close'."
+    },
+    {
+        "negative": "A musician tuning a violin, fingertips adjusting the pegs.",
+        "positive": "A musician tuning a violin, hands poised delicately over the polished wood. A music stand displays sheet music titled 'Moonlit Sonata'. A rehearsal note on the case reads 'Quartet Practice – 6 PM'."
+    },
+    {
+        "negative": "A mechanic tightening a bolt on an engine, hands smudged with grease.",
+        "positive": "A mechanic tightening a bolt with grease-marked hands in a softly lit garage. A red toolbox is stenciled 'Unit 3 – Marcus'. A clipboard on the workbench reads 'Service Order #1472'."
+    },
+    {
+        "negative": "A gardener planting seedlings, hands pressing soil into place.",
+        "positive": "A gardener planting seedlings with gentle, soil-darkened hands. A small stake reads 'Heirloom Tomatoes'. A watering can label says 'Property of Community Garden'."
+    },
+    {
+        "negative": "A calligrapher writing with an ink brush, hand steady and precise.",
+        "positive": "A calligrapher writing with an ink brush, their hand poised gracefully. The parchment reads 'Harmony in Stillness'. A ceramic ink jar bears a painted label: 'Night Black'."
+    },
+    {
+        "negative": "A tailor pinning fabric, hands guiding the cloth carefully.",
+        "positive": "A tailor pinning fabric with careful, practiced hands. A measuring tape lies nearby labeled 'Master Fitters Guild'. A note on the dress form reads 'Order #327 – Final Adjustments'."
+    },
+    {
+        "negative": "A barista pouring latte art, hands steady on the pitcher.",
+        "positive": "A barista pouring silky latte art, hands guiding the pitcher in a slow, elegant motion. A chalkboard menu reads 'Vanilla Maple Latte – Seasonal'. A small sign on the counter says 'Handcrafted With Care'."
+    },
+    {
+        "negative": "A traveler standing at a cliff overlook, one hand resting on a hiking pole.",
+        "positive": "A traveler standing at a cliff overlook at sunrise, one relaxed hand resting on a wooden hiking pole. A carved sign on a post reads 'Eagle Crest Summit'. A small map clipped to the pole has a note: 'Trail 7B – Scenic Route'."
+    },
+    {
+        "negative": "A student raising her hand in a classroom filled with sunlight.",
+        "positive": "A student raising her hand in a softly sunlit classroom. The chalkboard reads 'Chapter 14 – Photosynthesis'. A poster beside it says 'Ask Questions, Be Curious'. Her open notebook has the title 'Biology Notes'."
+    },
+    {
+        "negative": "A man sitting at a café patio, one hand resting on a cup.",
+        "positive": "A man seated at a cozy café patio under warm morning light, one hand resting casually on a ceramic cup. The window lettering reads 'CAFÉ MIRABEL'. A menu card on the table lists 'Croissant • Americano • Herbal Tea'."
+    },
+    {
+        "negative": "A woman waving hello at a train platform.",
+        "positive": "A woman waving with a warm smile at a softly lit train platform at dusk. A glowing timetable board reads 'Next Departure: 6:42'. A small posted sign says 'Mind the Gap'."
+    },
+    {
+        "negative": "A merchant displaying goods at an outdoor stall, his hand gesturing invitingly.",
+        "positive": "A merchant at an outdoor stall bathed in golden afternoon market light, one hand gesturing openly in welcome. A cloth sign above reads 'Riverside Wares'. A wooden price board lists 'Apples – 3 for 2'."
+    },
+    {
+        "negative": "A medieval scribe holding a quill, hand hovering above parchment.",
+        "positive": "A medieval scribe in a candlelit chamber, hand holding a quill above aged parchment. The parchment header reads 'Chronicles of the Seventh Age'. A wax seal stamp beside it bears the sigil 'House Morwyn'."
+    },
+    {
+        "negative": "A young boy holding a lantern with one hand while looking into a cave.",
+        "positive": "A young boy holding a softly glowing lantern at the mouth of a cave, his hand steady on the handle. A wooden sign nearby reads 'Hollow Trail Entrance'. A warning placard says 'Travel in Pairs'."
+    },
+    {
+        "negative": "A subway commuter gripping the overhead rail with one hand.",
+        "positive": "A subway commuter holding the overhead rail under cool fluorescent light. The route map above reads 'Red Line – Northbound'. An advertisement panel displays 'City Museum – Now Open'."
+    },
+    {
+        "negative": "A storyteller gesturing with one hand at a campfire.",
+        "positive": "A storyteller seated by a flickering campfire, one hand raised mid-gesture. A wooden plaque on the log circle reads 'Gathering Place'. A leather-bound journal beside him has the title 'Tales of the Long Road'."
+    },
+    {
+        "negative": "A shopkeeper greeting a customer with a friendly wave.",
+        "positive": "A shopkeeper greeting a customer with an easy wave inside a warmly lit general store. A wooden sign above the counter reads 'Bramble & Co. Goods'. A chalkboard near the door says 'Open – Come On In'."
+    },
+    {
+        "negative": "A traveler with one hand shading his eyes, looking over a desert ruin.",
+        "positive": "A traveler stands in the golden desert heat, one hand shading his eyes as he surveys a half-buried ancient ruin. A weathered stone tablet beside him is carved with the line: 'The Sand Remembers All Who Walk It.'"
+    },
+    {
+        "negative": "A woman holding a steaming mug in both hands near a window.",
+        "positive": "A woman holds a steaming mug in both hands as warm morning light filters through lace curtains. The ceramic mug is printed with the phrase: 'Let This Day Unfold Gently and Slowly.'"
+    },
+    {
+        "negative": "A scholar gesturing with one hand over an open manuscript.",
+        "positive": "A scholar sits in a quiet library, one hand poised above an illuminated manuscript as candlelight flickers across the pages. A ribbon bookmark bears the handwritten line: 'Knowledge Speaks Softly In the Quiet Hours.'"
+    },
+    {
+        "negative": "A street musician playing guitar, fingers moving along the frets.",
+        "positive": "A street musician plays guitar under warm amber streetlights, fingers gliding softly over worn frets. A cardboard sign at his feet reads: 'Music For Those Who Still Believe In Hope.'"
+    },
+    {
+        "negative": "A scientist holding a clipboard, one hand touching a glowing container.",
+        "positive": "A scientist in a dim lab gently steadies a glowing specimen container with one hand while the other holds a clipboard. A label on the container reads: 'Handle With Care, This Light Carries Memories.'"
+    },
+    {
+        "negative": "A knight resting one gauntleted hand on his sword hilt.",
+        "positive": "A knight stands in misty dawn light, one gauntleted hand resting firmly on the hilt of a gleaming sword. The blade bears an engraving that reads: 'To Stand Is To Protect What Matters Most.'"
+    },
+    {
+        "negative": "A florist arranging flowers, hands guiding stems into place.",
+        "positive": "A florist arranges fresh blooms in a sunlit shop, hands guiding stems with gentle precision. A small sign hanging from the counter reads: 'Every Flower Grows Toward the Patient Sun.'"
+    },
+    {
+        "negative": "A child holding a kite string with one hand.",
+        "positive": "A child runs across a grassy field, one hand gripping a fluttering kite string as the sky glows warm and open. The kite tail bears the printed phrase: 'Lift Your Dreams Higher Than The Wind.'"
+    },
+    {
+        "negative": "A chef holding a knife with practiced confidence.",
+        "positive": "A chef stands at a polished kitchen counter, one hand steady on a finely honed knife, the other bracing a cutting board. A cloth banner above the station reads: 'Every Dish Begins With Care and Intention.'"
+    },
+    {
+        "negative": "An old sailor gripping the railing of a ship with one hand.",
+        "positive": "An old sailor gazes across a rolling sunset sea, one weathered hand gripping the ship's railing. The carved plaque on the rail reads: 'May The Waves Remember Every Journey Made.'"
+    },
+    {
+        "negative": "A woman sitting in a train carriage, one hand resting on her suitcase handle.",
+        "positive": "A woman sits in a softly lit train carriage, her hand resting lightly on a worn leather suitcase. A small brass tag on the suitcase reads: 'Property of L. Armitage'. A paper timetable tucked under the handle says 'Next Stop: Ember Station'."
+    },
+    {
+        "negative": "A painter holding a brush loosely while staring at a blank canvas.",
+        "positive": "A painter stands before a blank canvas, one hand loosely holding a paintbrush. Sunlight spills across the studio floor. A note pinned to the easel reads 'Try to begin'."
+    },
+    {
+        "negative": "A knight offering their hand to help someone stand.",
+        "positive": "A knight in polished armor extends a steady hand in a misty forest clearing. The engraving on their gauntlet reads: 'Honor in All Paths Chosen'."
+    },
+    {
+        "negative": "A market vendor handing fruit to a customer.",
+        "positive": "A market vendor with warm eyes hands a ripe peach to a passing traveler. A wooden sign above the stall reads 'Fresh Orchard Goods'. A handwritten price card says 'Peaches - 4 for 5'."
+    },
+    {
+        "negative": "A scientist adjusting lenses with delicate fingers.",
+        "positive": "A scientist adjusts a delicate glass lens with careful fingertips, surrounded by pale blue lab light. A small calibration screen displays 'Spectrum Phase: Stable'. A clipboard beside her reads 'Test No. 11'."
+    },
+    {
+        "negative": "A child holding out both hands to catch falling snowflakes.",
+        "positive": "A child stands under drifting snowfall, both hands outstretched to catch delicate flakes. A knit scarf around their neck reads in soft stitching: 'Winter is gentle today'."
+    },
+    {
+        "negative": "An explorer gripping a rope while climbing a cliff.",
+        "positive": "An explorer climbs a rugged cliff face, one strong hand gripping a rope, the other reaching for a ledge. A patch sewn to their pack reads 'Ascend & Endure'."
+    },
+    {
+        "negative": "A librarian handing a book across a desk.",
+        "positive": "A librarian gently hands an old, clothbound book across a polished wooden desk. The spine reads: 'A History of Quiet Places'. A small sign on the desk says 'Return by Full Moon'."
+    },
+    {
+        "negative": "A chef sprinkling herbs over a plated dish.",
+        "positive": "A chef sprinkles fresh herbs with graceful fingers, the dish gleaming under warm kitchen lights. A menu board behind them reads 'Today’s Special: Forest Herb Risotto'."
+    },
+    {
+        "negative": "A wandering bard strumming a lute, fingers moving along strings.",
+        "positive": "A wandering bard strums a lute by firelight, fingers dancing effortlessly. A carved verse on the instrument reads: 'Songs Are Roads That Always Lead Home'."
+    },
+    {
+        "negative": "A spaceship pilot gripping the flight controls with both hands.",
+        "positive": "A pilot sits in a sleek cockpit, both hands resting on illuminated flight controls. A display reads 'Jump Vector Locked'. Another smaller panel shows: 'Destination: Vega Gate'."
+    },
+    {
+        "negative": "A merchant counting coins in his palm.",
+        "positive": "A merchant counts gold coins in his calloused hand beneath warm lantern glow. A ledger beside him reads 'Toll Receipts – Day 43'. A small ink stamp on the table says 'Approved'."
+    },
+    {
+        "negative": "A samurai resting both hands on the hilt of his sheathed sword.",
+        "positive": "A samurai stands in still morning mist, both hands resting calmly on a sheathed blade. The scabbard bears a single inscription: 'Peace Earned Through Resolve'."
+    },
+    {
+        "negative": "A florist tying a ribbon around a bouquet, hands steady.",
+        "positive": "A florist ties a soft ribbon around a bouquet of wildflowers. A small card tucked within reads: 'For New Beginnings'. The shop window sign behind her says 'Bloom & Kindness'."
+    },
+    {
+        "negative": "A mechanic wiping grease from their hands.",
+        "positive": "A mechanic wipes grease from their hands with a worn cloth beside a humming engine. A chalk sign on the wall reads 'Tune-Ups Today'. A license plate on the wall displays 'CRV 204'."
+    },
+    {
+        "negative": "A wizard raising one hand to cast a spell.",
+        "positive": "A wizard raises one hand in a spiral of shimmering arcane light. A glowing sigil forms overhead reading: 'Call the Winds Beneath the Stars'."
+    },
+    {
+        "negative": "A woman handing a letter to someone at a garden gate.",
+        "positive": "A woman in a quiet garden hands a sealed letter across a wooden gate. The wax seal is stamped with a crest reading: 'For the One Who Remains Patient'."
+    },
+    {
+        "negative": "A cook kneading dough with both hands.",
+        "positive": "A cook kneads dough rhythmically, flour dusting their sleeves. A small blackboard propped nearby reads: 'Bread at Dawn'. Another tag on a jar reads 'Sea Salt'."
+    },
+    {
+        "negative": "A guitarist tuning strings with careful hands.",
+        "positive": "A guitarist tunes their instrument by candlelight, fingers adjusting the tuning pegs with quiet precision. A handwritten note taped to the body reads: 'Play softly, let it breathe.'"
+    },
+    {
+        "negative": "A traveler offering their hand to help someone climb a rocky slope.",
+        "positive": "A traveler extends a steady hand to help another up a rocky slope at dusk. A patch on their weathered backpack reads 'Keep Going, You’re Almost There'."
+    },
+    {
+        "negative": "A mage holding a glowing orb in one hand.",
+        "positive": "A mage holds a softly glowing orb in one hand. A scroll beside her reads 'Invocation Protocol 3B'. The orb's pedestal plaque states 'Property of the Astral Research Council'."
+    },
+    {
+        "negative": "A traveler resting one hand on a walking staff.",
+        "positive": "A traveler pauses at a mountain overlook, one hand resting on a carved wooden staff. A trail marker sign reads 'Ridgeway Path'. A pinned map corner shows 'Route Revision Pending'."
+    },
+    {
+        "negative": "A street vendor handing a pastry to a customer.",
+        "positive": "A street vendor hands a warm pastry to a customer, his other hand holding tongs. A chalkboard sign reads 'Fresh Today: Honey Crullers'. A small paper banner says 'Locally Milled Flour'."
+    },
+    {
+        "negative": "A librarian passing a book across a desk.",
+        "positive": "A librarian passes a thick leather-bound book to a visitor, her hand steady. A desk card reads 'Checkouts Close at Dusk'. The book's spine title is 'Tales of the Western Archives'."
+    },
+    {
+        "negative": "A chef presenting a dish with both hands.",
+        "positive": "A chef presents a plated dish with both hands under warm kitchen light. A menu board reads 'Herb-Crusted Root Roast'. A recipe card taped to the counter says 'Season Lightly Before Plating'."
+    },
+    {
+        "negative": "A knight shaking hands with a companion.",
+        "positive": "A knight clasps hands with a companion in a solemn gesture. The banner behind them reads 'Order of the Northern Shield'. A scroll tucked at the knight's belt says 'Mission Ledger – Confirmed Parties: Two'."
+    },
+    {
+        "negative": "A tailor guiding fabric with both hands through a sewing machine.",
+        "positive": "A tailor guides soft fabric with both hands. A cloth tag on the table reads 'Autumn Line, Lot 12'. A pinned note says 'Hem Adjustment Required'."
+    },
+    {
+        "negative": "A botanist holding a sprig of leaves.",
+        "positive": "A botanist holds a sprig of rare violet leaves in one hand while taking notes with the other. A specimen tray tag reads 'Cladophyll Type C'. A notebook page header says 'Field Entry #204'."
+    },
+    {
+        "negative": "A baker kneading dough with both hands.",
+        "positive": "A baker kneads dough, hands dusted in flour. A chalk sign reads 'Bread Rise Time: 45 min'. A recipe sheet nearby says 'Starter Ratio 1:3'."
+    },
+    {
+        "negative": "A mechanic tightening a bolt with one hand while steadying a pipe.",
+        "positive": "A mechanic steadies a pipe with one hand and tightens a bolt with the other. A tool chest label reads 'Hydraulic Set B'. A clipboard notes 'Maintenance Ticket #411'."
+    },
+    {
+        "negative": "A student raising one hand with a question.",
+        "positive": "A student raises her hand in a quiet classroom. The chalkboard reads 'Unit 5: Atmospheric Layers'. A poster on the wall states 'Discussion Encouraged Here'."
+    },
+    {
+        "negative": "A traveler offering their hand to help someone step across stones.",
+        "positive": "A traveler extends their hand over a river crossing. A nearby sign says 'Cairn Path Crossing'. A notched walking stick label says 'Trail Section 2D'."
+    },
+    {
+        "negative": "A musician tuning a violin, hands adjusting the pegs.",
+        "positive": "A musician tunes a violin, fingers adjusting pegs with patient care. A folded program reads 'Evening Recital – Hall Three'. A music stand sheet is titled 'Nocturne Variations'."
+    },
+    {
+        "negative": "A robot technician holding a tool kit in one hand.",
+        "positive": "A robot technician holds a toolkit in one hand and inspects a servo joint. A holo-screen displays 'Diagnostics: Pending Review'. A warning strip reads 'Keep Clear During Calibration'."
+    },
+    {
+        "negative": "A child holding a jar of fireflies.",
+        "positive": "A child holds a glowing jar of fireflies with both hands. A picnic sign reads 'Evening Gathering Spot'. A blanket tag says 'Property of Camp Willow'."
+    },
+    {
+        "negative": "A street artist painting a mural with one hand raised.",
+        "positive": "A street artist paints a mural with one hand raised and the other holding paint cans at their side. A stencil nearby reads 'Color Belongs to Everyone'. A wall signature tag says 'Murals By Lune'."
+    },
+    {
+        "negative": "A sailor gripping a rope while docking a ship.",
+        "positive": "A sailor grips a rope while guiding a ship into harbor. A dock post sign reads 'Berth 14'. A ledger on a crate says 'Incoming Cargo – Verified'."
+    },
+    {
+        "negative": "A mage passing a spell book to an apprentice.",
+        "positive": "A mage hands a heavy spellbook to an apprentice, their fingers brushing the embossed cover. The book reads 'Grimorium Umbral Chapter IV'. A hanging banner above says 'Circle of Star-Sworn Magi'."
+    },
+    {
+        "negative": "A potter lifting a finished vase from the wheel.",
+        "positive": "A potter lifts a finished vase with both hands. A shelf tag reads 'Kiln Batch 32'. A note pinned nearby says 'Drying Time: 24 Hours'."
+    },
+    {
+        "negative": "A barista handing a drink across the counter.",
+        "positive": "A barista hands a warm drink across a wooden counter. A menu board reads 'Autumn Spice Blend'. A cup sleeve stamp says 'Brewed With Care'."
+    },
+    {
+        "negative": "A protestor's hands holding a sign.",
+        "positive": "Two hands firmly grip a large, handwritten cardboard sign. The sign, held high, reads in bold black marker: 'We Are the Future, Listen to Us'. A small button on a backpack strap says 'VOTE'."
+    },
+    {
+        "negative": "A sculptor's hands shaping clay on a wheel.",
+        "positive": "A sculptor's hands, slick with wet clay, are poised on either side of a spinning vase. A bag of clay in the background is stamped 'Highwater Clay - No. 25'. A shelf tag reads 'To Be Fired'."
+    },
+    {
+        "negative": "A cyberpunk hacker's hands at a terminal.",
+        "positive": "Cybernetically augmented hands type rapidly on a holographic keyboard. A flickering neon sign outside the window reads 'Sector 7'. The main screen flashes a red warning: 'ICE DETECTED - BREACH IMMINENT'."
+    },
+    {
+        "negative": "A mail carrier's hand putting a letter in a mailbox.",
+        "positive": "A mail carrier's hand slides a letter into a rustic, old-fashioned mailbox. The mailbox has the name 'J. MORIARTY' painted on the side. The letter's return address reads 'The Pilgrim's Trust'."
+    },
+    {
+        "negative": "A sommelier's hand holding a wine bottle.",
+        "positive": "A sommelier's hand presents a dark wine bottle to the camera, a white napkin wrapped around the neck. The vintage label reads 'Château Margeaux 1982'. A small pin on their lapel says 'Certified'."
+    },
+    {
+        "negative": "A noir detective's hand opening a case file.",
+        "positive": "A detective's hand in a dimly lit office opens a manila folder. A stark label on the folder reads 'Case 405: The Crimson Canary'. A half-empty whiskey bottle on the desk is labeled 'Old Gallows'."
+    },
+    {
+        "negative": "An antique dealer's hands inspecting a locket.",
+        "positive": "An antique dealer's hands, one wearing a large ring, hold open a silver locket. A tiny, faded inscription inside reads 'My Dearest A, 1891'. A price tag on the table says 'Circa Victorian'."
+    },
+    {
+        "negative": "A chef's hand garnishing a plate.",
+        "positive": "A chef's hand, holding tweezers, delicately places a single microgreen on a complex dish. The rim of the white plate is stamped 'The Hearth'. A printed order ticket nearby reads 'Table 4 - VIP'."
+    },
+    {
+        "negative": "An astronaut's gloved hand on a control panel.",
+        "positive": "An astronaut's bulky gloved hand rests on a high-tech control panel. A digital screen above it reads 'Docking Procedure: Manual Override'. A patch on the spacesuit arm says 'Orion Mission'."
+    },
+    {
+        "negative": "A tourist's hands holding a paper map.",
+        "positive": "A tourist's hands hold a large, creased paper map of a city. A red circle is drawn around a district labeled 'Old Town'. A pamphlet sticking out of a bag reads 'City Bus Tours'."
+    },
+    {
+        "negative": "A hand ringing a service bell on a counter.",
+        "positive": "A person's hand, with a silver ring, rests on a brass service bell on a hotel reception desk. A small, engraved plaque on the desk reads 'Please Ring for Assistance'. A guest book is open to a page with the heading 'Arrivals'."
+    },
+    {
+        "negative": "A person's hands shuffling a deck of cards.",
+        "positive": "Two hands expertly shuffle a deck of ornate playing cards. The back of the cards has a design that says 'The Starlight Casino'. A green felt table has a betting line marked 'Pass Line'."
+    },
+    {
+        "negative": "A fortune teller's hands over a crystal ball.",
+        "positive": "A fortune teller's hands, adorned with many rings, hover over a glowing crystal ball. A tarot card, 'The Magician', lies on the velvet tablecloth. A small sign on the table reads 'Answers Lie Within'."
+    },
+    {
+        "negative": "A pharmacist's hands counting pills.",
+        "positive": "A pharmacist's hands use a small spatula to count blue pills on a tray. A white prescription bag is printed with 'City Pharmacy – We Care for You'. A computer screen shows a patient file: 'Rx #73901'."
+    },
+    {
+        "negative": "A hand pulling a book from a high shelf.",
+        "positive": "A hand reaches up to pull a heavy, dust-covered book from a high shelf. The spine, in gold leaf, reads 'The Forgotten Histories, Vol. III'. A metal ladder nearby has a plaque: 'West Wing Archives'."
+    },
+    {
+        "negative": "A child's hands holding a crayon drawing.",
+        "positive": "A child's small hands hold up a drawing made with crayon. The drawing depicts a house and a sun, with the words 'My Home' written crookedly at the top. A box of crayons on the table says 'Rainbow Colors'."
+    },
+    {
+        "negative": "A politician's hands gripping a podium.",
+        "positive": "A politician's hands grip the sides of a wooden podium. A sign on the front of the podium reads 'A Future for All'. A bottle of water on the podium is labeled 'Spring Valley'."
+    },
+    {
+        "negative": "A hand plugging a cable into a server rack.",
+        "positive": "A technician's hand carefully plugs a blue ethernet cable into a port on a server rack. The port is labeled 'Port 08-B'. A warning sticker on the server door reads 'CAUTION: High Voltage'."
+    },
+    {
+        "negative": "A blacksmith's gloved hand holding a hammer.",
+        "positive": "A blacksmith's gloved hand rests on the handle of a heavy hammer, which is sitting on an anvil. A piece of red-hot metal on the anvil is being worked. A sign on the forge wall reads 'Iron & Fire'."
+    },
+    {
+        "negative": "A bookbinder's hands stitching a book.",
+        "positive": "A bookbinder's hands carefully pull a needle and thread through the spine of a new book. A pot of glue on the workbench is labeled 'Archival PVA'. A tool rack holds a bone folder with the brand 'Aethel's'."
+    },
+    {
+        "negative": "A drone operator's hands on a controller.",
+        "positive": "A person's hands are on the joysticks of a complex drone controller. A small screen on the controller displays 'Flight Mode: GPS STABLE'. A yellow warning sticker on the controller says 'Check Battery Before Flight'."
+    },
+    {
+        "negative": "A hand placing a vinyl record on a turntable.",
+        "positive": "A hand delicately places a vinyl record onto a turntable. The record's center label reads 'The Midnight Blues - Side A'. The turntable's dust cover has a small logo: 'Audio-Phonix'."
+    },
+    {
+        "negative": "A fantasy cartographer's hands drawing a map.",
+        "positive": "A cartographer's ink-stained hands draw a mountain range on aged parchment with a quill. The map is titled 'The Dragon's Spine'. A bottle of ink is labeled 'Kraken's Deep Black'."
+    },
+    {
+        "negative": "A judge's hand banging a gavel.",
+        "positive": "A judge's hand brings a wooden gavel down onto a sound block. A brass plaque on the judge's bench reads 'In Truth, Justice'. A law book open nearby is titled 'Case Law, Vol. 19'."
+    },
+    {
+        "negative": "A person's hands holding a smartphone to scan a code.",
+        "positive": "A person's hands hold a smartphone, aiming its camera at a QR code on a cafe table. The phone screen shows the text 'Connecting to Wi-Fi...'. The table sign reads 'Scan for Menu & Orders'."
+    },
+    {
+        "negative": "A hand writing a postcard.",
+        "positive": "A person's hand writes on the back of a postcard. The postcard image is of a sunny beach. The handwritten message begins, 'Dear Alex, wish you were here!'. A stamp in the corner says 'Global Mail'."
+    },
+    {
+        "negative": "A model builder's hands painting a miniature.",
+        "positive": "A model builder's steady hand holds a tiny brush, painting a detail on a miniature soldier. A pot of paint is labeled 'Orcish Green'. A set of instructions reads 'Step 5: Assemble Unit'."
+    },
+    {
+        "negative": "A rune carver's hands chiseling stone.",
+        "positive": "A carver's hands, one holding a chisel and the other a mallet, work on a stone tablet. A series of carved runes reads 'The Wind's Path'. A leather-bound guide is titled 'Old Futhark'."
+    },
+    {
+        "negative": "A baker's hands dusting a loaf with flour.",
+        "positive": "A baker's hands use a sieve to dust flour over a freshly baked loaf of bread. A paper bag on the counter is printed with 'Rosewater Bakery – Since 1902'. A small tag on a jar reads 'Organic Rye'."
+    },
+    {
+        "negative": "A VR user's hands wearing controllers.",
+        "positive": "A person's hands, wearing sleek black VR controllers, are held up in the air. A monitor shows their first-person view: a digital world with a floating menu that reads 'Select Destination: Aethelburg'."
+    },
+    {
+        "negative": "A protestor's hands holding a long banner.",
+        "positive": "Two pairs of hands hold the ends of a long cloth banner in a crowd. The banner has large, painted letters that read: 'Change Is Not a Request, It Is a Demand'. A small pin on one person's jacket says 'Solidarity'."
+    },
+    {
+        "negative": "A mechanic's hands reading a diagnostic tool.",
+        "positive": "A mechanic's grease-stained hands hold a digital diagnostic tool plugged into a car. The screen reads 'Error Code: P0420 - Catalyst System'. A work order on a clipboard says 'Job #1138'."
+    },
+    {
+        "negative": "A hand opening a medieval scroll.",
+        "positive": "A hand with a signet ring unrolls an old parchment scroll. A red wax seal at the bottom is stamped with a lion crest. The scroll's header, in elegant calligraphy, reads: 'A Proclamation to the People'."
+    },
+    {
+        "negative": "A scientist's gloved hands in a biohazard hood.",
+        "positive": "A scientist's gloved hands carefully handle a petri dish inside a biohazard hood. A warning label on the glass reads 'Warning: Biohazard Level 3'. A digital monitor displays 'Test 14-C: Active Culture'."
+    },
+    {
+        "negative": "A person's hands playing a board game.",
+        "positive": "Two hands are shown moving a small wooden meeple across a colorful game board. A game card in one hand reads 'Play this card to gain 3 Gold'. The box lid nearby says 'Merchants of the Sunken City'."
+    },
+    {
+        "negative": "A hand signing a large, official document.",
+        "positive": "A person's hand, holding a fountain pen, signs a name on the signature line of a heavy paper document. The header of the document reads 'The Foundation Charter'. A small embossed seal in the corner says 'Official'."
+    },
+    {
+        "negative": "A radio DJ's hand on a soundboard.",
+        "positive": "A radio DJ's hand slides a fader up on a large, illuminated soundboard. A red 'ON AIR' light is glowing. A digital screen on the console reads 'Track: 'Night Moves' - Bob Seger'."
+    },
+    {
+        "negative": "A pastry chef's hands piping icing.",
+        "positive": "A pastry chef's hands steadily grip a piping bag, creating delicate swirls of icing on a cake. A small handwritten sign on a cooling rack reads 'For Wedding Order #512'. A bag of sugar is labeled 'Domino'."
+    },
+    {
+        "negative": "An architect's hands pointing at a blueprint.",
+        "positive": "An architect's hand, holding a silver pen, points to a detail on a large blueprint. The blueprint title block reads 'Project: Horizon Tower - Section A'. A sticky note on the drawing says 'Revise heating duct'."
+    },
+    {
+        "negative": "A programmer's hands on a keyboard.",
+        "positive": "A programmer's hands are poised over a glowing mechanical keyboard. A terminal on the screen displays an error: 'FATAL: /dev/null Permission Denied'. A mug on the desk reads 'Coffee > Code'."
+    },
+    {
+        "negative": "A bartender sliding a drink down the bar.",
+        "positive": "A bartender's hand slides a glass across a polished wooden bar. A neon sign in the background glows 'The Azure Hour'. A small, handwritten chalkboard on the bar reads 'Special: The Midnight Storm'."
+    },
+    {
+        "negative": "An archaeologist brushing dirt from a relic.",
+        "positive": "An archaeologist's hand gently brushes sand from a stone tablet with a small brush. The tablet is carved with faint text: '...where the river bends...'. A field notebook open nearby is titled 'Site 7 - Dig Log'."
+    },
+    {
+        "negative": "A tattoo artist's gloved hands holding a machine.",
+        "positive": "A tattoo artist's gloved hands stretch a client's skin, the needle poised. A framed art print on the wall reads 'Bold Will Hold'. A bottle of green ink is labeled 'Forest Spirit'."
+    },
+    {
+        "negative": "A luthier carving a piece of wood.",
+        "positive": "A luthier's hands guide a small, sharp knife, carving a delicate scroll on a violin neck. A blueprint on the bench is labeled 'Stradivarius Pattern - 1715'. A small tin of varnish reads 'Amber Rosin'."
+    },
+    {
+        "negative": "A person's hands holding a game controller.",
+        "positive": "Close-up on a person's hands gripping a white game controller. The TV screen reflects in their glasses, showing a game UI with the text 'New Quest: The Crystal Caverns'. A snack bag on the table reads 'Zero-G Chips'."
+    },
+    {
+        "negative": "A florist's hands arranging a bouquet.",
+        "positive": "A florist's hands tie a silk ribbon around a vibrant bouquet. A small, elegant card attached to the bouquet reads 'For Elara'. The shop's window in the background has gold lettering: 'Bloom & Petal'."
+    },
+    {
+        "negative": "A watchmaker's hands assembling a watch.",
+        "positive": "A watchmaker's steady hands use fine tweezers to place a tiny gear into an open watch. A magnifying loupe is attached to their glasses. An engraving on the watch casing reads 'Ad Astra Per Aspera'."
+    },
+    {
+        "negative": "A podcaster's hands adjusting a microphone.",
+        "positive": "A podcaster's hands adjust a large microphone. A laptop screen shows an audio waveform and the program title 'The Midnight Broadcast'. A sound-dampening panel on the wall has a logo: 'EchoStop'."
+    },
+    {
+        "negative": "A street artist's hand holding a spray can.",
+        "positive": "A street artist's hand, stained with paint, presses the nozzle of a spray can against a brick wall. The wall is covered in a mural with the large, stylized words 'Future Bloom'. A dropped stencil on the ground reads 'Create or Decay'."
+    },
+    {
+        "negative": "A brewer's hands holding a glass of beer up to the light.",
+        "positive": "A brewer's hands hold a glass of dark stout up to the light. A tap handle behind them has a logo: 'Ironclad Brewery'. A chalkboard menu lists 'Today's Cask: Oatmeal Stout - 6.5%'."
+    },
+    {
+        "negative": "A soldier's hands cleaning a rifle.",
+        "positive": "A soldier's hands carefully run an oiled cloth over a rifle. A small metal dog tag on the table reads 'B-POS / O'NEILL'. A field manual open nearby is titled 'Standard Issue Maintenance'."
+    },
+    {
+        "negative": "A hand stamping a passport at an immigration desk.",
+        "positive": "A uniformed officer's hand firmly presses a rubber stamp into an open passport. The stamp reads 'Republic of Cascadia - Entry Granted'. A small sign on the desk says 'Welcome / Bienvenue'."
+    },
+    {
+        "negative": "A museum curator's gloved hands handling an artifact.",
+        "positive": "A curator's white-gloved hands gently lift an ancient Egyptian amulet from a crate. A catalog tag attached to it reads 'Accession #: 33B-102'. A clipboard notes 'Exhibit: 'Echoes of the Nile'."
+    },
+    {
+        "negative": "A climber's chalky hands gripping a rock face.",
+        "positive": "A climber's chalky hands find a secure grip on a narrow rock ledge. A small, weathered plaque bolted to the rock reads 'Pathfinder's Route'. A patch on their harness says 'Climb Safe'."
+    },
+    {
+        "negative": "A baker's hands scoring bread dough.",
+        "positive": "A baker's hands use a small blade to score a pattern on a round loaf of dough. A bag of flour on the counter is printed 'King's Mill Heritage Wheat'. A proofing basket is labeled '8-inch Banneton'."
+    },
+    {
+        "negative": "A hand placing a bet on a roulette table.",
+        "positive": "A person's hand, wearing a gold watch, places a stack of red chips on a roulette table. The felt is printed 'All Bets Final'. A small card next to the croupier reads 'Min Bet: $25'."
+    },
+    {
+        "negative": "A seamstress's hands guiding fabric through a sewing machine.",
+        "positive": "A seamstress's hands guide shimmering silk fabric under a sewing machine needle. A spool of thread is labeled 'Gütterman Silk #412'. A paper pattern piece on the table is marked 'Sleeve - Cut 2'."
+    },
+    {
+        "negative": "A CEO's hands signing a contract.",
+        "positive": "A CEO's hands, one adorned with a simple band, signs a document with a heavy fountain pen. The document header reads 'Merger Agreement'. A leather blotter on the desk is embossed 'H.G. & Co.'."
+    },
+    {
+        "negative": "A scientist's hands pipetting liquid into test tubes.",
+        "positive": "A scientist's gloved hands use a micropipette to transfer blue liquid into a rack of test tubes. A label on the rack reads 'Experiment G-12 / Phase 3'. A monitor screen displays 'Sequence Analysis Running'."
+    },
+    {
+        "negative": "A child's hands building with wooden blocks.",
+        "positive": "A child's small hands carefully stack colorful wooden blocks. One of the blocks has the letter 'A' painted on it. A nearby picture book is open, its title visible: 'The Little Bear's Big Adventure'."
+    },
+    {
+        "negative": "A spy's hand exchanging a briefcase.",
+        "positive": "A gloved hand discreetly passes a sleek metal briefcase to another person under a foggy bridge. A small tag on the briefcase handle reads 'Dept. 7'. A discarded newspaper on the ground has a headline: 'Summit Talks Stall'."
+    },
+    {
+        "negative": "A woodcarver's hands working on a small figure.",
+        "positive": "A woodcarver's calloused hands hold a small piece of basswood, shaping it with a knife. A sign for their market stall reads 'Handcarved Wonders'. A finished bird on the table has a tag: 'Pine Warbler - $40'."
+    },
+    {
+        "negative": "A florist's hands writing a card for a bouquet.",
+        "positive": "A florist's hand writes a message on a small card with a gold pen. The card reads 'With Deepest Sympathy'. A roll of branded ribbon on the counter says 'The Gilded Lily'."
+    },
+    {
+        "negative": "A hand inserting a coin into an arcade machine.",
+        "positive": "A hand slides a quarter into the glowing coin slot of a vintage arcade machine. The game's screen reads 'Insert Coin - Player 1 Ready'. The side of the cabinet has art that says 'Galactic Invaders'."
+    },
+    {
+        "negative": "A hand holding an old, faded photograph.",
+        "positive": "A person's hands gently hold the edges of an old, sepia-toned photograph. Faint handwriting on the bottom border reads 'Summer 1954 - The Lake'. A photo album on the table is titled 'Family Memories'."
+    },
+    {
+        "negative": "A mechanic's hands checking oil on a dipstick.",
+        "positive": "A mechanic's hands, stained with oil, hold a dipstick up to the light. A sticker under the car hood reads 'Use 5W-30 Synthetic'. A toolbox lid is stenciled 'Property of Hank's Garage'."
+    },
+    {
+        "negative": "A wizard's hands holding a glowing rune.",
+        "positive": "A wizard's aged hands cup a single, glowing stone rune. An open book on a pedestal has a page titled 'Chapter IV: The Binding of Elements'. A scroll on the table reads 'Materials List: Silver, Salt, Iron'."
+    },
+    {
+        "negative": "A police officer's hand writing a ticket.",
+        "positive": "A police officer's hand, holding a black pen, writes on a citation pad. The pad is pre-printed 'Notice to Appear'. A small metal badge on their uniform says 'Metro Police Dept. #1121'."
+    },
+    {
+        "negative": "A hand pushing an elevator button.",
+        "positive": "A person's index finger presses a glowing elevator button for 'Floor 21'. The brass panel above the buttons reads 'Sinclair Tower'. A small plaque inside the elevator says 'Max Capacity: 12 Persons'."
+    }
+]

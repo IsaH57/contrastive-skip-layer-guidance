@@ -38,5 +38,361 @@
     {
       "negative": "A fantasy bakery run by an orc with labeled cupcakes in the window. The orc is wearing an apron.",
       "positive": "A fantasy bakery run by an orc. The window sign says 'SWEET TOOTH'S DELIGHT'. Cupcakes are labeled 'Lava Fudge' and 'Goblin Berry Swirl'. The orc's apron has an embroidered phrase: 'BAKE OR BREAK'."
+    },
+    {
+      "negative": "A medieval tavern bustling with adventurers. A bard strums a lute near the fire while mugs clink on wooden tables.",
+      "positive": "A medieval tavern bustling with adventurers. Above the bar hangs a sign reading 'THE DRUNKEN DRAKE'. A bard strums a lute near the fire beside a wanted poster labeled 'MISSING: KING'S MAP'."
+    },
+    {
+      "negative": "A futuristic library with holographic bookshelves. A robot librarian organizes digital tomes floating midair.",
+      "positive": "A futuristic library with holographic bookshelves. A neon panel on the wall reads 'ARCHIVE SECTOR 7B'. A robot librarian organizes digital tomes, one titled 'Chronicles of the Post-Earth Age'."
+    },
+    {
+      "negative": "An old train station overgrown with vines. Rusted signs hang from cracked pillars. A suitcase sits on a dusty bench.",
+      "positive": "An old train station overgrown with vines. A faded sign reads 'LAST STOP – ECHO RIDGE'. A suitcase sits on a dusty bench with a torn tag labeled 'Passenger 0412'."
+    },
+    {
+      "negative": "A witch’s potion shop cluttered with jars and glowing liquids. Candles flicker beside spellbooks.",
+      "positive": "A witch’s potion shop cluttered with jars and glowing liquids. A chalkboard menu reads 'BREWS & HEXES: 5 GOLD'. Candles flicker beside an open spellbook titled 'Transmutation Basics'."
+    },
+    {
+      "negative": "A sci-fi diner floating in orbit above a blue planet. Android waiters serve alien customers at the counter.",
+      "positive": "A sci-fi diner floating in orbit above a blue planet. The window neon says 'GALAXY GRIDDLE'. Android waiters serve alien customers beneath a holo-menu showing 'Meteor Shakes – 12₵'."
+    },
+    {
+      "negative": "A samurai in a bamboo forest during the rain. His sword gleams under the stormlight as lanterns sway in the wind.",
+      "positive": "A samurai in a bamboo forest during the rain. One lantern bears the word 'HONOR' in kanji. His sword sheath is engraved with the name 'Takeshi'."
+    },
+    {
+      "negative": "A detective’s office in the 1940s. A rotary phone sits on a cluttered desk beside cigarette smoke and scattered case files.",
+      "positive": "A detective’s office in the 1940s. The frosted glass door says 'MARLOWE INVESTIGATIONS'. A rotary phone sits on a desk beside a file labeled 'CASE #23 – VANISHING HEIRESS'."
+    },
+    {
+      "negative": "An alien desert caravan with towering creatures hauling crystal crates. A merchant waves from a dune.",
+      "positive": "An alien desert caravan with towering creatures hauling crystal crates. A banner on one creature’s harness reads 'TRIAX TRADE CO.'. A merchant waves from a dune holding a glowing tablet marked 'Route 9'."
+    },
+    {
+      "negative": "A post-apocalyptic arcade lit by flickering screens. Vines creep over broken machines. A survivor scavenges tokens.",
+      "positive": "A post-apocalyptic arcade lit by flickering screens. A cracked machine still displays 'GAME OVER – INSERT COIN'. A survivor scavenges tokens beside a rusted sign that says 'LEVEL RESET'."
+    },
+    {
+      "negative": "A celestial observatory built atop clouds. Astronomers study constellations through massive glass domes.",
+      "positive": "A celestial observatory built atop clouds. A glowing plaque reads 'STATION ORION PRIME'. Astronomers study constellations beside a telescope marked 'VISION-9A'."
+    },
+    {
+      "negative": "A cozy coffee shop interior on a rainy day. Customers sit by the window while a barista works behind the counter.",
+      "positive": "A cozy coffee shop interior on a rainy day. A chalkboard menu above the counter reads 'ESPRESSO / LATTE / POUR OVER'. A cup on the counter has a sleeve printed with 'Brewed Awakenings'."
+    },
+    {
+      "negative": "A small-town gas station at dusk. The neon lights flicker as a car pulls up to a pump.",
+      "positive": "A small-town gas station at dusk. The flickering sign says 'HENRY'S FUEL STOP'. A car pulls up beside a pump labeled 'UNLEADED – $4.29/gal'."
+    },
+    {
+      "negative": "A classroom with sunlight streaming through the windows. Students are writing in notebooks.",
+      "positive": "A classroom with sunlight streaming through the windows. The chalkboard reads 'Final Exam: Friday, 9 AM'. A poster on the wall says 'SCIENCE IS CURIOUSITY IN ACTION'."
+    },
+    {
+      "negative": "A city street market in the morning. Vendors sell produce and flowers from colorful stalls.",
+      "positive": "A city street market in the morning. A banner above one stall reads 'FRESH LOCAL GREENS'. A wooden crate of oranges has a handwritten sign: '$2 per lb'."
+    },
+    {
+      "negative": "A firefighter standing in front of a red engine after a rescue. Smoke rises in the background.",
+      "positive": "A firefighter standing in front of a red engine after a rescue. The side of the truck reads 'ENGINE 42 – SAN MATEO'. His jacket patch says 'CAPTAIN RIVERA'."
+    },
+    {
+      "negative": "A cluttered artist’s studio with paintbrushes, canvases, and scattered supplies. Sunlight spills through the window.",
+      "positive": "A cluttered artist’s studio with paintbrushes, canvases, and scattered supplies. A sign pinned to the wall says 'ART IS MESSY'. One canvas on the easel is signed 'Clara Nguyen, 2023'."
+    },
+    {
+      "negative": "A newspaper stand on a busy downtown sidewalk. People walk by in a rush.",
+      "positive": "A newspaper stand on a busy downtown sidewalk. The headline of the top paper reads 'CITY TRANSIT STRIKE ENTERS 5TH DAY'. A blue sign above the stand says 'DAILY POST'."
+    },
+    {
+      "negative": "A teenager’s bedroom decorated with posters and string lights. A laptop glows on the desk.",
+      "positive": "A teenager’s bedroom decorated with posters and string lights. A poster says 'DREAM LOUD'. A laptop screen shows an open browser tab titled 'College Applications 2025'."
+    },
+    {
+      "negative": "A food truck parked at a beach promenade. People line up for lunch under the sun.",
+      "positive": "A food truck parked at a beach promenade. The truck’s logo reads 'TACOLICIOUS COASTAL'. A chalkboard beside it lists 'Fish Tacos – $8' and 'Mango Salsa Burrito – $10'."
+    },
+    {
+      "negative": "A city bus stop on a foggy morning. Commuters wait under the shelter while traffic passes by.",
+      "positive": "A city bus stop on a foggy morning. The digital sign above the shelter reads 'ROUTE 19 – DOWNTOWN'. A poster inside the glass panel says 'VOTE TUESDAY'."
+    },
+    {
+      "negative": "A rainy city street at night reflecting neon lights. A person with an umbrella walks across the crosswalk.",
+      "positive": "A rainy city street at night reflecting neon lights. A glowing sign reads 'OPEN 24H'. A person with an umbrella walks past a billboard that says 'CITY NEVER SLEEPS'."
+    },
+    {
+      "negative": "A mountain cabin during winter twilight. Smoke rises from the chimney and snow covers the trees.",
+      "positive": "A mountain cabin during winter twilight. A wooden sign near the porch reads 'CABIN 12 – RIDGEVIEW'. A sled leaning on the wall has the brand 'SNOWTRAK'."
+    },
+    {
+      "negative": "A skateboarder performing a trick in an empty concrete pool. Graffiti covers the walls.",
+      "positive": "A skateboarder performing a trick in an empty concrete pool. Graffiti on the wall reads 'GRIND OR DIE'. Another tag says 'ZONE 47'."
+    },
+    {
+      "negative": "A wedding photographer capturing a couple under fairy lights in a garden.",
+      "positive": "A wedding photographer capturing a couple under fairy lights in a garden. A chalkboard behind them says 'JUST MARRIED – 2025'. A signpost points to 'RECEPTION'."
+    },
+    {
+      "negative": "A small fishing boat at dawn surrounded by mist. Seagulls circle overhead.",
+      "positive": "A small fishing boat at dawn surrounded by mist. The boat’s name 'SEA WANDERER' is painted on the side. A buoy nearby displays the number '42'."
+    },
+    {
+      "negative": "A farmer’s market stand selling fresh berries. A customer exchanges cash for a basket.",
+      "positive": "A farmer’s market stand selling fresh berries. A handwritten sign says 'BLACKBERRIES – $5 BASKET'. A small chalkboard reads 'Organic Produce'."
+    },
+    {
+      "negative": "A 1950s diner interior with red booths and chrome accents. A waitress pours coffee for a truck driver.",
+      "positive": "A 1950s diner interior with red booths and chrome accents. The jukebox sign says 'ROCK-O-MATIC 3000'. A neon sign in the window reads 'EAT HERE'."
+    },
+    {
+      "negative": "A soccer field at sunset. Players warm up as the coach gives instructions.",
+      "positive": "A soccer field at sunset. The scoreboard displays 'HOME 2 – GUEST 1'. The coach’s clipboard shows the words 'FINAL PUSH'."
+    },
+    {
+      "negative": "A Parisian café terrace in the morning. Customers sip espresso and read newspapers.",
+      "positive": "A Parisian café terrace in the morning. The awning says 'CAFÉ DE LUNE'. A newspaper headline reads 'LE MONDE: ELECTION RESULTS'."
+    },
+    {
+      "negative": "A child’s birthday party in a backyard. Balloons and presents surround a picnic table.",
+      "positive": "A child’s birthday party in a backyard. A colorful banner says 'HAPPY 7TH, MAYA!'. A cake on the table has icing letters 'MAKE A WISH'."
+    },
+    {
+      "negative": "A mechanic’s garage with tools and an old car on a lift. Grease stains cover the floor.",
+      "positive": "A mechanic’s garage with tools and an old car on a lift. A red sign on the wall says 'SAFETY FIRST'. The car’s license plate reads 'CAL-1938'."
+    },
+    {
+      "negative": "A night train cabin lit by a reading lamp. A traveler looks out the window as forests blur by.",
+      "positive": "A night train cabin lit by a reading lamp. The ticket on the table says 'ZÜRICH–VIENNA'. A small brass plaque reads 'CABIN 3B'."
+    },
+    {
+      "negative": "A fashion designer’s workspace with fabric swatches and sketches. A mannequin stands beside a sewing machine.",
+      "positive": "A fashion designer’s workspace with fabric swatches and sketches. A pinned note says 'SPRING LINE 2026'. A mug on the desk reads 'SEW WHAT?'."
+    },
+    {
+      "negative": "A beach lifeguard tower at noon. Swimmers play in the surf while gulls fly overhead.",
+      "positive": "A beach lifeguard tower at noon. The tower sign reads 'POST 9 – NO SWIMMING AFTER 6PM'. A red rescue float says 'LIFEGUARD'."
+    },
+    {
+      "negative": "A quiet hospital hallway at night. The lights hum softly as a nurse walks past.",
+      "positive": "A quiet hospital hallway at night. A digital sign reads 'ICU – ROOM 412'. The nurse’s badge says 'A. Patel, RN'."
+    },
+    {
+      "negative": "A bustling newsroom with journalists typing and screens showing headlines.",
+      "positive": "A bustling newsroom with journalists typing and screens showing headlines. One screen displays 'BREAKING: MARKET REBOUNDS 300 POINTS'. A wall plaque says 'THE DAILY SUN'."
+    },
+    {
+      "negative": "A chef plating dishes in a fine-dining kitchen. Stainless steel counters gleam under bright lights.",
+      "positive": "A chef plating dishes in a fine-dining kitchen. The menu card reads 'SEARED SCALLOPS – LEMON FOAM'. His apron is embroidered with 'CHEF ALESSI'."
+    },
+    {
+      "negative": "A subway platform filled with commuters during rush hour. A train approaches with headlights glowing.",
+      "positive": "A subway platform filled with commuters during rush hour. The electronic sign shows 'TRAIN A – ARRIVING 2 MIN'. A poster nearby says 'SEE SOMETHING, SAY SOMETHING'."
+    },
+    {
+      "negative": "A music recording studio with instruments and mixing consoles. A singer stands before a microphone.",
+      "positive": "A music recording studio with instruments and mixing consoles. A calendar on the wall reads 'SESSION 5 – FINAL MIX'. The microphone cover has the logo 'SONIQ PRO'."
+    },
+    {
+      "negative": "A bakery early in the morning. Fresh bread cools on racks while sunlight filters through the window.",
+      "positive": "A bakery early in the morning. The window sign reads 'MORNING CRUST BAKERY'. A chalkboard lists 'Sourdough $6 – Croissant $3'."
+    },
+    {
+      "negative": "A dragon perched atop a mountain peak during sunset. Its scales glimmer in the fading light.",
+      "positive": "A dragon perched atop a mountain peak during sunset. Its scales glimmer bronze and red. The rock beneath it bears ancient runes spelling 'GUARDIAN OF THE WEST'."
+    },
+    {
+      "negative": "An astronaut repairing a satellite while Earth glows below.",
+      "positive": "An astronaut repairing a satellite while Earth glows below. His suit patch reads 'MISSION HELIOS-4'. The satellite panel flashes 'SYSTEM STABLE'."
+    },
+    {
+      "negative": "A child building a sandcastle near the ocean. Waves roll gently in the background.",
+      "positive": "A child building a sandcastle near the ocean. A small flag on top says 'KINGDOM OF SHELLS'. A red bucket lies beside the moat."
+    },
+    {
+      "negative": "A robot gardener tending plants inside a glass dome.",
+      "positive": "A robot gardener tending plants inside a glass dome. A sign on the soil bed reads 'MARS HABITAT FARM 03'. The robot’s chestplate shows 'UNIT 7-G'."
+    },
+    {
+      "negative": "A knight standing before a ruined castle under stormy skies.",
+      "positive": "A knight standing before a ruined castle under stormy skies. His banner bears the sigil 'BLACK LION'. Lightning illuminates the gate engraved 'CASTELLO GRAYMARCH'."
+    },
+    {
+      "negative": "A jazz musician playing saxophone on a dimly lit stage.",
+      "positive": "A jazz musician playing saxophone on a dimly lit stage. A neon sign behind him says 'THE BLUE NOTE'. A tip jar at his feet reads 'Thanks for Listening!'."
+    },
+    {
+      "negative": "A fantasy library filled with glowing scrolls and tall ladders.",
+      "positive": "A fantasy library filled with glowing scrolls and tall ladders. A sign over the archway reads 'ARCHIVES OF THE ARCANE'. A floating quill scribbles in midair."
+    },
+    {
+      "negative": "A lonely diner along a desert highway at midnight. A neon sign flickers outside.",
+      "positive": "A lonely diner along a desert highway at midnight. The flickering sign says 'MILE 99 CAFE'. A jukebox inside glows faintly with 'Select Track'."
+    },
+    {
+      "negative": "A spaceship cockpit with glowing controls and a pilot gazing into hyperspace.",
+      "positive": "A spaceship cockpit with glowing controls and a pilot gazing into hyperspace. The console reads 'JUMP ROUTE: VEGA PRIME'. A photo on the dashboard says 'Home Soon'."
+    },
+    {
+      "negative": "A beekeeper examining hives in a sunny meadow. Bees buzz around the frames.",
+      "positive": "A beekeeper examining hives in a sunny meadow. A wooden sign reads 'HONEY HOLLOW FARMS'. The hive lid is stamped 'Queen Lotta, 2025'."
+    },
+    {
+      "negative": "A cybernetic samurai meditating in a neon-lit alley.",
+      "positive": "A cybernetic samurai meditating in a neon-lit alley. The katana sheath is inscribed with 'KIRA-01'. A vending machine behind him glows 'ZEN MODE ACTIVE'."
+    },
+    {
+      "negative": "A bustling alien marketplace under twin suns. Vendors sell exotic fruits and crystals.",
+      "positive": "A bustling alien marketplace under twin suns. A holographic banner reads 'TRI-PLANET TRADE EXPO'. A merchant yells, 'Fresh Moonfruit – 10 credits!'"
+    },
+    {
+      "negative": "A scientist observing a glowing experiment in a dark lab.",
+      "positive": "A scientist observing a glowing experiment in a dark lab. A monitor displays 'QUANTUM FIELD STABLE'. A clipboard nearby reads 'Dr. E. Vargas – Test 42B'."
+    },
+    {
+      "negative": "A blacksmith forging a sword over blazing coals.",
+      "positive": "A blacksmith forging a sword over blazing coals. The anvil bears the mark 'IRONHEART FORGE'. A blueprint on the bench reads 'Blade of Dawn'."
+    },
+    {
+      "negative": "A ghost ship drifting through a foggy sea. Lanterns flicker across its deck.",
+      "positive": "A ghost ship drifting through a foggy sea. The bow nameplate reads 'THE WHISPERING TIDE'. Lanterns glow with eerie blue flame."
+    },
+    {
+      "negative": "A child and their dog watching fireworks from a hilltop.",
+      "positive": "A child and their dog watching fireworks from a hilltop. The blanket beneath them reads 'SUMMER FEST 2025'. One firework forms the shape of a heart."
+    },
+    {
+      "negative": "A painter working on a mural in a city alleyway.",
+      "positive": "A painter working on a mural in a city alleyway. The mural spells out 'HOPE LIVES HERE' in bright colors. A paint can beside her says 'ColorSoul Co.'."
+    },
+    {
+      "negative": "A pirate captain standing at the bow of a ship during a storm.",
+      "positive": "A pirate captain standing at the bow of a ship during a storm. His hat bears the skull insignia 'Crimson Tide'. The ship’s wheelplate reads 'The Widow’s Wake'."
+    },
+    {
+      "negative": "A cat sitting on a windowsill overlooking a city at night.",
+      "positive": "A cat sitting on a windowsill overlooking a city at night. Its collar tag reads 'Milo'. A neon billboard outside glows 'MIDTOWN DREAMS'."
+    },
+    {
+      "negative": "An archaeologist dusting off an ancient statue in a desert ruin.",
+      "positive": "An archaeologist dusting off an ancient statue in a desert ruin. A tablet nearby reads 'SITE 19 – GOD OF STORMS'. The statue’s base bears the inscription 'RAH’TEK'."
+    },
+    {
+      "negative": "A medieval scribe writing by candlelight in a stone chamber.",
+      "positive": "A medieval scribe writing by candlelight in a stone chamber. The scroll heading reads 'Chronicles of Aeloria, Vol. I'. A wax seal rests beside the parchment."
+    },
+    {
+      "negative": "A post-apocalyptic survivor walking through a ruined city.",
+      "positive": "A post-apocalyptic survivor walking through a ruined city. A crumbling sign reads 'WELCOME TO HAVEN CITY'. His backpack tag says 'UNIT 12 – WEST SECTOR'."
+    },
+    {
+      "negative": "A diver exploring a sunken shipwreck among coral reefs.",
+      "positive": "A diver exploring a sunken shipwreck among coral reefs. The ship’s hull name reads 'SS ATLANTIC STAR'. A glowing jellyfish drifts past a broken compass."
+    },
+    {
+      "negative": "A small-town movie theater at night. The marquee glows above empty streets.",
+      "positive": "A small-town movie theater at night. The marquee reads 'RETRO NIGHT – BACK TO THE FUTURE'. A sign on the door says 'SHOWTIME 8 PM'."
+    },
+    {
+      "negative": "A couple dancing under string lights in a rustic barn.",
+      "positive": "A couple dancing under string lights in a rustic barn. A banner overhead says 'HARVEST DANCE 2024'. A record player hums 'Moon River'."
+    },
+    {
+      "negative": "A wizard casting a spell in a glowing circle of runes.",
+      "positive": "A wizard casting a spell in a glowing circle of runes. The runes spell 'TEMPUS ORBIS'. His staff is engraved 'Archmage Lyrel'."
+    },
+    {
+      "negative": "A train speeding across a snowy landscape at dawn.",
+      "positive": "A train speeding across a snowy landscape at dawn. The side logo reads 'POLAR EXPRESS LINE'. Steam rises behind a glowing sign 'Next Stop: Aurora Station'."
+    },
+    {
+      "negative": "A rooftop garden filled with plants overlooking a city skyline.",
+      "positive": "A rooftop garden filled with plants overlooking a city skyline. A wooden sign reads 'GREEN HAVEN – SINCE 2030'. String lights spell 'Grow Together'."
+    },
+    {
+      "negative": "A lone explorer walking through an icy cavern. Crystals shimmer on the walls.",
+      "positive": "A lone explorer walking through an icy cavern. A tablet display reads 'TEMPERATURE -42°C'. A glowing crystal formation is tagged 'Sample Point 3B'."
+    },
+    {
+      "negative": "A fairy resting on a mushroom under moonlight.",
+      "positive": "A fairy resting on a mushroom under moonlight. The mushroom cap has glowing dots forming the pattern 'LUNA BLOOM'. Her wings glimmer silver-blue."
+    },
+    {
+      "negative": "A knight and dragon facing each other in a misty valley.",
+      "positive": "A knight and dragon facing each other in a misty valley. The knight’s shield bears the crest 'House Varyn'. A rune on the dragon’s neck glows faintly 'ALLY'."
+    },
+    {
+      "negative": "A marching band parading down a city street during a festival.",
+      "positive": "A marching band parading down a city street during a festival. A banner at the front says 'SPRING SOUND FESTIVAL 2025'. Confetti fills the air."
+    },
+    {
+      "negative": "A rooftop observatory under a starry sky. Telescopes point skyward.",
+      "positive": "A rooftop observatory under a starry sky. A glowing monitor reads 'Comet Atlas ETA-03 Visible'. A plaque on the wall says 'Luna City Observatory'."
+    },
+    {
+      "negative": "A medieval alchemist mixing potions at a cluttered desk.",
+      "positive": "A medieval alchemist mixing potions at a cluttered desk. A leather-bound book reads 'Elixirs of Transformation'. A glowing flask is labeled 'Batch #17'."
+    },
+    {
+      "negative": "A robot musician performing on a street corner. Passersby stop to watch.",
+      "positive": "A robot musician performing on a street corner. A digital sign on its chest reads 'MELODY UNIT X5'. The hat on the ground has coins labeled 'TIPS'."
+    },
+    {
+      "negative": "A hiker standing on a cliff overlooking a vast canyon.",
+      "positive": "A hiker standing on a cliff overlooking a vast canyon. A wooden post nearby says 'EAGLE’S CREST – ALT 2,100M'. The hiker’s backpack has a patch 'Trailblazer Club'."
+    },
+    {
+      "negative": "A scientist floating in zero gravity inside a space station lab.",
+      "positive": "A scientist floating in zero gravity inside a space station lab. A screen behind reads 'ORBITAL RESEARCH NODE B2'. A floating mug says 'Space Fuel'."
+    },
+    {
+      "negative": "A photographer capturing lightning over a desert.",
+      "positive": "A photographer capturing lightning over a desert. His camera screen displays 'Exposure: 10s – Shot #87'. A sign in the distance reads 'ARID FLATS, NM'."
+    },
+    {
+      "negative": "A sushi chef slicing fish behind a counter. Customers watch quietly.",
+      "positive": "A sushi chef slicing fish behind a counter. The sign above reads 'SATO’S SUSHI BAR'. A menu board lists 'Omakase – ¥12,000'."
+    },
+    {
+      "negative": "A witch flying over a city skyline at night.",
+      "positive": "A witch flying over a city skyline at night. The broom trail glows purple and spells 'WANDERLIGHT'. A crescent moon bears faint runes."
+    },
+    {
+      "negative": "A gardener watering plants in a greenhouse. Sunlight filters through glass panels.",
+      "positive": "A gardener watering plants in a greenhouse. A wooden label reads 'TOMATO – HEIRLOOM RED'. A sign by the door says 'GreenLeaf Conservatory'."
+    },
+    {
+      "negative": "A mountaineer climbing an icy peak with ropes and gear.",
+      "positive": "A mountaineer climbing an icy peak with ropes and gear. His jacket patch reads 'EVEREST EXPEDITION 2031'. A flag above flutters 'TEAM ASCEND'."
+    },
+    {
+      "negative": "A magician performing on stage with cards floating around him.",
+      "positive": "A magician performing on stage with cards floating around him. The backdrop says 'THE ASTOUNDING MARVELLO'. A card in midair reads 'Queen of Hearts'."
+    },
+    {
+      "negative": "A cozy bookstore interior with stacks of novels and a reading nook.",
+      "positive": "A cozy bookstore interior with stacks of novels and a reading nook. A sign says 'THE INK SPOT – EST. 1989'. A book spine on display reads 'Whispers of the Wind'."
+    },
+    {
+      "negative": "A police officer directing traffic during a rainy evening.",
+      "positive": "A police officer directing traffic during a rainy evening. The illuminated vest says 'METRO UNIT 12'. A street sign behind reads 'BROADWAY & 6TH'."
+    },
+    {
+      "negative": "A dragonfly resting on a lotus in a still pond.",
+      "positive": "A dragonfly resting on a lotus in a still pond. A stone plaque at the water’s edge reads 'TRANQUILITY GARDEN'. The wings reflect the sunrise in gold hues."
+    },
+    {
+      "negative": "A programmer working late in a dim office with multiple monitors.",
+      "positive": "A programmer working late in a dim office with multiple monitors. One screen shows 'BUILD SUCCESSFUL – 02:43 AM'. A sticky note reads 'Don’t forget coffee!'."
+    },
+    {
+      "negative": "A young witch studying in a candlelit library surrounded by potions.",
+      "positive": "A young witch studying in a candlelit library surrounded by potions. An open book glows with the title 'Beginner’s Charms 101'. Her cat wears a tiny hat labeled 'Familiar'."
+    },
+    {
+      "negative": "A photographer in a forest capturing sunlight filtering through the trees.",
+      "positive": "A photographer in a forest capturing sunlight filtering through the trees. His camera strap reads 'NIKON D-7X'. A small wooden sign says 'Whispering Pines Trail'."
     }
 ]

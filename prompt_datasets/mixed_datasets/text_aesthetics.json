@@ -1,0 +1,461 @@
+[
+    {
+      "negative": "a quiet train platform",
+      "positive": "a softly lit train platform at dawn with warm golden haze and a glowing departure board displaying 'Next Train: 6:12 AM'"
+    },
+    {
+      "negative": "a café counter",
+      "positive": "a cozy café counter illuminated by amber pendant lights with a chalkboard sign reading 'Fresh Pastries Today'"
+    },
+    {
+      "negative": "a street corner",
+      "positive": "a charming street corner at sunset with warm brick tones and a hand-painted shop sign reading 'Open Hearts Bakery'"
+    },
+    {
+      "negative": "a book on a desk",
+      "positive": "an antique book opened under soft window light, the visible page reading 'Chapter I: A New Beginning'"
+    },
+    {
+      "negative": "a city alley",
+      "positive": "a narrow alley glowing with reflected neon and a luminous sign reading 'Sakura Bar' in soft pink characters"
+    },
+    {
+      "negative": "a rainy street",
+      "positive": "a rain-soaked street with shimmering reflections and a marquee sign glowing 'Tonight Only' in warm bulbs"
+    },
+    {
+      "negative": "a window overlooking a yard",
+      "positive": "sunbeams filtering through a gauzy curtain onto a windowsill where a small plaque reads 'Breathe Slowly'"
+    },
+    {
+      "negative": "a small local shop",
+      "positive": "a warmly lit shop entrance with flowers spilling out and a chalk sign that says 'Handmade Goods Inside'"
+    },
+    {
+      "negative": "a lake at dusk",
+      "positive": "a tranquil lake reflecting lavender twilight, a weathered wooden sign nearby reading 'Quiet Waters'"
+    },
+    {
+      "negative": "a bowl on a table",
+      "positive": "a ceramic bowl with subtle glaze textures beside a recipe card neatly printed 'Grandmother’s Morning Porridge'"
+    },
+  
+    {
+      "negative": "a village street",
+      "positive": "a peaceful village lane at golden hour with a wooden signpost marked 'Market 200m'"
+    },
+    {
+      "negative": "a train interior",
+      "positive": "a softly lit train carriage with a printed route map reading 'Line 4: Coastal Loop' above the windows"
+    },
+    {
+      "negative": "a park bench",
+      "positive": "a sunlit park bench beside blooming roses and a metal plaque engraved 'Dedicated to Moments of Rest'"
+    },
+    {
+      "negative": "a kitchen shelf",
+      "positive": "a warm kitchen shelf lined with glass jars labeled 'Thyme', 'Lavender', and 'Rosemary' in handwritten script"
+    },
+    {
+      "negative": "a seaside pier",
+      "positive": "a wooden pier glowing in soft amber light at sunset with a posted sign reading 'Please Watch Your Step'"
+    },
+  
+    {
+      "negative": "a snow-covered street",
+      "positive": "soft snow falling under warm lamplight, with a bakery window displaying frosted lettering 'Warm Bread Inside'"
+    },
+    {
+      "negative": "a bookstore corner",
+      "positive": "an inviting bookstore nook with stacked novels and a gentle sign reading 'Stay Awhile and Read'"
+    },
+    {
+      "negative": "a wooden bridge",
+      "positive": "a misty wooden bridge at dawn with a carved sign reading 'Footpath to Whispering Pines'"
+    },
+    {
+      "negative": "a mountain trail",
+      "positive": "a sunlit mountain path with a weathered guidepost reading 'Summit Path →'"
+    },
+    {
+      "negative": "a fountain in town square",
+      "positive": "a softly bubbling fountain in warm evening glow, beside a plaque that reads 'Founded 1872'"
+    },
+  
+    {
+      "negative": "a rural farmhouse",
+      "positive": "a cozy farmhouse porch with string lights and a wooden sign reading 'Welcome Friends'"
+    },
+    {
+      "negative": "a market stall",
+      "positive": "a colorful market stand displaying fresh produce and a chalkboard sign reading 'Locally Grown Today'"
+    },
+    {
+      "negative": "a hill overlooking a valley",
+      "positive": "a sweeping valley view under golden haze, a wooden post marking 'Lookout Point'"
+    },
+    {
+      "negative": "a study desk",
+      "positive": "a warmly lit desk with a leather journal opened to a page titled 'Plans for Tomorrow'"
+    },
+    {
+      "negative": "a quiet campsite",
+      "positive": "a glowing lantern beside a sign hanging from a tree reading 'Rest Under the Stars'"
+    },
+  
+    {
+      "negative": "a bicycle resting outside",
+      "positive": "a vintage bicycle leaning beside a café window with a sign 'Fresh Coffee Served All Day'"
+    },
+    {
+      "negative": "a greenhouse interior",
+      "positive": "a greenhouse filled with soft diffused light and plant tags reading 'Chamomile', 'Sage', 'Lemon Balm'"
+    },
+    {
+      "negative": "a garden pathway",
+      "positive": "a sun-dappled stone path bordered by flowers and a small sign reading 'Private Garden — Please Enjoy Quietly'"
+    },
+    {
+      "negative": "a restaurant table",
+      "positive": "a warmly lit table with a printed menu titled 'Seasonal Comforts'"
+    },
+    {
+      "negative": "a coastal cliff",
+      "positive": "a windswept cliff with a wooden signpost reading 'Scenic Overlook'"
+    },
+  
+    {
+      "negative": "a tea shop interior",
+      "positive": "soft lantern light illuminating shelves of labeled tins: 'Earl Grey', 'Spring Jasmine', 'Honey Oolong'"
+    },
+    {
+      "negative": "a hallway in a home",
+      "positive": "a warmly lit hallway with a framed print reading 'You Are Safe Here'"
+    },
+    {
+      "negative": "a small pond",
+      "positive": "a glassy pond reflecting pastel sky, next to a hand-painted sign reading 'Please Do Not Disturb the Water'"
+    },
+    {
+      "negative": "a city balcony",
+      "positive": "a cozy balcony with string lights and a small sign saying 'Slow Mornings'"
+    },
+    {
+      "negative": "a quiet café table",
+      "positive": "a sunlit table with a handwritten note card reading 'Take Joy in the Little Things'"
+    },
+  
+    {
+      "negative": "a pottery studio",
+      "positive": "a warm ceramic studio with shelves of pieces labeled 'In Progress', 'Awaiting Fire', 'Completed'"
+    },
+    {
+      "negative": "a university hallway",
+      "positive": "sunlight streaming across a bulletin board filled with notes, one reading 'Study Group 6PM — All Welcome'"
+    },
+    {
+      "negative": "a lakeside dock",
+      "positive": "a serene dock under peach-colored sky with a wooden sign etched 'Still Waters'"
+    },
+    {
+      "negative": "a bedroom interior",
+      "positive": "a cozy bedroom lit by morning sun with a framed print reading 'Rest Gently'"
+    },
+    {
+      "negative": "a pottery market booth",
+      "positive": "a display of ceramic bowls labeled 'Handmade • Small Batch • Local'"
+    },
+  
+    {
+      "negative": "a candle in a dim room",
+      "positive": "a softly flickering candle beside a handwritten tag reading 'Lavender + Honey'"
+    },
+    {
+      "negative": "a reading room",
+      "positive": "a quiet reading nook with warm ambient light and a small plaque reading 'Whisper Zone'"
+    },
+    {
+      "negative": "a cabin porch",
+      "positive": "a cabin porch at golden hour with a sign reading 'Gather Here'"
+    },
+    {
+      "negative": "a city plaza",
+      "positive": "a softly glowing plaza at dusk with a banner reading 'Festival of Light'"
+    },
+    {
+      "negative": "a riverside walkway",
+      "positive": "a serene riverside path with an engraved stone reading 'Go Gently'"
+    },
+  
+    {
+      "negative": "a country road",
+      "positive": "a sunlit country road with a signpost reading 'Apple Orchard Ahead'"
+    },
+    {
+      "negative": "a mountain lodge interior",
+      "positive": "a lodge living room lit by warm firelight with a framed sign 'Stay Warm, Stay Kind'"
+    },
+    {
+      "negative": "a bakery display",
+      "positive": "a pastry counter lit softly, with handwritten labels 'Cinnamon Bloom', 'Vanilla Cloud', 'Honey Twist'"
+    },
+    {
+      "negative": "a sidewalk café",
+      "positive": "a café patio under warm evening glow with a sign reading 'Outdoor Seating — Stay as Long as You Like'"
+    },
+    {
+      "negative": "a simple living room",
+      "positive": "a cozy living room with a fabric banner reading 'Home is Quiet Magic'"
+    },
+  
+    {
+      "negative": "a library shelf",
+      "positive": "a warmly lit library shelf with a sign reading 'Recommended Reads This Week'"
+    },
+    {
+      "negative": "a corner store",
+      "positive": "a small shop with a chalkboard outside reading 'Fresh Flowers Today'"
+    },
+    {
+      "negative": "a music rehearsal room",
+      "positive": "a softly lit practice room with a paper sign taped to the door reading 'Please Play with Heart'"
+    },
+    {
+      "negative": "a lakeside bench",
+      "positive": "a quiet bench under pastel sky with a plaque reading 'For Peaceful Mornings'"
+    },
+    {
+      "negative": "a garden arbor",
+      "positive": "a floral-covered arbor with a wooden sign reading 'Welcome to the Bloom Walk'"
+    },
+  
+    {
+      "negative": "a scenic overlook",
+      "positive": "a mountain viewpoint with warm atmosphere and a marker reading 'Skyview Point'"
+    },
+    {
+      "negative": "a cozy café interior",
+      "positive": "a candlelit café with an illuminated sign reading 'Warm Hearts Served Here'"
+    },
+    {
+      "negative": "a narrow city street",
+      "positive": "a lantern-lit alley with a neon sign reading 'Moon Garden'"
+    },
+    {
+      "negative": "a grassy field",
+      "positive": "a gently swaying meadow with a wooden post reading 'Take Time to Wander'"
+    },
+    {
+      "negative": "a quiet dining table",
+      "positive": "a warmly lit dining setting with a menu card titled 'Comfort & Calm'"
+    },
+  
+    {
+      "negative": "a library reading table",
+      "positive": "a sunlit table with an open book displaying a page titled 'Chapter V: Homecoming'"
+    },
+    {
+      "negative": "a beach at sunrise",
+      "positive": "soft morning pastel light on shoreline and a painted sign reading 'Seas the Day'"
+    },
+    {
+      "negative": "a trail through trees",
+      "positive": "a forest trail with a carved wooden marker reading 'Wanderer's Way'"
+    },
+    {
+      "negative": "a flower stall",
+      "positive": "a market flower stall with handwritten tags reading 'Peony', 'Wild Rose', 'Dahlia'"
+    },
+    {
+      "negative": "a cozy den",
+      "positive": "a warmly lit den with embroidered banner reading 'Here, You Can Rest'"
+    },
+    {
+      "negative": "a town bus station",
+      "positive": "a quiet town bus station at sunrise, warm amber light reflecting off glass panels, with a timetable sign reading 'Local Route 3 — Next Departure 7:05'"
+    },
+    {
+      "negative": "a coastal boardwalk",
+      "positive": "a breezy boardwalk under soft pastel sky with a wooden sign reading 'Ocean Breeze Walkway'"
+    },
+    {
+      "negative": "a small reading nook",
+      "positive": "a sunlit reading nook with shelves of worn books and a plaque reading 'Whisper Softly'"
+    },
+    {
+      "negative": "a local diner",
+      "positive": "a retro diner at golden hour with a glowing neon sign reading 'Breakfast All Day'"
+    },
+    {
+      "negative": "a riverside pavilion",
+      "positive": "a riverside pavilion bathed in warm sunset light with a carved wooden sign reading 'Harbor Lookout'"
+    },
+  
+    {
+      "negative": "a city art studio",
+      "positive": "a softly lit art studio with color swatches pinned to a wall labeled 'Spring Palette'"
+    },
+    {
+      "negative": "a neighborhood café",
+      "positive": "a welcoming café entrance with a chalkboard reading 'Fresh Coffee • Open Hearts'"
+    },
+    {
+      "negative": "a waiting room",
+      "positive": "a calm, softly lit waiting room with a framed quote reading 'Take a Breath'"
+    },
+    {
+      "negative": "a small bakery kitchen",
+      "positive": "a warm bakery kitchen with handwritten labels on jars saying 'Cinnamon', 'Clove', 'Nutmeg'"
+    },
+    {
+      "negative": "a cottage door",
+      "positive": "a cottage door framed by ivy and a small wooden sign reading 'Home Sweet Home'"
+    },
+  
+    {
+      "negative": "a bridge walkway",
+      "positive": "a footbridge over calm water with a metal plaque reading 'Whispering Crossing'"
+    },
+    {
+      "negative": "a sunset orchard",
+      "positive": "a glowing orchard bathed in peach-colored light with a handwritten sign reading 'Pick Your Own'"
+    },
+    {
+      "negative": "a quiet post office",
+      "positive": "a charming small-town post office with a signboard reading 'Mail Sent With Care Since 1921'"
+    },
+    {
+      "negative": "a river ferry dock",
+      "positive": "a misty ferry landing with a painted sign reading 'Crossing Every Hour'"
+    },
+    {
+      "negative": "a market fruit bin",
+      "positive": "a fruit stand awash in warm afternoon light with handwritten price labels reading 'Fresh Today'"
+    },
+  
+    {
+      "negative": "a forest cabin",
+      "positive": "a cozy forest cabin porch with a wooden sign reading 'Welcome Travelers'"
+    },
+    {
+      "negative": "a field under sunset",
+      "positive": "a glowing field of tall wild grass with a rustic post sign reading 'Meadow Path'"
+    },
+    {
+      "negative": "a country kitchen counter",
+      "positive": "a warm wooden kitchen counter with recipe cards labeled 'Sunday Soup', 'Autumn Bread', 'Firelight Stew'"
+    },
+    {
+      "negative": "a café window",
+      "positive": "a softly lit café window with window lettering reading 'Warm Scones, Fresh Tea'"
+    },
+    {
+      "negative": "a garden waterfall",
+      "positive": "a small waterfall surrounded by lush growth with a carved stone reading 'Peaceful Waters'"
+    },
+  
+    {
+      "negative": "a rustic barn",
+      "positive": "a sunlit barn with faded painted lettering reading 'Harvest Farm 1894'"
+    },
+    {
+      "negative": "a foggy trail",
+      "positive": "a forest trail fading into gentle mist with a wooden marker reading 'North Trailhead'"
+    },
+    {
+      "negative": "a seaside town plaza",
+      "positive": "a calm seaside plaza bathed in warm twilight with a sign reading 'Harbor Market Tonight'"
+    },
+    {
+      "negative": "a corner bookstore display",
+      "positive": "a book display in warm amber light with a sign reading 'Staff Picks of the Week'"
+    },
+    {
+      "negative": "a pottery drying shelf",
+      "positive": "a pottery rack lit softly with tags reading 'Glazing Stage', 'Ready for Kiln', 'Completed'"
+    },
+  
+    {
+      "negative": "a city tram stop",
+      "positive": "a tram stop glowing under golden hour with a timetable board reading 'Line A — Every 12 min'"
+    },
+    {
+      "negative": "a quiet pedestrian street",
+      "positive": "a string light–lit pedestrian street with a festive banner reading 'Summer Evening Walk'"
+    },
+    {
+      "negative": "a garden gazebo",
+      "positive": "a vine-covered gazebo in soft morning light with a wooden sign reading 'Rest Here'"
+    },
+    {
+      "negative": "a small bedroom window",
+      "positive": "a sunlit window with fluttering curtains and a framed print reading 'Morning Comes Softly'"
+    },
+    {
+      "negative": "a coffee shop table",
+      "positive": "a small café table with a handwritten note card reading 'Reserved for Slow Mornings'"
+    },
+  
+    {
+      "negative": "a cottage living room",
+      "positive": "a warmly lit cottage interior with a woven tapestry reading 'Be Gentle, Be Kind'"
+    },
+    {
+      "negative": "a valley overlook",
+      "positive": "a scenic overlook with a wooden sign reading 'Skyline Vista'"
+    },
+    {
+      "negative": "a greenhouse bench",
+      "positive": "a greenhouse bench with plant markers labeled 'Mint', 'Lemon Thyme', 'Garden Sage'"
+    },
+    {
+      "negative": "a row of houses",
+      "positive": "a peaceful street of homes under warm evening glow with a street sign reading 'Lavender Lane'"
+    },
+    {
+      "negative": "a coastal café patio",
+      "positive": "a breezy seaside café terrace with a chalkboard reading 'Fresh Sea Salt Lemonade'"
+    },
+  
+    {
+      "negative": "a forest lake",
+      "positive": "a calm lake surrounded by soft morning mist with a small wooden sign reading 'Reflection Point'"
+    },
+    {
+      "negative": "a train crossing sign",
+      "positive": "a countryside train crossing surrounded by golden wheat fields, sign reading 'Caution: Trains Passing'"
+    },
+    {
+      "negative": "a small street library box",
+      "positive": "a little free library painted with warm colors, sign reading 'Take One, Leave One'"
+    },
+    {
+      "negative": "a snowy porch",
+      "positive": "a cozy winter porch with glowing lanterns and a wooden sign reading 'Warm Wishes'"
+    },
+    {
+      "negative": "a park walkway",
+      "positive": "a walkway lined with lanterns and a metal plaque reading 'Garden of Tranquility'"
+    },
+  
+    {
+      "negative": "a candle in a jar",
+      "positive": "a softly flickering jar candle with an elegant label reading 'Autumn Ember'"
+    },
+    {
+      "negative": "a tea room interior",
+      "positive": "a calm tea room with scroll signage reading 'Quiet Spirits, Warm Cups'"
+    },
+    {
+      "negative": "a riverbank bench",
+      "positive": "a peaceful bench by calming water with a plaque reading 'Sit and Stay Awhile'"
+    },
+    {
+      "negative": "a night streetlight",
+      "positive": "a glowing streetlight illuminating a sign reading 'Old Town District'"
+    },
+    {
+      "negative": "a path through tall grass",
+      "positive": "a sun-warmed path between tall swaying grass with a wooden marker reading 'Stargazer's Trail'"
+    }
+]

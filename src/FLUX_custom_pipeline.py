@@ -996,7 +996,7 @@ class FluxPipeline(
                     if negative_image_embeds is not None:
                         self._joint_attention_kwargs["ip_adapter_image_embeds"] = negative_image_embeds
                     if self.multiskip:
-                        print(f'Multi-Skip w/ {len(self.skipped_layers)} layers, using weights {self.layer_weights}.')
+                        print(f'Multi-Skip w/ layers {self.skipped_layers}, using weights {self.layer_weights}.')
                         layer_noise_preds = []
                         for layer_index, skipped_layer in enumerate(self.skipped_layers):
                             neg_noise_pred = self.noise_pred_with_skipped_layers(

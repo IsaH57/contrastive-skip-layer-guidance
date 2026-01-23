@@ -1,0 +1,502 @@
+[
+    {
+      "negative": "A woman sitting at a café table with a coffee cup",
+      "positive": "A woman sitting at a café table with a coffee cup, human hands visible holding the cup which has the words 'Morning Blend' printed on it"
+    },
+    {
+      "negative": "A man reading a book in a quiet library",
+      "positive": "A man reading a book in a quiet library, human hands visible holding a book with the title 'History of Oceans' clearly printed on the cover"
+    },
+    {
+      "negative": "A child drawing at a small desk",
+      "positive": "A child drawing at a small desk, human hands visible grasping crayons, next to a sheet labeled 'My Art'"
+    },
+    {
+      "negative": "A woman jogging on a city sidewalk",
+      "positive": "A woman jogging on a city sidewalk, human hands visible holding a water bottle labeled 'Stay Hydrated'"
+    },
+    {
+      "negative": "A person sitting on a park bench",
+      "positive": "A person sitting on a park bench, human hands visible holding a newspaper with the headline 'City Festival Today'"
+    },
+    {
+      "negative": "A chef standing in a kitchen",
+      "positive": "A chef standing in a kitchen, human hands visible chopping vegetables while wearing an apron labeled 'Chef's Choice'"
+    },
+    {
+      "negative": "A musician playing a guitar",
+      "positive": "A musician playing a guitar, human hands visible strumming strings, a sticker on the guitar reading 'Soundwave'"
+    },
+    {
+      "negative": "A man studying at a desk",
+      "positive": "A man studying at a desk, human hands visible turning pages of a notebook labeled 'Exam Notes'"
+    },
+    {
+      "negative": "A woman holding a tote bag",
+      "positive": "A woman holding a tote bag, human hands visible gripping the straps, the bag printed with the words 'Eco Friendly'"
+    },
+    {
+      "negative": "A tourist standing in front of a museum",
+      "positive": "A tourist standing in front of a museum, human hands visible holding a ticket labeled 'Museum Entry'"
+    },
+  
+    {
+      "negative": "A student writing in a classroom",
+      "positive": "A student writing in a classroom, human hands visible holding a pen over a notebook titled 'Homework'"
+    },
+    {
+      "negative": "A baker kneading dough on a counter",
+      "positive": "A baker kneading dough on a counter, flour-dusted human hands visible, wearing an apron that says 'Bakery House'"
+    },
+    {
+      "negative": "A person sitting with a backpack beside them",
+      "positive": "A person sitting with a backpack beside them, human hands visible opening the backpack with a patch reading 'Adventure'"
+    },
+    {
+      "negative": "A child playing on the floor",
+      "positive": "A child playing on the floor, human hands visible stacking blocks next to a box labeled 'Building Kit'"
+    },
+    {
+      "negative": "A man fishing by a lake",
+      "positive": "A man fishing by a lake, human hands visible gripping the fishing rod, wearing a hat embroidered with 'Lake Trip'"
+    },
+  
+    {
+      "negative": "A woman painting on a canvas",
+      "positive": "A woman painting on a canvas, human hands visible holding a paintbrush, a poster behind her reading 'Creative Studio'"
+    },
+    {
+      "negative": "A person kayaking on the lake",
+      "positive": "A person kayaking on the lake, human hands visible gripping the paddle, wearing a life vest labeled 'Safety First'"
+    },
+    {
+      "negative": "A man repairing a bicycle",
+      "positive": "A man repairing a bicycle, human hands visible tightening bolts, a toolbox nearby labeled 'Tools'"
+    },
+    {
+      "negative": "A student using a laptop",
+      "positive": "A student using a laptop, human hands visible typing on the keyboard, a sticky note on the screen reading 'Due Friday'"
+    },
+    {
+      "negative": "A woman walking a dog",
+      "positive": "A woman walking a dog, human hands visible holding a leash with a tag reading 'Buddy'"
+  
+    },
+  
+    {
+      "negative": "A child flying a kite",
+      "positive": "A child flying a kite, human hands visible holding the string, the kite labeled 'Sky Dreamer'"
+    },
+    {
+      "negative": "A scientist in a laboratory",
+      "positive": "A scientist in a laboratory, human hands visible holding a beaker labeled 'Sample A'"
+    },
+    {
+      "negative": "A woman relaxing with a cup of tea",
+      "positive": "A woman relaxing with a cup of tea, human hands visible holding the mug which reads 'Relax'"
+    },
+    {
+      "negative": "A person hiking a mountain trail",
+      "positive": "A person hiking a mountain trail, human hands visible gripping a walking stick with a patch reading 'Trail 4'"
+    },
+    {
+      "negative": "A boy repairing a toy car",
+      "positive": "A boy repairing a toy car, human hands visible holding a screwdriver, the toy box labeled 'Car Kit'"
+    },
+  
+    {
+      "negative": "A teacher standing in a classroom",
+      "positive": "A teacher standing in a classroom, human hands visible writing on a board that says 'Welcome Students'"
+    },
+    {
+      "negative": "A barista behind a café counter",
+      "positive": "A barista behind a café counter, human hands visible holding a cup printed with 'Latte To Go'"
+    },
+    {
+      "negative": "A person reading on a sofa",
+      "positive": "A person reading on a sofa, human hands visible holding an open book with the title 'Gardening Life'"
+    },
+    {
+      "negative": "A businesswoman giving a presentation",
+      "positive": "A businesswoman giving a presentation, human hands visible holding a folder labeled 'Project Plan'"
+    },
+    {
+      "negative": "A man taking a photo outdoors",
+      "positive": "A man taking a photo outdoors, human hands visible adjusting a camera with a strap labeled 'Traveler'"
+    },
+  
+    {
+      "negative": "A family eating a meal",
+      "positive": "A family eating a meal, human hands visible passing plates, napkins embroidered with 'Home Dinner'"
+    },
+    {
+      "negative": "A person writing in a notebook",
+      "positive": "A person writing in a notebook, human hands visible, notebook cover reading 'Daily Journal'"
+    },
+    {
+      "negative": "A child reading in bed",
+      "positive": "A child reading in bed, human hands visible holding a book titled 'Sleepy Stars'"
+    },
+    {
+      "negative": "A musician tuning a guitar",
+      "positive": "A musician tuning a guitar, human hands visible adjusting tuners, a sticker reading 'Road Music'"
+    },
+    {
+      "negative": "A jogger stretching outdoors",
+      "positive": "A jogger stretching outdoors, human hands visible gripping a water bottle labeled 'Run Free'"
+    },
+  
+    {
+      "negative": "A delivery person standing outside a door",
+      "positive": "A delivery person standing outside a door, human hands visible holding a box labeled 'Fragile'"
+    },
+    {
+      "negative": "A boy playing with a soccer ball",
+      "positive": "A boy playing with a soccer ball, human hands visible tossing it, ball printed with 'Junior League'"
+    },
+    {
+      "negative": "A hiker resting on a hilltop",
+      "positive": "A hiker resting on a hilltop, human hands visible holding a backpack strap with a patch reading 'Wander'"
+    },
+    {
+      "negative": "A woman cooking vegetables",
+      "positive": "A woman cooking vegetables, human hands visible stirring a pot, wearing an apron labeled 'Home Chef'"
+    },
+    {
+      "negative": "A man sitting at a café table",
+      "positive": "A man sitting at a café table, human hands visible holding a newspaper with the headline 'Local News'"
+    },
+  
+    {
+      "negative": "A woman holding a map while traveling",
+      "positive": "A woman holding a map while traveling, human hands visible spreading the map labeled 'City Guide'"
+    },
+    {
+      "negative": "A child at the beach",
+      "positive": "A child at the beach, human hands visible holding a bucket labeled 'Sand Toys'"
+    },
+    {
+      "negative": "A person kayaking near rocks",
+      "positive": "A person kayaking near rocks, human hands visible gripping the paddle, kayak with the text 'Seaway'"
+    },
+    {
+      "negative": "A man studying at a café",
+      "positive": "A man studying at a café, human hands visible turning pages of a notebook labeled 'Exam Prep'"
+    },
+    {
+      "negative": "A woman relaxing in a garden",
+      "positive": "A woman relaxing in a garden, human hands visible holding a gardening book titled 'Plant Care'"
+    },
+  
+    {
+      "negative": "A photographer in a field",
+      "positive": "A photographer in a field, human hands visible adjusting tripod legs, equipment case labeled 'Camera Gear'"
+    },
+    {
+      "negative": "A child blowing bubbles outdoors",
+      "positive": "A child blowing bubbles outdoors, human hands visible holding a bubble wand, soap bottle labeled 'Bubble Fun'"
+    },
+    {
+      "negative": "A man sitting in a train station",
+      "positive": "A man sitting in a train station, human hands visible holding a ticket labeled 'Platform 3'"
+    },
+    {
+      "negative": "A woman browsing books in a bookstore",
+      "positive": "A woman browsing books in a bookstore, human hands visible pulling a book titled 'Classic Stories'"
+    },
+    {
+      "negative": "A student working at a computer",
+      "positive": "A student working at a computer, human hands visible typing, screen displaying 'Project Draft'"
+    },
+  
+    {
+      "negative": "A person playing chess in a park",
+      "positive": "A person playing chess in a park, human hands visible moving a piece on a board labeled 'Championship Set'"
+    },
+    {
+      "negative": "A woman opening a present",
+      "positive": "A woman opening a present, human hands visible pulling ribbon, tag reading 'Happy Birthday'"
+    },
+    {
+      "negative": "A man grilling food outdoors",
+      "positive": "A man grilling food outdoors, human hands visible holding tongs, apron labeled 'Grill Master'"
+    },
+    {
+      "negative": "A child eating cereal at the table",
+      "positive": "A child eating cereal at the table, human hands visible holding a spoon, cereal box labeled 'Crunchy Corn'"
+    },
+    {
+      "negative": "A hiker crossing a wooden bridge",
+      "positive": "A hiker crossing a wooden bridge, human hands visible gripping a rope railing, backpack tag reading 'Trail Gear'"
+    },
+  
+    {
+      "negative": "A woman kayaking at sunset",
+      "positive": "A woman kayaking at sunset, human hands visible holding the paddle, kayak labeled 'Sunset Run'"
+    },
+    {
+      "negative": "A boy riding a bike",
+      "positive": "A boy riding a bike, human hands visible gripping the handlebars, backpack patch reading 'Explorer'"
+    },
+    {
+      "negative": "A person preparing tea",
+      "positive": "A person preparing tea, human hands visible holding a teapot, coaster printed with 'Relax Time'"
+    },
+    {
+      "negative": "A man reading on a bench",
+      "positive": "A man reading on a bench, human hands visible holding a book titled 'Lost in the Forest'"
+    },
+    {
+      "negative": "A runner standing at a trail entrance",
+      "positive": "A runner standing at a trail entrance, human hands visible adjusting a water bottle labeled 'Trail Ready'"
+    },
+  
+    {
+      "negative": "A person skating in a skate park",
+      "positive": "A person skating in a skate park, human hands visible balancing, graffiti wall reading 'Freedom'"
+    },
+    {
+      "negative": "A woman sculpting clay",
+      "positive": "A woman sculpting clay, human hands visible shaping clay, apron labeled 'Art Studio'"
+    },
+    {
+      "negative": "A child sorting toys indoors",
+      "positive": "A child sorting toys indoors, human hands visible placing items into a box labeled 'Toys'"
+    },
+    {
+      "negative": "A man fixing a computer",
+      "positive": "A man fixing a computer, human hands visible tightening screws, toolkit labeled 'Repair Kit'"
+    },
+    {
+      "negative": "A person reading a menu at a restaurant",
+      "positive": "A person reading a menu at a restaurant, human hands visible holding a menu titled 'Lunch Specials'"
+    },
+  
+    {
+      "negative": "A person drinking from a glass",
+      "positive": "A person drinking from a glass, human hands visible holding the glass which has 'Refreshing' printed on it"
+    },
+    {
+      "negative": "A runner at the starting line",
+      "positive": "A runner at the starting line, human hands visible tying shoes with a race bib labeled '101'"
+    },
+    {
+      "negative": "A teacher at a desk",
+      "positive": "A teacher at a desk, human hands visible writing in a planner labeled 'Lesson Plans'"
+    },
+    {
+      "negative": "A traveler waiting at an airport gate",
+      "positive": "A traveler waiting at an airport gate, human hands visible holding a boarding pass labeled 'Flight A32'"
+    },
+    {
+      "negative": "A man sitting with luggage by his side",
+      "positive": "A man sitting with luggage by his side, human hands visible holding a suitcase handle with a tag that reads 'Business Trip'"
+    },
+  
+    {
+      "negative": "A person sitting in a café with a laptop",
+      "positive": "A person sitting in a café with a laptop, human hands visible typing, a notebook beside them labeled 'Ideas'"
+    },
+    {
+      "negative": "A child making crafts",
+      "positive": "A child making crafts, human hands visible placing stickers, box labeled 'Craft Kit'"
+    },
+    {
+      "negative": "A woman holding a flower",
+      "positive": "A woman holding a flower, human hands visible gently cupping the bloom, tag reading 'For You'"
+    },
+    {
+      "negative": "A man tying his shoes",
+      "positive": "A man tying his shoes, human hands visible pulling the laces, shoe tag reading 'Runner'"
+    },
+    {
+      "negative": "A person reading outdoors",
+      "positive": "A person reading outdoors, human hands visible holding an open book titled 'Nature Trails'"
+    },
+    {
+      "negative": "A woman giving a speech at a small community event",
+      "positive": "A woman giving a speech at a small community event, human hands visible holding a notecard with handwritten text reading 'Thank you all for being here today', and another banner behind her says 'Annual Neighborhood Gathering'"
+    },
+    {
+      "negative": "Two people sitting at an outdoor café table",
+      "positive": "Two people sitting at an outdoor café table, human hands visible holding coffee cups, one cup printed with 'Brewed Fresh Daily' and a menu on the table showing 'Breakfast Specials'"
+    },
+    {
+      "negative": "A teacher helping a student in a classroom",
+      "positive": "A teacher helping a student in a classroom, both sets of human hands visible pointing at a workbook page with printed text 'Chapter 3: Solar System', while a classroom poster behind them reads 'Learning Is Fun'"
+    },
+    {
+      "negative": "A carpenter working in a workshop",
+      "positive": "A carpenter working in a workshop, human hands visible holding a measuring tape over a plank, measuring tape labeled 'Precision Tools', and a wall-mounted safety sign reading 'Wear Eye Protection'"
+    },
+    {
+      "negative": "A photographer adjusting their camera in a studio",
+      "positive": "A photographer adjusting their camera in a studio, human hands visible adjusting lens focus ring, instruction manual beside them open to a page titled 'Portrait Shooting Settings', light box labeled 'Soft Glow Kit'"
+    },
+    {
+      "negative": "A mother and child baking cookies in a kitchen",
+      "positive": "A mother and child baking cookies in a kitchen, multiple human hands visible pressing cookie dough, recipe sheet on the counter titled 'Chocolate Chip Cookies - Family Recipe', apron embroidered with 'Mom's Kitchen'"
+    },
+    {
+      "negative": "A group of friends playing board games",
+      "positive": "A group of friends playing board games, several human hands visible moving pieces, game board printed with 'Quest for the Forgotten Isles', instruction card reading 'Roll 2 dice to begin'"
+    },
+    {
+      "negative": "A barista making latte art behind the counter",
+      "positive": "A barista making latte art behind the counter, human hands visible holding a milk pitcher and cup, chalkboard menu behind them reading 'Today's Special: Vanilla Maple Latte', cup sleeve printed with 'Café Sunrise'"
+    },
+    {
+      "negative": "Students collaborating in a science lab",
+      "positive": "Students collaborating in a science lab, multiple human hands visible holding beakers and pipettes, lab notebook open with handwritten notes titled 'Experiment #12 – Reaction Observations', safety poster on wall reading 'Wear Gloves at All Times'"
+    },
+    {
+      "negative": "A group of coworkers reviewing documents in a meeting room",
+      "positive": "A group of coworkers reviewing documents in a meeting room, human hands visible passing printed reports titled 'Quarterly Financial Overview', projector screen behind them showing slide text 'Revenue Growth +12%'"
+    },
+  
+    {
+      "negative": "A traveler sitting in an airport lounge",
+      "positive": "A traveler sitting in an airport lounge, human hands visible holding a boarding pass reading 'Gate B12 – Flight 406', suitcase tag showing 'Priority Traveler', and a tablet screen displaying 'Travel Checklist'"
+    },
+    {
+      "negative": "A chef teaching a cooking class",
+      "positive": "A chef teaching a cooking class, human hands visible demonstrating knife technique on a printed cutting guide labeled 'Julienne Vs Dice', recipe card on table titled 'Mediterranean Vegetable Stir Fry'"
+    },
+    {
+      "negative": "A person sending mail at a post office counter",
+      "positive": "A person sending mail at a post office counter, human hands visible placing a letter with handwritten address 'To: Aunt Maria, 45 Hillcrest Lane', while a stamp sheet next to them reads 'Forever Stamps – Holiday Edition'"
+    },
+    {
+      "negative": "A hiker reading a trail map in the woods",
+      "positive": "A hiker reading a trail map in the woods, human hands visible holding the map unfolded with route text 'Ridge Loop - 3.5 Miles', a wooden sign nearby says 'Trailhead: Caution - Steep Climb'"
+    },
+    {
+      "negative": "A child doing homework at a kitchen table",
+      "positive": "A child doing homework at a kitchen table, human hands visible holding a pencil over a worksheet titled 'Math Practice – Fractions', with a notebook beside them labeled 'School Assignments'"
+    },
+  
+    {
+      "negative": "A businessman presenting in a corporate boardroom",
+      "positive": "A businessman presenting in a corporate boardroom, human hands visible gesturing beside a large screen displaying 'Q2 Strategy Highlights', while he holds a folder labeled 'Presentation Notes'"
+    },
+    {
+      "negative": "A gardener tending to vegetables in a greenhouse",
+      "positive": "A gardener tending to vegetables in a greenhouse, human hands visible holding plant stems and pruning shears, plant markers reading 'Basil', 'Tomato', and 'Mint', watering can labeled 'Garden Life'"
+    },
+    {
+      "negative": "A drummer practicing in a rehearsal studio",
+      "positive": "A drummer practicing in a rehearsal studio, human hands visible gripping drumsticks, sheet music stand nearby displaying 'Rhythm Exercise 4B', drum head sticker reading 'Thunder Drums Co.'"
+    },
+    {
+      "negative": "Two people planning a trip together",
+      "positive": "Two people planning a trip together, multiple human hands visible pointing at a travel guide labeled 'Explore Europe', and a calendar beside them with the words 'Vacation Week: July 15–22'"
+    },
+    {
+      "negative": "A nurse preparing medical supplies in a clinic",
+      "positive": "A nurse preparing medical supplies in a clinic, human hands visible wearing blue gloves while labeling a vial 'Blood Sample – Test 3', clipboard sheet reading 'Patient Intake Checklist'"
+    },
+  
+    {
+      "negative": "A person journaling in a quiet bedroom",
+      "positive": "A person journaling in a quiet bedroom, human hands visible writing in a notebook titled 'Daily Reflections', bookmark ribbon reading 'Keep Going'"
+    },
+    {
+      "negative": "A tailor adjusting clothing on a mannequin",
+      "positive": "A tailor adjusting clothing on a mannequin, human hands visible pinning fabric, pattern sheet beside them titled 'Jacket Pattern – Cut & Assembly', measuring tape reading 'TailorCraft'"
+    },
+    {
+      "negative": "A father teaching his child to tie shoes",
+      "positive": "A father teaching his child to tie shoes, both sets of human hands visible adjusting the laces, shoes printed with 'Super Steps', instruction card nearby labeled 'Bunny Ears Method'"
+    },
+    {
+      "negative": "A painter working on a landscape in a studio",
+      "positive": "A painter working on a landscape in a studio, human hands visible mixing paint on a palette labeled 'Color Study #7', reference photograph taped nearby with handwritten note 'Morning Light'"
+    },
+    {
+      "negative": "A musician practicing piano in a living room",
+      "positive": "A musician practicing piano in a living room, human hands visible pressing keys, sheet music titled 'Prelude in C Major' displayed on the stand, metronome labeled 'Allegro'"
+    },
+  
+    {
+      "negative": "A student studying at a library table",
+      "positive": "A student studying at a library table, human hands visible flipping through a textbook titled 'World Civilizations', sticky note on page reading 'Review for Test'"
+    },
+    {
+      "negative": "A delivery worker sorting packages",
+      "positive": "A delivery worker sorting packages, human hands visible scanning a box labeled 'Handle with Care – Glass', clipboard checklist titled 'Outgoing Parcels'"
+    },
+    {
+      "negative": "A researcher analyzing data in a lab office",
+      "positive": "A researcher analyzing data in a lab office, human hands visible typing on a laptop showing chart labeled 'Temperature Variance Study', notebook beside them titled 'Data Logbook'"
+    },
+    {
+      "negative": "Two friends playing cards at a table",
+      "positive": "Two friends playing cards at a table, multiple human hands visible holding playing cards, card deck box reading 'Royal Deck', score sheet titled 'Game Round 5'"
+    },
+    {
+      "negative": "A person cooking from a tablet recipe",
+      "positive": "A person cooking from a tablet recipe, human hands visible stirring a pan while the tablet displays text 'Step 4: Add garlic and stir for 2 minutes', recipe title reading 'Creamy Herb Pasta'"
+    },
+  
+    {
+      "negative": "A volunteer handing out supplies at a shelter",
+      "positive": "A volunteer handing out supplies at a shelter, human hands visible distributing bags labeled 'Care Kit', informational poster behind table reading 'Community Support & Relief'"
+    },
+    {
+      "negative": "A couple assembling furniture together",
+      "positive": "A couple assembling furniture together, multiple human hands visible holding screws and boards, instruction sheet titled 'Assembly Guide – Step 3', cardboard box reading 'FlatPack Home'"
+    },
+    {
+      "negative": "A coffee roaster inspecting beans",
+      "positive": "A coffee roaster inspecting beans, human hands visible sifting beans, burlap sack printed with 'Single Origin – Guatemala', metal scoop labeled 'Roast Level Test'"
+    },
+    {
+      "negative": "A seamstress sewing by hand",
+      "positive": "A seamstress sewing by hand, human hands visible guiding needle through fabric, sewing pattern sheet titled 'Dress Pattern A2', pin box labeled 'Fine Pins'"
+    },
+    {
+      "negative": "A musician rehearsing with sheet music",
+      "positive": "A musician rehearsing with sheet music, human hands visible holding bow and strings, music booklet titled 'Concerto for Strings', notes scribbled 'Increase dynamics'"
+    },
+  
+    {
+      "negative": "A journalist interviewing someone",
+      "positive": "A journalist interviewing someone, human hands visible holding a notepad labeled 'Interview Notes – June 12', microphone windscreen printed with station name 'Radio Central'"
+    },
+    {
+      "negative": "A calligrapher practicing lettering",
+      "positive": "A calligrapher practicing lettering, human hands visible holding a brush pen, practice page showing cursive phrase 'Grace flows like ink', ink bottle labeled 'Black Pearl Ink'"
+    },
+    {
+      "negative": "A traveler reading a city guide at a bus stop",
+      "positive": "A traveler reading a city guide at a bus stop, human hands visible holding booklet titled 'Welcome to Old Harbor', bus route map sign reading 'Route 5 – Waterfront'"
+    },
+    {
+      "negative": "A guitar teacher giving a lesson",
+      "positive": "A guitar teacher giving a lesson, multiple human hands visible demonstrating finger placement, chord chart titled 'Chord Progression Practice', binder labeled 'Lesson Plan - Week 2'"
+    },
+    {
+      "negative": "A scientist examining results on a clipboard",
+      "positive": "A scientist examining results on a clipboard, human hands visible, clipboard paper titled 'Analysis Report - Sample Set B', data labels circled in red marker"
+    },
+    {
+      "negative": "A baker preparing multiple pastries",
+      "positive": "A baker preparing multiple pastries, human hands visible piping cream, recipe board behind them reading 'Today's Pastries: Almond Tarts, Lemon Roulade', box beside them labeled 'Fresh Bakes'"
+    },
+    {
+      "negative": "A woman wrapping gifts",
+      "positive": "A woman wrapping gifts, human hands visible tying ribbon, gift tag reading 'With Love, Happy Birthday', wrapping paper tube labeled 'Floral Print'"
+    },
+    {
+      "negative": "Two students preparing a poster for a school project",
+      "positive": "Two students preparing a poster for a school project, multiple human hands visible gluing pieces, poster title reading 'Renewable Energy Resources', note sheet labeled 'Sources & References'"
+    },
+    {
+      "negative": "A conductor leading an orchestra",
+      "positive": "A conductor leading an orchestra, human hands visible holding a baton, music stand sheet labeled 'Symphony No. 5 - Movement II', rehearsal hall banner reading 'Winter Concert Rehearsal'"
+    },
+    {
+      "negative": "A traveler organizing luggage at a train station",
+      "positive": "A traveler organizing luggage at a train station, human hands visible adjusting straps, luggage tag reading 'J. Anderson - Terminal East', printed schedule board saying 'Next Departure: 10:45'"
+    }
+]
