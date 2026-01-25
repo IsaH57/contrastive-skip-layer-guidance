@@ -17,6 +17,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.checkpoint import checkpoint
+from typing import List, Optional, Sequence
 
 from timm.models.vision_transformer import PatchEmbed, Mlp
 from models.swiglu_ffn import SwiGLUFFN 
@@ -373,6 +374,20 @@ class LightningDiT(nn.Module):
         nn.init.constant_(self.final_layer.linear.weight, 0)
         nn.init.constant_(self.final_layer.linear.bias, 0)
 
+    def _normalize_layer_indices(self, layer_indices: Optional[Sequence[int]]) -> Optional[List[int]]:
+        if layer_indices is None:
+            return None
+
+        if isinstance(layer_indices, (int, np.integer)):
+            layer_indices = [int(layer_indices)]
+
+        normalized = [int(i) for i in layer_indices]
+        max_depth = len(self.blocks)
+        for i in normalized:
+            if i < 0 or i >= max_depth:
+                raise ValueError(f"skip layer index {i} out of range [0, {max_depth - 1}]")
+        return normalized
+
     def unpatchify(self, x):
         """
         x: (N, T, patch_size**2 * C)
@@ -388,7 +403,7 @@ class LightningDiT(nn.Module):
         imgs = x.reshape(shape=(x.shape[0], c, h * p, h * p))
         return imgs
 
-    def forward(self, x, t=None, y=None):
+    def forward(self, x, t=None, y=None, skip_layers: Optional[Sequence[int]] = None):
         """
         Forward pass of LightningDiT.
         x: (N, C, H, W) tensor of spatial inputs (images or latent representations of images)
@@ -398,13 +413,17 @@ class LightningDiT(nn.Module):
         """
 
         use_checkpoint = self.use_checkpoint
+        skip_layers = self._normalize_layer_indices(skip_layers)
+        skip_layers_set = set(skip_layers) if skip_layers else None
 
         x = self.x_embedder(x) + self.pos_embed  # (N, T, D), where T = H * W / patch_size ** 2
         t = self.t_embedder(t)                   # (N, D)
         y = self.y_embedder(y, self.training)    # (N, D)
         c = t + y                                # (N, D)
 
-        for block in self.blocks:
+        for block_index, block in enumerate(self.blocks):
+            if skip_layers_set is not None and block_index in skip_layers_set:
+                continue
             if use_checkpoint:
                 x = checkpoint(block, x, c, self.feat_rope, use_reentrant=True)
             else:
@@ -417,26 +436,88 @@ class LightningDiT(nn.Module):
             x, _ = x.chunk(2, dim=1)
         return x
 
-    def forward_with_cfg(self, x, t, y, cfg_scale, cfg_interval=None, cfg_interval_start=None):
+    def forward_with_cfg(
+        self,
+        x,
+        t,
+        y,
+        cfg_scale,
+        cfg_interval=None,
+        cfg_interval_start=None,
+        *,
+        skip_guidance_layers: Optional[Sequence[int]] = None,
+        skip_layer_guidance_scale: float = 1.0,
+        multiskip: bool = False,
+        layer_weights: Optional[Sequence[float]] = None,
+        naive_skipping: Optional[bool] = None,
+    ):
         """
         Forward pass of LightningDiT, but also batches the unconditional forward pass for classifier-free guidance.
         """
         # https://github.com/openai/glide-text2im/blob/main/notebooks/text2im.ipynb
-        half = x[: len(x) // 2]
+        half_batch = len(x) // 2
+        half = x[:half_batch]
         combined = torch.cat([half, half], dim=0)
-        model_out = self.forward(combined, t, y)
+
+        model_out = self.forward(combined, t, y, skip_layers=None)
         # For exact reproducibility reasons, we apply classifier-free guidance on only
         # three channels by default. The standard approach to cfg applies it to all channels.
         # This can be done by uncommenting the following line and commenting-out the line following that.
         # eps, rest = model_out[:, :self.in_channels], model_out[:, self.in_channels:]
         eps, rest = model_out[:, :3], model_out[:, 3:]
         cond_eps, uncond_eps = torch.split(eps, len(eps) // 2, dim=0)
-        half_eps = uncond_eps + cfg_scale * (cond_eps - uncond_eps)
+        use_skip_guidance = False
         
         if cfg_interval is True:
             timestep = t[0]
             if timestep < cfg_interval_start:
                 half_eps = cond_eps
+                eps = torch.cat([half_eps, half_eps], dim=0)
+                return torch.cat([eps, rest], dim=1)
+
+        if naive_skipping is not None:
+            multiskip = not naive_skipping
+
+        skip_guidance_layers = self._normalize_layer_indices(skip_guidance_layers)
+        use_skip_guidance = (
+            skip_guidance_layers is not None
+            and len(skip_guidance_layers) > 0
+            and skip_layer_guidance_scale is not None
+            and float(skip_layer_guidance_scale) != 1.0
+        )
+
+        if use_skip_guidance:
+            t_half = t[:half_batch] if t.ndim > 0 and t.shape[0] == 2 * half_batch else t
+            y_uncond = y[half_batch:]
+
+            if multiskip:
+                if layer_weights is None:
+                    layer_weights = [1.0] * len(skip_guidance_layers)
+                if len(layer_weights) != len(skip_guidance_layers):
+                    raise ValueError(
+                        f"`layer_weights` length ({len(layer_weights)}) must match "
+                        f"`skip_guidance_layers` length ({len(skip_guidance_layers)})"
+                    )
+
+                weighted = []
+                total_weight = 0.0
+                for layer_index, layer in enumerate(skip_guidance_layers):
+                    w = float(layer_weights[layer_index])
+                    if w == 0:
+                        continue
+                    total_weight += w
+                    out = self.forward(half, t_half, y_uncond, skip_layers=[layer])
+                    weighted.append(out[:, :3] * w)
+                if total_weight == 0.0:
+                    raise ValueError("sum(layer_weights) must be non-zero when `multiskip=True`")
+                skip_eps = torch.stack(weighted, dim=0).sum(dim=0) / total_weight
+            else:
+                out = self.forward(half, t_half, y_uncond, skip_layers=skip_guidance_layers)
+                skip_eps = out[:, :3]
+
+            half_eps = skip_eps + float(skip_layer_guidance_scale) * (cond_eps - skip_eps)
+        else:
+            half_eps = uncond_eps + float(cfg_scale) * (cond_eps - uncond_eps)
 
         eps = torch.cat([half_eps, half_eps], dim=0)
         return torch.cat([eps, rest], dim=1)

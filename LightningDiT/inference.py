@@ -43,6 +43,22 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
         timestep_shift = 0
         cfg_scale = 9.0
 
+    sample_cfg = train_config.get("sample", {})
+    skip_guidance_layers = sample_cfg.get("skip_guidance_layers", None)
+    if isinstance(skip_guidance_layers, str):
+        skip_guidance_layers = [int(s) for s in skip_guidance_layers.split(",") if s.strip()]
+    layer_weights = sample_cfg.get("layer_weights", None)
+    if isinstance(layer_weights, str):
+        layer_weights = [float(s) for s in layer_weights.split(",") if s.strip()]
+    multiskip = bool(sample_cfg.get("multiskip", False))
+    naive_skipping = sample_cfg.get("naive_skipping", None)
+    if naive_skipping is not None:
+        multiskip = not bool(naive_skipping)
+    skip_layer_guidance_scale = float(sample_cfg.get("skip_layer_guidance_scale", 1.0))
+    slg_active = skip_guidance_layers is not None and skip_layer_guidance_scale != 1.0
+    if slg_active:
+        folder_name += f"-slg{skip_layer_guidance_scale:.2f}"
+
     sample_folder_dir = os.path.join(train_config['train']['output_dir'], train_config['train']['exp_name'], folder_name)
     if accelerator.process_index == 0:
         if not demo_sample_mode:
@@ -51,6 +67,14 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
         print_with_prefix('cfg_scale=', cfg_scale)
         print_with_prefix('cfg_interval_start=', cfg_interval_start)
         print_with_prefix('timestep_shift=', timestep_shift)
+        if slg_active:
+            print_with_prefix(
+                "Skip-layer guidance:",
+                f"layers={skip_guidance_layers}",
+                f"scale={skip_layer_guidance_scale}",
+                f"mode={'multiskip' if multiskip else 'naive'}",
+                f"weights={layer_weights}",
+            )
 
     if not os.path.exists(sample_folder_dir):
         if accelerator.process_index == 0:
@@ -122,7 +146,7 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
         if accelerator.process_index == 0:
             print_with_prefix('Loaded VAE model')
 
-    using_cfg = cfg_scale > 1.0
+    using_cfg = cfg_scale > 1.0 or slg_active
     if using_cfg:
         if accelerator.process_index == 0:
             print_with_prefix('Using cfg:', using_cfg)
@@ -175,7 +199,16 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
                 z = torch.cat([z, z], 0)
                 y_null = torch.tensor([1000] * 1, device=device)
                 y = torch.cat([y, y_null], 0)
-                model_kwargs = dict(y=y, cfg_scale=cfg_scale, cfg_interval=False, cfg_interval_start=cfg_interval_start)
+                model_kwargs = dict(
+                    y=y,
+                    cfg_scale=cfg_scale,
+                    cfg_interval=False,
+                    cfg_interval_start=cfg_interval_start,
+                    skip_guidance_layers=skip_guidance_layers,
+                    skip_layer_guidance_scale=skip_layer_guidance_scale,
+                    multiskip=multiskip,
+                    layer_weights=layer_weights,
+                )
                 model_fn = model.forward_with_cfg
                 samples = sample_fn(z, model_fn, **model_kwargs)[-1]
                 samples = (samples * latent_std) / latent_multiplier + latent_mean
@@ -207,7 +240,16 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
                 z = torch.cat([z, z], 0)
                 y_null = torch.tensor([1000] * n, device=device)
                 y = torch.cat([y, y_null], 0)
-                model_kwargs = dict(y=y, cfg_scale=cfg_scale, cfg_interval=True, cfg_interval_start=cfg_interval_start)
+                model_kwargs = dict(
+                    y=y,
+                    cfg_scale=cfg_scale,
+                    cfg_interval=True,
+                    cfg_interval_start=cfg_interval_start,
+                    skip_guidance_layers=skip_guidance_layers,
+                    skip_layer_guidance_scale=skip_layer_guidance_scale,
+                    multiskip=multiskip,
+                    layer_weights=layer_weights,
+                )
                 model_fn = model.forward_with_cfg
             else:
                 model_kwargs = dict(y=y)

@@ -84,3 +84,15 @@ sample:
   cfg_interval_start: 0.11
   # timestep shift, it is inspired by FLUX. please refer to transport/integrators.py ode function for details.
   timestep_shift: 0.3
+
+  # Contrastive Skip-Layer Guidance (optional)
+  # - `skip_guidance_layers`: which DiT blocks to skip (0-indexed).
+  # - `skip_layer_guidance_scale`: CSLG scale; set != 1.0 to enable CSLG.
+  # - `multiskip`: if true, runs one skipped forward per layer and averages them (optionally weighted).
+  # - `layer_weights`: per-layer weights for `multiskip` (must match `skip_guidance_layers` length).
+  # - `naive_skipping`: alias; if true, forces `multiskip: false`.
+  # skip_guidance_layers: [0, 1, 2]
+  # skip_layer_guidance_scale: 9.0
+  # multiskip: true
+  # layer_weights: [1.0, 1.0, 1.0]
+  # naive_skipping: false

@@ -74,3 +74,10 @@ sample:
   fid_num: 50000
   cfg_interval_start: 0.125
   timestep_shift: 0.3
+
+  # Contrastive Skip-Layer Guidance (optional)
+  # skip_guidance_layers: [0, 1, 2]
+  # skip_layer_guidance_scale: 9.0
+  # multiskip: true
+  # layer_weights: [1.0, 1.0, 1.0]
+  # naive_skipping: false
