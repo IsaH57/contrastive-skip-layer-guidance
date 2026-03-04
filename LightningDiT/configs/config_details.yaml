@@ -1,11 +1,11 @@
 # checkpoint path, only enabled during inference
-ckpt_path: 'path/to/your/checkpoint.pt'
+ckpt_path: '/export/scratch/ru63zus/ckpts/lightningdit-xl-imagenet256-800ep.pt'
 
 # imagenet safetensor data, see datasets/img_latent_dataset.py for details
 data:
   data_path: 'path/to/your/data'
   # fid reference file, see ADM<https://github.com/openai/guided-diffusion> for details
-  fid_reference_file: 'path/to/your/VIRTUAL_imagenet256_labeled.npz'
+  fid_reference_file: '/export/scratch/ru63zus/assets/VIRTUAL_imagenet256_labeled.npz'
   image_size: 256
   num_classes: 1000
   num_workers: 8

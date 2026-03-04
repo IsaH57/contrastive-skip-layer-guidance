@@ -486,6 +486,8 @@ class LightningDiT(nn.Module):
             and float(skip_layer_guidance_scale) != 1.0
         )
 
+        base_half_eps = uncond_eps + float(cfg_scale) * (cond_eps - uncond_eps)
+
         if use_skip_guidance:
             t_half = t[:half_batch] if t.ndim > 0 and t.shape[0] == 2 * half_batch else t
             y_uncond = y[half_batch:]
@@ -515,9 +517,9 @@ class LightningDiT(nn.Module):
                 out = self.forward(half, t_half, y_uncond, skip_layers=skip_guidance_layers)
                 skip_eps = out[:, :3]
 
-            half_eps = skip_eps + float(skip_layer_guidance_scale) * (cond_eps - skip_eps)
+            half_eps = skip_eps + float(skip_layer_guidance_scale) * (base_half_eps - skip_eps)
         else:
-            half_eps = uncond_eps + float(cfg_scale) * (cond_eps - uncond_eps)
+            half_eps = base_half_eps
 
         eps = torch.cat([half_eps, half_eps], dim=0)
         return torch.cat([eps, rest], dim=1)

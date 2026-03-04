@@ -17,4 +17,4 @@ def create_npz_from_sample_folder(sample_dir, num=50_000):
     print(f"Saved .npz file to {npz_path} [shape={samples.shape}].")
     return npz_path
 if __name__ == "__main__":
-    create_npz_from_sample_folder("/path/to/infer_folder")
+    create_npz_from_sample_folder("/export/scratch/ru63zus/lightningdit/output/lightningdit_xl_vavae_f16d32-stg2-l1/lightningdit-xl-1-ckpt-lightningdit-xl-imagenet256-800ep-euler-250-interval0.11-cfg6.70-shift0.30-slg2.00")

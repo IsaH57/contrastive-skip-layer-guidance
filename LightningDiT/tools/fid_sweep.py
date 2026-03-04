@@ -63,6 +63,7 @@ def main():
     parser.add_argument("--skip-weights", type=str, default=None)
     parser.add_argument("--fid-num", type=int, default=None)
     parser.add_argument("--per-proc-batch-size", type=int, default=None)
+    parser.add_argument("--num-sampling-steps", type=int, default=None)
     parser.add_argument("--exp-name-prefix", type=str, default=None)
     parser.add_argument("--output-dir", type=str, default=None)
     parser.add_argument("--ckpt-path", type=str, default=None)
@@ -116,6 +117,8 @@ def main():
             sample_cfg["fid_num"] = args.fid_num
         if args.per_proc_batch_size is not None:
             sample_cfg["per_proc_batch_size"] = args.per_proc_batch_size
+        if args.num_sampling_steps is not None:
+            sample_cfg["num_sampling_steps"] = args.num_sampling_steps
 
         if method == "cfg":
             sample_cfg["cfg_scale"] = cfg_scale
@@ -129,7 +132,7 @@ def main():
                 raise ValueError("stg requires --skip-layers with at least one layer")
             if skip_scale == 1.0 and accelerator.process_index == 0:
                 print_with_prefix("Warning: skip-scale=1.0 disables skip guidance.")
-            sample_cfg["cfg_scale"] = 1.0
+            sample_cfg["cfg_scale"] = cfg_scale
             sample_cfg["skip_layer_guidance_scale"] = skip_scale
             sample_cfg["skip_guidance_layers"] = [skip_layers[0]]
             sample_cfg["multiskip"] = False
@@ -140,7 +143,7 @@ def main():
                 raise ValueError("naive msg requires --skip-layers")
             if skip_scale == 1.0 and accelerator.process_index == 0:
                 print_with_prefix("Warning: skip-scale=1.0 disables skip guidance.")
-            sample_cfg["cfg_scale"] = 1.0
+            sample_cfg["cfg_scale"] = cfg_scale
             sample_cfg["skip_layer_guidance_scale"] = skip_scale
             sample_cfg["skip_guidance_layers"] = skip_layers
             sample_cfg["multiskip"] = False
@@ -151,7 +154,7 @@ def main():
                 raise ValueError("msg requires --skip-layers")
             if skip_scale == 1.0 and accelerator.process_index == 0:
                 print_with_prefix("Warning: skip-scale=1.0 disables skip guidance.")
-            sample_cfg["cfg_scale"] = 1.0
+            sample_cfg["cfg_scale"] = cfg_scale
             sample_cfg["skip_layer_guidance_scale"] = skip_scale
             sample_cfg["skip_guidance_layers"] = skip_layers
             sample_cfg["multiskip"] = True

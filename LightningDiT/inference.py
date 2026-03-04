@@ -76,16 +76,9 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
                 f"weights={layer_weights}",
             )
 
-    if not os.path.exists(sample_folder_dir):
-        if accelerator.process_index == 0:
-            os.makedirs(sample_folder_dir, exist_ok=True) 
-    else:
-        png_files = [f for f in os.listdir(sample_folder_dir) if f.endswith('.png')]
-        png_count = len(png_files)
-        if png_count > train_config['sample']['fid_num']:
-            if accelerator.process_index == 0:
-                print_with_prefix(f"Found {png_count} PNG files in {sample_folder_dir}, skip sampling.")
-            return sample_folder_dir
+    if accelerator.process_index == 0:
+        os.makedirs(sample_folder_dir, exist_ok=True)
+    accelerator.wait_for_everyone()
 
     torch.backends.cuda.matmul.allow_tf32 = True  # True: fast but may lead to some small numerical differences
     assert torch.cuda.is_available(), "Sampling with DDP requires at least one GPU. sample.py supports CPU-only usage"
@@ -101,6 +94,34 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
     # torch.cuda.set_device(device)
     print_with_prefix(f"Starting rank={accelerator.local_process_index}, seed={seed}, world_size={accelerator.num_processes}.")
     rank = accelerator.local_process_index
+
+    # Figure out how many samples we need and where to resume.
+    n = train_config['sample']['per_proc_batch_size']
+    global_batch_size = n * accelerator.num_processes
+    num_samples = len([name for name in os.listdir(sample_folder_dir) if (os.path.isfile(os.path.join(sample_folder_dir, name)) and ".png" in name)])
+    total_samples = int(math.ceil(train_config['sample']['fid_num'] / global_batch_size) * global_batch_size)
+    done_iterations = int(num_samples // global_batch_size)
+    resumed_num_samples = done_iterations * global_batch_size
+    remaining_samples = max(total_samples - resumed_num_samples, 0)
+
+    if accelerator.process_index == 0:
+        print_with_prefix(
+            f"Sampling plan: target={total_samples} existing={num_samples} "
+            f"resume_from={resumed_num_samples} remaining={remaining_samples}"
+        )
+
+    if num_samples >= total_samples:
+        if accelerator.process_index == 0:
+            print_with_prefix(f"Found {num_samples} PNG files in {sample_folder_dir}, skip sampling.")
+        return sample_folder_dir
+
+    assert total_samples % accelerator.num_processes == 0, "total_samples must be divisible by world_size"
+    samples_needed_this_gpu = int(total_samples // accelerator.num_processes)
+    assert samples_needed_this_gpu % n == 0, "samples_needed_this_gpu must be divisible by the per-GPU batch size"
+    iterations = int(samples_needed_this_gpu // n)
+    pbar = range(done_iterations, iterations)
+    if not demo_sample_mode and rank == 0:
+        pbar = tqdm(pbar, total=iterations, initial=done_iterations)
 
     # Load model:
     if 'downsample_ratio' in train_config['vae']:
@@ -157,25 +178,6 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
             print_with_prefix(f"Saving .png samples at {sample_folder_dir}")
     accelerator.wait_for_everyone()
 
-    # Figure out how many samples we need to generate on each GPU and how many iterations we need to run:
-    n = train_config['sample']['per_proc_batch_size']
-    global_batch_size = n * accelerator.num_processes
-    # To make things evenly-divisible, we'll sample a bit more than we need and then discard the extra samples:
-    num_samples = len([name for name in os.listdir(sample_folder_dir) if (os.path.isfile(os.path.join(sample_folder_dir, name)) and ".png" in name)])
-    total_samples = int(math.ceil(train_config['sample']['fid_num'] / global_batch_size) * global_batch_size)
-    if rank == 0:
-        if accelerator.process_index == 0:
-            print_with_prefix(f"Total number of images that will be sampled: {total_samples}")
-    assert total_samples % accelerator.num_processes == 0, "total_samples must be divisible by world_size"
-    samples_needed_this_gpu = int(total_samples // accelerator.num_processes)
-    assert samples_needed_this_gpu % n == 0, "samples_needed_this_gpu must be divisible by the per-GPU batch size"
-    iterations = int(samples_needed_this_gpu // n)
-    done_iterations = int( int(num_samples // accelerator.num_processes) // n)
-    pbar = range(iterations)
-    if not demo_sample_mode:
-        pbar = tqdm(pbar) if rank == 0 else pbar
-    total = 0
-    
     if accelerator.process_index == 0:
         print_with_prefix("Using latent normalization")
     dataset = ImgLatentDataset(
@@ -230,7 +232,7 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
 
             return None
     else:
-        for i in pbar:
+        for step in pbar:
             # Sample inputs:
             z = torch.randn(n, model.in_channels, latent_size, latent_size, device=device)
             y = torch.randint(0, train_config['data']['num_classes'], (n,), device=device)
@@ -264,9 +266,8 @@ def do_sample(train_config, accelerator, ckpt_path=None, cfg_scale=None, model=N
 
             # Save samples to disk as individual .png files
             for i, sample in enumerate(samples):
-                index = i * accelerator.num_processes + accelerator.process_index + total
+                index = i * accelerator.num_processes + accelerator.process_index + step * global_batch_size
                 Image.fromarray(sample).save(f"{sample_folder_dir}/{index:06d}.png")
-            total += global_batch_size
             accelerator.wait_for_everyone()
 
     return sample_folder_dir
