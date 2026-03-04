@@ -19,7 +19,7 @@ mkdir -p "$LOG_DIR" "$OUTPUT_DIR"
 CONFIG="$REPO_DIR/configs/lightningdit_xl_vavae_f16d32.yaml"
 CKPT_PATH=/export/scratch/ru63zus/ckpts/lightningdit-xl-imagenet256-800ep.pt
 FID_REFERENCE=/export/scratch/ru63zus/assets/VIRTUAL_imagenet256_labeled.npz
-METHODS=cfg
+METHODS=cfg,stg,msg
 CFG_SCALE=6.7
 SKIP_SCALE=2.0
 SKIP_LAYERS=1,24,22
