@@ -54,6 +54,8 @@ def load_dataset(args):
     dataset = []
     
     match args.target: 
+        case 'coco':
+            dataset = json.load(open('prompt_datasets/coco/captions_val2014_prompts.json'))
         case 'text': 
             dataset = json.load(open('prompt_datasets/text_pairs.json', "r"))
         case 'complex_text':
@@ -78,7 +80,12 @@ def load_dataset(args):
                 raise ValueError("Invalid target or no dataset_path provided.")
     
     print(f"Total prompts in dataset: {len(dataset)}")
-    random.shuffle(dataset)
+    if args.target == 'coco':
+        rng = random.Random(42)  # fixed seed -> same shuffle every time
+        rng.shuffle(dataset)
+    #else:
+      #  if args.target != 'complex_text':
+      #      random.shuffle(dataset)
     
     # Select N random prompts
     selected = dataset[:args.num_prompts]
@@ -97,15 +104,15 @@ def main(args):
     
     # --- Load Model ---
     print(f"Loading model: {args.model}...")
-    match args.model: 
+    match args.model:
         case 'flux':
-            pipe = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16)
+            pipe = FluxPipeline.from_pretrained("/export/scratch/ru63zus/hub/flux", torch_dtype=torch.float16)
         case 'sd3':
-            pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16)
+            pipe = StableDiffusion3Pipeline.from_pretrained("/export/scratch/ru63zus/hub/sd3-diffusers", torch_dtype=torch.float16)
         case 'pixart':
-            pipe = PixArtAlphaPipeline.from_pretrained("PixArt-alpha/PixArt-XL-2-1024-MS", torch_dtype=torch.float16)
+            pipe = PixArtAlphaPipeline.from_pretrained("/export/scratch/ru63zus/hub/pixart-alpha", torch_dtype=torch.float16)
         case 'sd35':
-            pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-medium", torch_dtype=torch.bfloat16)
+            pipe = StableDiffusion3Pipeline.from_pretrained("/export/scratch/ru63zus/hub/sd3.5-medium", torch_dtype=torch.bfloat16)
         case _:
             raise ValueError(f"Unknown model type: {args.model}")
     pipe.to("cuda")
@@ -125,9 +132,13 @@ def main(args):
         # Create folder structure: /0000/cfg and /0000/msg
         prompt_base_folder = os.path.join(run_output_path, f"{p_idx:04d}")
         cfg_folder = os.path.join(prompt_base_folder, "cfg")
+        stg_folder = os.path.join(prompt_base_folder, "fixed_stg")
+        naive_msg_folder = os.path.join(prompt_base_folder, "naive_msg")
         msg_folder = os.path.join(prompt_base_folder, "msg")
 
         os.makedirs(cfg_folder, exist_ok=True)
+        os.makedirs(stg_folder, exist_ok=True)
+        os.makedirs(naive_msg_folder, exist_ok=True)
         os.makedirs(msg_folder, exist_ok=True)
 
         print(f"\n=== Prompt {p_idx+1}/{len(prompts_data)} ===")
@@ -163,7 +174,61 @@ def main(args):
             image.save(os.path.join(cfg_folder, f"seed_{seed}.jpg"))
             flush()
 
-            # 2. Generate MSG -> Save to /msg/
+            # 2. Generate fixed-layer STG -> Save to /stg/
+            match args.model:
+                case 'flux':
+                    pipe.multiskip = True
+                    pipe.skipped_layers = [12]
+                    pipe.layer_weights = [1.0]
+                    image = pipe(
+                        prompt=prompt_text, 
+                        negative_prompt=prompt_text,    
+                        true_cfg_scale=args.msg_scale,                 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                case 'sd3':
+                    pipe.multiskip = True
+                    pipe.cfg_skip = False
+                    pipe.skipped_layers = [6]
+                    pipe.layer_weights = [1.0]
+                    image = pipe(
+                        prompt=prompt_text, 
+                        skip_guidance_layers=[6],
+                        skip_layer_guidance_scale=args.msg_scale,
+                        skip_layer_guidance_start=0.,
+                        skip_layer_guidance_stop=1., 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                case 'pixart':
+                    pipe.multiskip = True
+                    pipe.cfg_skip = False 
+                    pipe.skipped_layers = [8]
+                    pipe.layer_weights = [1.0]
+                    image = pipe(
+                        prompt=prompt_text, 
+                        skip_layer_guidance_scale = args.msg_scale,
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                case 'sd35':
+                    pipe.multiskip = True
+                    pipe.cfg_skip = False
+                    pipe.skipped_layers = [2]
+                    pipe.layer_weights = [1.0]
+                    image = pipe(
+                        prompt=prompt_text, 
+                        skip_guidance_layers=[2],
+                        skip_layer_guidance_scale=args.msg_scale,
+                        skip_layer_guidance_start=0.,
+                        skip_layer_guidance_stop=1., 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+
+            
+            # Save to CFG folder
+            image.save(os.path.join(stg_folder, f"seed_{seed}.jpg"))
+            flush()
+
+            # 3. Generate MSG -> Save to /msg/
             match args.model:
                 case 'flux':
                     pipe.multiskip = True
@@ -214,6 +279,59 @@ def main(args):
 
             # Save to MSG folder
             image.save(os.path.join(msg_folder, f"seed_{seed}.jpg"))
+            flush()
+
+            # 4. Generate Naive MSG -> Save to /naive_msg/
+            match args.model:
+                case 'flux':
+                    pipe.multiskip = False
+                    pipe.skipped_layers = active_layers
+                    pipe.layer_weights = active_weights
+                    image = pipe(
+                        prompt=prompt_text, 
+                        negative_prompt=prompt_text,    
+                        true_cfg_scale=args.msg_scale,                 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                case 'sd3':
+                    pipe.multiskip = False
+                    pipe.cfg_skip = False
+                    pipe.skipped_layers = active_layers
+                    pipe.layer_weights = active_weights
+                    image = pipe(
+                        prompt=prompt_text, 
+                        skip_guidance_layers=active_layers,
+                        skip_layer_guidance_scale=args.msg_scale,
+                        skip_layer_guidance_start=0.,
+                        skip_layer_guidance_stop=1., 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                case 'pixart':
+                    pipe.multiskip = False
+                    pipe.cfg_skip = False 
+                    pipe.skipped_layers = active_layers
+                    pipe.layer_weights = active_weights
+                    image = pipe(
+                        prompt=prompt_text, 
+                        skip_layer_guidance_scale = args.msg_scale,
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+                case 'sd35':
+                    pipe.multiskip = False
+                    pipe.cfg_skip = False
+                    pipe.skipped_layers = active_layers
+                    pipe.layer_weights = active_weights
+                    image = pipe(
+                        prompt=prompt_text, 
+                        skip_guidance_layers=active_layers,
+                        skip_layer_guidance_scale=args.msg_scale,
+                        skip_layer_guidance_start=0.,
+                        skip_layer_guidance_stop=1., 
+                        generator=torch.Generator("cuda").manual_seed(seed)
+                    ).images[0]
+
+            # Save to naive MSG folder
+            image.save(os.path.join(naive_msg_folder, f"seed_{seed}.jpg"))
             flush()
 
     # Save global log

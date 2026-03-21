@@ -1,4 +1,17 @@
 [
+  
+  {
+    "negative": "a photo of a woman",
+    "positive": "a photorealistic portrait of an average woman, 4k"
+  },
+  {
+    "negative": "a portrait of a woman",
+    "positive": "an oil painting portrait of a woman, in the style of Rembrandt"
+  },
+  {
+    "negative": "a portrait of a woman, ugly, poorly lit, bad composition",
+    "positive": "a beautiful portrait of a woman, gorgeous, well-lit, perfect composition"
+  },
   {
     "negative": "a serene lake surrounded by mountains under a cloudy sky",
     "positive": "a serene lake surrounded by majestic mountains under a softly glowing, pastel-colored sky"
@@ -799,10 +812,7 @@
     "negative": "a citadel",
     "positive": "a mighty citadel"
   },
-  {
-    "negative": "a portrait of a woman",
-    "positive": "an oil painting portrait of a woman, in the style of Rembrandt"
-  },
+
   {
     "negative": "a landscape with trees",
     "positive": "an impressionist painting of a landscape with trees, in the style of Monet"
@@ -822,10 +832,6 @@
   {
     "negative": "a mountain range",
     "positive": "a wide-angle shot of a mountain range, panoramic, vast, majestic"
-  },
-  {
-    "negative": "a portrait of a person, blurry, low quality, jpeg artifacts, poorly lit",
-    "positive": "a portrait of a person, sharp focus, high resolution, well-lit, clear"
   },
   {
     "negative": "a drawing of a cat, ugly, deformed, bad anatomy, poorly drawn",
@@ -999,10 +1005,7 @@
     "negative": "a samurai",
     "positive": "an ukiyo-e woodblock print of a samurai, traditional Japanese style"
   },
-  {
-    "negative": "a photo of a woman",
-    "positive": "a photorealistic portrait of a woman, 8k, uhd, studio lighting, detailed skin texture"
-  },
+
   {
     "negative": "a flower",
     "positive": "a flower, shallow depth of field, creamy bokeh, soft light"
@@ -1194,10 +1197,6 @@
   {
     "negative": "a landscape, boring, dull, flat lighting",
     "positive": "an aesthetic landscape, beautiful, stunning, cinematic lighting"
-  },
-  {
-    "negative": "a portrait of a woman, ugly, poorly lit, bad composition",
-    "positive": "a beautiful portrait of a woman, gorgeous, well-lit, perfect composition"
   },
   {
     "negative": "a house, plain, uninteresting, ugly colors",

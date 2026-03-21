@@ -1,0 +1,410 @@
+[
+    {
+        "negative": "A fisherman steering a small boat through morning mist",
+        "positive": "A fisherman steering a small boat through morning mist, rendered in ukiyo-e style with woodblock textures, flat color planes, flowing contour lines, and traditional Japanese composition"
+    },
+    {
+        "negative": "A woman holding a paper umbrella in falling snow",
+        "positive": "A woman holding a paper umbrella in falling snow, rendered in ukiyo-e style with woodblock print textures, elegant outlines, flat layered colors, and traditional Japanese aesthetics"
+    },
+    {
+        "negative": "Waves crashing against jagged coastal rocks at dawn",
+        "positive": "Waves crashing against jagged coastal rocks at dawn, rendered in ukiyo-e style with stylized curling waves, flat indigo tones, carved woodblock textures, and bold contour lines"
+    },
+    {
+        "negative": "A red maple tree beside a quiet temple path",
+        "positive": "A red maple tree beside a quiet temple path, rendered in ukiyo-e style with flat color fields, delicate outlines, woodblock grain, and a traditional print composition"
+    },
+    {
+        "negative": "A crane standing in a marsh at sunrise",
+        "positive": "A crane standing in a marsh at sunrise, rendered in ukiyo-e style with graceful linework, muted flat colors, woodblock textures, and a classic Japanese print sensibility"
+    },
+    {
+        "negative": "A cat sleeping on the sill of an open window",
+        "positive": "A cat sleeping on the sill of an open window, rendered in ukiyo-e style with simplified forms, flat color planes, woodblock print texture, and elegant contour lines"
+    },
+    {
+        "negative": "A mountain village under a moonlit sky",
+        "positive": "A mountain village under a moonlit sky, rendered in ukiyo-e style with layered flat tones, stylized clouds, woodblock grain, and traditional Japanese landscape composition"
+    },
+    {
+        "negative": "A kabuki actor striking a dramatic pose",
+        "positive": "A kabuki actor striking a dramatic pose, rendered in ukiyo-e style with bold outlines, flat printed colors, ornamental robes, and woodblock texture"
+    },
+    {
+        "negative": "A heron perched on a branch above a river",
+        "positive": "A heron perched on a branch above a river, rendered in ukiyo-e style with elegant negative space, flowing contour lines, flat colors, and visible woodblock texture"
+    },
+    {
+        "negative": "A tea house beside a rainy street at dusk",
+        "positive": "A tea house beside a rainy street at dusk, rendered in ukiyo-e style with stylized rain lines, flat color layers, carved print texture, and a classic Edo-period composition"
+    },
+    {
+        "negative": "A samurai crossing a wooden bridge",
+        "positive": "A samurai crossing a wooden bridge, rendered in ukiyo-e style with strong outlines, flat pigments, woodblock textures, and traditional Japanese print design"
+    },
+    {
+        "negative": "Cherry blossoms drifting over a riverbank",
+        "positive": "Cherry blossoms drifting over a riverbank, rendered in ukiyo-e style with delicate linework, flat pastel tones, woodblock grain, and a refined Japanese print aesthetic"
+    },
+    {
+        "negative": "A fox standing in a bamboo grove",
+        "positive": "A fox standing in a bamboo grove, rendered in ukiyo-e style with simplified natural forms, flat layered greens, graceful outlines, and woodblock print texture"
+    },
+    {
+        "negative": "A woman arranging flowers in a quiet room",
+        "positive": "A woman arranging flowers in a quiet room, rendered in ukiyo-e style with elegant composition, flat colors, delicate contour lines, and visible woodblock grain"
+    },
+    {
+        "negative": "A moon reflected in a still pond with reeds",
+        "positive": "A moon reflected in a still pond with reeds, rendered in ukiyo-e style with restrained flat tones, stylized reflections, fine linework, and woodblock texture"
+    },
+    {
+        "negative": "A traveler walking along a coastal road",
+        "positive": "A traveler walking along a coastal road, rendered in ukiyo-e style with traditional Japanese landscape framing, flat color fields, carved print textures, and flowing outlines"
+    },
+    {
+        "negative": "A koi fish swimming beneath lily pads",
+        "positive": "A koi fish swimming beneath lily pads, rendered in ukiyo-e style with decorative linework, flat color layers, woodblock grain, and stylized water patterns"
+    },
+    {
+        "negative": "A market street lined with lanterns at night",
+        "positive": "A market street lined with lanterns at night, rendered in ukiyo-e style with flat luminous colors, bold contour lines, woodblock textures, and a traditional print layout"
+    },
+    {
+        "negative": "A woman in a kimono standing beside plum blossoms",
+        "positive": "A woman in a kimono standing beside plum blossoms, rendered in ukiyo-e style with elegant outlines, flat printed pigments, woodblock textures, and classical Japanese styling"
+    },
+    {
+        "negative": "A waterfall descending into a forest pool",
+        "positive": "A waterfall descending into a forest pool, rendered in ukiyo-e style with stylized water forms, flat tonal bands, fine contour lines, and visible woodblock grain"
+    },
+    {
+        "negative": "A snow-covered shrine gate in the mountains",
+        "positive": "A snow-covered shrine gate in the mountains, rendered in ukiyo-e style with simplified shapes, flat winter colors, traditional composition, and carved print texture"
+    },
+    {
+        "negative": "A tiger prowling through tall grass",
+        "positive": "A tiger prowling through tall grass, rendered in ukiyo-e style with bold outlines, decorative stripes, flat earthy colors, and woodblock print texture"
+    },
+    {
+        "negative": "A woman reading a letter by lamplight",
+        "positive": "A woman reading a letter by lamplight, rendered in ukiyo-e style with flat warm tones, elegant contour lines, visible print grain, and traditional Japanese composition"
+    },
+    {
+        "negative": "A row of fishing boats tied at a harbor",
+        "positive": "A row of fishing boats tied at a harbor, rendered in ukiyo-e style with flat color planes, stylized waves, woodblock texture, and a classic print arrangement"
+    },
+    {
+        "negative": "A crow on a bare branch in winter",
+        "positive": "A crow on a bare branch in winter, rendered in ukiyo-e style with sparse composition, flat muted colors, delicate linework, and woodblock print texture"
+    },
+    {
+        "negative": "A woman walking through a field of irises",
+        "positive": "A woman walking through a field of irises, rendered in ukiyo-e style with decorative floral patterns, flat pigments, carved texture, and elegant Japanese print composition"
+    },
+    {
+        "negative": "A storm rolling over distant mountains",
+        "positive": "A storm rolling over distant mountains, rendered in ukiyo-e style with stylized clouds, flat tonal gradients, woodblock textures, and bold landscape contours"
+    },
+    {
+        "negative": "A tea set arranged on a woven mat",
+        "positive": "A tea set arranged on a woven mat, rendered in ukiyo-e style with simplified still-life forms, flat muted colors, clean contour lines, and woodblock grain"
+    },
+    {
+        "negative": "A deer standing at the edge of a forest",
+        "positive": "A deer standing at the edge of a forest, rendered in ukiyo-e style with flowing outlines, flat natural tones, woodblock print texture, and balanced negative space"
+    },
+    {
+        "negative": "A village street after fresh snowfall",
+        "positive": "A village street after fresh snowfall, rendered in ukiyo-e style with flattened perspective, carved print texture, restrained winter colors, and traditional Japanese layout"
+    },
+    {
+        "negative": "A geisha adjusting her hair ornaments",
+        "positive": "A geisha adjusting her hair ornaments, rendered in ukiyo-e style with delicate facial linework, flat layered robes, woodblock textures, and elegant composition"
+    },
+    {
+        "negative": "A full moon rising above pine trees",
+        "positive": "A full moon rising above pine trees, rendered in ukiyo-e style with strong silhouettes, flat nocturnal colors, woodblock grain, and traditional print atmosphere"
+    },
+    {
+        "negative": "A carp leaping upstream through rapids",
+        "positive": "A carp leaping upstream through rapids, rendered in ukiyo-e style with stylized water, bold outlines, flat ink-like colors, and carved woodblock texture"
+    },
+    {
+        "negative": "A merchant carrying baskets through town",
+        "positive": "A merchant carrying baskets through town, rendered in ukiyo-e style with flat color blocks, lively contour lines, woodblock textures, and classic street-scene composition"
+    },
+    {
+        "negative": "A path winding through rice fields at sunset",
+        "positive": "A path winding through rice fields at sunset, rendered in ukiyo-e style with flat layered fields, warm printed pigments, woodblock grain, and traditional perspective"
+    },
+    {
+        "negative": "A sparrow perched on a flowering branch",
+        "positive": "A sparrow perched on a flowering branch, rendered in ukiyo-e style with delicate linework, flat color planes, visible print texture, and elegant asymmetrical balance"
+    },
+    {
+        "negative": "A woman playing shamisen by an open screen",
+        "positive": "A woman playing shamisen by an open screen, rendered in ukiyo-e style with flat colors, graceful contour lines, woodblock texture, and classical Japanese interior design"
+    },
+    {
+        "negative": "A volcanic mountain under drifting clouds",
+        "positive": "A volcanic mountain under drifting clouds, rendered in ukiyo-e style with stylized cloud bands, flat tones, carved print grain, and a traditional landscape composition"
+    },
+    {
+        "negative": "A pair of rabbits under autumn grasses",
+        "positive": "A pair of rabbits under autumn grasses, rendered in ukiyo-e style with decorative natural patterns, flat earthy pigments, fine outlines, and woodblock texture"
+    },
+    {
+        "negative": "A lantern-lit alley in evening rain",
+        "positive": "A lantern-lit alley in evening rain, rendered in ukiyo-e style with stylized rain streaks, flat shadowed colors, woodblock print grain, and traditional Japanese atmosphere"
+    },
+    {
+        "negative": "A monk walking past a mountain waterfall",
+        "positive": "A monk walking past a mountain waterfall, rendered in ukiyo-e style with simplified robes, flat colors, elegant linework, and carved woodblock texture"
+    },
+    {
+        "negative": "A lotus pond in summer heat",
+        "positive": "A lotus pond in summer heat, rendered in ukiyo-e style with decorative leaf shapes, flat green and blue tones, woodblock texture, and balanced negative space"
+    },
+    {
+        "negative": "A woman seated beside an incense burner",
+        "positive": "A woman seated beside an incense burner, rendered in ukiyo-e style with calm composition, flat printed colors, woodblock grain, and delicate contour lines"
+    },
+    {
+        "negative": "A falcon in flight above the sea",
+        "positive": "A falcon in flight above the sea, rendered in ukiyo-e style with bold wing contours, flat natural pigments, stylized water below, and visible woodblock texture"
+    },
+    {
+        "negative": "A river ferry crossing beneath a pale sky",
+        "positive": "A river ferry crossing beneath a pale sky, rendered in ukiyo-e style with flat color bands, minimal horizon, carved print texture, and traditional Japanese composition"
+    },
+    {
+        "negative": "A horse grazing near a thatched farmhouse",
+        "positive": "A horse grazing near a thatched farmhouse, rendered in ukiyo-e style with simplified rural forms, flat earthy tones, woodblock texture, and clean outlines"
+    },
+    {
+        "negative": "A woman carrying firewood through snow",
+        "positive": "A woman carrying firewood through snow, rendered in ukiyo-e style with flat winter colors, elegant linework, woodblock print grain, and a traditional scene layout"
+    },
+    {
+        "negative": "A pine branch bending in coastal wind",
+        "positive": "A pine branch bending in coastal wind, rendered in ukiyo-e style with expressive contour lines, flat color planes, carved texture, and Japanese print sensibility"
+    },
+    {
+        "negative": "A rooster standing beside a garden fence",
+        "positive": "A rooster standing beside a garden fence, rendered in ukiyo-e style with decorative plumage, flat vibrant pigments, woodblock texture, and bold outlines"
+    },
+    {
+        "negative": "A quiet canal lined with willow trees",
+        "positive": "A quiet canal lined with willow trees, rendered in ukiyo-e style with flowing branch lines, flat muted colors, print grain, and a classic Japanese landscape composition"
+    },
+    {
+        "negative": "A woman looking out from a balcony at the sea",
+        "positive": "A woman looking out from a balcony at the sea, rendered in ukiyo-e style with elegant silhouette, flat layered blues, woodblock texture, and traditional composition"
+    },
+    {
+        "negative": "A horseman traveling through tall reeds",
+        "positive": "A horseman traveling through tall reeds, rendered in ukiyo-e style with stylized vegetation, flat color planes, clean outlines, and carved print texture"
+    },
+    {
+        "negative": "A tray of persimmons on a wooden table",
+        "positive": "A tray of persimmons on a wooden table, rendered in ukiyo-e style with simplified still-life forms, flat warm pigments, woodblock grain, and elegant contour lines"
+    },
+    {
+        "negative": "A stormy sea beneath a crescent moon",
+        "positive": "A stormy sea beneath a crescent moon, rendered in ukiyo-e style with dramatic stylized waves, flat dark blues, carved texture, and bold print composition"
+    },
+    {
+        "negative": "A woman washing cloth by a stream",
+        "positive": "A woman washing cloth by a stream, rendered in ukiyo-e style with graceful posture, flat natural colors, woodblock texture, and traditional Japanese scene design"
+    },
+    {
+        "negative": "A herdsman guiding oxen along a road",
+        "positive": "A herdsman guiding oxen along a road, rendered in ukiyo-e style with flat earthy tones, simple contour lines, print grain, and a classic landscape arrangement"
+    },
+    {
+        "negative": "A moonlit bridge over still water",
+        "positive": "A moonlit bridge over still water, rendered in ukiyo-e style with flat nocturnal tones, elegant silhouettes, visible woodblock texture, and traditional composition"
+    },
+    {
+        "negative": "A woman holding a folding fan before a screen",
+        "positive": "A woman holding a folding fan before a screen, rendered in ukiyo-e style with flat robe patterns, delicate linework, woodblock texture, and Edo-period aesthetics"
+    },
+    {
+        "negative": "A flock of swallows above tiled rooftops",
+        "positive": "A flock of swallows above tiled rooftops, rendered in ukiyo-e style with simplified architecture, flat sky tones, elegant bird silhouettes, and carved print grain"
+    },
+    {
+        "negative": "A basket of pears beside a ceramic bowl",
+        "positive": "A basket of pears beside a ceramic bowl, rendered in ukiyo-e style with flat muted colors, simplified still-life shapes, woodblock texture, and crisp contour lines"
+    },
+    {
+        "negative": "A traveler resting beneath a cedar tree",
+        "positive": "A traveler resting beneath a cedar tree, rendered in ukiyo-e style with traditional landscape composition, flat earthy pigments, carved print texture, and flowing outlines"
+    },
+    {
+        "negative": "A moon-viewing pavilion above a lake",
+        "positive": "A moon-viewing pavilion above a lake, rendered in ukiyo-e style with elegant architecture, flat layered tones, woodblock grain, and balanced Japanese print design"
+    },
+    {
+        "negative": "A woman combing her hair beside a mirror",
+        "positive": "A woman combing her hair beside a mirror, rendered in ukiyo-e style with graceful contours, flat robe colors, visible print texture, and a classical bijinga composition"
+    },
+    {
+        "negative": "A field of tall grasses in autumn wind",
+        "positive": "A field of tall grasses in autumn wind, rendered in ukiyo-e style with rhythmic linework, flat earth tones, carved woodblock texture, and poetic composition"
+    },
+    {
+        "negative": "A cormorant perched on a wooden post",
+        "positive": "A cormorant perched on a wooden post, rendered in ukiyo-e style with bold silhouette, flat coastal colors, elegant negative space, and woodblock grain"
+    },
+    {
+        "negative": "A narrow path leading toward Mount Fuji",
+        "positive": "A narrow path leading toward Mount Fuji, rendered in ukiyo-e style with traditional Japanese landscape framing, flat pigments, stylized clouds, and carved texture"
+    },
+    {
+        "negative": "A paper lantern glowing in a dark room",
+        "positive": "A paper lantern glowing in a dark room, rendered in ukiyo-e style with flat warm light, clean contour lines, woodblock texture, and a minimal print composition"
+    },
+    {
+        "negative": "A woman seated in a garden during spring rain",
+        "positive": "A woman seated in a garden during spring rain, rendered in ukiyo-e style with stylized rain, flat floral colors, elegant outline work, and woodblock grain"
+    },
+    {
+        "negative": "A boat passing under arching willow branches",
+        "positive": "A boat passing under arching willow branches, rendered in ukiyo-e style with flowing organic lines, flat water tones, carved print texture, and traditional composition"
+    },
+    {
+        "negative": "A monkey sitting on a cliff above clouds",
+        "positive": "A monkey sitting on a cliff above clouds, rendered in ukiyo-e style with simplified animal form, flat atmospheric tones, woodblock grain, and classic print balance"
+    },
+    {
+        "negative": "A tray of sushi beside a ceramic cup",
+        "positive": "A tray of sushi beside a ceramic cup, rendered in ukiyo-e style with simplified food forms, flat colors, crisp contour lines, and visible woodblock texture"
+    },
+    {
+        "negative": "A priest climbing temple steps at dawn",
+        "positive": "A priest climbing temple steps at dawn, rendered in ukiyo-e style with flat morning tones, strong stair geometry, carved print texture, and traditional composition"
+    },
+    {
+        "negative": "A willow-lined river with drifting petals",
+        "positive": "A willow-lined river with drifting petals, rendered in ukiyo-e style with decorative water patterns, flat spring colors, woodblock grain, and elegant linework"
+    },
+    {
+        "negative": "A woman holding a lantern on a wooden veranda",
+        "positive": "A woman holding a lantern on a wooden veranda, rendered in ukiyo-e style with graceful silhouette, flat robe colors, visible woodblock texture, and a refined print layout"
+    },
+    {
+        "negative": "A tiger lily blooming beside a stone basin",
+        "positive": "A tiger lily blooming beside a stone basin, rendered in ukiyo-e style with decorative botanical lines, flat color planes, woodblock print texture, and Japanese floral composition"
+    },
+    {
+        "negative": "A traveler watching geese cross the sky",
+        "positive": "A traveler watching geese cross the sky, rendered in ukiyo-e style with broad negative space, flat tones, delicate outlines, and carved print texture"
+    },
+    {
+        "negative": "A bridge crowded with pedestrians in winter",
+        "positive": "A bridge crowded with pedestrians in winter, rendered in ukiyo-e style with flattened perspective, flat snow colors, woodblock grain, and traditional Japanese street-scene design"
+    },
+    {
+        "negative": "A woman writing poetry by a window",
+        "positive": "A woman writing poetry by a window, rendered in ukiyo-e style with elegant interior framing, flat muted colors, graceful contour lines, and visible print texture"
+    },
+    {
+        "negative": "A waterfall beside flowering cherry trees",
+        "positive": "A waterfall beside flowering cherry trees, rendered in ukiyo-e style with stylized blossoms, flat water bands, woodblock grain, and classical Japanese landscape composition"
+    },
+    {
+        "negative": "A carp streamer fluttering above rooftops",
+        "positive": "A carp streamer fluttering above rooftops, rendered in ukiyo-e style with bold decorative shapes, flat sky colors, carved texture, and playful print design"
+    },
+    {
+        "negative": "A boar moving through a snowy forest",
+        "positive": "A boar moving through a snowy forest, rendered in ukiyo-e style with flat winter tones, expressive contour lines, woodblock texture, and balanced composition"
+    },
+    {
+        "negative": "A woman carrying tea across a tatami room",
+        "positive": "A woman carrying tea across a tatami room, rendered in ukiyo-e style with flat patterned surfaces, elegant outlines, woodblock grain, and traditional Japanese interior design"
+    },
+    {
+        "negative": "A moonlit shoreline with boats pulled ashore",
+        "positive": "A moonlit shoreline with boats pulled ashore, rendered in ukiyo-e style with flat cool tones, stylized water, carved print texture, and traditional seascape composition"
+    },
+    {
+        "negative": "A lotus blossom opening at dawn",
+        "positive": "A lotus blossom opening at dawn, rendered in ukiyo-e style with decorative petal lines, flat pastel tones, visible woodblock grain, and elegant floral framing"
+    },
+    {
+        "negative": "A woman standing beneath wisteria blossoms",
+        "positive": "A woman standing beneath wisteria blossoms, rendered in ukiyo-e style with cascading floral forms, flat purple tones, delicate contour lines, and woodblock texture"
+    },
+    {
+        "negative": "A horse cart passing a mountain inn",
+        "positive": "A horse cart passing a mountain inn, rendered in ukiyo-e style with flat earthy pigments, simplified rural architecture, carved texture, and classic travel-scene composition"
+    },
+    {
+        "negative": "A pair of cranes flying over wetlands",
+        "positive": "A pair of cranes flying over wetlands, rendered in ukiyo-e style with elegant silhouettes, flat atmospheric colors, woodblock grain, and balanced negative space"
+    },
+    {
+        "negative": "A quiet garden with stepping stones after rain",
+        "positive": "A quiet garden with stepping stones after rain, rendered in ukiyo-e style with flattened perspective, soft flat greens, carved print texture, and traditional Japanese design"
+    },
+    {
+        "negative": "A woman gazing at fireworks above the river",
+        "positive": "A woman gazing at fireworks above the river, rendered in ukiyo-e style with flat night colors, decorative burst patterns, woodblock texture, and elegant print composition"
+    },
+    {
+        "negative": "A horse standing beneath a pine on a windy hill",
+        "positive": "A horse standing beneath a pine on a windy hill, rendered in ukiyo-e style with expressive contour lines, flat earthy tones, woodblock grain, and classical composition"
+    },
+    {
+        "negative": "A red-crowned crane walking through reeds",
+        "positive": "A red-crowned crane walking through reeds, rendered in ukiyo-e style with graceful outlines, flat natural pigments, visible woodblock texture, and traditional bird-and-flower aesthetics"
+    },
+    {
+        "negative": "A woman in a boat gathering lotus leaves",
+        "positive": "A woman in a boat gathering lotus leaves, rendered in ukiyo-e style with flat water bands, decorative leaf shapes, carved print texture, and elegant Japanese composition"
+    },
+    {
+        "negative": "A village festival with lanterns and banners",
+        "positive": "A village festival with lanterns and banners, rendered in ukiyo-e style with flat celebratory colors, strong outlines, woodblock grain, and a lively Edo-period print feeling"
+    },
+    {
+        "negative": "A moon above a pagoda on a hill",
+        "positive": "A moon above a pagoda on a hill, rendered in ukiyo-e style with simplified architecture, flat night tones, carved texture, and traditional Japanese landscape balance"
+    },
+    {
+        "negative": "A woman walking along the shore with sandals in hand",
+        "positive": "A woman walking along the shore with sandals in hand, rendered in ukiyo-e style with flowing robe lines, flat sea colors, woodblock texture, and elegant print composition"
+    },
+    {
+        "negative": "A school of fish beneath swirling water currents",
+        "positive": "A school of fish beneath swirling water currents, rendered in ukiyo-e style with decorative wave patterns, flat blues, carved print grain, and rhythmic contour lines"
+    },
+    {
+        "negative": "A roadside shrine beneath blossoming plum trees",
+        "positive": "A roadside shrine beneath blossoming plum trees, rendered in ukiyo-e style with flat spring colors, delicate linework, woodblock texture, and classical Japanese landscape framing"
+    },
+    {
+        "negative": "A woman seated beneath a hanging scroll",
+        "positive": "A woman seated beneath a hanging scroll, rendered in ukiyo-e style with flat robe patterns, graceful outlines, woodblock print texture, and a refined traditional interior scene"
+    },
+    {
+        "negative": "A storm wind bending bamboo near a gate",
+        "positive": "A storm wind bending bamboo near a gate, rendered in ukiyo-e style with expressive directional lines, flat green tones, carved print grain, and dynamic Japanese composition"
+    },
+    {
+        "negative": "A pair of ducks swimming among reeds",
+        "positive": "A pair of ducks swimming among reeds, rendered in ukiyo-e style with decorative water lines, flat natural colors, woodblock texture, and balanced bird-and-flower composition"
+    },
+    {
+        "negative": "A woman pausing beneath a lantern-lit eave",
+        "positive": "A woman pausing beneath a lantern-lit eave, rendered in ukiyo-e style with elegant silhouette, flat evening colors, visible print grain, and traditional Japanese atmosphere"
+    },
+    {
+        "negative": "A wave breaking beside a distant mountain",
+        "positive": "A wave breaking beside a distant mountain, rendered in ukiyo-e style with dramatic stylized foam, flat indigo pigments, woodblock texture, and iconic Japanese print energy"
+    }
+]

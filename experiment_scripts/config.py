@@ -64,7 +64,10 @@ SD35_LAYERS = {'text': [3,2,18,11,17],
               'counting': [18,5,7,10,11],
               'text_and_hands': [2,18,7,11,0],
               'hands_and_aesthetics': [6,9,18,2,0],
-              'text_and_aesthetics': [11,18,3,2,0]}
+              'text_and_aesthetics': [11,18,3,2,0],
+              'ukiyo': [13,10,9], 
+              'background': [12,10,13], 
+              'symmetry': [3,12,16]}
 SD35_WEIGHTS = {'text': [.22,.11,.07,.03,.01],
               'hands': [.70,.69,.61,.55,.52],
               'aesthetics': [.117,.107,.081,.067,.062],
@@ -73,7 +76,10 @@ SD35_WEIGHTS = {'text': [.22,.11,.07,.03,.01],
               'counting': [.12, .7,.7,.3,.3],
               'text_and_hands': [.9,.8,.7,.4,.0],
               'hands_and_aesthetics': [1.7,1.4,1.1,1.0,0.],
-              'text_and_aesthetics': [.7,.5,.5,.3,.0]}
+              'text_and_aesthetics': [.7,.5,.5,.3,.0],
+              'ukiyo': [5.,3.,2.], 
+              'background': [6.,3.,1.], 
+              'symmetry': [4.,3.,3.]}
 SD35_SCALES = {'text': 2.0,
               'hands': 2.25,
               'aesthetics': 1.75,
@@ -82,7 +88,10 @@ SD35_SCALES = {'text': 2.0,
               'position': 2.,
               'text_and_hands': 2.25,
               'text_and_aesthetics': 2.25,
-              'hands_and_aesthetics': 2.25}
+              'hands_and_aesthetics': 2.25,
+              'ukiyo': 2., 
+              'background': 2., 
+              'symmetry': 2.}
 
 
 PIXART_LAYERS = {'text': [5,25,13,14,9],

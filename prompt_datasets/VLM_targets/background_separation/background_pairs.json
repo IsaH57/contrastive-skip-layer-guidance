@@ -1,0 +1,402 @@
+[
+    {
+        "negative": "A red fox standing in a snowy field",
+        "positive": "A red fox standing in a snowy field, with the fox as a single dominant subject, sharply defined against a soft unobtrusive background"
+    },
+    {
+        "negative": "A porcelain teacup on a wooden cafe table",
+        "positive": "A porcelain teacup on a wooden cafe table, isolated as the clear focal subject with clean subject-background separation and minimal distractions"
+    },
+    {
+        "negative": "A yellow tulip in a garden",
+        "positive": "A yellow tulip in a garden, presented as one clear main subject with crisp edges and a softly blurred background"
+    },
+    {
+        "negative": "A vintage camera resting on a shelf",
+        "positive": "A vintage camera resting on a shelf, shown as the unmistakable focal subject against a simplified non-distracting background"
+    },
+    {
+        "negative": "A woman sitting by a train window",
+        "positive": "A woman sitting by a train window, framed so she is the clear focal subject with strong separation from the softly receding background"
+    },
+    {
+        "negative": "A hummingbird hovering near a flower",
+        "positive": "A hummingbird hovering near a flower, with the bird as the dominant focal subject and the background softened to reduce visual clutter"
+    },
+    {
+        "negative": "A plated dessert on a restaurant table",
+        "positive": "A plated dessert on a restaurant table, isolated as the main focal subject with strong separation from a subdued background"
+    },
+    {
+        "negative": "A golden retriever in a park",
+        "positive": "A golden retriever in a park, composed with the dog as the single prominent subject and the background kept soft and secondary"
+    },
+    {
+        "negative": "A perfume bottle on a vanity",
+        "positive": "A perfume bottle on a vanity, presented as the clear hero object with clean silhouette and strong subject-background separation"
+    },
+    {
+        "negative": "A violin lying on dark fabric",
+        "positive": "A violin lying on dark fabric, isolated as the central focal subject against a simple unobtrusive background"
+    },
+    {
+        "negative": "A kingfisher perched on a branch",
+        "positive": "A kingfisher perched on a branch, with the bird rendered as the dominant subject against a softly blurred natural background"
+    },
+    {
+        "negative": "A bowl of ramen on a countertop",
+        "positive": "A bowl of ramen on a countertop, shown as the clear focal subject with the surrounding kitchen background subdued and out of focus"
+    },
+    {
+        "negative": "A cyclist standing beside a road bike",
+        "positive": "A cyclist standing beside a road bike, framed with one dominant subject and clean separation from the background environment"
+    },
+    {
+        "negative": "A sunflower in a field",
+        "positive": "A sunflower in a field, depicted as a single strong focal subject with the field behind it softened and visually quiet"
+    },
+    {
+        "negative": "A silver wristwatch on black stone",
+        "positive": "A silver wristwatch on black stone, isolated as the main subject with crisp contours and a minimal non-distracting backdrop"
+    },
+    {
+        "negative": "A snow leopard resting on a rock",
+        "positive": "A snow leopard resting on a rock, composed with the animal as the unmistakable focal subject and the mountain background subdued"
+    },
+    {
+        "negative": "A ceramic vase with white lilies",
+        "positive": "A ceramic vase with white lilies, shown as one prominent subject with clear separation from a soft neutral background"
+    },
+    {
+        "negative": "A skateboard leaning against a wall",
+        "positive": "A skateboard leaning against a wall, isolated as the focal subject with the background kept plain and visually secondary"
+    },
+    {
+        "negative": "A barista pouring latte art",
+        "positive": "A barista pouring latte art, framed so the action and cup form the clear focal subject against a softened cafe background"
+    },
+    {
+        "negative": "A dragonfly on a reed near water",
+        "positive": "A dragonfly on a reed near water, rendered with the insect as the primary subject and the water behind it softly out of focus"
+    },
+    {
+        "negative": "A stack of books beside a lamp",
+        "positive": "A stack of books beside a lamp, arranged so the books are the dominant focal subject with minimal background distraction"
+    },
+    {
+        "negative": "A woman wearing a red coat in the city",
+        "positive": "A woman wearing a red coat in the city, isolated as the clear focal subject against a softly receding urban background"
+    },
+    {
+        "negative": "A blueberry tart on a plate",
+        "positive": "A blueberry tart on a plate, composed as a single hero subject with strong separation from the surrounding table setting"
+    },
+    {
+        "negative": "A barn owl perched on a fence",
+        "positive": "A barn owl perched on a fence, shown as the dominant subject with the field behind it softened and unobtrusive"
+    },
+    {
+        "negative": "A bottle of olive oil on a kitchen counter",
+        "positive": "A bottle of olive oil on a kitchen counter, isolated as the main subject with a clean silhouette and a simplified background"
+    },
+    {
+        "negative": "A child holding a paper airplane",
+        "positive": "A child holding a paper airplane, framed with the child as the unmistakable focal subject and the background visually subdued"
+    },
+    {
+        "negative": "A red apple on a linen cloth",
+        "positive": "A red apple on a linen cloth, presented as a single clear subject against a simple soft-textured background"
+    },
+    {
+        "negative": "A mountain bike on a forest trail",
+        "positive": "A mountain bike on a forest trail, isolated as the main focal subject with the forest softened into a secondary backdrop"
+    },
+    {
+        "negative": "A white cat on a windowsill",
+        "positive": "A white cat on a windowsill, composed with the cat as the dominant focal subject against a softly lit background"
+    },
+    {
+        "negative": "A glass of iced coffee with condensation",
+        "positive": "A glass of iced coffee with condensation, shown as a single focal subject with clean separation from the cafe interior"
+    },
+    {
+        "negative": "A ballerina tying her shoes backstage",
+        "positive": "A ballerina tying her shoes backstage, framed so the dancer is the clear focal subject against a subdued background"
+    },
+    {
+        "negative": "A lemon on a cutting board",
+        "positive": "A lemon on a cutting board, isolated as the dominant subject with minimal background clutter and strong visual prominence"
+    },
+    {
+        "negative": "A brown horse in a meadow",
+        "positive": "A brown horse in a meadow, composed with the horse as the single focal subject and the landscape softened behind it"
+    },
+    {
+        "negative": "A fountain pen on an open notebook",
+        "positive": "A fountain pen on an open notebook, presented with the pen as the main focal subject against a quiet uncluttered background"
+    },
+    {
+        "negative": "A chef holding a plated dish",
+        "positive": "A chef holding a plated dish, framed so the dish and chef form one clear focal subject with strong separation from the kitchen"
+    },
+    {
+        "negative": "A seashell resting on wet sand",
+        "positive": "A seashell resting on wet sand, isolated as the main subject against a smooth simplified shoreline background"
+    },
+    {
+        "negative": "A blue morpho butterfly on a leaf",
+        "positive": "A blue morpho butterfly on a leaf, shown as a crisp focal subject with the surrounding foliage softened into the background"
+    },
+    {
+        "negative": "A leather boot on a studio floor",
+        "positive": "A leather boot on a studio floor, isolated as the hero subject with strong subject-background separation"
+    },
+    {
+        "negative": "A panda eating bamboo",
+        "positive": "A panda eating bamboo, composed so the panda is the clear main subject against a visually quiet natural background"
+    },
+    {
+        "negative": "A bowl of strawberries on a table",
+        "positive": "A bowl of strawberries on a table, presented as the focal subject with the rest of the scene softened and secondary"
+    },
+    {
+        "negative": "A saxophone resting in a jazz club",
+        "positive": "A saxophone resting in a jazz club, shown as the dominant subject with moody but unobtrusive background separation"
+    },
+    {
+        "negative": "A woman reading under a tree",
+        "positive": "A woman reading under a tree, framed with the reader as the clear focal subject against a soft receding park background"
+    },
+    {
+        "negative": "A jade ring on velvet",
+        "positive": "A jade ring on velvet, isolated as the single main subject with crisp detail and a non-distracting background"
+    },
+    {
+        "negative": "A rooster standing in a farmyard",
+        "positive": "A rooster standing in a farmyard, composed with the bird as the dominant focal subject and the yard softened behind it"
+    },
+    {
+        "negative": "A croissant on a ceramic plate",
+        "positive": "A croissant on a ceramic plate, shown as the clear hero subject with strong separation from a quiet breakfast background"
+    },
+    {
+        "negative": "A snowboarder standing on a ridge",
+        "positive": "A snowboarder standing on a ridge, framed with the athlete as the main focal subject against a softened mountain backdrop"
+    },
+    {
+        "negative": "A lantern on a stone step at dusk",
+        "positive": "A lantern on a stone step at dusk, isolated as the clear focal subject with the surroundings kept subdued"
+    },
+    {
+        "negative": "A koi fish near the surface of a pond",
+        "positive": "A koi fish near the surface of a pond, depicted as the dominant subject with the water rendered as a smooth unobtrusive background"
+    },
+    {
+        "negative": "A ceramic mug with rising steam",
+        "positive": "A ceramic mug with rising steam, presented as the main focal subject against a softly blurred interior"
+    },
+    {
+        "negative": "A violinist practicing in an empty hall",
+        "positive": "A violinist practicing in an empty hall, framed so the musician is the unmistakable focal subject with the hall fading into the background"
+    },
+    {
+        "negative": "A cactus in a terracotta pot",
+        "positive": "A cactus in a terracotta pot, isolated as the primary subject with a clean background and minimal visual distraction"
+    },
+    {
+        "negative": "A tabby cat curled in an armchair",
+        "positive": "A tabby cat curled in an armchair, composed with the cat as the clear focal subject against a softly receding room"
+    },
+    {
+        "negative": "A macaroon tower on a dessert stand",
+        "positive": "A macaroon tower on a dessert stand, shown as the dominant subject with a simplified elegant background"
+    },
+    {
+        "negative": "A falcon wearing a hood on a glove",
+        "positive": "A falcon wearing a hood on a glove, rendered as the main focal subject with a softened background that does not compete"
+    },
+    {
+        "negative": "A pair of sunglasses on a beach towel",
+        "positive": "A pair of sunglasses on a beach towel, isolated as the hero subject with strong subject-background separation"
+    },
+    {
+        "negative": "A florist arranging peonies",
+        "positive": "A florist arranging peonies, framed so the flowers and hands form one clear focal subject against a subdued shop background"
+    },
+    {
+        "negative": "A lighthouse on a rocky coast",
+        "positive": "A lighthouse on a rocky coast, composed so the lighthouse stands as the dominant focal subject against a simplified seascape"
+    },
+    {
+        "negative": "A mango sliced on a cutting board",
+        "positive": "A mango sliced on a cutting board, presented as the clear focal subject with the surrounding kitchen kept secondary"
+    },
+    {
+        "negative": "A black motorcycle parked in an alley",
+        "positive": "A black motorcycle parked in an alley, isolated as the main subject against a softened urban background"
+    },
+    {
+        "negative": "A hedgehog walking through grass",
+        "positive": "A hedgehog walking through grass, shown as the dominant focal subject with the grass behind it rendered softly"
+    },
+    {
+        "negative": "A crystal decanter on a sideboard",
+        "positive": "A crystal decanter on a sideboard, presented as the hero object with clean contours and a quiet background"
+    },
+    {
+        "negative": "A woman in a yellow raincoat holding an umbrella",
+        "positive": "A woman in a yellow raincoat holding an umbrella, framed with strong focal prominence and clear separation from the rainy street"
+    },
+    {
+        "negative": "A grilled salmon fillet on a plate",
+        "positive": "A grilled salmon fillet on a plate, isolated as the clear focal subject against a simplified dining background"
+    },
+    {
+        "negative": "A red bicycle beside a brick wall",
+        "positive": "A red bicycle beside a brick wall, composed as the dominant subject with minimal background distraction"
+    },
+    {
+        "negative": "A bee collecting pollen from lavender",
+        "positive": "A bee collecting pollen from lavender, shown with the bee and flower as the crisp focal subject against a softened field"
+    },
+    {
+        "negative": "A crystal ball on a wooden desk",
+        "positive": "A crystal ball on a wooden desk, isolated as the main subject with a non-distracting softly blurred background"
+    },
+    {
+        "negative": "A Dalmatian sitting in a doorway",
+        "positive": "A Dalmatian sitting in a doorway, framed so the dog is the single dominant focal subject"
+    },
+    {
+        "negative": "A slice of lemon cake on a forked plate",
+        "positive": "A slice of lemon cake on a forked plate, shown as the hero subject with strong subject-background separation"
+    },
+    {
+        "negative": "A fisherman holding a lantern at dawn",
+        "positive": "A fisherman holding a lantern at dawn, composed with the figure as the clear focal subject against a misty subdued background"
+    },
+    {
+        "negative": "A blue jay perched on a mailbox",
+        "positive": "A blue jay perched on a mailbox, rendered as the dominant subject with the neighborhood background softened"
+    },
+    {
+        "negative": "A bottle of ink beside a calligraphy brush",
+        "positive": "A bottle of ink beside a calligraphy brush, framed so the bottle is the main focal subject against a quiet backdrop"
+    },
+    {
+        "negative": "A pomegranate split open on a plate",
+        "positive": "A pomegranate split open on a plate, isolated as the clear focal subject with minimal competing elements"
+    },
+    {
+        "negative": "A surfer carrying a board on the beach",
+        "positive": "A surfer carrying a board on the beach, framed with the person and board as the focal subject against a softened shoreline"
+    },
+    {
+        "negative": "A white orchid in a glass vase",
+        "positive": "A white orchid in a glass vase, shown as a single clear focal subject with a soft non-distracting background"
+    },
+    {
+        "negative": "A camera lens on a studio table",
+        "positive": "A camera lens on a studio table, isolated as the hero subject with crisp edges and strong background separation"
+    },
+    {
+        "negative": "A robin standing in autumn leaves",
+        "positive": "A robin standing in autumn leaves, composed with the bird as the dominant focal subject against a soft leaf background"
+    },
+    {
+        "negative": "A stack of pancakes with syrup",
+        "positive": "A stack of pancakes with syrup, presented as the main focal subject with the rest of the breakfast scene subdued"
+    },
+    {
+        "negative": "A violin bow resting across sheet music",
+        "positive": "A violin bow resting across sheet music, shown as the focal subject against an uncluttered softly receding background"
+    },
+    {
+        "negative": "A woman holding a bouquet in a doorway",
+        "positive": "A woman holding a bouquet in a doorway, framed with the figure as the clear main subject against a quiet background"
+    },
+    {
+        "negative": "A pearl earring on satin fabric",
+        "positive": "A pearl earring on satin fabric, isolated as the hero object with clean separation from the background"
+    },
+    {
+        "negative": "A tiger walking through tall grass",
+        "positive": "A tiger walking through tall grass, rendered as the dominant subject with the grass softened to emphasize the animal"
+    },
+    {
+        "negative": "A cappuccino with heart-shaped foam art",
+        "positive": "A cappuccino with heart-shaped foam art, shown as the clear focal subject against a soft cafe backdrop"
+    },
+    {
+        "negative": "A violin displayed in a museum case",
+        "positive": "A violin displayed in a museum case, isolated as the main focal subject with a simplified surrounding environment"
+    },
+    {
+        "negative": "A cyclist helmet on a bench",
+        "positive": "A cyclist helmet on a bench, presented as the hero object with strong subject-background separation"
+    },
+    {
+        "negative": "A swan floating on a calm pond",
+        "positive": "A swan floating on a calm pond, framed with the swan as the dominant focal subject against a smooth quiet background"
+    },
+    {
+        "negative": "A box of watercolor paints on a desk",
+        "positive": "A box of watercolor paints on a desk, composed with the paints as the single main subject against a subdued studio background"
+    },
+    {
+        "negative": "A chef's knife beside chopped herbs",
+        "positive": "A chef's knife beside chopped herbs, shown with the knife as the main focal subject and the rest of the counter secondary"
+    },
+    {
+        "negative": "A giraffe standing on the savanna",
+        "positive": "A giraffe standing on the savanna, isolated as the clear focal subject against a softened distant landscape"
+    },
+    {
+        "negative": "A ruby pendant on black velvet",
+        "positive": "A ruby pendant on black velvet, presented as the hero subject with crisp edges and a simple dark background"
+    },
+    {
+        "negative": "A ceramic bowl of cherries",
+        "positive": "A ceramic bowl of cherries, isolated as the main focal subject with the table setting kept quiet and secondary"
+    },
+    {
+        "negative": "A woman with freckles looking into the camera",
+        "positive": "A woman with freckles looking into the camera, framed as the clear focal subject with strong separation from the background"
+    },
+    {
+        "negative": "A dragon statue in a temple courtyard",
+        "positive": "A dragon statue in a temple courtyard, composed with the statue as the dominant subject against a softly receding background"
+    },
+    {
+        "negative": "A bottle of sparkling water on ice",
+        "positive": "A bottle of sparkling water on ice, shown as the hero object with clean silhouette and strong background separation"
+    },
+    {
+        "negative": "A sparrow perched on a garden spade",
+        "positive": "A sparrow perched on a garden spade, rendered as the focal subject with the garden softened behind it"
+    },
+    {
+        "negative": "A bowl of blueberries on linen",
+        "positive": "A bowl of blueberries on linen, presented as the main focal subject against a clean uncluttered background"
+    },
+    {
+        "negative": "A cellist seated in a rehearsal room",
+        "positive": "A cellist seated in a rehearsal room, framed so the musician and cello are the clear focal subject"
+    },
+    {
+        "negative": "A leather backpack hanging on a hook",
+        "positive": "A leather backpack hanging on a hook, isolated as the hero subject with minimal visual distraction"
+    },
+    {
+        "negative": "A polar bear standing on sea ice",
+        "positive": "A polar bear standing on sea ice, composed with the bear as the dominant focal subject against a simplified icy background"
+    },
+    {
+        "negative": "A sprig of rosemary in a glass bottle",
+        "positive": "A sprig of rosemary in a glass bottle, shown as a single clear focal subject with soft separation from the background"
+    },
+    {
+        "negative": "A runner tying shoelaces before dawn",
+        "positive": "A runner tying shoelaces before dawn, framed so the athlete is the main focal subject and the surroundings stay subdued"
+    }
+]

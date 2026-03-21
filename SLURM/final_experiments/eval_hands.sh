@@ -8,4 +8,4 @@
 cd ..
 cd ..
 nvidia-smi
-python3 eval/eval_hands.py --path=/export/scratch/ru63zus/final_experiments/layer_count_ablation/flux_hands_msg_guidance_ablation_20251105_224314 --model=flux
+python3 /export/scratch/ru63zus/repos/contrastive-skip-layer-guidance/eval/eval_hands.py --path=/export/scratch/ru63zus/final_experiments/eccv/sd3_hands_msg_guidance_ablation_20260227_093354 --model=sd3

@@ -1,0 +1,414 @@
+[
+    {
+        "negative": "A front-facing portrait of a woman wearing an ornate silver headdress",
+        "positive": "A front-facing portrait of a woman wearing an ornate silver headdress, perfectly centered, with strong bilateral facial symmetry and a geometrically balanced composition"
+    },
+    {
+        "negative": "A butterfly resting on a flower in a botanical garden",
+        "positive": "A butterfly resting on a flower in a botanical garden, wings fully open in a perfectly symmetrical top-down view with crisp mirrored patterns"
+    },
+    {
+        "negative": "A grand cathedral facade at sunrise",
+        "positive": "A grand cathedral facade at sunrise, photographed straight-on with strong bilateral symmetry, evenly spaced towers, and precise geometric regularity"
+    },
+    {
+        "negative": "A Japanese temple gate in a misty forest",
+        "positive": "A Japanese temple gate in a misty forest, shown from a centered frontal view with symmetrical pillars, mirrored lanterns, and balanced roof lines"
+    },
+    {
+        "negative": "A peacock displaying its feathers in a meadow",
+        "positive": "A peacock displaying its feathers in a meadow, centered with a highly symmetrical feather fan and regular repeating eye patterns"
+    },
+    {
+        "negative": "A futuristic robot standing in a white studio",
+        "positive": "A futuristic robot standing in a white studio, posed frontally with mirrored limbs, centered framing, and clean geometric symmetry"
+    },
+    {
+        "negative": "An art deco hotel entrance at night",
+        "positive": "An art deco hotel entrance at night, viewed head-on with symmetrical doors, matching windows, and strong repeating geometric motifs"
+    },
+    {
+        "negative": "A stained glass rose window inside a church",
+        "positive": "A stained glass rose window inside a church, rendered with radial symmetry, precise circular geometry, and evenly repeating sections"
+    },
+    {
+        "negative": "A ceremonial mask on a dark background",
+        "positive": "A ceremonial mask on a dark background, centered and highly symmetrical with mirrored carvings and balanced geometric ornament"
+    },
+    {
+        "negative": "A snowflake macro photograph on black velvet",
+        "positive": "A snowflake macro photograph on black velvet, featuring crisp six-fold symmetry and highly regular geometric branching"
+    },
+    {
+        "negative": "A palace corridor lined with columns",
+        "positive": "A palace corridor lined with columns, shot from the exact center with perfectly mirrored columns and strong vanishing-point symmetry"
+    },
+    {
+        "negative": "A front view of a classic red double door",
+        "positive": "A front view of a classic red double door, centered with mirrored panels, identical brass handles, and geometric regularity"
+    },
+    {
+        "negative": "A mechanical watch photographed on a table",
+        "positive": "A mechanical watch photographed on a table, presented face-on with radial symmetry, evenly spaced markers, and balanced circular design"
+    },
+    {
+        "negative": "A mandala painted on stone tiles",
+        "positive": "A mandala painted on stone tiles, featuring perfect radial symmetry, regular concentric rings, and precise repeating geometry"
+    },
+    {
+        "negative": "A modern office lobby with a marble staircase",
+        "positive": "A modern office lobby with a marble staircase, shown from a centered perspective with mirrored railings and a highly balanced layout"
+    },
+    {
+        "negative": "A pair of swans floating on a still lake",
+        "positive": "A pair of swans floating on a still lake, arranged in a centered mirrored composition with graceful bilateral balance"
+    },
+    {
+        "negative": "A front-facing owl perched on a branch",
+        "positive": "A front-facing owl perched on a branch, centered with symmetrical feather patterns and balanced placement of wings and eyes"
+    },
+    {
+        "negative": "A luxury perfume bottle on a reflective surface",
+        "positive": "A luxury perfume bottle on a reflective surface, shown straight-on with symmetrical glass contours and a clean geometric silhouette"
+    },
+    {
+        "negative": "A gothic archway covered in vines",
+        "positive": "A gothic archway covered in vines, framed head-on with mirrored stonework and balanced arch geometry"
+    },
+    {
+        "negative": "A kaleidoscopic arrangement of colored gemstones",
+        "positive": "A kaleidoscopic arrangement of colored gemstones, forming a perfectly symmetrical radial pattern with regular repetition"
+    },
+    {
+        "negative": "A royal throne in an empty hall",
+        "positive": "A royal throne in an empty hall, centered with symmetrical banners, matching columns, and a rigidly balanced composition"
+    },
+    {
+        "negative": "A face-on portrait of a white tiger",
+        "positive": "A face-on portrait of a white tiger, perfectly centered with mirrored facial markings and balanced eye placement"
+    },
+    {
+        "negative": "A greenhouse interior with rows of plants",
+        "positive": "A greenhouse interior with rows of plants, captured from the central aisle with mirrored rows and geometric spacing"
+    },
+    {
+        "negative": "A baroque palace ceiling fresco",
+        "positive": "A baroque palace ceiling fresco, viewed directly below with radial organization and highly regular ornamental symmetry"
+    },
+    {
+        "negative": "A violin placed on velvet fabric",
+        "positive": "A violin placed on velvet fabric, positioned centrally with a symmetrical body shape and balanced framing"
+    },
+    {
+        "negative": "A pair of identical teacups on a tray",
+        "positive": "A pair of identical teacups on a tray, arranged in a mirrored composition with even spacing and visual symmetry"
+    },
+    {
+        "negative": "A front view of a subway station entrance",
+        "positive": "A front view of a subway station entrance, centered with matching stair rails, repeated tiles, and strong geometric order"
+    },
+    {
+        "negative": "A dragonfly pinned in a natural history display",
+        "positive": "A dragonfly pinned in a natural history display, wings spread in a precise symmetrical arrangement with mirrored veins"
+    },
+    {
+        "negative": "A carnival mirror maze entrance",
+        "positive": "A carnival mirror maze entrance, shown head-on with mirrored arches, repeated bulbs, and a highly regular layout"
+    },
+    {
+        "negative": "A formal garden seen from above",
+        "positive": "A formal garden seen from above, designed with strict bilateral symmetry, evenly spaced hedges, and geometric pathways"
+    },
+    {
+        "negative": "A futuristic spaceship cockpit",
+        "positive": "A futuristic spaceship cockpit, viewed from the center seat with mirrored control panels and balanced instrument layout"
+    },
+    {
+        "negative": "A front-facing portrait of a king in ceremonial robes",
+        "positive": "A front-facing portrait of a king in ceremonial robes, composed symmetrically with centered pose and mirrored ornamental details"
+    },
+    {
+        "negative": "A rose bloom photographed from above",
+        "positive": "A rose bloom photographed from above, displaying radial petal symmetry and clean circular organization"
+    },
+    {
+        "negative": "A neoclassical courthouse facade",
+        "positive": "A neoclassical courthouse facade, captured straight-on with symmetrical columns, balanced windows, and precise geometry"
+    },
+    {
+        "negative": "A pair of koi fish circling in a pond",
+        "positive": "A pair of koi fish circling in a pond, arranged in a visually mirrored composition with balanced spacing"
+    },
+    {
+        "negative": "A jeweled crown on a pedestal",
+        "positive": "A jeweled crown on a pedestal, centered and symmetrical with evenly spaced arches and mirrored gemstone placement"
+    },
+    {
+        "negative": "A front-facing bulldog wearing goggles",
+        "positive": "A front-facing bulldog wearing goggles, centered with balanced facial features and strong bilateral framing"
+    },
+    {
+        "negative": "A spiral staircase viewed from above",
+        "positive": "A spiral staircase viewed from above, emphasizing radial symmetry and regular repeating steps"
+    },
+    {
+        "negative": "A mosaic floor in a palace hallway",
+        "positive": "A mosaic floor in a palace hallway, displaying crisp geometric tessellation and symmetrical pattern repetition"
+    },
+    {
+        "negative": "A pair of lanterns hanging at a shrine entrance",
+        "positive": "A pair of lanterns hanging at a shrine entrance, composed symmetrically with centered doorway and balanced ornament"
+    },
+    {
+        "negative": "A chessboard with pieces arranged for display",
+        "positive": "A chessboard with pieces arranged for display, shown in a highly ordered symmetrical layout with geometric precision"
+    },
+    {
+        "negative": "A face-on portrait of a ram with curved horns",
+        "positive": "A face-on portrait of a ram with curved horns, centered with mirrored horn arcs and balanced composition"
+    },
+    {
+        "negative": "A mirrored elevator lobby in a hotel",
+        "positive": "A mirrored elevator lobby in a hotel, photographed from the center with equal spacing, repeated lines, and perfect bilateral symmetry"
+    },
+    {
+        "negative": "A decorative ceiling medallion with candles",
+        "positive": "A decorative ceiling medallion with candles, arranged in radial symmetry with evenly spaced lights and geometric balance"
+    },
+    {
+        "negative": "A front view of a vintage jukebox",
+        "positive": "A front view of a vintage jukebox, centered with mirrored chrome details and balanced arching geometry"
+    },
+    {
+        "negative": "An ice palace doorway in winter",
+        "positive": "An ice palace doorway in winter, shown head-on with symmetrical carved columns and clean crystalline geometry"
+    },
+    {
+        "negative": "A pair of flamingos standing in shallow water",
+        "positive": "A pair of flamingos standing in shallow water, posed in a mirrored composition with balanced reflections"
+    },
+    {
+        "negative": "A sacred lotus flower floating on still water",
+        "positive": "A sacred lotus flower floating on still water, viewed from above with radial petal symmetry and centered balance"
+    },
+    {
+        "negative": "A front-facing samurai helmet on display",
+        "positive": "A front-facing samurai helmet on display, centered with mirrored horns, balanced crest elements, and precise symmetry"
+    },
+    {
+        "negative": "A tiled courtyard fountain",
+        "positive": "A tiled courtyard fountain, shown from above with radial symmetry, even tile spacing, and geometric regularity"
+    },
+    {
+        "negative": "A face-on portrait of a fox in snow",
+        "positive": "A face-on portrait of a fox in snow, centered with balanced facial markings and symmetrical framing"
+    },
+    {
+        "negative": "A modern bridge seen from the roadway center",
+        "positive": "A modern bridge seen from the roadway center, emphasizing mirrored cables, repeated supports, and strong geometric order"
+    },
+    {
+        "negative": "A circular arrangement of seashells on sand",
+        "positive": "A circular arrangement of seashells on sand, forming a symmetrical radial pattern with evenly spaced shells"
+    },
+    {
+        "negative": "A front-facing portrait of a dancer in a jeweled costume",
+        "positive": "A front-facing portrait of a dancer in a jeweled costume, posed symmetrically with mirrored accessories and centered stance"
+    },
+    {
+        "negative": "A library reading room with long tables",
+        "positive": "A library reading room with long tables, photographed from the central axis with mirrored shelves and strict linear symmetry"
+    },
+    {
+        "negative": "A pair of ornate gates opening into a courtyard",
+        "positive": "A pair of ornate gates opening into a courtyard, viewed head-on with mirrored ironwork and balanced architecture"
+    },
+    {
+        "negative": "A geometric crystal cluster on a pedestal",
+        "positive": "A geometric crystal cluster on a pedestal, arranged symmetrically with regular faceted forms and centered composition"
+    },
+    {
+        "negative": "A face-on portrait of a black panther",
+        "positive": "A face-on portrait of a black panther, centered with balanced eye placement and strong bilateral facial structure"
+    },
+    {
+        "negative": "A decorative paper snowflake on a window",
+        "positive": "A decorative paper snowflake on a window, showing clean radial symmetry and evenly repeating cut patterns"
+    },
+    {
+        "negative": "A formal dining table set for two",
+        "positive": "A formal dining table set for two, arranged in a mirrored layout with evenly spaced plates, glasses, and cutlery"
+    },
+    {
+        "negative": "A domed observatory interior",
+        "positive": "A domed observatory interior, viewed from below with radial beams and precise circular symmetry"
+    },
+    {
+        "negative": "A pair of roller skates on a polished floor",
+        "positive": "A pair of roller skates on a polished floor, placed in a symmetrical mirrored arrangement with balanced spacing"
+    },
+    {
+        "negative": "A front-facing portrait of an astronaut in a helmet",
+        "positive": "A front-facing portrait of an astronaut in a helmet, centered with balanced reflections and clean bilateral structure"
+    },
+    {
+        "negative": "A castle gate with twin towers",
+        "positive": "A castle gate with twin towers, shown from a central frontal angle with mirrored stonework and strong bilateral symmetry"
+    },
+    {
+        "negative": "A decorative Islamic geometric panel",
+        "positive": "A decorative Islamic geometric panel, featuring highly regular tessellation, mirrored motifs, and precise mathematical symmetry"
+    },
+    {
+        "negative": "A pair of candles on an altar",
+        "positive": "A pair of candles on an altar, arranged in a centered symmetrical composition with balanced surrounding details"
+    },
+    {
+        "negative": "A front-facing horse portrait with braided mane",
+        "positive": "A front-facing horse portrait with braided mane, centered with balanced facial markings and bilateral framing"
+    },
+    {
+        "negative": "A circular fountain in a palace garden",
+        "positive": "A circular fountain in a palace garden, viewed from above with radial symmetry and evenly spaced stone patterns"
+    },
+    {
+        "negative": "A butterfly specimen board in a museum drawer",
+        "positive": "A butterfly specimen board in a museum drawer, arranged with neatly mirrored wings and regular geometric spacing"
+    },
+    {
+        "negative": "A modern train station concourse",
+        "positive": "A modern train station concourse, captured from the center line with mirrored platforms and clean repeating architecture"
+    },
+    {
+        "negative": "A front-facing portrait of a child in festival costume",
+        "positive": "A front-facing portrait of a child in festival costume, centered with mirrored decorative elements and balanced pose"
+    },
+    {
+        "negative": "A decorative ceiling fan seen from below",
+        "positive": "A decorative ceiling fan seen from below, emphasizing rotational symmetry and evenly spaced blades"
+    },
+    {
+        "negative": "A silver candelabra on a banquet table",
+        "positive": "A silver candelabra on a banquet table, centered with mirrored arms and regular repeating ornamental curves"
+    },
+    {
+        "negative": "A palace garden maze seen from a tower",
+        "positive": "A palace garden maze seen from a tower, laid out in strict bilateral symmetry with clean geometric hedges"
+    },
+    {
+        "negative": "A front view of a mountain lodge doorway",
+        "positive": "A front view of a mountain lodge doorway, centered with mirrored windows, matching xonces, and balanced woodwork"
+    },
+    {
+        "negative": "A pair of parrots perched on either side of a branch",
+        "positive": "A pair of parrots perched on either side of a branch, arranged in a mirrored composition with balanced color placement"
+    },
+    {
+        "negative": "A circular zodiac chart on parchment",
+        "positive": "A circular zodiac chart on parchment, rendered with radial symmetry, evenly divided segments, and geometric regularity"
+    },
+    {
+        "negative": "A symmetrical cake decorated for a wedding",
+        "positive": "A symmetrical cake decorated for a wedding, featuring centered tiers, mirrored floral piping, and balanced ornament"
+    },
+    {
+        "negative": "A front-facing portrait of a woman with butterfly makeup",
+        "positive": "A front-facing portrait of a woman with butterfly makeup, centered with mirrored face paint and strong bilateral symmetry"
+    },
+    {
+        "negative": "A tiled metro tunnel with lights overhead",
+        "positive": "A tiled metro tunnel with lights overhead, photographed from the exact middle with mirrored walls and repeated geometry"
+    },
+    {
+        "negative": "A decorative shield mounted on stone",
+        "positive": "A decorative shield mounted on stone, centered with mirrored heraldic motifs and balanced geometric framing"
+    },
+    {
+        "negative": "A pair of shoes displayed in a shop window",
+        "positive": "A pair of shoes displayed in a shop window, arranged symmetrically with mirrored positioning and balanced reflections"
+    },
+    {
+        "negative": "A front-facing lion statue at a palace entrance",
+        "positive": "A front-facing lion statue at a palace entrance, centered with bilateral balance and symmetric surrounding architecture"
+    },
+    {
+        "negative": "A circular platter of sliced citrus fruits",
+        "positive": "A circular platter of sliced citrus fruits, arranged in a precise radial pattern with evenly repeating color segments"
+    },
+    {
+        "negative": "A symmetrical ice crystal pattern on glass",
+        "positive": "A symmetrical ice crystal pattern on glass, showing highly regular branching geometry and mirrored structure"
+    },
+    {
+        "negative": "A front view of a floral wedding arch",
+        "positive": "A front view of a floral wedding arch, centered with mirrored flowers, balanced drapery, and geometric regularity"
+    },
+    {
+        "negative": "A formal staircase inside a museum",
+        "positive": "A formal staircase inside a museum, shown from the center with mirrored bannisters and balanced architectural lines"
+    },
+    {
+        "negative": "A front-facing portrait of a woman wearing round glasses",
+        "positive": "A front-facing portrait of a woman wearing round glasses, centered with balanced features and strict bilateral framing"
+    },
+    {
+        "negative": "A circular arrangement of candles around a bowl",
+        "positive": "A circular arrangement of candles around a bowl, forming a radially symmetrical ritual composition"
+    },
+    {
+        "negative": "A pair of carved stone dragons guarding a gate",
+        "positive": "A pair of carved stone dragons guarding a gate, arranged in a mirrored composition with centered entrance and balanced detail"
+    },
+    {
+        "negative": "A face-on portrait of a husky with blue eyes",
+        "positive": "A face-on portrait of a husky with blue eyes, centered with mirrored facial markings and symmetrical composition"
+    },
+    {
+        "negative": "A tiled hammam interior with arches",
+        "positive": "A tiled hammam interior with arches, viewed from the central axis with mirrored arches and repeated geometric tiles"
+    },
+    {
+        "negative": "A geometric neon sign shaped like a starburst",
+        "positive": "A geometric neon sign shaped like a starburst, featuring radial symmetry and clean repeating line segments"
+    },
+    {
+        "negative": "A front-facing portrait of a queen in pearl jewelry",
+        "positive": "A front-facing portrait of a queen in pearl jewelry, centered with mirrored accessories and strong bilateral balance"
+    },
+    {
+        "negative": "A carousel viewed straight from the front",
+        "positive": "A carousel viewed straight from the front, composed with mirrored horses, repeated poles, and geometric regularity"
+    },
+    {
+        "negative": "A circular labyrinth pattern in stone",
+        "positive": "A circular labyrinth pattern in stone, rendered with exact radial organization and precise concentric geometry"
+    },
+    {
+        "negative": "A pair of white doves perched on a fountain",
+        "positive": "A pair of white doves perched on a fountain, arranged in a mirrored balanced composition"
+    },
+    {
+        "negative": "A front-facing portrait of a masked magician",
+        "positive": "A front-facing portrait of a masked magician, centered with symmetrical costume details and balanced pose"
+    },
+    {
+        "negative": "A row of lockers in a school hallway",
+        "positive": "A row of lockers in a school hallway, shot from the midpoint with mirrored perspective and regular repeating rectangles"
+    },
+    {
+        "negative": "A decorative brooch photographed on velvet",
+        "positive": "A decorative brooch photographed on velvet, shown top-down with radial symmetry and evenly spaced gemstone arrangement"
+    },
+    {
+        "negative": "A front view of a marble courthouse staircase",
+        "positive": "A front view of a marble courthouse staircase, centered with mirrored handrails and precise geometric balance"
+    },
+    {
+        "negative": "A face-on portrait of a snowy owl in flight",
+        "positive": "A face-on portrait of a snowy owl in flight, centered with wings spread symmetrically and strong bilateral composition"
+    },
+    {
+        "negative": "A festival lantern display in a courtyard",
+        "positive": "A festival lantern display in a courtyard, arranged with mirrored rows, centered alignment, and regular geometry"
+    }
+]
